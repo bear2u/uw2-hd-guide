@@ -1,0 +1,28 @@
+---
+import reference from '../data/game-reference.json';
+interface Props { kind: 'ports' | 'discoveries' }
+const { kind } = Astro.props;
+const title = kind === 'ports' ? '항구와 보급항의 위치 분포' : '발견물 후보의 위치 분포';
+const rows = reference[kind];
+const width = 2160, height = 1080;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<figure class="strategy-map">
+  <svg viewBox={`-80 -60 ${width + 160} ${height + 150}`} role="img" aria-label={`${title}. X는 오른쪽, Y는 아래쪽으로 증가합니다. 상세 위치는 아래 도감 링크에서 확인하세요.`}>
+    <rect x="0" y="0" width={width} height={height} class="sea" />
+    {[0,540,1080,1620,2160].map(x => <g><path d={`M${x},0 V${height}`} class="grid" /><text x={x} y={height+62} text-anchor="middle">{x}</text></g>)}
+    {[0,270,540,810,1080].map(y => <g><path d={`M0,${y} H${width}`} class="grid" /><text x="-18" y={y+12} text-anchor="end">{y}</text></g>)}
+    {rows.map(row => <g><title>{row.name} · X {row.x}, Y {row.y}</title>{'kind' in row && row.kind === '보급항' ? <rect x={row.x-10} y={row.y-10} width="20" height="20" class="supply" /> : <circle cx={row.x} cy={row.y} r="9" class="place" />}</g>)}
+  </svg>
+  <figcaption>{title} · {rows.length}곳. {kind === 'ports' ? '원은 일반 항구, 빈 사각형은 보급항입니다.' : '모든 후보를 함께 표시하며 한 항해에서 전부 등장하지는 않습니다.'} 해안선을 생략한 좌표 안내 그림으로, 점을 직선으로 이은 항로가 아닙니다. <a href={`${base}/atlas/${kind}/`}>이름·좌표를 표로 보기</a></figcaption>
+</figure>
+<style>
+  .strategy-map { border: var(--guide-line) solid var(--nb-border); border-radius: var(--guide-radius-small); padding: 1rem; background: var(--nb-card); }
+  svg { display: block; width: 100%; height: auto; }
+  .sea { fill: var(--nb-muted); }
+  .grid { fill: none; stroke: var(--nb-border); stroke-width: 2; }
+  .place { fill: var(--nb-primary); }
+  .supply { fill: var(--nb-card); stroke: var(--nb-foreground); stroke-width: 4; }
+  text { fill: var(--nb-muted-foreground); font-size: 32px; }
+  figcaption { margin-top: 1rem; }
+</style>
