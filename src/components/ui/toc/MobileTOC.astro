@@ -1,0 +1,15 @@
+---
+import { cn } from '@/lib/cn';
+import type { HTMLAttributes } from 'astro/types';
+import type { TOCItem } from '@cloudflare/nimbus-docs/types';
+interface Props extends HTMLAttributes<'nav'> { headings: TOCItem[] }
+const {headings,class:className,...attrs}=Astro.props;
+---
+{headings.length > 0 && <nav aria-label="페이지 목차" class={cn('relative',className)} {...attrs}>
+ <details class="rounded-md border border-border bg-background">
+  <summary class="cursor-pointer px-3 py-2.5 text-sm font-medium hover:bg-accent focus-visible:outline-2 focus-visible:outline-primary">이 페이지에서</summary>
+  <ul class="list-none px-3 pb-3 text-sm">
+   {headings.filter(h=>h.slug).map(h=><li><a href={`#${h.slug}`} class="block rounded py-2 text-muted-foreground hover:text-foreground focus-visible:outline-2 focus-visible:outline-primary">{h.text}</a></li>)}
+  </ul>
+ </details>
+</nav>}

@@ -1,0 +1,6234 @@
+{
+    "schemaVersion": 1,
+    "source": "HD 리메이크의 배포된 새 게임 템플릿과 게임 정의",
+    "heroes": [
+        {
+            "id": 0,
+            "portId": 0,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "gold": 0,
+            "name": "조안 페레로",
+            "port": "리스본"
+        },
+        {
+            "id": 1,
+            "portId": 1,
+            "navigationLevel": 8,
+            "battleLevel": 10,
+            "gold": 0,
+            "name": "카탈리나 에란초",
+            "port": "세비야"
+        },
+        {
+            "id": 2,
+            "portId": 29,
+            "navigationLevel": 10,
+            "battleLevel": 12,
+            "gold": 0,
+            "name": "오토 베인스",
+            "port": "런던"
+        },
+        {
+            "id": 3,
+            "portId": 33,
+            "navigationLevel": 11,
+            "battleLevel": 1,
+            "gold": 0,
+            "name": "에르네스트 폰 보어",
+            "port": "암스테르담"
+        },
+        {
+            "id": 4,
+            "portId": 8,
+            "navigationLevel": 4,
+            "battleLevel": 1,
+            "gold": 0,
+            "name": "피에트로 콘티",
+            "port": "제노바"
+        },
+        {
+            "id": 5,
+            "portId": 2,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "gold": 0,
+            "name": "알 베자스",
+            "port": "이스탄불"
+        }
+    ],
+    "ports": [
+        {
+            "id": 0,
+            "x": 120,
+            "y": 358,
+            "economy": 780,
+            "industry": 770,
+            "name": "리스본",
+            "kind": "일반 항구",
+            "specialty": "돌소금"
+        },
+        {
+            "id": 1,
+            "x": 142,
+            "y": 372,
+            "economy": 770,
+            "industry": 810,
+            "name": "세비야",
+            "kind": "일반 항구",
+            "specialty": "도자기"
+        },
+        {
+            "id": 2,
+            "x": 352,
+            "y": 344,
+            "economy": 810,
+            "industry": 720,
+            "name": "이스탄불",
+            "kind": "일반 항구",
+            "specialty": "융단"
+        },
+        {
+            "id": 3,
+            "x": 194,
+            "y": 342,
+            "economy": 590,
+            "industry": 540,
+            "name": "바르셀로나",
+            "kind": "일반 항구",
+            "specialty": "돌소금"
+        },
+        {
+            "id": 4,
+            "x": 200,
+            "y": 376,
+            "economy": 160,
+            "industry": 180,
+            "name": "알제",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 5,
+            "x": 242,
+            "y": 372,
+            "economy": 130,
+            "industry": 160,
+            "name": "튀니스",
+            "kind": "일반 항구",
+            "specialty": "철광석"
+        },
+        {
+            "id": 6,
+            "x": 178,
+            "y": 356,
+            "economy": 320,
+            "industry": 300,
+            "name": "발렌시아",
+            "kind": "일반 항구",
+            "specialty": "모직물"
+        },
+        {
+            "id": 7,
+            "x": 212,
+            "y": 326,
+            "economy": 350,
+            "industry": 290,
+            "name": "마르세유",
+            "kind": "일반 항구",
+            "specialty": "향수"
+        },
+        {
+            "id": 8,
+            "x": 230,
+            "y": 320,
+            "economy": 750,
+            "industry": 760,
+            "name": "제노바",
+            "kind": "일반 항구",
+            "specialty": "은"
+        },
+        {
+            "id": 9,
+            "x": 240,
+            "y": 328,
+            "economy": 620,
+            "industry": 540,
+            "name": "피사",
+            "kind": "일반 항구",
+            "specialty": "견직물"
+        },
+        {
+            "id": 10,
+            "x": 260,
+            "y": 348,
+            "economy": 630,
+            "industry": 640,
+            "name": "나폴리",
+            "kind": "일반 항구",
+            "specialty": "모직물"
+        },
+        {
+            "id": 11,
+            "x": 270,
+            "y": 376,
+            "economy": 240,
+            "industry": 220,
+            "name": "시라쿠사",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 12,
+            "x": 196,
+            "y": 358,
+            "economy": 290,
+            "industry": 285,
+            "name": "팔마",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 13,
+            "x": 258,
+            "y": 318,
+            "economy": 740,
+            "industry": 730,
+            "name": "베네치아",
+            "kind": "일반 항구",
+            "specialty": "유리그릇"
+        },
+        {
+            "id": 14,
+            "x": 288,
+            "y": 338,
+            "economy": 150,
+            "industry": 140,
+            "name": "라구사",
+            "kind": "일반 항구",
+            "specialty": "염료"
+        },
+        {
+            "id": 15,
+            "x": 330,
+            "y": 386,
+            "economy": 180,
+            "industry": 160,
+            "name": "간디아",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 16,
+            "x": 324,
+            "y": 366,
+            "economy": 640,
+            "industry": 540,
+            "name": "아테네",
+            "kind": "일반 항구",
+            "specialty": "미술품"
+        },
+        {
+            "id": 17,
+            "x": 316,
+            "y": 344,
+            "economy": 110,
+            "industry": 120,
+            "name": "살로니카",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 18,
+            "x": 358,
+            "y": 416,
+            "economy": 720,
+            "industry": 700,
+            "name": "알렉산드리아",
+            "kind": "일반 항구",
+            "specialty": "면직물"
+        },
+        {
+            "id": 19,
+            "x": 390,
+            "y": 410,
+            "economy": 140,
+            "industry": 150,
+            "name": "야파",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 20,
+            "x": 392,
+            "y": 402,
+            "economy": 270,
+            "industry": 250,
+            "name": "베이루트",
+            "kind": "일반 항구",
+            "specialty": "융단"
+        },
+        {
+            "id": 21,
+            "x": 378,
+            "y": 386,
+            "economy": 150,
+            "industry": 160,
+            "name": "니코시아",
+            "kind": "일반 항구",
+            "specialty": "동"
+        },
+        {
+            "id": 22,
+            "x": 258,
+            "y": 406,
+            "economy": 420,
+            "industry": 400,
+            "name": "트리폴리",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 23,
+            "x": 386,
+            "y": 316,
+            "economy": 340,
+            "industry": 350,
+            "name": "카파",
+            "kind": "일반 항구",
+            "specialty": "철광석"
+        },
+        {
+            "id": 24,
+            "x": 410,
+            "y": 302,
+            "economy": 110,
+            "industry": 115,
+            "name": "타나",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 25,
+            "x": 418,
+            "y": 344,
+            "economy": 360,
+            "industry": 370,
+            "name": "트레비존드",
+            "kind": "일반 항구",
+            "specialty": "면직물"
+        },
+        {
+            "id": 26,
+            "x": 144,
+            "y": 384,
+            "economy": 85,
+            "industry": 90,
+            "name": "세우타",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 27,
+            "x": 170,
+            "y": 314,
+            "economy": 600,
+            "industry": 580,
+            "name": "보르도",
+            "kind": "일반 항구",
+            "specialty": "와인"
+        },
+        {
+            "id": 28,
+            "x": 166,
+            "y": 296,
+            "economy": 560,
+            "industry": 570,
+            "name": "낭트",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 29,
+            "x": 180,
+            "y": 262,
+            "economy": 720,
+            "industry": 740,
+            "name": "런던",
+            "kind": "일반 항구",
+            "specialty": "양모"
+        },
+        {
+            "id": 30,
+            "x": 160,
+            "y": 264,
+            "economy": 320,
+            "industry": 380,
+            "name": "브리스톨",
+            "kind": "일반 항구",
+            "specialty": "주석"
+        },
+        {
+            "id": 31,
+            "x": 136,
+            "y": 252,
+            "economy": 370,
+            "industry": 350,
+            "name": "더블린",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 32,
+            "x": 214,
+            "y": 258,
+            "economy": 660,
+            "industry": 670,
+            "name": "앤트워프",
+            "kind": "일반 항구",
+            "specialty": "모직물"
+        },
+        {
+            "id": 33,
+            "x": 216,
+            "y": 248,
+            "economy": 700,
+            "industry": 730,
+            "name": "암스테르담",
+            "kind": "일반 항구",
+            "specialty": "유리구슬"
+        },
+        {
+            "id": 34,
+            "x": 254,
+            "y": 230,
+            "economy": 530,
+            "industry": 510,
+            "name": "코펜하겐",
+            "kind": "일반 항구",
+            "specialty": "유리그릇"
+        },
+        {
+            "id": 35,
+            "x": 240,
+            "y": 244,
+            "economy": 600,
+            "industry": 620,
+            "name": "함부르크",
+            "kind": "일반 항구",
+            "specialty": "염료"
+        },
+        {
+            "id": 36,
+            "x": 242,
+            "y": 190,
+            "economy": 190,
+            "industry": 185,
+            "name": "오슬로",
+            "kind": "일반 항구",
+            "specialty": "목재"
+        },
+        {
+            "id": 37,
+            "x": 294,
+            "y": 196,
+            "economy": 480,
+            "industry": 470,
+            "name": "스톡홀름",
+            "kind": "일반 항구",
+            "specialty": "동"
+        },
+        {
+            "id": 38,
+            "x": 244,
+            "y": 242,
+            "economy": 320,
+            "industry": 300,
+            "name": "뤼베크",
+            "kind": "일반 항구",
+            "specialty": "은"
+        },
+        {
+            "id": 39,
+            "x": 288,
+            "y": 240,
+            "economy": 370,
+            "industry": 280,
+            "name": "단치히",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 40,
+            "x": 322,
+            "y": 218,
+            "economy": 150,
+            "industry": 160,
+            "name": "리가",
+            "kind": "일반 항구",
+            "specialty": "목재"
+        },
+        {
+            "id": 41,
+            "x": 210,
+            "y": 192,
+            "economy": 145,
+            "industry": 150,
+            "name": "베르겐",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 42,
+            "x": 1904,
+            "y": 588,
+            "economy": 220,
+            "industry": 210,
+            "name": "카라카스",
+            "kind": "일반 항구",
+            "specialty": "담배"
+        },
+        {
+            "id": 43,
+            "x": 1852,
+            "y": 592,
+            "economy": 190,
+            "industry": 130,
+            "name": "카르타헤나",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 44,
+            "x": 1816,
+            "y": 502,
+            "economy": 210,
+            "industry": 220,
+            "name": "아바나",
+            "kind": "일반 항구",
+            "specialty": "담배"
+        },
+        {
+            "id": 45,
+            "x": 1922,
+            "y": 584,
+            "economy": 40,
+            "industry": 45,
+            "name": "마르가리타",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 46,
+            "x": 1828,
+            "y": 600,
+            "economy": 160,
+            "industry": 190,
+            "name": "파나마",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 47,
+            "x": 1826,
+            "y": 596,
+            "economy": 60,
+            "industry": 75,
+            "name": "포르토벨로",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 48,
+            "x": 1894,
+            "y": 540,
+            "economy": 150,
+            "industry": 160,
+            "name": "산토도밍고",
+            "kind": "일반 항구",
+            "specialty": "설탕"
+        },
+        {
+            "id": 49,
+            "x": 1736,
+            "y": 532,
+            "economy": 80,
+            "industry": 75,
+            "name": "베라크루즈",
+            "kind": "일반 항구",
+            "specialty": "금"
+        },
+        {
+            "id": 50,
+            "x": 1848,
+            "y": 542,
+            "economy": 60,
+            "industry": 80,
+            "name": "자메이카",
+            "kind": "일반 항구",
+            "specialty": "설탕"
+        },
+        {
+            "id": 51,
+            "x": 1768,
+            "y": 564,
+            "economy": 70,
+            "industry": 65,
+            "name": "과테말라",
+            "kind": "일반 항구",
+            "specialty": "곡류"
+        },
+        {
+            "id": 52,
+            "x": 2064,
+            "y": 722,
+            "economy": 215,
+            "industry": 240,
+            "name": "페르남부쿠",
+            "kind": "일반 항구",
+            "specialty": "염료"
+        },
+        {
+            "id": 53,
+            "x": 2034,
+            "y": 824,
+            "economy": 45,
+            "industry": 50,
+            "name": "리우데자네이루",
+            "kind": "일반 항구",
+            "specialty": "금"
+        },
+        {
+            "id": 54,
+            "x": 1874,
+            "y": 590,
+            "economy": 120,
+            "industry": 105,
+            "name": "마라카이보",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 55,
+            "x": 1852,
+            "y": 526,
+            "economy": 80,
+            "industry": 105,
+            "name": "산티아고",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 56,
+            "x": 1996,
+            "y": 642,
+            "economy": 70,
+            "industry": 65,
+            "name": "카옌",
+            "kind": "일반 항구",
+            "specialty": "목재"
+        },
+        {
+            "id": 57,
+            "x": 74,
+            "y": 402,
+            "economy": 240,
+            "industry": 230,
+            "name": "마데이라",
+            "kind": "일반 항구",
+            "specialty": "설탕"
+        },
+        {
+            "id": 58,
+            "x": 74,
+            "y": 438,
+            "economy": 90,
+            "industry": 80,
+            "name": "산타크루스",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 59,
+            "x": 162,
+            "y": 596,
+            "economy": 210,
+            "industry": 190,
+            "name": "상조르즈",
+            "kind": "일반 항구",
+            "specialty": "상아"
+        },
+        {
+            "id": 60,
+            "x": 76,
+            "y": 546,
+            "economy": 85,
+            "industry": 100,
+            "name": "비사우",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 61,
+            "x": 254,
+            "y": 704,
+            "economy": 90,
+            "industry": 75,
+            "name": "루안다",
+            "kind": "일반 항구",
+            "specialty": "산호"
+        },
+        {
+            "id": 62,
+            "x": 70,
+            "y": 494,
+            "economy": 200,
+            "industry": 185,
+            "name": "아르긴",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 63,
+            "x": 72,
+            "y": 538,
+            "economy": 75,
+            "industry": 60,
+            "name": "바서스트",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 64,
+            "x": 154,
+            "y": 530,
+            "economy": 430,
+            "industry": 35,
+            "name": "통북투",
+            "kind": "일반 항구",
+            "specialty": "상아"
+        },
+        {
+            "id": 65,
+            "x": 148,
+            "y": 594,
+            "economy": 90,
+            "industry": 75,
+            "name": "아비장",
+            "kind": "일반 항구",
+            "specialty": "사향"
+        },
+        {
+            "id": 66,
+            "x": 388,
+            "y": 762,
+            "economy": 390,
+            "industry": 400,
+            "name": "소팔라",
+            "kind": "일반 항구",
+            "specialty": "상아"
+        },
+        {
+            "id": 67,
+            "x": 418,
+            "y": 662,
+            "economy": 370,
+            "industry": 360,
+            "name": "말린디",
+            "kind": "일반 항구",
+            "specialty": "사향"
+        },
+        {
+            "id": 68,
+            "x": 454,
+            "y": 614,
+            "economy": 90,
+            "industry": 70,
+            "name": "모가디슈",
+            "kind": "일반 항구",
+            "specialty": "상아"
+        },
+        {
+            "id": 69,
+            "x": 414,
+            "y": 670,
+            "economy": 380,
+            "industry": 390,
+            "name": "몸바사",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 70,
+            "x": 420,
+            "y": 734,
+            "economy": 180,
+            "industry": 160,
+            "name": "모잠비크",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 71,
+            "x": 400,
+            "y": 748,
+            "economy": 60,
+            "industry": 60,
+            "name": "켈리마느",
+            "kind": "일반 항구",
+            "specialty": "구갑"
+        },
+        {
+            "id": 72,
+            "x": 458,
+            "y": 540,
+            "economy": 210,
+            "industry": 260,
+            "name": "아덴",
+            "kind": "일반 항구",
+            "specialty": "호박"
+        },
+        {
+            "id": 73,
+            "x": 520,
+            "y": 450,
+            "economy": 100,
+            "industry": 90,
+            "name": "곰브룬",
+            "kind": "일반 항구",
+            "specialty": "생강"
+        },
+        {
+            "id": 74,
+            "x": 426,
+            "y": 528,
+            "economy": 90,
+            "industry": 85,
+            "name": "마사와",
+            "kind": "일반 항구",
+            "specialty": "피망"
+        },
+        {
+            "id": 75,
+            "x": 376,
+            "y": 428,
+            "economy": 510,
+            "industry": 480,
+            "name": "카이로",
+            "kind": "일반 항구",
+            "specialty": "미술품"
+        },
+        {
+            "id": 76,
+            "x": 470,
+            "y": 426,
+            "economy": 480,
+            "industry": 500,
+            "name": "바스라",
+            "kind": "일반 항구",
+            "specialty": "유제품"
+        },
+        {
+            "id": 77,
+            "x": 416,
+            "y": 488,
+            "economy": 500,
+            "industry": 80,
+            "name": "메카",
+            "kind": "일반 항구",
+            "specialty": "사향"
+        },
+        {
+            "id": 78,
+            "x": 496,
+            "y": 458,
+            "economy": 130,
+            "industry": 160,
+            "name": "카타르",
+            "kind": "일반 항구",
+            "specialty": "구갑"
+        },
+        {
+            "id": 79,
+            "x": 502,
+            "y": 450,
+            "economy": 70,
+            "industry": 80,
+            "name": "시라즈",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 80,
+            "x": 532,
+            "y": 464,
+            "economy": 180,
+            "industry": 230,
+            "name": "무스카트",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 81,
+            "x": 576,
+            "y": 458,
+            "economy": 75,
+            "industry": 80,
+            "name": "디우",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 82,
+            "x": 632,
+            "y": 562,
+            "economy": 130,
+            "industry": 120,
+            "name": "코친",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 83,
+            "x": 660,
+            "y": 576,
+            "economy": 180,
+            "industry": 210,
+            "name": "실론",
+            "kind": "일반 항구",
+            "specialty": "계피"
+        },
+        {
+            "id": 84,
+            "x": 934,
+            "y": 652,
+            "economy": 50,
+            "industry": 50,
+            "name": "암본",
+            "kind": "일반 항구",
+            "specialty": "육두구"
+        },
+        {
+            "id": 85,
+            "x": 622,
+            "y": 536,
+            "economy": 540,
+            "industry": 560,
+            "name": "고아",
+            "kind": "일반 항구",
+            "specialty": "생강"
+        },
+        {
+            "id": 86,
+            "x": 786,
+            "y": 606,
+            "economy": 90,
+            "industry": 95,
+            "name": "말라카",
+            "kind": "일반 항구",
+            "specialty": "계피"
+        },
+        {
+            "id": 87,
+            "x": 934,
+            "y": 622,
+            "economy": 80,
+            "industry": 85,
+            "name": "테르나테",
+            "kind": "일반 항구",
+            "specialty": "정향"
+        },
+        {
+            "id": 88,
+            "x": 948,
+            "y": 660,
+            "economy": 45,
+            "industry": 40,
+            "name": "반다",
+            "kind": "일반 항구",
+            "specialty": "육두구"
+        },
+        {
+            "id": 89,
+            "x": 934,
+            "y": 684,
+            "economy": 40,
+            "industry": 45,
+            "name": "딜리",
+            "kind": "일반 항구",
+            "specialty": "정향"
+        },
+        {
+            "id": 90,
+            "x": 760,
+            "y": 604,
+            "economy": 35,
+            "industry": 40,
+            "name": "아체",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 91,
+            "x": 820,
+            "y": 666,
+            "economy": 40,
+            "industry": 55,
+            "name": "자카르타",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 92,
+            "x": 628,
+            "y": 552,
+            "economy": 530,
+            "industry": 560,
+            "name": "캘리컷",
+            "kind": "일반 항구",
+            "specialty": "육두구"
+        },
+        {
+            "id": 93,
+            "x": 810,
+            "y": 628,
+            "economy": 50,
+            "industry": 45,
+            "name": "방카",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 94,
+            "x": 894,
+            "y": 454,
+            "economy": 520,
+            "industry": 570,
+            "name": "천주",
+            "kind": "일반 항구",
+            "specialty": "생사"
+        },
+        {
+            "id": 95,
+            "x": 862,
+            "y": 474,
+            "economy": 480,
+            "industry": 490,
+            "name": "마카오",
+            "kind": "일반 항구",
+            "specialty": "없음"
+        },
+        {
+            "id": 96,
+            "x": 812,
+            "y": 482,
+            "economy": 300,
+            "industry": 340,
+            "name": "하노이",
+            "kind": "일반 항구",
+            "specialty": "산호"
+        },
+        {
+            "id": 97,
+            "x": 840,
+            "y": 388,
+            "economy": 580,
+            "industry": 280,
+            "name": "장안",
+            "kind": "일반 항구",
+            "specialty": "견직물"
+        },
+        {
+            "id": 98,
+            "x": 996,
+            "y": 390,
+            "economy": 420,
+            "industry": 410,
+            "name": "사카이",
+            "kind": "일반 항구",
+            "specialty": "견직물"
+        },
+        {
+            "id": 99,
+            "x": 956,
+            "y": 402,
+            "economy": 210,
+            "industry": 220,
+            "name": "나가사키",
+            "kind": "일반 항구",
+            "specialty": "은"
+        },
+        {
+            "id": 100,
+            "x": 64,
+            "y": 210,
+            "economy": -1,
+            "industry": -1,
+            "name": "헤클라",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 101,
+            "x": 278,
+            "y": 114,
+            "economy": -1,
+            "industry": -1,
+            "name": "나르비크",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 102,
+            "x": 286,
+            "y": 860,
+            "economy": -1,
+            "industry": -1,
+            "name": "케이프타운",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 103,
+            "x": 292,
+            "y": 312,
+            "economy": -1,
+            "industry": -1,
+            "name": "베오그라드",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 104,
+            "x": 472,
+            "y": 758,
+            "economy": -1,
+            "industry": -1,
+            "name": "타마타브",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 105,
+            "x": 666,
+            "y": 60,
+            "economy": -1,
+            "industry": -1,
+            "name": "딕손",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 106,
+            "x": 912,
+            "y": 360,
+            "economy": -1,
+            "industry": -1,
+            "name": "여순",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 107,
+            "x": 932,
+            "y": 716,
+            "economy": -1,
+            "industry": -1,
+            "name": "레베크",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 108,
+            "x": 936,
+            "y": 578,
+            "economy": -1,
+            "industry": -1,
+            "name": "민다나오",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 109,
+            "x": 956,
+            "y": 78,
+            "economy": -1,
+            "industry": -1,
+            "name": "틱시",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 110,
+            "x": 1020,
+            "y": 334,
+            "economy": -1,
+            "industry": -1,
+            "name": "에조",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 111,
+            "x": 1028,
+            "y": 884,
+            "economy": -1,
+            "industry": -1,
+            "name": "질롱",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 112,
+            "x": 1038,
+            "y": 538,
+            "economy": -1,
+            "industry": -1,
+            "name": "괌",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 113,
+            "x": 1050,
+            "y": 686,
+            "economy": -1,
+            "industry": -1,
+            "name": "모르즈비",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 114,
+            "x": 1160,
+            "y": 200,
+            "economy": -1,
+            "industry": -1,
+            "name": "코르프",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 115,
+            "x": 1210,
+            "y": 900,
+            "economy": -1,
+            "industry": -1,
+            "name": "왕거누이",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 116,
+            "x": 1240,
+            "y": 738,
+            "economy": -1,
+            "industry": -1,
+            "name": "수바",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 117,
+            "x": 1342,
+            "y": 156,
+            "economy": -1,
+            "industry": -1,
+            "name": "놈",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 118,
+            "x": 1400,
+            "y": 498,
+            "economy": -1,
+            "industry": -1,
+            "name": "날후",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 119,
+            "x": 1414,
+            "y": 732,
+            "economy": -1,
+            "industry": -1,
+            "name": "타히티",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 120,
+            "x": 1510,
+            "y": 228,
+            "economy": -1,
+            "industry": -1,
+            "name": "주노",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 121,
+            "x": 1592,
+            "y": 122,
+            "economy": -1,
+            "industry": -1,
+            "name": "코퍼마인",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 122,
+            "x": 1614,
+            "y": 448,
+            "economy": -1,
+            "industry": -1,
+            "name": "산타바르바라",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 123,
+            "x": 1770,
+            "y": 242,
+            "economy": -1,
+            "industry": -1,
+            "name": "처칠",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 124,
+            "x": 1834,
+            "y": 724,
+            "economy": -1,
+            "industry": -1,
+            "name": "카야오",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 125,
+            "x": 1864,
+            "y": 892,
+            "economy": -1,
+            "industry": -1,
+            "name": "발파라이소",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 126,
+            "x": 1870,
+            "y": 778,
+            "economy": -1,
+            "industry": -1,
+            "name": "모옌도",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 127,
+            "x": 1906,
+            "y": 372,
+            "economy": -1,
+            "industry": -1,
+            "name": "코드",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 128,
+            "x": 1956,
+            "y": 906,
+            "economy": -1,
+            "industry": -1,
+            "name": "몬테비데오",
+            "kind": "보급항",
+            "specialty": "없음"
+        },
+        {
+            "id": 129,
+            "x": 2100,
+            "y": 190,
+            "economy": -1,
+            "industry": -1,
+            "name": "포렐",
+            "kind": "보급항",
+            "specialty": "없음"
+        }
+    ],
+    "goods": [
+        {
+            "id": 0,
+            "name": "정향",
+            "category": "향신료"
+        },
+        {
+            "id": 1,
+            "name": "계피",
+            "category": "향신료"
+        },
+        {
+            "id": 2,
+            "name": "후추",
+            "category": "향신료"
+        },
+        {
+            "id": 3,
+            "name": "육두구",
+            "category": "향신료"
+        },
+        {
+            "id": 4,
+            "name": "피망",
+            "category": "향신료"
+        },
+        {
+            "id": 5,
+            "name": "생강",
+            "category": "향신료"
+        },
+        {
+            "id": 6,
+            "name": "담배",
+            "category": "기호품"
+        },
+        {
+            "id": 7,
+            "name": "차",
+            "category": "기호품"
+        },
+        {
+            "id": 8,
+            "name": "커피",
+            "category": "기호품"
+        },
+        {
+            "id": 9,
+            "name": "카카오",
+            "category": "기호품"
+        },
+        {
+            "id": 10,
+            "name": "설탕",
+            "category": "식품"
+        },
+        {
+            "id": 11,
+            "name": "유제품",
+            "category": "식품"
+        },
+        {
+            "id": 12,
+            "name": "어육",
+            "category": "식품"
+        },
+        {
+            "id": 13,
+            "name": "곡류",
+            "category": "식품"
+        },
+        {
+            "id": 14,
+            "name": "올리브유",
+            "category": "식품"
+        },
+        {
+            "id": 15,
+            "name": "와인",
+            "category": "식품"
+        },
+        {
+            "id": 16,
+            "name": "돌소금",
+            "category": "식품"
+        },
+        {
+            "id": 17,
+            "name": "생사",
+            "category": "섬유"
+        },
+        {
+            "id": 18,
+            "name": "무명",
+            "category": "섬유"
+        },
+        {
+            "id": 19,
+            "name": "양모",
+            "category": "섬유"
+        },
+        {
+            "id": 20,
+            "name": "마",
+            "category": "섬유"
+        },
+        {
+            "id": 21,
+            "name": "면직물",
+            "category": "직물"
+        },
+        {
+            "id": 22,
+            "name": "견직물",
+            "category": "직물"
+        },
+        {
+            "id": 23,
+            "name": "모직물",
+            "category": "직물"
+        },
+        {
+            "id": 24,
+            "name": "벨벳",
+            "category": "직물"
+        },
+        {
+            "id": 25,
+            "name": "삼베",
+            "category": "직물"
+        },
+        {
+            "id": 26,
+            "name": "산호",
+            "category": "보석"
+        },
+        {
+            "id": 27,
+            "name": "호박",
+            "category": "보석"
+        },
+        {
+            "id": 28,
+            "name": "상아",
+            "category": "보석"
+        },
+        {
+            "id": 29,
+            "name": "진주",
+            "category": "보석"
+        },
+        {
+            "id": 30,
+            "name": "구갑",
+            "category": "보석"
+        },
+        {
+            "id": 31,
+            "name": "금",
+            "category": "귀금속"
+        },
+        {
+            "id": 32,
+            "name": "은",
+            "category": "귀금속"
+        },
+        {
+            "id": 33,
+            "name": "동",
+            "category": "광석"
+        },
+        {
+            "id": 34,
+            "name": "주석",
+            "category": "광석"
+        },
+        {
+            "id": 35,
+            "name": "철광석",
+            "category": "광석"
+        },
+        {
+            "id": 36,
+            "name": "미술품",
+            "category": "사치품"
+        },
+        {
+            "id": 37,
+            "name": "융단",
+            "category": "사치품"
+        },
+        {
+            "id": 38,
+            "name": "사향",
+            "category": "사치품"
+        },
+        {
+            "id": 39,
+            "name": "향수",
+            "category": "사치품"
+        },
+        {
+            "id": 40,
+            "name": "유리구슬",
+            "category": "기타"
+        },
+        {
+            "id": 41,
+            "name": "염료",
+            "category": "기타"
+        },
+        {
+            "id": 42,
+            "name": "도자기",
+            "category": "기타"
+        },
+        {
+            "id": 43,
+            "name": "유리그릇",
+            "category": "기타"
+        },
+        {
+            "id": 44,
+            "name": "무기",
+            "category": "기타"
+        },
+        {
+            "id": 45,
+            "name": "목재",
+            "category": "기타"
+        }
+    ],
+    "ships": [
+        {
+            "id": 0,
+            "capacity": 50,
+            "minCrew": 5,
+            "maxCrew": 20,
+            "durability": 30,
+            "power": 80,
+            "tacking": 70,
+            "maxGuns": 10,
+            "price": 1200,
+            "name": "발사"
+        },
+        {
+            "id": 1,
+            "capacity": 60,
+            "minCrew": 5,
+            "maxCrew": 20,
+            "durability": 20,
+            "power": 85,
+            "tacking": 65,
+            "maxGuns": 10,
+            "price": 1300,
+            "name": "한자 코그"
+        },
+        {
+            "id": 2,
+            "capacity": 70,
+            "minCrew": 5,
+            "maxCrew": 20,
+            "durability": 30,
+            "power": 75,
+            "tacking": 90,
+            "maxGuns": 15,
+            "price": 1800,
+            "name": "다우"
+        },
+        {
+            "id": 3,
+            "capacity": 500,
+            "minCrew": 50,
+            "maxCrew": 200,
+            "durability": 70,
+            "power": 60,
+            "tacking": 50,
+            "maxGuns": 40,
+            "price": 20000,
+            "name": "바스"
+        },
+        {
+            "id": 4,
+            "capacity": 80,
+            "minCrew": 5,
+            "maxCrew": 20,
+            "durability": 20,
+            "power": 95,
+            "tacking": 70,
+            "maxGuns": 15,
+            "price": 1400,
+            "name": "타렛테"
+        },
+        {
+            "id": 5,
+            "capacity": 120,
+            "minCrew": 10,
+            "maxCrew": 40,
+            "durability": 30,
+            "power": 75,
+            "tacking": 90,
+            "maxGuns": 20,
+            "price": 2400,
+            "name": "카라벨 라티나"
+        },
+        {
+            "id": 6,
+            "capacity": 120,
+            "minCrew": 10,
+            "maxCrew": 40,
+            "durability": 30,
+            "power": 90,
+            "tacking": 70,
+            "maxGuns": 20,
+            "price": 2400,
+            "name": "카라벨 레돈다"
+        },
+        {
+            "id": 7,
+            "capacity": 180,
+            "minCrew": 15,
+            "maxCrew": 60,
+            "durability": 40,
+            "power": 70,
+            "tacking": 90,
+            "maxGuns": 20,
+            "price": 10000,
+            "name": "브리간틴"
+        },
+        {
+            "id": 8,
+            "capacity": 450,
+            "minCrew": 25,
+            "maxCrew": 120,
+            "durability": 50,
+            "power": 85,
+            "tacking": 65,
+            "maxGuns": 40,
+            "price": 30000,
+            "name": "나오"
+        },
+        {
+            "id": 9,
+            "capacity": 600,
+            "minCrew": 30,
+            "maxCrew": 160,
+            "durability": 50,
+            "power": 80,
+            "tacking": 60,
+            "maxGuns": 50,
+            "price": 40000,
+            "name": "카락"
+        },
+        {
+            "id": 10,
+            "capacity": 800,
+            "minCrew": 45,
+            "maxCrew": 200,
+            "durability": 80,
+            "power": 65,
+            "tacking": 60,
+            "maxGuns": 70,
+            "price": 60000,
+            "name": "갤리온"
+        },
+        {
+            "id": 11,
+            "capacity": 600,
+            "minCrew": 25,
+            "maxCrew": 300,
+            "durability": 70,
+            "power": 70,
+            "tacking": 80,
+            "maxGuns": 40,
+            "price": 44000,
+            "name": "지벡"
+        },
+        {
+            "id": 12,
+            "capacity": 150,
+            "minCrew": 5,
+            "maxCrew": 60,
+            "durability": 40,
+            "power": 85,
+            "tacking": 95,
+            "maxGuns": 20,
+            "price": 6000,
+            "name": "핀네스"
+        },
+        {
+            "id": 13,
+            "capacity": 250,
+            "minCrew": 5,
+            "maxCrew": 60,
+            "durability": 50,
+            "power": 85,
+            "tacking": 95,
+            "maxGuns": 40,
+            "price": 16000,
+            "name": "슬루프"
+        },
+        {
+            "id": 14,
+            "capacity": 650,
+            "minCrew": 20,
+            "maxCrew": 300,
+            "durability": 80,
+            "power": 85,
+            "tacking": 60,
+            "maxGuns": 70,
+            "price": 224000,
+            "name": "프리깃"
+        },
+        {
+            "id": 15,
+            "capacity": 1000,
+            "minCrew": 40,
+            "maxCrew": 450,
+            "durability": 90,
+            "power": 65,
+            "tacking": 50,
+            "maxGuns": 120,
+            "price": 300000,
+            "name": "바그"
+        },
+        {
+            "id": 16,
+            "capacity": 1200,
+            "minCrew": 45,
+            "maxCrew": 500,
+            "durability": 90,
+            "power": 65,
+            "tacking": 50,
+            "maxGuns": 150,
+            "price": 320000,
+            "name": "쉽"
+        },
+        {
+            "id": 17,
+            "capacity": 500,
+            "minCrew": 25,
+            "maxCrew": 100,
+            "durability": 80,
+            "power": 70,
+            "tacking": 80,
+            "maxGuns": 40,
+            "price": 16000,
+            "name": "정크"
+        },
+        {
+            "id": 18,
+            "capacity": 120,
+            "minCrew": 5,
+            "maxCrew": 20,
+            "durability": 40,
+            "power": 85,
+            "tacking": 100,
+            "maxGuns": 10,
+            "price": 1400,
+            "name": "경 갤리"
+        },
+        {
+            "id": 19,
+            "capacity": 500,
+            "minCrew": 40,
+            "maxCrew": 200,
+            "durability": 80,
+            "power": 80,
+            "tacking": 75,
+            "maxGuns": 30,
+            "price": 34000,
+            "name": "플란더스 갤리"
+        },
+        {
+            "id": 20,
+            "capacity": 950,
+            "minCrew": 60,
+            "maxCrew": 400,
+            "durability": 90,
+            "power": 70,
+            "tacking": 70,
+            "maxGuns": 50,
+            "price": 64000,
+            "name": "베네치안 갤리스"
+        },
+        {
+            "id": 21,
+            "capacity": 450,
+            "minCrew": 30,
+            "maxCrew": 250,
+            "durability": 60,
+            "power": 100,
+            "tacking": 95,
+            "maxGuns": 40,
+            "price": 40000,
+            "name": "라레알"
+        },
+        {
+            "id": 22,
+            "capacity": 1100,
+            "minCrew": 45,
+            "maxCrew": 300,
+            "durability": 90,
+            "power": 85,
+            "tacking": 80,
+            "maxGuns": 100,
+            "price": 140000,
+            "name": "철갑선"
+        },
+        {
+            "id": 23,
+            "capacity": 500,
+            "minCrew": 20,
+            "maxCrew": 200,
+            "durability": 60,
+            "power": 95,
+            "tacking": 95,
+            "maxGuns": 40,
+            "price": 14000,
+            "name": "안택선"
+        },
+        {
+            "id": 24,
+            "capacity": 250,
+            "minCrew": 10,
+            "maxCrew": 60,
+            "durability": 30,
+            "power": 100,
+            "tacking": 100,
+            "maxGuns": 20,
+            "price": 2000,
+            "name": "관선"
+        }
+    ],
+    "items": [
+        {
+            "id": 0,
+            "rating": 5,
+            "price": 500,
+            "name": "단검",
+            "type": "검"
+        },
+        {
+            "id": 1,
+            "rating": 10,
+            "price": 1000,
+            "name": "소검",
+            "type": "검"
+        },
+        {
+            "id": 2,
+            "rating": 20,
+            "price": 4000,
+            "name": "장검",
+            "type": "검"
+        },
+        {
+            "id": 3,
+            "rating": 15,
+            "price": 3000,
+            "name": "레이피어",
+            "type": "직도"
+        },
+        {
+            "id": 4,
+            "rating": 10,
+            "price": 2000,
+            "name": "에페",
+            "type": "직도"
+        },
+        {
+            "id": 5,
+            "rating": 20,
+            "price": 6000,
+            "name": "에스터크",
+            "type": "직도"
+        },
+        {
+            "id": 6,
+            "rating": 10,
+            "price": 3000,
+            "name": "짧은 사브르",
+            "type": "곡도"
+        },
+        {
+            "id": 7,
+            "rating": 20,
+            "price": 8000,
+            "name": "시미터",
+            "type": "곡도"
+        },
+        {
+            "id": 8,
+            "rating": 25,
+            "price": 20000,
+            "name": "일본도",
+            "type": "곡도"
+        },
+        {
+            "id": 9,
+            "rating": 10,
+            "price": 1500,
+            "name": "커틀라스",
+            "type": "대검"
+        },
+        {
+            "id": 10,
+            "rating": 20,
+            "price": 5000,
+            "name": "넓은 검",
+            "type": "대검"
+        },
+        {
+            "id": 11,
+            "rating": 30,
+            "price": 24000,
+            "name": "청룡언월도",
+            "type": "대검"
+        },
+        {
+            "id": 12,
+            "rating": 25,
+            "price": 14000,
+            "name": "플람베르크",
+            "type": "직도"
+        },
+        {
+            "id": 13,
+            "rating": 25,
+            "price": 14000,
+            "name": "변종검",
+            "type": "검"
+        },
+        {
+            "id": 14,
+            "rating": 25,
+            "price": 15000,
+            "name": "클레이모어",
+            "type": "대검"
+        },
+        {
+            "id": 15,
+            "rating": 15,
+            "price": 3000,
+            "name": "사브르",
+            "type": "곡도"
+        },
+        {
+            "id": 16,
+            "rating": 10,
+            "price": 1000,
+            "name": "가죽 갑옷",
+            "type": "갑옷"
+        },
+        {
+            "id": 17,
+            "rating": 20,
+            "price": 2000,
+            "name": "사슬 갑옷",
+            "type": "갑옷"
+        },
+        {
+            "id": 18,
+            "rating": 30,
+            "price": 4000,
+            "name": "경장 판금 갑옷",
+            "type": "갑옷"
+        },
+        {
+            "id": 19,
+            "rating": 40,
+            "price": 8000,
+            "name": "판금 갑옷",
+            "type": "갑옷"
+        },
+        {
+            "id": 20,
+            "rating": 5,
+            "price": 4000,
+            "name": "사분의",
+            "type": "측량기"
+        },
+        {
+            "id": 21,
+            "rating": 2,
+            "price": 8000,
+            "name": "육분의",
+            "type": "측량기"
+        },
+        {
+            "id": 22,
+            "rating": 1,
+            "price": 12000,
+            "name": "경위의",
+            "type": "측량기"
+        },
+        {
+            "id": 23,
+            "rating": 1,
+            "price": 2000,
+            "name": "회중시계",
+            "type": "항해용품"
+        },
+        {
+            "id": 24,
+            "rating": 1,
+            "price": 5000,
+            "name": "망원경",
+            "type": "항해용품"
+        },
+        {
+            "id": 25,
+            "rating": 1,
+            "price": 2000,
+            "name": "고양이",
+            "type": "항해용품"
+        },
+        {
+            "id": 26,
+            "rating": 25,
+            "price": 18000,
+            "name": "백호반월도",
+            "type": "대검"
+        },
+        {
+            "id": 27,
+            "rating": 0,
+            "price": 0,
+            "name": "공백",
+            "type": "소모품"
+        },
+        {
+            "id": 28,
+            "rating": 0,
+            "price": 0,
+            "name": "공백",
+            "type": "소모품"
+        },
+        {
+            "id": 29,
+            "rating": 0,
+            "price": 0,
+            "name": "사략허가서(P)",
+            "type": "항해용품"
+        },
+        {
+            "id": 30,
+            "rating": 0,
+            "price": 0,
+            "name": "사략허가서(S)",
+            "type": "항해용품"
+        },
+        {
+            "id": 31,
+            "rating": 0,
+            "price": 0,
+            "name": "사략허가서(O)",
+            "type": "항해용품"
+        },
+        {
+            "id": 32,
+            "rating": 0,
+            "price": 0,
+            "name": "사략허가서(E)",
+            "type": "항해용품"
+        },
+        {
+            "id": 33,
+            "rating": 0,
+            "price": 0,
+            "name": "사략허가서(I)",
+            "type": "항해용품"
+        },
+        {
+            "id": 34,
+            "rating": 0,
+            "price": 0,
+            "name": "사략허가서(H)",
+            "type": "항해용품"
+        },
+        {
+            "id": 35,
+            "rating": 0,
+            "price": 10000,
+            "name": "면세증(P)",
+            "type": "항해용품"
+        },
+        {
+            "id": 36,
+            "rating": 0,
+            "price": 10000,
+            "name": "면세증(S)",
+            "type": "항해용품"
+        },
+        {
+            "id": 37,
+            "rating": 0,
+            "price": 10000,
+            "name": "면세증(O)",
+            "type": "항해용품"
+        },
+        {
+            "id": 38,
+            "rating": 0,
+            "price": 10000,
+            "name": "면세증(E)",
+            "type": "항해용품"
+        },
+        {
+            "id": 39,
+            "rating": 0,
+            "price": 10000,
+            "name": "면세증(I)",
+            "type": "항해용품"
+        },
+        {
+            "id": 40,
+            "rating": 0,
+            "price": 10000,
+            "name": "면세증(H)",
+            "type": "항해용품"
+        },
+        {
+            "id": 41,
+            "rating": 1,
+            "price": 500,
+            "name": "쥐약",
+            "type": "소모품"
+        },
+        {
+            "id": 42,
+            "rating": 1,
+            "price": 1000,
+            "name": "성스러운 향유",
+            "type": "소모품"
+        },
+        {
+            "id": 43,
+            "rating": 1,
+            "price": 1000,
+            "name": "라임 주스",
+            "type": "소모품"
+        },
+        {
+            "id": 44,
+            "rating": 1,
+            "price": 300000,
+            "name": "왕관",
+            "type": "장신구"
+        },
+        {
+            "id": 45,
+            "rating": 0,
+            "price": 0,
+            "name": "공백",
+            "type": "소모품"
+        },
+        {
+            "id": 46,
+            "rating": 0,
+            "price": 0,
+            "name": "속죄상",
+            "type": "소모품"
+        },
+        {
+            "id": 47,
+            "rating": 0,
+            "price": 0,
+            "name": "면죄부",
+            "type": "소모품"
+        },
+        {
+            "id": 48,
+            "rating": 0,
+            "price": 0,
+            "name": "공백",
+            "type": "소모품"
+        },
+        {
+            "id": 49,
+            "rating": 0,
+            "price": 0,
+            "name": "공백",
+            "type": "소모품"
+        },
+        {
+            "id": 50,
+            "rating": 3,
+            "price": 3000,
+            "name": "비단 숄",
+            "type": "장신구"
+        },
+        {
+            "id": 51,
+            "rating": 8,
+            "price": 8000,
+            "name": "키타이 의상",
+            "type": "장신구"
+        },
+        {
+            "id": 52,
+            "rating": 5,
+            "price": 5000,
+            "name": "은제 머리장식",
+            "type": "장신구"
+        },
+        {
+            "id": 53,
+            "rating": 10,
+            "price": 10000,
+            "name": "백금 머리빗",
+            "type": "장신구"
+        },
+        {
+            "id": 54,
+            "rating": 12,
+            "price": 12000,
+            "name": "담비털 가운",
+            "type": "장신구"
+        },
+        {
+            "id": 55,
+            "rating": 4,
+            "price": 4000,
+            "name": "장식고리관",
+            "type": "장신구"
+        },
+        {
+            "id": 56,
+            "rating": 3,
+            "price": 3000,
+            "name": "공작 깃털 부채",
+            "type": "장신구"
+        },
+        {
+            "id": 57,
+            "rating": 2,
+            "price": 1000,
+            "name": "비단 옷감",
+            "type": "장신구"
+        },
+        {
+            "id": 58,
+            "rating": 5,
+            "price": 5000,
+            "name": "우단 가운",
+            "type": "장신구"
+        },
+        {
+            "id": 59,
+            "rating": 100,
+            "price": 100000,
+            "name": "금강석 왕관",
+            "type": "보물"
+        },
+        {
+            "id": 60,
+            "rating": 10,
+            "price": 10000,
+            "name": "진주 팔찌",
+            "type": "보물"
+        },
+        {
+            "id": 61,
+            "rating": 50,
+            "price": 50000,
+            "name": "홍옥석 지팡이",
+            "type": "보물"
+        },
+        {
+            "id": 62,
+            "rating": 3,
+            "price": 3000,
+            "name": "은촛대",
+            "type": "보물"
+        },
+        {
+            "id": 63,
+            "rating": 20,
+            "price": 20000,
+            "name": "비취 보석 상자",
+            "type": "보물"
+        },
+        {
+            "id": 64,
+            "rating": 60,
+            "price": 50000,
+            "name": "보관",
+            "type": "보물"
+        },
+        {
+            "id": 65,
+            "rating": 15,
+            "price": 15000,
+            "name": "금팔찌",
+            "type": "보물"
+        },
+        {
+            "id": 66,
+            "rating": 20,
+            "price": 18000,
+            "name": "청옥석 반지",
+            "type": "보물"
+        },
+        {
+            "id": 67,
+            "rating": 10,
+            "price": 8000,
+            "name": "공작석 상자",
+            "type": "보물"
+        },
+        {
+            "id": 68,
+            "rating": 20,
+            "price": 20000,
+            "name": "백금 브로치",
+            "type": "보물"
+        },
+        {
+            "id": 69,
+            "rating": 25,
+            "price": 22000,
+            "name": "청금석 반지",
+            "type": "보물"
+        },
+        {
+            "id": 70,
+            "rating": 0,
+            "price": 0,
+            "name": "１０６",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 71,
+            "rating": 0,
+            "price": 0,
+            "name": "벤다데칸",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 72,
+            "rating": 0,
+            "price": 0,
+            "name": "착세스",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 73,
+            "rating": 40,
+            "price": 380000,
+            "name": "무라마사",
+            "type": "곡도"
+        },
+        {
+            "id": 74,
+            "rating": 40,
+            "price": 360000,
+            "name": "룬검",
+            "type": "검"
+        },
+        {
+            "id": 75,
+            "rating": 70,
+            "price": 600000,
+            "name": "성기사의 갑옷",
+            "type": "갑옷"
+        },
+        {
+            "id": 76,
+            "rating": 40,
+            "price": 380000,
+            "name": "성기사의 검",
+            "type": "직도"
+        },
+        {
+            "id": 77,
+            "rating": 30,
+            "price": 280000,
+            "name": "시바의 마검",
+            "type": "곡도"
+        },
+        {
+            "id": 78,
+            "rating": 55,
+            "price": 300000,
+            "name": "에롤의 갑옷",
+            "type": "갑옷"
+        },
+        {
+            "id": 79,
+            "rating": 0,
+            "price": 0,
+            "name": "예비",
+            "type": "소모품"
+        },
+        {
+            "id": 80,
+            "rating": 86,
+            "price": 0,
+            "name": "가면의 지도",
+            "type": "지도"
+        },
+        {
+            "id": 81,
+            "rating": 58,
+            "price": 0,
+            "name": "제단의 지도",
+            "type": "지도"
+        },
+        {
+            "id": 82,
+            "rating": 2,
+            "price": 0,
+            "name": "조각상의 지도",
+            "type": "지도"
+        },
+        {
+            "id": 83,
+            "rating": 13,
+            "price": 0,
+            "name": "석판의 지도",
+            "type": "지도"
+        },
+        {
+            "id": 84,
+            "rating": 88,
+            "price": 0,
+            "name": "수정구슬의 지도",
+            "type": "지도"
+        },
+        {
+            "id": 85,
+            "rating": 63,
+            "price": 0,
+            "name": "항아리의 지도",
+            "type": "지도"
+        },
+        {
+            "id": 86,
+            "rating": 90,
+            "price": 0,
+            "name": "보검의 지도",
+            "type": "지도"
+        },
+        {
+            "id": 87,
+            "rating": 56,
+            "price": 0,
+            "name": "메달의 지도",
+            "type": "지도"
+        },
+        {
+            "id": 88,
+            "rating": 33,
+            "price": 0,
+            "name": "지팡이의 지도",
+            "type": "지도"
+        },
+        {
+            "id": 89,
+            "rating": 44,
+            "price": 0,
+            "name": "낡은 지도",
+            "type": "지도"
+        },
+        {
+            "id": 90,
+            "rating": 0,
+            "price": 0,
+            "name": "순금 가면",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 91,
+            "rating": 0,
+            "price": 0,
+            "name": "비취옥 제단",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 92,
+            "rating": 0,
+            "price": 0,
+            "name": "고대신의 조각상",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 93,
+            "rating": 0,
+            "price": 0,
+            "name": "흑요석 석판",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 94,
+            "rating": 0,
+            "price": 0,
+            "name": "암흑신의 수정구슬",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 95,
+            "rating": 0,
+            "price": 0,
+            "name": "불 뿜는 항아리",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 96,
+            "rating": 0,
+            "price": 0,
+            "name": "파괴신의 보검",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 97,
+            "rating": 0,
+            "price": 0,
+            "name": "황금 메달",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 98,
+            "rating": 0,
+            "price": 0,
+            "name": "성자의 지팡이",
+            "type": "국보급 보물"
+        },
+        {
+            "id": 99,
+            "rating": 0,
+            "price": 0,
+            "name": "최후의 보물",
+            "type": "국보급 보물"
+        }
+    ],
+    "sailors": [
+        {
+            "id": 0,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "nation": 0,
+            "skills": 1,
+            "name": "조안 페레로",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 1,
+            "navigationLevel": 8,
+            "battleLevel": 10,
+            "nation": 1,
+            "skills": 4,
+            "name": "카탈리나 에란초",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 2,
+            "navigationLevel": 10,
+            "battleLevel": 12,
+            "nation": 3,
+            "skills": 4,
+            "name": "오토 베인스",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 3,
+            "navigationLevel": 11,
+            "battleLevel": 1,
+            "nation": 5,
+            "skills": 24,
+            "name": "에르네스트 폰 보어",
+            "nationName": "네덜란드",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 4,
+            "navigationLevel": 4,
+            "battleLevel": 1,
+            "nation": 4,
+            "skills": 16,
+            "name": "피에트로 콘티",
+            "nationName": "이탈리아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 5,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "nation": 2,
+            "skills": 3,
+            "name": "알 베자스",
+            "nationName": "오스만제국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 6,
+            "navigationLevel": 14,
+            "battleLevel": 15,
+            "nation": 0,
+            "skills": 27,
+            "name": "사이몬 세게이라",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 7,
+            "navigationLevel": 17,
+            "battleLevel": 17,
+            "nation": 0,
+            "skills": 22,
+            "name": "루이 코스타",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 8,
+            "navigationLevel": 11,
+            "battleLevel": 11,
+            "nation": 0,
+            "skills": 2,
+            "name": "로렌소 페론",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 9,
+            "navigationLevel": 11,
+            "battleLevel": 12,
+            "nation": 0,
+            "skills": 17,
+            "name": "로파오 페레이라",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 10,
+            "navigationLevel": 15,
+            "battleLevel": 15,
+            "nation": 0,
+            "skills": 20,
+            "name": "라파엘 셀란",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 11,
+            "navigationLevel": 9,
+            "battleLevel": 11,
+            "nation": 0,
+            "skills": 4,
+            "name": "디에고 소사",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 12,
+            "navigationLevel": 9,
+            "battleLevel": 11,
+            "nation": 0,
+            "skills": 16,
+            "name": "알퐁소 안드레드",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 13,
+            "navigationLevel": 14,
+            "battleLevel": 16,
+            "nation": 0,
+            "skills": 28,
+            "name": "가르시아 알바레스",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 14,
+            "navigationLevel": 8,
+            "battleLevel": 8,
+            "nation": 0,
+            "skills": 0,
+            "name": "곤살로 실베이라",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 15,
+            "navigationLevel": 14,
+            "battleLevel": 15,
+            "nation": 1,
+            "skills": 23,
+            "name": "에스테반 오르테가",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 16,
+            "navigationLevel": 10,
+            "battleLevel": 8,
+            "nation": 1,
+            "skills": 17,
+            "name": "카를로스 아라곤",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 17,
+            "navigationLevel": 8,
+            "battleLevel": 10,
+            "nation": 1,
+            "skills": 2,
+            "name": "리카르도 자파타",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 18,
+            "navigationLevel": 13,
+            "battleLevel": 16,
+            "nation": 1,
+            "skills": 23,
+            "name": "후안 산타나",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 19,
+            "navigationLevel": 16,
+            "battleLevel": 17,
+            "nation": 1,
+            "skills": 28,
+            "name": "토니오 보르티아가",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 20,
+            "navigationLevel": 16,
+            "battleLevel": 17,
+            "nation": 1,
+            "skills": 20,
+            "name": "우고 몬토야",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 21,
+            "navigationLevel": 9,
+            "battleLevel": 10,
+            "nation": 1,
+            "skills": 0,
+            "name": "사비에르 나바로",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 22,
+            "navigationLevel": 11,
+            "battleLevel": 11,
+            "nation": 1,
+            "skills": 20,
+            "name": "베르날 로욜라",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 23,
+            "navigationLevel": 16,
+            "battleLevel": 16,
+            "nation": 1,
+            "skills": 20,
+            "name": "에르난 차베스",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 24,
+            "navigationLevel": 12,
+            "battleLevel": 11,
+            "nation": 2,
+            "skills": 19,
+            "name": "야지드 쉬바즈",
+            "nationName": "오스만제국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 25,
+            "navigationLevel": 10,
+            "battleLevel": 8,
+            "nation": 2,
+            "skills": 3,
+            "name": "말리코 야살",
+            "nationName": "오스만제국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 26,
+            "navigationLevel": 17,
+            "battleLevel": 14,
+            "nation": 2,
+            "skills": 27,
+            "name": "벨레히 압둘",
+            "nationName": "오스만제국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 27,
+            "navigationLevel": 14,
+            "battleLevel": 17,
+            "nation": 2,
+            "skills": 19,
+            "name": "마르와노 핫산",
+            "nationName": "오스만제국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 28,
+            "navigationLevel": 14,
+            "battleLevel": 16,
+            "nation": 2,
+            "skills": 28,
+            "name": "라쉬드 잡파",
+            "nationName": "오스만제국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 29,
+            "navigationLevel": 15,
+            "battleLevel": 17,
+            "nation": 2,
+            "skills": 20,
+            "name": "왈리드 케말",
+            "nationName": "오스만제국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 30,
+            "navigationLevel": 11,
+            "battleLevel": 12,
+            "nation": 2,
+            "skills": 20,
+            "name": "아프메드 무하에딘",
+            "nationName": "오스만제국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 31,
+            "navigationLevel": 9,
+            "battleLevel": 8,
+            "nation": 2,
+            "skills": 0,
+            "name": "살라 헤이스칼",
+            "nationName": "오스만제국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 32,
+            "navigationLevel": 13,
+            "battleLevel": 15,
+            "nation": 2,
+            "skills": 20,
+            "name": "싯다드 케빈",
+            "nationName": "오스만제국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 33,
+            "navigationLevel": 14,
+            "battleLevel": 15,
+            "nation": 3,
+            "skills": 27,
+            "name": "조셉 이스트만",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 34,
+            "navigationLevel": 8,
+            "battleLevel": 11,
+            "nation": 3,
+            "skills": 17,
+            "name": "토마스 그리샴",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 35,
+            "navigationLevel": 17,
+            "battleLevel": 13,
+            "nation": 3,
+            "skills": 26,
+            "name": "콜린 로우",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 36,
+            "navigationLevel": 9,
+            "battleLevel": 8,
+            "nation": 3,
+            "skills": 1,
+            "name": "에드먼드 하베이",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 37,
+            "navigationLevel": 14,
+            "battleLevel": 15,
+            "nation": 3,
+            "skills": 28,
+            "name": "로버트 와일드",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 38,
+            "navigationLevel": 16,
+            "battleLevel": 13,
+            "nation": 3,
+            "skills": 20,
+            "name": "빅터 러셀",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 39,
+            "navigationLevel": 11,
+            "battleLevel": 10,
+            "nation": 3,
+            "skills": 20,
+            "name": "윌리엄 클라이브",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 40,
+            "navigationLevel": 8,
+            "battleLevel": 8,
+            "nation": 3,
+            "skills": 0,
+            "name": "월터 로렌스",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 41,
+            "navigationLevel": 11,
+            "battleLevel": 10,
+            "nation": 3,
+            "skills": 20,
+            "name": "찰스 그라프튼",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 42,
+            "navigationLevel": 16,
+            "battleLevel": 17,
+            "nation": 4,
+            "skills": 29,
+            "name": "구이도 벤조",
+            "nationName": "이탈리아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 43,
+            "navigationLevel": 12,
+            "battleLevel": 10,
+            "nation": 4,
+            "skills": 17,
+            "name": "조셉페 아를리오",
+            "nationName": "이탈리아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 44,
+            "navigationLevel": 12,
+            "battleLevel": 10,
+            "nation": 4,
+            "skills": 1,
+            "name": "산티노 아마디오",
+            "nationName": "이탈리아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 45,
+            "navigationLevel": 15,
+            "battleLevel": 16,
+            "nation": 4,
+            "skills": 29,
+            "name": "조반니 알덴테",
+            "nationName": "이탈리아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 46,
+            "navigationLevel": 9,
+            "battleLevel": 10,
+            "nation": 4,
+            "skills": 4,
+            "name": "안드레아 그리마니",
+            "nationName": "이탈리아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 47,
+            "navigationLevel": 11,
+            "battleLevel": 12,
+            "nation": 4,
+            "skills": 20,
+            "name": "가브리엘 칸놀리",
+            "nationName": "이탈리아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 48,
+            "navigationLevel": 20,
+            "battleLevel": 21,
+            "nation": 4,
+            "skills": 28,
+            "name": "루이지 만지아",
+            "nationName": "이탈리아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 49,
+            "navigationLevel": 27,
+            "battleLevel": 30,
+            "nation": 4,
+            "skills": 28,
+            "name": "비토리오 도리아",
+            "nationName": "이탈리아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 50,
+            "navigationLevel": 9,
+            "battleLevel": 9,
+            "nation": 4,
+            "skills": 0,
+            "name": "콜럼부 바카",
+            "nationName": "이탈리아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 51,
+            "navigationLevel": 13,
+            "battleLevel": 15,
+            "nation": 5,
+            "skills": 27,
+            "name": "후고 올재크",
+            "nationName": "네덜란드",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 52,
+            "navigationLevel": 10,
+            "battleLevel": 11,
+            "nation": 5,
+            "skills": 26,
+            "name": "마히온 글로티스",
+            "nationName": "네덜란드",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 53,
+            "navigationLevel": 9,
+            "battleLevel": 10,
+            "nation": 5,
+            "skills": 19,
+            "name": "쥬일리스 후인",
+            "nationName": "네덜란드",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 54,
+            "navigationLevel": 12,
+            "battleLevel": 11,
+            "nation": 5,
+            "skills": 26,
+            "name": "모그이스 라이든",
+            "nationName": "네덜란드",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 55,
+            "navigationLevel": 10,
+            "battleLevel": 8,
+            "nation": 5,
+            "skills": 16,
+            "name": "리오니 반 후이크",
+            "nationName": "네덜란드",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 56,
+            "navigationLevel": 15,
+            "battleLevel": 15,
+            "nation": 5,
+            "skills": 28,
+            "name": "빌렘 하인",
+            "nationName": "네덜란드",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 57,
+            "navigationLevel": 12,
+            "battleLevel": 8,
+            "nation": 5,
+            "skills": 16,
+            "name": "율리안 펠머",
+            "nationName": "네덜란드",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 58,
+            "navigationLevel": 8,
+            "battleLevel": 10,
+            "nation": 5,
+            "skills": 28,
+            "name": "고든 헨드리크",
+            "nationName": "네덜란드",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 59,
+            "navigationLevel": 13,
+            "battleLevel": 15,
+            "nation": 5,
+            "skills": 28,
+            "name": "잭크 비즌",
+            "nationName": "네덜란드",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 60,
+            "navigationLevel": 7,
+            "battleLevel": 16,
+            "nation": 0,
+            "skills": 0,
+            "name": "안토니우 칸",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 61,
+            "navigationLevel": 9,
+            "battleLevel": 12,
+            "nation": 6,
+            "skills": 16,
+            "name": "피에르 루귤롱",
+            "nationName": "해적",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 62,
+            "navigationLevel": 11,
+            "battleLevel": 16,
+            "nation": 6,
+            "skills": 20,
+            "name": "루이스 스콧",
+            "nationName": "해적",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 63,
+            "navigationLevel": 10,
+            "battleLevel": 14,
+            "nation": 6,
+            "skills": 0,
+            "name": "존 데이비스",
+            "nationName": "해적",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 64,
+            "navigationLevel": 18,
+            "battleLevel": 32,
+            "nation": 6,
+            "skills": 28,
+            "name": "하이레딘 레이스",
+            "nationName": "해적",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 65,
+            "navigationLevel": 16,
+            "battleLevel": 30,
+            "nation": 6,
+            "skills": 4,
+            "name": "아이딘 레이스",
+            "nationName": "해적",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 66,
+            "navigationLevel": 20,
+            "battleLevel": 31,
+            "nation": 6,
+            "skills": 28,
+            "name": "마호메드 샤이아룩",
+            "nationName": "해적",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 67,
+            "navigationLevel": 21,
+            "battleLevel": 28,
+            "nation": 6,
+            "skills": 28,
+            "name": "올고후 알리",
+            "nationName": "해적",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 68,
+            "navigationLevel": 9,
+            "battleLevel": 13,
+            "nation": 6,
+            "skills": 0,
+            "name": "잭 라캄",
+            "nationName": "해적",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 69,
+            "navigationLevel": 30,
+            "battleLevel": 32,
+            "nation": 0,
+            "skills": 20,
+            "name": "로코 알렘켈",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 70,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "nation": 0,
+            "skills": 2,
+            "name": "엔리코 말리오네",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 71,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "nation": 0,
+            "skills": 1,
+            "name": "도밍고 마나나",
+            "nationName": "포르투갈",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 72,
+            "navigationLevel": 8,
+            "battleLevel": 11,
+            "nation": 1,
+            "skills": 20,
+            "name": "프랑코 사누드",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 73,
+            "navigationLevel": 9,
+            "battleLevel": 15,
+            "nation": 1,
+            "skills": 20,
+            "name": "안드레아 기지",
+            "nationName": "에스파니아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 74,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "nation": 3,
+            "skills": 0,
+            "name": "에드먼드 길버트",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 75,
+            "navigationLevel": 7,
+            "battleLevel": 10,
+            "nation": 3,
+            "skills": 20,
+            "name": "매튜 로이",
+            "nationName": "영국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 76,
+            "navigationLevel": 3,
+            "battleLevel": 2,
+            "nation": 4,
+            "skills": 18,
+            "name": "카밀로 스테파노",
+            "nationName": "이탈리아",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 77,
+            "navigationLevel": 10,
+            "battleLevel": 2,
+            "nation": 5,
+            "skills": 16,
+            "name": "로이드 스타텐",
+            "nationName": "네덜란드",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 78,
+            "navigationLevel": 3,
+            "battleLevel": 7,
+            "nation": 2,
+            "skills": 20,
+            "name": "자한 살림",
+            "nationName": "오스만제국",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 79,
+            "navigationLevel": 60,
+            "battleLevel": 50,
+            "nation": 2,
+            "skills": 31,
+            "name": "필리 레이스",
+            "nationName": "오스만제국",
+            "port": "이스탄불"
+        },
+        {
+            "id": 80,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "nation": 2,
+            "skills": 0,
+            "name": "아프메드 글라니",
+            "nationName": "오스만제국",
+            "port": "알렉산드리아"
+        },
+        {
+            "id": 81,
+            "navigationLevel": 2,
+            "battleLevel": 3,
+            "nation": 2,
+            "skills": 2,
+            "name": "알 파시",
+            "nationName": "오스만제국",
+            "port": "트리폴리"
+        },
+        {
+            "id": 82,
+            "navigationLevel": 2,
+            "battleLevel": 1,
+            "nation": 2,
+            "skills": 3,
+            "name": "자가노스 베이",
+            "nationName": "오스만제국",
+            "port": "카이로"
+        },
+        {
+            "id": 83,
+            "navigationLevel": 12,
+            "battleLevel": 7,
+            "nation": 0,
+            "skills": 24,
+            "name": "페르난 핀토",
+            "nationName": "포르투갈",
+            "port": "베네치아"
+        },
+        {
+            "id": 84,
+            "navigationLevel": 2,
+            "battleLevel": 1,
+            "nation": 0,
+            "skills": 0,
+            "name": "호베르투 아만잔",
+            "nationName": "포르투갈",
+            "port": "제노바"
+        },
+        {
+            "id": 85,
+            "navigationLevel": 7,
+            "battleLevel": 6,
+            "nation": 0,
+            "skills": 21,
+            "name": "미구엘 솔리스",
+            "nationName": "포르투갈",
+            "port": "리스본"
+        },
+        {
+            "id": 86,
+            "navigationLevel": 6,
+            "battleLevel": 6,
+            "nation": 0,
+            "skills": 0,
+            "name": "디에고 파군지스",
+            "nationName": "포르투갈",
+            "port": "발렌시아"
+        },
+        {
+            "id": 87,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "nation": 0,
+            "skills": 16,
+            "name": "단치 페레이라",
+            "nationName": "포르투갈",
+            "port": "나폴리"
+        },
+        {
+            "id": 88,
+            "navigationLevel": 2,
+            "battleLevel": 2,
+            "nation": 0,
+            "skills": 0,
+            "name": "마누엘 멜구아스",
+            "nationName": "포르투갈",
+            "port": "캘리컷"
+        },
+        {
+            "id": 89,
+            "navigationLevel": 5,
+            "battleLevel": 5,
+            "nation": 0,
+            "skills": 4,
+            "name": "시스코 알바레스",
+            "nationName": "포르투갈",
+            "port": "페르남부쿠"
+        },
+        {
+            "id": 90,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "nation": 0,
+            "skills": 16,
+            "name": "루이 파레이루",
+            "nationName": "포르투갈",
+            "port": "스톡홀름"
+        },
+        {
+            "id": 91,
+            "navigationLevel": 1,
+            "battleLevel": 2,
+            "nation": 1,
+            "skills": 0,
+            "name": "루카 올만",
+            "nationName": "에스파니아",
+            "port": "바르셀로나"
+        },
+        {
+            "id": 92,
+            "navigationLevel": 13,
+            "battleLevel": 8,
+            "nation": 1,
+            "skills": 21,
+            "name": "사비노 발보아",
+            "nationName": "에스파니아",
+            "port": "메카"
+        },
+        {
+            "id": 93,
+            "navigationLevel": 14,
+            "battleLevel": 12,
+            "nation": 1,
+            "skills": 26,
+            "name": "베니토 고메스",
+            "nationName": "에스파니아",
+            "port": "알렉산드리아"
+        },
+        {
+            "id": 94,
+            "navigationLevel": 11,
+            "battleLevel": 7,
+            "nation": 1,
+            "skills": 17,
+            "name": "베르나르도 산체스",
+            "nationName": "에스파니아",
+            "port": "세비야"
+        },
+        {
+            "id": 95,
+            "navigationLevel": 6,
+            "battleLevel": 5,
+            "nation": 1,
+            "skills": 20,
+            "name": "오마르 카사니",
+            "nationName": "에스파니아",
+            "port": "카라카스"
+        },
+        {
+            "id": 96,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "nation": 1,
+            "skills": 0,
+            "name": "알론소 오레이다",
+            "nationName": "에스파니아",
+            "port": "리스본"
+        },
+        {
+            "id": 97,
+            "navigationLevel": 2,
+            "battleLevel": 3,
+            "nation": 3,
+            "skills": 20,
+            "name": "거스 존슨",
+            "nationName": "영국",
+            "port": "아테네"
+        },
+        {
+            "id": 98,
+            "navigationLevel": 7,
+            "battleLevel": 9,
+            "nation": 3,
+            "skills": 5,
+            "name": "로렌스 에드워즈",
+            "nationName": "영국",
+            "port": "런던"
+        },
+        {
+            "id": 99,
+            "navigationLevel": 2,
+            "battleLevel": 1,
+            "nation": 3,
+            "skills": 18,
+            "name": "안투안 핏치",
+            "nationName": "영국",
+            "port": "런던"
+        },
+        {
+            "id": 100,
+            "navigationLevel": 2,
+            "battleLevel": 1,
+            "nation": 3,
+            "skills": 0,
+            "name": "안토니 모간",
+            "nationName": "영국",
+            "port": "브리스톨"
+        },
+        {
+            "id": 101,
+            "navigationLevel": 14,
+            "battleLevel": 9,
+            "nation": 4,
+            "skills": 17,
+            "name": "알로이지 조반니",
+            "nationName": "이탈리아",
+            "port": "세비야"
+        },
+        {
+            "id": 102,
+            "navigationLevel": 2,
+            "battleLevel": 2,
+            "nation": 4,
+            "skills": 0,
+            "name": "프릿사 램지",
+            "nationName": "이탈리아",
+            "port": "피사"
+        },
+        {
+            "id": 103,
+            "navigationLevel": 8,
+            "battleLevel": 5,
+            "nation": 4,
+            "skills": 16,
+            "name": "니콜로 몬타니아",
+            "nationName": "이탈리아",
+            "port": "제노바"
+        },
+        {
+            "id": 104,
+            "navigationLevel": 7,
+            "battleLevel": 8,
+            "nation": 4,
+            "skills": 4,
+            "name": "아메리고 바지오",
+            "nationName": "이탈리아",
+            "port": "트레비존드"
+        },
+        {
+            "id": 105,
+            "navigationLevel": 5,
+            "battleLevel": 5,
+            "nation": 4,
+            "skills": 0,
+            "name": "카르미네 라구사",
+            "nationName": "이탈리아",
+            "port": "이스탄불"
+        },
+        {
+            "id": 106,
+            "navigationLevel": 5,
+            "battleLevel": 6,
+            "nation": 5,
+            "skills": 0,
+            "name": "클라우스 쇼든",
+            "nationName": "네덜란드",
+            "port": "암스테르담"
+        },
+        {
+            "id": 107,
+            "navigationLevel": 1,
+            "battleLevel": 2,
+            "nation": 5,
+            "skills": 0,
+            "name": "암부아스 엔거",
+            "nationName": "네덜란드",
+            "port": "실론"
+        },
+        {
+            "id": 108,
+            "navigationLevel": 3,
+            "battleLevel": 4,
+            "nation": 5,
+            "skills": 16,
+            "name": "게오르그 슈올",
+            "nationName": "네덜란드",
+            "port": "고아"
+        },
+        {
+            "id": 109,
+            "navigationLevel": 7,
+            "battleLevel": 9,
+            "nation": 5,
+            "skills": 24,
+            "name": "파트리크 토만",
+            "nationName": "네덜란드",
+            "port": "암스테르담"
+        },
+        {
+            "id": 110,
+            "navigationLevel": 5,
+            "battleLevel": 3,
+            "nation": 5,
+            "skills": 2,
+            "name": "야콥 발바이크",
+            "nationName": "네덜란드",
+            "port": "보르도"
+        },
+        {
+            "id": 111,
+            "navigationLevel": 1,
+            "battleLevel": 3,
+            "nation": 6,
+            "skills": 4,
+            "name": "아이반 솔다드",
+            "nationName": "해적",
+            "port": "산토도밍고"
+        },
+        {
+            "id": 112,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "nation": 6,
+            "skills": 0,
+            "name": "안토니오 핀타도",
+            "nationName": "해적",
+            "port": "상조르즈"
+        },
+        {
+            "id": 113,
+            "navigationLevel": 1,
+            "battleLevel": 2,
+            "nation": 6,
+            "skills": 4,
+            "name": "치차로 페델리드",
+            "nationName": "해적",
+            "port": "마르세유"
+        },
+        {
+            "id": 114,
+            "navigationLevel": 9,
+            "battleLevel": 15,
+            "nation": 6,
+            "skills": 20,
+            "name": "하미드 랄",
+            "nationName": "해적",
+            "port": "고정 항구 없음"
+        },
+        {
+            "id": 115,
+            "navigationLevel": 2,
+            "battleLevel": 3,
+            "nation": 6,
+            "skills": 4,
+            "name": "헨리 만사인",
+            "nationName": "해적",
+            "port": "몸바사"
+        },
+        {
+            "id": 116,
+            "navigationLevel": 1,
+            "battleLevel": 1,
+            "nation": 6,
+            "skills": 4,
+            "name": "게오르그 에겔",
+            "nationName": "해적",
+            "port": "함부르크"
+        },
+        {
+            "id": 117,
+            "navigationLevel": 5,
+            "battleLevel": 8,
+            "nation": 6,
+            "skills": 20,
+            "name": "잭 딥슨",
+            "nationName": "해적",
+            "port": "나가사키"
+        },
+        {
+            "id": 118,
+            "navigationLevel": 9,
+            "battleLevel": 12,
+            "nation": 6,
+            "skills": 20,
+            "name": "로버트 도나휴",
+            "nationName": "해적",
+            "port": "소팔라"
+        },
+        {
+            "id": 119,
+            "navigationLevel": 1,
+            "battleLevel": 2,
+            "nation": 6,
+            "skills": 4,
+            "name": "리처드 헉슬리",
+            "nationName": "해적",
+            "port": "자메이카"
+        }
+    ],
+    "discoveries": [
+        {
+            "id": 0,
+            "x": 168,
+            "y": 270,
+            "difficulty": 10,
+            "name": "스톤헨지",
+            "type": "유적",
+            "activeHeroes": [
+                2
+            ]
+        },
+        {
+            "id": 1,
+            "x": 354,
+            "y": 418,
+            "difficulty": 10,
+            "name": "로제타 석",
+            "type": "유적",
+            "activeHeroes": [
+                0,
+                2,
+                4
+            ]
+        },
+        {
+            "id": 2,
+            "x": 364,
+            "y": 444,
+            "difficulty": 30,
+            "name": "피라미드",
+            "type": "유적",
+            "activeHeroes": [
+                3,
+                5
+            ]
+        },
+        {
+            "id": 3,
+            "x": 386,
+            "y": 502,
+            "difficulty": 30,
+            "name": "크로커다일",
+            "type": "괴물",
+            "activeHeroes": [
+                3
+            ]
+        },
+        {
+            "id": 4,
+            "x": 374,
+            "y": 536,
+            "difficulty": 35,
+            "name": "누비아 피라미드",
+            "type": "유적",
+            "activeHeroes": [
+                0,
+                4
+            ]
+        },
+        {
+            "id": 5,
+            "x": 398,
+            "y": 562,
+            "difficulty": 30,
+            "name": "청나일 폭포",
+            "type": "자연",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                5
+            ]
+        },
+        {
+            "id": 6,
+            "x": 368,
+            "y": 566,
+            "difficulty": 30,
+            "name": "누바족",
+            "type": "원주민",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                5
+            ]
+        },
+        {
+            "id": 7,
+            "x": 382,
+            "y": 600,
+            "difficulty": 40,
+            "name": "콩가마토",
+            "type": "괴물",
+            "activeHeroes": [
+                0,
+                1,
+                3
+            ]
+        },
+        {
+            "id": 8,
+            "x": 376,
+            "y": 640,
+            "difficulty": 20,
+            "name": "니안자 호",
+            "type": "자연",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 9,
+            "x": 228,
+            "y": 632,
+            "difficulty": 30,
+            "name": "디오고 캉의 비석",
+            "type": "유적",
+            "activeHeroes": [
+                0,
+                1,
+                3,
+                4
+            ]
+        },
+        {
+            "id": 10,
+            "x": 194,
+            "y": 550,
+            "difficulty": 40,
+            "name": "도곤족",
+            "type": "원주민",
+            "activeHeroes": [
+                0,
+                3,
+                4
+            ]
+        },
+        {
+            "id": 11,
+            "x": 164,
+            "y": 530,
+            "difficulty": 30,
+            "name": "마타이족",
+            "type": "원주민",
+            "activeHeroes": [
+                4
+            ]
+        },
+        {
+            "id": 12,
+            "x": 254,
+            "y": 688,
+            "difficulty": 25,
+            "name": "아르마딜로",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                1
+            ]
+        },
+        {
+            "id": 13,
+            "x": 282,
+            "y": 648,
+            "difficulty": 70,
+            "name": "모켈레 음벰베",
+            "type": "괴물",
+            "activeHeroes": [
+                3,
+                5
+            ]
+        },
+        {
+            "id": 14,
+            "x": 330,
+            "y": 644,
+            "difficulty": 20,
+            "name": "네그릴로",
+            "type": "원주민",
+            "activeHeroes": [
+                0,
+                2,
+                3
+            ]
+        },
+        {
+            "id": 15,
+            "x": 244,
+            "y": 730,
+            "difficulty": 30,
+            "name": "코이산족",
+            "type": "원주민",
+            "activeHeroes": [
+                0,
+                2,
+                3,
+                5
+            ]
+        },
+        {
+            "id": 16,
+            "x": 296,
+            "y": 862,
+            "difficulty": 40,
+            "name": "디아스의 비석",
+            "type": "유적",
+            "activeHeroes": [
+                1,
+                2
+            ]
+        },
+        {
+            "id": 17,
+            "x": 330,
+            "y": 856,
+            "difficulty": 40,
+            "name": "홋템도트족",
+            "type": "원주민",
+            "activeHeroes": [
+                1,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 18,
+            "x": 428,
+            "y": 644,
+            "difficulty": 65,
+            "name": "맨드릴",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                3,
+                5
+            ]
+        },
+        {
+            "id": 19,
+            "x": 484,
+            "y": 784,
+            "difficulty": 100,
+            "name": "도도",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 20,
+            "x": 472,
+            "y": 712,
+            "difficulty": 10,
+            "name": "카멜레온",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 21,
+            "x": 404,
+            "y": 460,
+            "difficulty": 30,
+            "name": "파피루스",
+            "type": "식물",
+            "activeHeroes": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 22,
+            "x": 474,
+            "y": 422,
+            "difficulty": 60,
+            "name": "불타는 물",
+            "type": "자연",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 23,
+            "x": 572,
+            "y": 458,
+            "difficulty": 60,
+            "name": "모헨조다로",
+            "type": "유적",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                4
+            ]
+        },
+        {
+            "id": 24,
+            "x": 618,
+            "y": 510,
+            "difficulty": 10,
+            "name": "킹코브라",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                2,
+                4
+            ]
+        },
+        {
+            "id": 25,
+            "x": 738,
+            "y": 538,
+            "difficulty": 35,
+            "name": "네그리토",
+            "type": "원주민",
+            "activeHeroes": [
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "id": 26,
+            "x": 766,
+            "y": 556,
+            "difficulty": 30,
+            "name": "아유타야의 불두",
+            "type": "유적",
+            "activeHeroes": [
+                1,
+                3
+            ]
+        },
+        {
+            "id": 27,
+            "x": 752,
+            "y": 586,
+            "difficulty": 50,
+            "name": "코뿔새",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                1,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 28,
+            "x": 796,
+            "y": 550,
+            "difficulty": 60,
+            "name": "앙코르 와트",
+            "type": "유적",
+            "activeHeroes": [
+                2,
+                3,
+                4
+            ]
+        },
+        {
+            "id": 29,
+            "x": 832,
+            "y": 478,
+            "difficulty": 70,
+            "name": "가릉빈가",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                1
+            ]
+        },
+        {
+            "id": 30,
+            "x": 936,
+            "y": 368,
+            "difficulty": 30,
+            "name": "동충하초",
+            "type": "식물",
+            "activeHeroes": [
+                1,
+                2,
+                4
+            ]
+        },
+        {
+            "id": 31,
+            "x": 1010,
+            "y": 386,
+            "difficulty": 40,
+            "name": "등여유적",
+            "type": "유적",
+            "activeHeroes": []
+        },
+        {
+            "id": 32,
+            "x": 1016,
+            "y": 356,
+            "difficulty": 65,
+            "name": "나마하게",
+            "type": "원주민",
+            "activeHeroes": [
+                1,
+                3,
+                5
+            ]
+        },
+        {
+            "id": 33,
+            "x": 854,
+            "y": 390,
+            "difficulty": 90,
+            "name": "건릉",
+            "type": "유적",
+            "activeHeroes": [
+                1,
+                2,
+                5
+            ]
+        },
+        {
+            "id": 34,
+            "x": 844,
+            "y": 342,
+            "difficulty": 80,
+            "name": "만리장성",
+            "type": "유적",
+            "activeHeroes": [
+                1,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 35,
+            "x": 822,
+            "y": 364,
+            "difficulty": 30,
+            "name": "고슴도치",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                3,
+                4
+            ]
+        },
+        {
+            "id": 36,
+            "x": 794,
+            "y": 380,
+            "difficulty": 75,
+            "name": "판다",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                5
+            ]
+        },
+        {
+            "id": 37,
+            "x": 1872,
+            "y": 386,
+            "difficulty": 30,
+            "name": "여행비둘기",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                2,
+                4
+            ]
+        },
+        {
+            "id": 38,
+            "x": 1844,
+            "y": 430,
+            "difficulty": 20,
+            "name": "체로키족",
+            "type": "원주민",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "id": 39,
+            "x": 1720,
+            "y": 504,
+            "difficulty": 40,
+            "name": "비취 가면",
+            "type": "보물",
+            "activeHeroes": [
+                0,
+                1,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 40,
+            "x": 1794,
+            "y": 554,
+            "difficulty": 30,
+            "name": "구아타비타호",
+            "type": "자연",
+            "activeHeroes": [
+                0,
+                3,
+                4
+            ]
+        },
+        {
+            "id": 41,
+            "x": 1914,
+            "y": 590,
+            "difficulty": 10,
+            "name": "선인장",
+            "type": "식물",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "id": 42,
+            "x": 1946,
+            "y": 590,
+            "difficulty": 30,
+            "name": "이구아나",
+            "type": "괴물",
+            "activeHeroes": [
+                0,
+                2,
+                3,
+                4
+            ]
+        },
+        {
+            "id": 43,
+            "x": 1752,
+            "y": 400,
+            "difficulty": 25,
+            "name": "파리지옥",
+            "type": "식물",
+            "activeHeroes": [
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "id": 44,
+            "x": 1776,
+            "y": 332,
+            "difficulty": 80,
+            "name": "나이아가라 폭포",
+            "type": "자연",
+            "activeHeroes": [
+                1,
+                3
+            ]
+        },
+        {
+            "id": 45,
+            "x": 1970,
+            "y": 670,
+            "difficulty": 30,
+            "name": "아마존 수련",
+            "type": "식물",
+            "activeHeroes": [
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 46,
+            "x": 1974,
+            "y": 700,
+            "difficulty": 35,
+            "name": "아나콘다",
+            "type": "괴물",
+            "activeHeroes": [
+                0,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 47,
+            "x": 1940,
+            "y": 682,
+            "difficulty": 60,
+            "name": "포로로카",
+            "type": "자연",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        {
+            "id": 48,
+            "x": 1912,
+            "y": 638,
+            "difficulty": 65,
+            "name": "마타마타거북",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                1
+            ]
+        },
+        {
+            "id": 49,
+            "x": 1886,
+            "y": 658,
+            "difficulty": 55,
+            "name": "발사뗏목",
+            "type": "보물",
+            "activeHeroes": [
+                0,
+                1
+            ]
+        },
+        {
+            "id": 50,
+            "x": 1900,
+            "y": 708,
+            "difficulty": 20,
+            "name": "페요테선인장",
+            "type": "식물",
+            "activeHeroes": [
+                1,
+                4
+            ]
+        },
+        {
+            "id": 51,
+            "x": 1876,
+            "y": 722,
+            "difficulty": 35,
+            "name": "타란툴라",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                2,
+                3,
+                5
+            ]
+        },
+        {
+            "id": 52,
+            "x": 1872,
+            "y": 694,
+            "difficulty": 90,
+            "name": "아마조네스",
+            "type": "원주민",
+            "activeHeroes": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 53,
+            "x": 1838,
+            "y": 676,
+            "difficulty": 50,
+            "name": "황금개구리",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                2,
+                4
+            ]
+        },
+        {
+            "id": 54,
+            "x": 1942,
+            "y": 894,
+            "difficulty": 55,
+            "name": "왕부리새",
+            "type": "희귀한 동물",
+            "activeHeroes": []
+        },
+        {
+            "id": 55,
+            "x": 1960,
+            "y": 860,
+            "difficulty": 70,
+            "name": "괴수 토우",
+            "type": "보물",
+            "activeHeroes": [
+                0,
+                5
+            ]
+        },
+        {
+            "id": 56,
+            "x": 1976,
+            "y": 822,
+            "difficulty": 100,
+            "name": "땅늘보",
+            "type": "괴물",
+            "activeHeroes": [
+                3,
+                4
+            ]
+        },
+        {
+            "id": 57,
+            "x": 1934,
+            "y": 822,
+            "difficulty": 60,
+            "name": "개미핥기",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0
+            ]
+        },
+        {
+            "id": 58,
+            "x": 1856,
+            "y": 1042,
+            "difficulty": 25,
+            "name": "레온 펭귄",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                1,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 59,
+            "x": 1848,
+            "y": 988,
+            "difficulty": 35,
+            "name": "흡혈박쥐",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 60,
+            "x": 1876,
+            "y": 784,
+            "difficulty": 60,
+            "name": "티티카카 호",
+            "type": "자연",
+            "activeHeroes": [
+                4,
+                5
+            ]
+        },
+        {
+            "id": 61,
+            "x": 1826,
+            "y": 710,
+            "difficulty": 70,
+            "name": "엘 카스티요",
+            "type": "유적",
+            "activeHeroes": [
+                0,
+                2,
+                4
+            ]
+        },
+        {
+            "id": 62,
+            "x": 1838,
+            "y": 630,
+            "difficulty": 35,
+            "name": "틀랄록 상",
+            "type": "보물",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                5
+            ]
+        },
+        {
+            "id": 63,
+            "x": 1822,
+            "y": 608,
+            "difficulty": 40,
+            "name": "라스 볼라스",
+            "type": "유적",
+            "activeHeroes": [
+                1,
+                3,
+                5
+            ]
+        },
+        {
+            "id": 64,
+            "x": 1784,
+            "y": 576,
+            "difficulty": 65,
+            "name": "마르날리코 벽화",
+            "type": "보물",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 65,
+            "x": 1750,
+            "y": 552,
+            "difficulty": 70,
+            "name": "포폴 부흐",
+            "type": "보물",
+            "activeHeroes": [
+                2,
+                5
+            ]
+        },
+        {
+            "id": 66,
+            "x": 1706,
+            "y": 542,
+            "difficulty": 90,
+            "name": "수정 해골",
+            "type": "보물",
+            "activeHeroes": [
+                0,
+                2,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 67,
+            "x": 1682,
+            "y": 526,
+            "difficulty": 30,
+            "name": "올멕 두상",
+            "type": "유적",
+            "activeHeroes": [
+                0,
+                2,
+                3,
+                5
+            ]
+        },
+        {
+            "id": 68,
+            "x": 1668,
+            "y": 494,
+            "difficulty": 85,
+            "name": "태양석",
+            "type": "보물",
+            "activeHeroes": [
+                2,
+                3
+            ]
+        },
+        {
+            "id": 69,
+            "x": 1642,
+            "y": 460,
+            "difficulty": 50,
+            "name": "독도마뱀",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                1,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 70,
+            "x": 1608,
+            "y": 430,
+            "difficulty": 30,
+            "name": "평원들소",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                2,
+                4
+            ]
+        },
+        {
+            "id": 71,
+            "x": 1568,
+            "y": 364,
+            "difficulty": 55,
+            "name": "개쥐",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                4,
+                5
+            ]
+        },
+        {
+            "id": 72,
+            "x": 810,
+            "y": 668,
+            "difficulty": 75,
+            "name": "보로부두르",
+            "type": "유적",
+            "activeHeroes": [
+                2,
+                5
+            ]
+        },
+        {
+            "id": 73,
+            "x": 846,
+            "y": 680,
+            "difficulty": 60,
+            "name": "비단뱀",
+            "type": "괴물",
+            "activeHeroes": [
+                1,
+                3,
+                4
+            ]
+        },
+        {
+            "id": 74,
+            "x": 900,
+            "y": 680,
+            "difficulty": 85,
+            "name": "코모도왕도마뱀",
+            "type": "괴물",
+            "activeHeroes": [
+                0,
+                2,
+                5
+            ]
+        },
+        {
+            "id": 75,
+            "x": 876,
+            "y": 760,
+            "difficulty": 80,
+            "name": "아보리진족",
+            "type": "원주민",
+            "activeHeroes": [
+                1,
+                3,
+                5
+            ]
+        },
+        {
+            "id": 76,
+            "x": 862,
+            "y": 826,
+            "difficulty": 75,
+            "name": "목도리도마뱀",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 77,
+            "x": 938,
+            "y": 842,
+            "difficulty": 50,
+            "name": "울루루",
+            "type": "자연",
+            "activeHeroes": [
+                0,
+                1,
+                3
+            ]
+        },
+        {
+            "id": 78,
+            "x": 1044,
+            "y": 906,
+            "difficulty": 30,
+            "name": "태즈메이니아데블",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                1,
+                3,
+                5
+            ]
+        },
+        {
+            "id": 79,
+            "x": 1068,
+            "y": 860,
+            "difficulty": 55,
+            "name": "코알라",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 80,
+            "x": 1016,
+            "y": 732,
+            "difficulty": 55,
+            "name": "키위",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        {
+            "id": 81,
+            "x": 1002,
+            "y": 668,
+            "difficulty": 80,
+            "name": "극락조",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                5
+            ]
+        },
+        {
+            "id": 82,
+            "x": 888,
+            "y": 642,
+            "difficulty": 60,
+            "name": "화산암불상",
+            "type": "유적",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                4
+            ]
+        },
+        {
+            "id": 83,
+            "x": 828,
+            "y": 618,
+            "difficulty": 45,
+            "name": "낭상엽 식물",
+            "type": "식물",
+            "activeHeroes": [
+                0,
+                5
+            ]
+        },
+        {
+            "id": 84,
+            "x": 910,
+            "y": 532,
+            "difficulty": 45,
+            "name": "낙원나무뱀",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                4
+            ]
+        },
+        {
+            "id": 85,
+            "x": 938,
+            "y": 544,
+            "difficulty": 85,
+            "name": "일롱고트족",
+            "type": "원주민",
+            "activeHeroes": [
+                2,
+                3,
+                5
+            ]
+        },
+        {
+            "id": 86,
+            "x": 1230,
+            "y": 890,
+            "difficulty": 100,
+            "name": "모아",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 87,
+            "x": 8,
+            "y": 166,
+            "difficulty": 70,
+            "name": "큰바다쇠오리",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                3,
+                4
+            ]
+        },
+        {
+            "id": 88,
+            "x": 704,
+            "y": 2,
+            "difficulty": 90,
+            "name": "극광",
+            "type": "자연",
+            "activeHeroes": [
+                1,
+                3,
+                4
+            ]
+        },
+        {
+            "id": 89,
+            "x": 1252,
+            "y": 94,
+            "difficulty": 60,
+            "name": "바다소",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                1,
+                3,
+                5
+            ]
+        },
+        {
+            "id": 90,
+            "x": 1624,
+            "y": 64,
+            "difficulty": 75,
+            "name": "이누이트족",
+            "type": "원주민",
+            "activeHeroes": [
+                5
+            ]
+        },
+        {
+            "id": 91,
+            "x": 1778,
+            "y": 4,
+            "difficulty": 100,
+            "name": "매머드",
+            "type": "괴물",
+            "activeHeroes": [
+                0,
+                2,
+                4
+            ]
+        },
+        {
+            "id": 92,
+            "x": 1942,
+            "y": 10,
+            "difficulty": 100,
+            "name": "검치호",
+            "type": "괴물",
+            "activeHeroes": [
+                3,
+                5
+            ]
+        },
+        {
+            "id": 93,
+            "x": 990,
+            "y": 568,
+            "difficulty": 70,
+            "name": "차모로족",
+            "type": "원주민",
+            "activeHeroes": [
+                0,
+                1,
+                5
+            ]
+        },
+        {
+            "id": 94,
+            "x": 1090,
+            "y": 592,
+            "difficulty": 85,
+            "name": "흑진주조개",
+            "type": "보물",
+            "activeHeroes": [
+                0,
+                1,
+                2
+            ]
+        },
+        {
+            "id": 95,
+            "x": 1242,
+            "y": 732,
+            "difficulty": 10,
+            "name": "비행류",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "id": 96,
+            "x": 1762,
+            "y": 676,
+            "difficulty": 80,
+            "name": "갈라파고스땅거북",
+            "type": "희귀한 동물",
+            "activeHeroes": [
+                0,
+                2,
+                3
+            ]
+        },
+        {
+            "id": 97,
+            "x": 1574,
+            "y": 888,
+            "difficulty": 100,
+            "name": "모아이",
+            "type": "유적",
+            "activeHeroes": [
+                2,
+                4,
+                5
+            ]
+        }
+    ],
+    "challenges": [
+        {
+            "heroId": 0,
+            "id": "hero0.discovery_1",
+            "name": "첫 발견",
+            "description": "발견물을 1개 찾습니다.",
+            "category": "성장",
+            "target": 1
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.discovery_10",
+            "name": "탐험가",
+            "description": "발견물을 10개 찾습니다.",
+            "category": "성장",
+            "target": 10
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.discovery_30",
+            "name": "대탐험가",
+            "description": "발견물을 30개 찾습니다.",
+            "category": "성장",
+            "target": 30
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.known_ports_20",
+            "name": "넓어진 해도",
+            "description": "알고 있는 일반 항구가 20곳이 됩니다.",
+            "category": "성장",
+            "target": 20
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.known_ports_60",
+            "name": "세계의 항구",
+            "description": "알고 있는 일반 항구가 60곳이 됩니다.",
+            "category": "성장",
+            "target": 60
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.gold_100000",
+            "name": "항해 자금",
+            "description": "금괴를 포함해 금화 10만을 보유합니다.",
+            "category": "성장",
+            "target": 100000
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.gold_1000000",
+            "name": "대부호",
+            "description": "금괴를 포함해 금화 100만을 보유합니다.",
+            "category": "성장",
+            "target": 1000000
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.primary_fame_1000",
+            "name": "이름을 알리다",
+            "description": "모험 명성 1,000에 도달합니다.",
+            "category": "성장",
+            "target": 1000
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.primary_fame_10000",
+            "name": "바다의 명성",
+            "description": "모험 명성 10,000에 도달합니다.",
+            "category": "성장",
+            "target": 10000
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.primary_fame_40000",
+            "name": "전설의 선장",
+            "description": "모험 명성 40,000에 도달합니다.",
+            "category": "성장",
+            "target": 40000
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.fleet_3",
+            "name": "함대 결성",
+            "description": "함선 3척을 보유합니다.",
+            "category": "성장",
+            "target": 3
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.fleet_5",
+            "name": "대함대",
+            "description": "함선 5척을 보유합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.mates_5",
+            "name": "믿음직한 동료",
+            "description": "동료 항해사 5명을 거느립니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.navigation_5",
+            "name": "숙련 항해자",
+            "description": "주인공 항해 레벨 5에 도달합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.story_start",
+            "name": "이야기의 시작",
+            "description": "조안 페레로 본편 이야기 1단계에 도달합니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.story_turn",
+            "name": "이야기의 전환점",
+            "description": "조안 페레로 본편 이야기 3단계에 도달합니다.",
+            "category": "이야기",
+            "target": 3
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.story_final",
+            "name": "마지막 장으로",
+            "description": "조안 페레로 본편 이야기 5단계에 도달합니다.",
+            "category": "이야기",
+            "target": 5
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.ending",
+            "name": "이야기 완주",
+            "description": "조안 페레로의 실제 엔딩을 봅니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.arrivals_10",
+            "name": "항구를 잇는 항해",
+            "description": "실제 항해 후 일반 항구 또는 보급항에 10회 입항합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.sold_units_1000",
+            "name": "활발한 교역",
+            "description": "교역소에서 상품을 누적 1,000단위 매각합니다.",
+            "category": "활동",
+            "target": 1000
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.sales_revenue_1000000",
+            "name": "백만 금화의 거래",
+            "description": "교역품 누적 매출 100만 금화. 구입 원가를 뺀 순이익이 아닙니다.",
+            "category": "활동",
+            "target": 1000000
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.battle_wins_1",
+            "name": "첫 해전 승리",
+            "description": "적 함대 격파 또는 일기토로 해전에서 승리합니다. 적 퇴각은 제외합니다.",
+            "category": "활동",
+            "target": 1
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.battle_wins_10",
+            "name": "승전의 선장",
+            "description": "적 함대 격파 또는 일기토로 해전에서 10회 승리합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 0,
+            "id": "hero0.paid_repairs_5",
+            "name": "배를 아끼는 선장",
+            "description": "조선소에서 비용을 내고 수리를 5회 완료합니다. 상륙 수리는 제외합니다.",
+            "category": "활동",
+            "target": 5
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.discovery_1",
+            "name": "첫 발견",
+            "description": "발견물을 1개 찾습니다.",
+            "category": "성장",
+            "target": 1
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.discovery_10",
+            "name": "탐험가",
+            "description": "발견물을 10개 찾습니다.",
+            "category": "성장",
+            "target": 10
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.discovery_30",
+            "name": "대탐험가",
+            "description": "발견물을 30개 찾습니다.",
+            "category": "성장",
+            "target": 30
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.known_ports_20",
+            "name": "넓어진 해도",
+            "description": "알고 있는 일반 항구가 20곳이 됩니다.",
+            "category": "성장",
+            "target": 20
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.known_ports_60",
+            "name": "세계의 항구",
+            "description": "알고 있는 일반 항구가 60곳이 됩니다.",
+            "category": "성장",
+            "target": 60
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.gold_100000",
+            "name": "항해 자금",
+            "description": "금괴를 포함해 금화 10만을 보유합니다.",
+            "category": "성장",
+            "target": 100000
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.gold_1000000",
+            "name": "대부호",
+            "description": "금괴를 포함해 금화 100만을 보유합니다.",
+            "category": "성장",
+            "target": 1000000
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.primary_fame_1000",
+            "name": "이름을 알리다",
+            "description": "해적 명성 1,000에 도달합니다.",
+            "category": "성장",
+            "target": 1000
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.primary_fame_10000",
+            "name": "바다의 명성",
+            "description": "해적 명성 10,000에 도달합니다.",
+            "category": "성장",
+            "target": 10000
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.primary_fame_40000",
+            "name": "전설의 선장",
+            "description": "해적 명성 40,000에 도달합니다.",
+            "category": "성장",
+            "target": 40000
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.fleet_3",
+            "name": "함대 결성",
+            "description": "함선 3척을 보유합니다.",
+            "category": "성장",
+            "target": 3
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.fleet_5",
+            "name": "대함대",
+            "description": "함선 5척을 보유합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.mates_5",
+            "name": "믿음직한 동료",
+            "description": "동료 항해사 5명을 거느립니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.navigation_5",
+            "name": "숙련 항해자",
+            "description": "주인공 항해 레벨 5에 도달합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.story_start",
+            "name": "이야기의 시작",
+            "description": "카탈리나 에란초 본편 이야기 1단계에 도달합니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.story_turn",
+            "name": "이야기의 전환점",
+            "description": "카탈리나 에란초 본편 이야기 4단계에 도달합니다.",
+            "category": "이야기",
+            "target": 4
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.story_final",
+            "name": "마지막 장으로",
+            "description": "카탈리나 에란초 본편 이야기 7단계에 도달합니다.",
+            "category": "이야기",
+            "target": 7
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.ending",
+            "name": "이야기 완주",
+            "description": "카탈리나 에란초의 실제 엔딩을 봅니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.arrivals_10",
+            "name": "항구를 잇는 항해",
+            "description": "실제 항해 후 일반 항구 또는 보급항에 10회 입항합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.sold_units_1000",
+            "name": "활발한 교역",
+            "description": "교역소에서 상품을 누적 1,000단위 매각합니다.",
+            "category": "활동",
+            "target": 1000
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.sales_revenue_1000000",
+            "name": "백만 금화의 거래",
+            "description": "교역품 누적 매출 100만 금화. 구입 원가를 뺀 순이익이 아닙니다.",
+            "category": "활동",
+            "target": 1000000
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.battle_wins_1",
+            "name": "첫 해전 승리",
+            "description": "적 함대 격파 또는 일기토로 해전에서 승리합니다. 적 퇴각은 제외합니다.",
+            "category": "활동",
+            "target": 1
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.battle_wins_10",
+            "name": "승전의 선장",
+            "description": "적 함대 격파 또는 일기토로 해전에서 10회 승리합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 1,
+            "id": "hero1.paid_repairs_5",
+            "name": "배를 아끼는 선장",
+            "description": "조선소에서 비용을 내고 수리를 5회 완료합니다. 상륙 수리는 제외합니다.",
+            "category": "활동",
+            "target": 5
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.discovery_1",
+            "name": "첫 발견",
+            "description": "발견물을 1개 찾습니다.",
+            "category": "성장",
+            "target": 1
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.discovery_10",
+            "name": "탐험가",
+            "description": "발견물을 10개 찾습니다.",
+            "category": "성장",
+            "target": 10
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.discovery_30",
+            "name": "대탐험가",
+            "description": "발견물을 30개 찾습니다.",
+            "category": "성장",
+            "target": 30
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.known_ports_20",
+            "name": "넓어진 해도",
+            "description": "알고 있는 일반 항구가 20곳이 됩니다.",
+            "category": "성장",
+            "target": 20
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.known_ports_60",
+            "name": "세계의 항구",
+            "description": "알고 있는 일반 항구가 60곳이 됩니다.",
+            "category": "성장",
+            "target": 60
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.gold_100000",
+            "name": "항해 자금",
+            "description": "금괴를 포함해 금화 10만을 보유합니다.",
+            "category": "성장",
+            "target": 100000
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.gold_1000000",
+            "name": "대부호",
+            "description": "금괴를 포함해 금화 100만을 보유합니다.",
+            "category": "성장",
+            "target": 1000000
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.primary_fame_1000",
+            "name": "이름을 알리다",
+            "description": "해적 명성 1,000에 도달합니다.",
+            "category": "성장",
+            "target": 1000
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.primary_fame_10000",
+            "name": "바다의 명성",
+            "description": "해적 명성 10,000에 도달합니다.",
+            "category": "성장",
+            "target": 10000
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.primary_fame_40000",
+            "name": "전설의 선장",
+            "description": "해적 명성 40,000에 도달합니다.",
+            "category": "성장",
+            "target": 40000
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.fleet_3",
+            "name": "함대 결성",
+            "description": "함선 3척을 보유합니다.",
+            "category": "성장",
+            "target": 3
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.fleet_5",
+            "name": "대함대",
+            "description": "함선 5척을 보유합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.mates_5",
+            "name": "믿음직한 동료",
+            "description": "동료 항해사 5명을 거느립니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.navigation_5",
+            "name": "숙련 항해자",
+            "description": "주인공 항해 레벨 5에 도달합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.story_start",
+            "name": "이야기의 시작",
+            "description": "오토 스피노라 본편 이야기 1단계에 도달합니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.story_turn",
+            "name": "이야기의 전환점",
+            "description": "오토 스피노라 본편 이야기 3단계에 도달합니다.",
+            "category": "이야기",
+            "target": 3
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.story_final",
+            "name": "마지막 장으로",
+            "description": "오토 스피노라 본편 이야기 5단계에 도달합니다.",
+            "category": "이야기",
+            "target": 5
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.ending",
+            "name": "이야기 완주",
+            "description": "오토 스피노라의 실제 엔딩을 봅니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.arrivals_10",
+            "name": "항구를 잇는 항해",
+            "description": "실제 항해 후 일반 항구 또는 보급항에 10회 입항합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.sold_units_1000",
+            "name": "활발한 교역",
+            "description": "교역소에서 상품을 누적 1,000단위 매각합니다.",
+            "category": "활동",
+            "target": 1000
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.sales_revenue_1000000",
+            "name": "백만 금화의 거래",
+            "description": "교역품 누적 매출 100만 금화. 구입 원가를 뺀 순이익이 아닙니다.",
+            "category": "활동",
+            "target": 1000000
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.battle_wins_1",
+            "name": "첫 해전 승리",
+            "description": "적 함대 격파 또는 일기토로 해전에서 승리합니다. 적 퇴각은 제외합니다.",
+            "category": "활동",
+            "target": 1
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.battle_wins_10",
+            "name": "승전의 선장",
+            "description": "적 함대 격파 또는 일기토로 해전에서 10회 승리합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 2,
+            "id": "hero2.paid_repairs_5",
+            "name": "배를 아끼는 선장",
+            "description": "조선소에서 비용을 내고 수리를 5회 완료합니다. 상륙 수리는 제외합니다.",
+            "category": "활동",
+            "target": 5
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.discovery_1",
+            "name": "첫 발견",
+            "description": "발견물을 1개 찾습니다.",
+            "category": "성장",
+            "target": 1
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.discovery_10",
+            "name": "탐험가",
+            "description": "발견물을 10개 찾습니다.",
+            "category": "성장",
+            "target": 10
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.discovery_30",
+            "name": "대탐험가",
+            "description": "발견물을 30개 찾습니다.",
+            "category": "성장",
+            "target": 30
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.known_ports_20",
+            "name": "넓어진 해도",
+            "description": "알고 있는 일반 항구가 20곳이 됩니다.",
+            "category": "성장",
+            "target": 20
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.known_ports_60",
+            "name": "세계의 항구",
+            "description": "알고 있는 일반 항구가 60곳이 됩니다.",
+            "category": "성장",
+            "target": 60
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.gold_100000",
+            "name": "항해 자금",
+            "description": "금괴를 포함해 금화 10만을 보유합니다.",
+            "category": "성장",
+            "target": 100000
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.gold_1000000",
+            "name": "대부호",
+            "description": "금괴를 포함해 금화 100만을 보유합니다.",
+            "category": "성장",
+            "target": 1000000
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.primary_fame_1000",
+            "name": "이름을 알리다",
+            "description": "모험 명성 1,000에 도달합니다.",
+            "category": "성장",
+            "target": 1000
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.primary_fame_10000",
+            "name": "바다의 명성",
+            "description": "모험 명성 10,000에 도달합니다.",
+            "category": "성장",
+            "target": 10000
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.primary_fame_40000",
+            "name": "전설의 선장",
+            "description": "모험 명성 40,000에 도달합니다.",
+            "category": "성장",
+            "target": 40000
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.fleet_3",
+            "name": "함대 결성",
+            "description": "함선 3척을 보유합니다.",
+            "category": "성장",
+            "target": 3
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.fleet_5",
+            "name": "대함대",
+            "description": "함선 5척을 보유합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.mates_5",
+            "name": "믿음직한 동료",
+            "description": "동료 항해사 5명을 거느립니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.navigation_5",
+            "name": "숙련 항해자",
+            "description": "주인공 항해 레벨 5에 도달합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.story_start",
+            "name": "이야기의 시작",
+            "description": "에르네스트 로페즈 본편 이야기 1단계에 도달합니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.story_turn",
+            "name": "이야기의 전환점",
+            "description": "에르네스트 로페즈 본편 이야기 2단계에 도달합니다.",
+            "category": "이야기",
+            "target": 2
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.story_final",
+            "name": "마지막 장으로",
+            "description": "에르네스트 로페즈 본편 이야기 4단계에 도달합니다.",
+            "category": "이야기",
+            "target": 4
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.ending",
+            "name": "이야기 완주",
+            "description": "에르네스트 로페즈의 실제 엔딩을 봅니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.arrivals_10",
+            "name": "항구를 잇는 항해",
+            "description": "실제 항해 후 일반 항구 또는 보급항에 10회 입항합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.sold_units_1000",
+            "name": "활발한 교역",
+            "description": "교역소에서 상품을 누적 1,000단위 매각합니다.",
+            "category": "활동",
+            "target": 1000
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.sales_revenue_1000000",
+            "name": "백만 금화의 거래",
+            "description": "교역품 누적 매출 100만 금화. 구입 원가를 뺀 순이익이 아닙니다.",
+            "category": "활동",
+            "target": 1000000
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.battle_wins_1",
+            "name": "첫 해전 승리",
+            "description": "적 함대 격파 또는 일기토로 해전에서 승리합니다. 적 퇴각은 제외합니다.",
+            "category": "활동",
+            "target": 1
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.battle_wins_10",
+            "name": "승전의 선장",
+            "description": "적 함대 격파 또는 일기토로 해전에서 10회 승리합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 3,
+            "id": "hero3.paid_repairs_5",
+            "name": "배를 아끼는 선장",
+            "description": "조선소에서 비용을 내고 수리를 5회 완료합니다. 상륙 수리는 제외합니다.",
+            "category": "활동",
+            "target": 5
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.discovery_1",
+            "name": "첫 발견",
+            "description": "발견물을 1개 찾습니다.",
+            "category": "성장",
+            "target": 1
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.discovery_10",
+            "name": "탐험가",
+            "description": "발견물을 10개 찾습니다.",
+            "category": "성장",
+            "target": 10
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.discovery_30",
+            "name": "대탐험가",
+            "description": "발견물을 30개 찾습니다.",
+            "category": "성장",
+            "target": 30
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.known_ports_20",
+            "name": "넓어진 해도",
+            "description": "알고 있는 일반 항구가 20곳이 됩니다.",
+            "category": "성장",
+            "target": 20
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.known_ports_60",
+            "name": "세계의 항구",
+            "description": "알고 있는 일반 항구가 60곳이 됩니다.",
+            "category": "성장",
+            "target": 60
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.gold_100000",
+            "name": "항해 자금",
+            "description": "금괴를 포함해 금화 10만을 보유합니다.",
+            "category": "성장",
+            "target": 100000
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.gold_1000000",
+            "name": "대부호",
+            "description": "금괴를 포함해 금화 100만을 보유합니다.",
+            "category": "성장",
+            "target": 1000000
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.primary_fame_1000",
+            "name": "이름을 알리다",
+            "description": "모험 명성 1,000에 도달합니다.",
+            "category": "성장",
+            "target": 1000
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.primary_fame_10000",
+            "name": "바다의 명성",
+            "description": "모험 명성 10,000에 도달합니다.",
+            "category": "성장",
+            "target": 10000
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.primary_fame_40000",
+            "name": "전설의 선장",
+            "description": "모험 명성 40,000에 도달합니다.",
+            "category": "성장",
+            "target": 40000
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.fleet_3",
+            "name": "함대 결성",
+            "description": "함선 3척을 보유합니다.",
+            "category": "성장",
+            "target": 3
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.fleet_5",
+            "name": "대함대",
+            "description": "함선 5척을 보유합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.mates_5",
+            "name": "믿음직한 동료",
+            "description": "동료 항해사 5명을 거느립니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.navigation_5",
+            "name": "숙련 항해자",
+            "description": "주인공 항해 레벨 5에 도달합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.story_start",
+            "name": "이야기의 시작",
+            "description": "피에트로 콘티 본편 이야기 1단계에 도달합니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.story_turn",
+            "name": "이야기의 전환점",
+            "description": "피에트로 콘티 본편 이야기 2단계에 도달합니다.",
+            "category": "이야기",
+            "target": 2
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.story_final",
+            "name": "마지막 장으로",
+            "description": "피에트로 콘티 본편 이야기 3단계에 도달합니다.",
+            "category": "이야기",
+            "target": 3
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.ending",
+            "name": "이야기 완주",
+            "description": "피에트로 콘티의 실제 엔딩을 봅니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.arrivals_10",
+            "name": "항구를 잇는 항해",
+            "description": "실제 항해 후 일반 항구 또는 보급항에 10회 입항합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.sold_units_1000",
+            "name": "활발한 교역",
+            "description": "교역소에서 상품을 누적 1,000단위 매각합니다.",
+            "category": "활동",
+            "target": 1000
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.sales_revenue_1000000",
+            "name": "백만 금화의 거래",
+            "description": "교역품 누적 매출 100만 금화. 구입 원가를 뺀 순이익이 아닙니다.",
+            "category": "활동",
+            "target": 1000000
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.battle_wins_1",
+            "name": "첫 해전 승리",
+            "description": "적 함대 격파 또는 일기토로 해전에서 승리합니다. 적 퇴각은 제외합니다.",
+            "category": "활동",
+            "target": 1
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.battle_wins_10",
+            "name": "승전의 선장",
+            "description": "적 함대 격파 또는 일기토로 해전에서 10회 승리합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 4,
+            "id": "hero4.paid_repairs_5",
+            "name": "배를 아끼는 선장",
+            "description": "조선소에서 비용을 내고 수리를 5회 완료합니다. 상륙 수리는 제외합니다.",
+            "category": "활동",
+            "target": 5
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.discovery_1",
+            "name": "첫 발견",
+            "description": "발견물을 1개 찾습니다.",
+            "category": "성장",
+            "target": 1
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.discovery_10",
+            "name": "탐험가",
+            "description": "발견물을 10개 찾습니다.",
+            "category": "성장",
+            "target": 10
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.discovery_30",
+            "name": "대탐험가",
+            "description": "발견물을 30개 찾습니다.",
+            "category": "성장",
+            "target": 30
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.known_ports_20",
+            "name": "넓어진 해도",
+            "description": "알고 있는 일반 항구가 20곳이 됩니다.",
+            "category": "성장",
+            "target": 20
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.known_ports_60",
+            "name": "세계의 항구",
+            "description": "알고 있는 일반 항구가 60곳이 됩니다.",
+            "category": "성장",
+            "target": 60
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.gold_100000",
+            "name": "항해 자금",
+            "description": "금괴를 포함해 금화 10만을 보유합니다.",
+            "category": "성장",
+            "target": 100000
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.gold_1000000",
+            "name": "대부호",
+            "description": "금괴를 포함해 금화 100만을 보유합니다.",
+            "category": "성장",
+            "target": 1000000
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.primary_fame_1000",
+            "name": "이름을 알리다",
+            "description": "교역 명성 1,000에 도달합니다.",
+            "category": "성장",
+            "target": 1000
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.primary_fame_10000",
+            "name": "바다의 명성",
+            "description": "교역 명성 10,000에 도달합니다.",
+            "category": "성장",
+            "target": 10000
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.primary_fame_40000",
+            "name": "전설의 선장",
+            "description": "교역 명성 40,000에 도달합니다.",
+            "category": "성장",
+            "target": 40000
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.fleet_3",
+            "name": "함대 결성",
+            "description": "함선 3척을 보유합니다.",
+            "category": "성장",
+            "target": 3
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.fleet_5",
+            "name": "대함대",
+            "description": "함선 5척을 보유합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.mates_5",
+            "name": "믿음직한 동료",
+            "description": "동료 항해사 5명을 거느립니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.navigation_5",
+            "name": "숙련 항해자",
+            "description": "주인공 항해 레벨 5에 도달합니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.story_start",
+            "name": "이야기의 시작",
+            "description": "알리 베자스 본편 이야기 1단계에 도달합니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.story_turn",
+            "name": "이야기의 전환점",
+            "description": "알리 베자스 본편 이야기 3단계에 도달합니다.",
+            "category": "이야기",
+            "target": 3
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.story_final",
+            "name": "마지막 장으로",
+            "description": "알리 베자스 본편 이야기 5단계에 도달합니다.",
+            "category": "이야기",
+            "target": 5
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.ending",
+            "name": "이야기 완주",
+            "description": "알리 베자스의 실제 엔딩을 봅니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.arrivals_10",
+            "name": "항구를 잇는 항해",
+            "description": "실제 항해 후 일반 항구 또는 보급항에 10회 입항합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.sold_units_1000",
+            "name": "활발한 교역",
+            "description": "교역소에서 상품을 누적 1,000단위 매각합니다.",
+            "category": "활동",
+            "target": 1000
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.sales_revenue_1000000",
+            "name": "백만 금화의 거래",
+            "description": "교역품 누적 매출 100만 금화. 구입 원가를 뺀 순이익이 아닙니다.",
+            "category": "활동",
+            "target": 1000000
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.battle_wins_1",
+            "name": "첫 해전 승리",
+            "description": "적 함대 격파 또는 일기토로 해전에서 승리합니다. 적 퇴각은 제외합니다.",
+            "category": "활동",
+            "target": 1
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.battle_wins_10",
+            "name": "승전의 선장",
+            "description": "적 함대 격파 또는 일기토로 해전에서 10회 승리합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 5,
+            "id": "hero5.paid_repairs_5",
+            "name": "배를 아끼는 선장",
+            "description": "조선소에서 비용을 내고 수리를 5회 완료합니다. 상륙 수리는 제외합니다.",
+            "category": "활동",
+            "target": 5
+        }
+    ]
+}

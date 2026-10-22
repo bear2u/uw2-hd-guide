@@ -1,0 +1,31 @@
+---
+import reference from '../data/game-reference.json';
+interface Props { kind: 'heroes' | 'ports' | 'goods' | 'ships' | 'items' | 'sailors' | 'discoveries' }
+const { kind } = Astro.props;
+const columns: Record<Props['kind'], [string, string][]> = {
+ heroes: [['name','주인공'],['port','시작 항구'],['gold','금화'],['navigationLevel','항해 레벨'],['battleLevel','전투 레벨']],
+ ports: [['name','항구'],['kind','구분'],['x','X'],['y','Y'],['economy','상업'],['industry','공업'],['specialty','특산품']],
+ goods: [['name','상품'],['category','분류']],
+ ships: [['name','모델'],['capacity','적재량'],['minCrew','최소 선원'],['maxCrew','최대 선원'],['durability','내구'],['power','추진'],['tacking','선회'],['maxGuns','포문'],['price','기준 가격']],
+ items: [['name','물품'],['type','종류'],['rating','성능값'],['price','기준 가격']],
+ sailors: [['name','항해사'],['navigationLevel','항해 레벨'],['battleLevel','전투 레벨'],['nationName','국적'],['skills','기술'],['port','초기 체류지']],
+ discoveries: [['name','발견물'],['type','종류'],['x','X'],['y','Y'],['difficulty','난이도'],['activeHeroes','활성 주인공']],
+};
+const heroes = ['조안','카탈리나','오토','에르네스트','피에트로','알리'];
+const rows = reference[kind] as unknown as Record<string, unknown>[];
+const display = (value: unknown, key: string): string => {
+ if (value === null || value === undefined || value === '' || value === -1) return '해당 없음';
+ if (key === 'skills') return [[1,'교섭'],[2,'회계'],[4,'포술'],[8,'지도 제작'],[16,'측량']].filter(([bit]) => (Number(value) & Number(bit)) !== 0).map(([,name]) => name).join(' · ') || '없음';
+ if (key === 'activeHeroes' && Array.isArray(value)) return value.map(id=>heroes[Number(id)]).join(' · ') || '없음';
+ if (typeof value === 'number') return value.toLocaleString('ko-KR');
+ return String(value);
+};
+---
+<p class="reference-summary">게임 시작 기준 · {rows.length}개 항목. 가로로 긴 표는 안쪽으로 스크롤할 수 있습니다.</p>
+<div class="reference-scroll" tabindex="0" role="region" aria-label={`${columns[kind][0][1]} 전체 목록 표`}>
+ <table>
+  <caption class="sr-only">{columns[kind][0][1]} 전체 목록</caption>
+  <thead><tr>{columns[kind].map(([,label])=><th scope="col">{label}</th>)}</tr></thead>
+  <tbody>{rows.map(row=><tr>{columns[kind].map(([key],i)=>i===0?<th scope="row">{display(row[key],key)}</th>:<td>{display(row[key],key)}</td>)}</tr>)}</tbody>
+ </table>
+</div>
