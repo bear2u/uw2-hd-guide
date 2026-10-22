@@ -17,7 +17,9 @@ for(const row of data.challenges) assert.ok(row.description && row.target>0 && r
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(new URL(e.name+'/',dir)):[new URL(e.name,dir)]);}
 const pages=walk(new URL('src/content/docs/',root)).filter(p=>p.pathname.endsWith('.mdx'));
 const updates = pages.filter(p => /\/updates\//.test(p.pathname));
-assert.equal(pages.length - updates.length,38,'기본 본문 페이지 수');
+assert.equal(pages.length - updates.length,42,'기본 본문 페이지 수');
+const aiPages = pages.filter(p => /\/ai\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
+assert.deepEqual(aiPages, ['connection.mdx','history.mdx','overview.mdx','personality.mdx'], 'AI 가이드 구성');
 assert.ok(updates.length > 0, '날짜별 업데이트 문서 필요');
 for (const p of updates) assert.match(p.pathname, /\/updates\/\d{4}-\d{2}-\d{2}\.mdx$/, '업데이트 문서 날짜 형식');
 for(const p of pages){const text=fs.readFileSync(p,'utf8');assert.ok(text.length>350,`${p.pathname} 본문 부족`);assert.ok(!/CHANGE_ME|Your documentation starts here|TODO:|Lorem ipsum/.test(text));}
