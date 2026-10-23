@@ -17,7 +17,7 @@ for(const row of data.challenges) assert.ok(row.description && row.target>0 && r
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(new URL(e.name+'/',dir)):[new URL(e.name,dir)]);}
 const pages=walk(new URL('src/content/docs/',root)).filter(p=>p.pathname.endsWith('.mdx'));
 const updates = pages.filter(p => /\/updates\//.test(p.pathname));
-assert.equal(pages.length - updates.length,50,'기본 본문 페이지 수');
+assert.equal(pages.length - updates.length,51,'기본 본문 페이지 수');
 const strategies = pages.filter(p => /\/strategy\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
 assert.deepEqual(strategies, ['discoveries.mdx','fleet.mdx','index.mdx','ports.mdx','references.mdx','stories.mdx','survival.mdx','trade.mdx'], '공략 문서 구성');
 const aiPages = pages.filter(p => /\/ai\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
