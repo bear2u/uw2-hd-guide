@@ -1,0 +1,69 @@
+%% title: 해전과 결투, 그 이후
+flowchart TD
+    prepare["저장·내구·선원·장비"]
+    rules["원작 또는 확장 전투"]
+    encounter["상대와 교전 조건 확인"]
+    start["해전 시작"]
+    goal["확장 전투의 목표 선택<br/>추가 보상 없음"]
+    turn["현재 차례의 배 확인"]
+    move["이동 칸과 방향 선택"]
+    attack["사거리·포탄·선원 확인"]
+    cannon["포격"]
+    boarding["백병전"]
+    retreat["퇴각 시도"]
+    storyduel["이야기 속 결투"]
+    duel["일기토 시작"]
+    exchange["공격·방어 선택"]
+    duelresult["결투 결과 확인"]
+    result["승리·퇴각·일몰·패배"]
+    loot["전리품 직접·알아서 싣기"]
+    capacity{"전리품을 모두 실었나요?"}
+    manual["남은 전리품 직접 배분"]
+    discard{"남은 짐을 버릴까요?"}
+    crew["함대·나포선 선원 점검"]
+    story["보상·성장·후속 대화"]
+    voyage["항해와 귀항"]
+    repair["항구에서 수리·보급"]
+    retry["저장 불러와 다시 준비"]
+
+    prepare --> rules
+    rules --> encounter
+    encounter --> start
+    start -->|원작 전투| turn
+    start -->|확장 전투| goal
+    goal --> turn
+    turn --> move
+    move -->|이동 뒤 공격 확인| attack
+    turn --> attack
+    turn --> retreat
+    attack --> cannon
+    attack --> boarding
+    boarding -->|일기토가 성립하면| duel
+    storyduel --> duel
+    duel --> exchange
+    exchange --> duelresult
+    duelresult -->|해전이 끝나면| result
+    duelresult -->|이야기 결투 종료| story
+    cannon -->|승패가 정해지면| result
+    boarding -->|승패가 정해지면| result
+    retreat -->|이탈에 성공하면| result
+    turn -->|일몰이면| result
+    result -->|전리품이 있으면| loot
+    loot --> capacity
+    capacity -->|모두 실음| crew
+    capacity -->|짐이 남음| manual
+    manual -->|분배 완료| crew
+    manual -->|뒤로| discard
+    discard -->|예: 남은 짐만 폐기| crew
+    crew --> story
+    result -->|전리품이 없으면| story
+    story -->|항해를 계속하면| voyage
+    voyage -->|귀항 후| repair
+
+    result -.->|패배 후 재도전| retry
+    discard -.->|아니오: 짐 유지| manual
+    move -.->|공격 없이 마치면| turn
+    cannon -.->|전투가 계속되면| turn
+    boarding -.->|전투가 계속되면| turn
+    duelresult -.->|해전이 계속되면| turn
+    retreat -.->|이탈하지 못하면| turn

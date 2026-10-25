@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>함께하기 · 가족 미니 도전</title>
+<style>
+  :root {
+    --page: #f6f6f4;
+    --panel: #ffffff;
+    --ink: #1b1b1a;
+    --ink-soft: #5d5d58;
+    --rule: #dcdcd6;
+    --accent: #2f6fde;
+    --reject: #d0453a;
+    --diagram-bg: #ffffff;
+    --diagram-alt: #ececE7;
+    --space-1: 4px;
+    --space-2: 6px;
+    --space-3: 8px;
+    --space-4: 10px;
+    --space-5: 12px;
+    --space-6: 16px;
+    --space-7: 20px;
+    --space-8: 24px;
+    --radius-s: 4px;
+    --radius-m: 8px;
+    --radius-l: 12px;
+    --text-xs: 12px;
+    --text-s: 13px;
+    --text-m: 15px;
+    --text-l: 18px;
+    --icon: 16px;
+    --icon-nudge: -3px;
+    --control-h: 34px;
+    --count-w: 64px;
+    --scrub-min: 160px;
+    --scrub-basis: 220px;
+    --caption-h: 24px;
+    --blur: 6px;
+    --focus-w: 2px;
+    --v-cap-h: 150px;
+    --v-pad: 40px;
+    --v-text-l: 40px;
+    --v-text-m: 30px;
+    --page-max: 1760px;
+    --dur-press: 120ms;
+    --dur-hover: 150ms;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --font-ui: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page: #141413;
+      --panel: #1e1e1c;
+      --ink: #ececea;
+      --ink-soft: #a3a39d;
+      --rule: #34342f;
+      --accent: #6d9cff;
+      --reject: #ff7a6e;
+      --diagram-bg: #1e1e1c;
+      --diagram-alt: #2b2b28;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --page: #141413;
+    --panel: #1e1e1c;
+    --ink: #ececea;
+    --ink-soft: #a3a39d;
+    --rule: #34342f;
+    --accent: #6d9cff;
+    --reject: #ff7a6e;
+    --diagram-bg: #1e1e1c;
+    --diagram-alt: #2b2b28;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--page); color: var(--ink);
+    font-size: var(--text-m); line-height: 1.5; font-family: var(--font-ui);
+  }
+  header { padding: var(--space-7) var(--space-6) var(--space-3); max-width: var(--page-max); margin: 0 auto; }
+  h1 { margin: 0; font-size: var(--text-l); font-weight: 650; letter-spacing: -0.01em; }
+  .bar {
+    position: sticky; top: 0; z-index: 2; background: color-mix(in srgb, var(--page) 92%, transparent);
+    backdrop-filter: blur(var(--blur)); border-bottom: 1px solid var(--rule);
+  }
+  .bar-inner {
+    max-width: var(--page-max); margin: 0 auto; padding: var(--space-4) var(--space-6);
+    display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-5); align-items: center;
+  }
+  button {
+    font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--rule);
+    border-radius: var(--radius-m); height: var(--control-h); padding: 0 var(--space-4); cursor: pointer;
+    transition: transform var(--dur-press) var(--ease-out), border-color var(--dur-hover);
+  }
+  button:hover { border-color: var(--ink-soft); }
+  button:active { transform: scale(0.97); }
+  button:focus-visible, input:focus-visible { outline: var(--focus-w) solid var(--accent); outline-offset: var(--focus-w); }
+  button svg { width: var(--icon); height: var(--icon); vertical-align: var(--icon-nudge); fill: currentColor; }
+  .speed { display: inline-flex; }
+  .speed button { border-radius: 0; margin-left: -1px; }
+  .speed button:first-child { border-radius: var(--radius-m) 0 0 var(--radius-m); margin-left: 0; }
+  .speed button:last-child { border-radius: 0 var(--radius-m) var(--radius-m) 0; }
+  .speed button[aria-checked="true"] { background: var(--ink); color: var(--panel); border-color: var(--ink); position: relative; }
+  .scrub { flex: 1 1 var(--scrub-basis); min-width: var(--scrub-min); accent-color: var(--accent); }
+  .count { font-variant-numeric: tabular-nums; color: var(--ink-soft); min-width: var(--count-w); text-align: right; }
+  label.follow { color: var(--ink-soft); display: flex; gap: var(--space-2); align-items: center; user-select: none; }
+  .caption {
+    flex: 1 0 100%; min-height: var(--caption-h); font-weight: 550;
+    display: flex; gap: var(--space-4); align-items: baseline; overflow: hidden;
+  }
+  .caption .section { color: var(--ink-soft); font-weight: 450; white-space: nowrap; }
+  .caption .text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .caption .text.is-reject { color: var(--reject); }
+  main { max-width: var(--page-max); margin: 0 auto; padding: var(--space-6); }
+  .stage {
+    background: var(--diagram-bg); border: 1px solid var(--rule); border-radius: var(--radius-l);
+    padding: var(--space-6); overflow-x: auto;
+  }
+  .stage svg.ondine {
+    display: block; margin: 0 auto;
+    --ondine-bg: var(--diagram-bg);
+    --ondine-fg: var(--ink);
+    --ondine-surface-alt: var(--diagram-alt);
+    --ondine-radius: 6px;
+  }
+  .fx-pop { transform-box: fill-box; transform-origin: center; }
+  .fx-packet { pointer-events: none; }
+  footer { max-width: var(--page-max); margin: 0 auto; padding: 0 var(--space-6) var(--space-8); color: var(--ink-soft); font-size: var(--text-s); }
+  /* video mode (?video): a fixed frame the renderer drives with __video.frame() */
+  .is-video body { overflow: hidden; }
+  .is-video header, .is-video footer, .is-video .bar-inner > :not(.caption) { display: none; }
+  .is-video .bar {
+    position: fixed; top: 0; left: 0; right: 0; height: var(--v-cap-h);
+    background: var(--page); border-bottom: 0; backdrop-filter: none;
+  }
+  .is-video .bar-inner { max-width: none; height: 100%; padding: var(--v-pad) var(--v-pad) 0; align-items: flex-start; }
+  .is-video .caption { flex-direction: column; gap: var(--space-2); align-items: flex-start; }
+  .is-video .caption .section { font-size: var(--v-text-l); font-weight: 700; color: var(--ink); letter-spacing: -0.02em; }
+  .is-video .caption .text { font-size: var(--v-text-m); font-weight: 500; color: var(--ink-soft); }
+  .is-video .caption .text.is-reject { color: var(--reject); }
+  .is-video main { position: fixed; top: var(--v-cap-h); left: 0; right: 0; bottom: 0; max-width: none; padding: 0 var(--v-pad) var(--v-pad); }
+  .is-video .stage { position: relative; height: 100%; padding: 0; overflow: hidden; }
+  .is-video .cam, .is-video .head { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+  .is-video .head { background: var(--diagram-bg); }
+  .is-video .stage svg.ondine { margin: 0; }
+  kbd { font-family: var(--font-mono); font-size: var(--text-xs); border: 1px solid var(--rule); border-radius: var(--radius-s); padding: 0 var(--space-1); }
+</style>
+<link rel="stylesheet" href="atlas.css">
+<script>if(new URLSearchParams(location.search).has("embed"))document.documentElement.classList.add("is-embed");</script>
+</head>
+<body>
+<header class="player-header"><a class="wordmark" href="index.html">UW II <span>항해 흐름도</span></a><a class="guide-back" href="../start/game-flow/">항해 수첩 ↗</a><div class="player-heading"><p class="eyebrow">CHAPTER 06 / 협동 미니게임</p><h1>세 선장이 함께 만드는 모험</h1><p>가족 등록부터 방 만들기, 여섯 도전, 공동 저장과 다시 도전까지 이어집니다.</p></div></header><nav class="chapter-nav" aria-label="흐름 선택"><a href="01-overview.animated.html" ><span>00</span>전체 지도</a><a href="02-start.animated.html" ><span>01</span>시작 · 이야기</a><a href="03-town-trade.animated.html" ><span>02</span>도시 · 교역</a><a href="04-voyage.animated.html" ><span>03</span>항해 · 탐험</a><a href="05-combat.animated.html" ><span>04</span>전투 · 보상</a><a href="06-ai-agent.animated.html" ><span>05</span>AI 자동 교역</a><a href="07-coop.animated.html" aria-current="page"><span>06</span>협동 미니게임</a></nav>
+<div class="bar">
+  <div class="bar-inner">
+    <button id="play" type="button" aria-label="재생"></button>
+    <button id="restart" type="button" aria-label="처음부터"><svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 1-4.6 3H1.8A6.5 6.5 0 1 0 3.5 3.4V1.5L.5 4.5l3 3V5.4A5 5 0 0 1 8 3z"/></svg></button>
+    <button id="prev" type="button" aria-label="이전 단계"><svg viewBox="0 0 16 16"><path d="M3 2h2v12H3zM14 2v12L6 8z"/></svg></button>
+    <button id="next" type="button" aria-label="다음 단계"><svg viewBox="0 0 16 16"><path d="M11 2h2v12h-2zM2 2v12l8-6z"/></svg></button>
+    <div id="speed" class="speed" role="radiogroup" aria-label="속도">
+      <button type="button" role="radio" aria-checked="false" data-speed="0.5">0.5x</button>
+      <button type="button" role="radio" aria-checked="true" data-speed="1">1x</button>
+      <button type="button" role="radio" aria-checked="false" data-speed="1.5">1.5x</button>
+      <button type="button" role="radio" aria-checked="false" data-speed="2">2x</button>
+    </div>
+    <input id="scrub" class="scrub" type="range" min="0" max="1000" step="1" value="0" aria-label="타임라인">
+    <span id="count" class="count">0 / 0</span>
+    <button id="show-all" type="button">전체 펼치기</button><label class="zoom-label">확대 <select id="zoom" aria-label="흐름도 확대"><option value="fit">화면 맞춤</option><option value="0.6">60%</option><option value="0.8">80%</option><option value="1" selected>100%</option><option value="1.25">125%</option></select></label><label class="follow"><input id="follow" type="checkbox" checked> 따라가기</label>
+    <div class="caption" aria-live="polite"><span id="section" class="section"></span><span id="text" class="text"></span></div>
+  </div>
+</div>
+<main><div class="reading-note"><span class="note-mark">i</span><p>1~3명이 참가하며 빈자리는 컴퓨터 선장이 돕습니다. 웹과 Android에서 함께 참가할 수 있습니다.</p></div><div class="stage" tabindex="0" aria-label="흐름도. 가로와 세로로 스크롤할 수 있습니다" id="stage"><svg xmlns="http://www.w3.org/2000/svg" class="ondine ondine-flowchart" viewBox="0 0 1927 1920" width="1927" height="1920" style="max-width:100%;height:auto;--_bg:var(--ondine-bg,#fff);--_fg:var(--ondine-fg,#000);--_m:var(--ondine-muted,var(--_fg));--_l:var(--ondine-line,var(--_fg));--_s:var(--ondine-surface,var(--_bg));--_a:var(--ondine-surface-alt,color-mix(in srgb,var(--_fg) 20%,var(--_bg)));--_b:var(--ondine-border,var(--_fg));--_c:var(--ondine-accent,var(--_fg));--_sw:var(--ondine-stroke,2px);stroke-width:var(--_sw);color:var(--_fg);--_r:var(--ondine-radius,0);--_fm:var(--ondine-font,ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', 'DejaVu Sans Mono', monospace);font:16px monospace;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;font-family:var(--ondine-font,ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', 'DejaVu Sans Mono', monospace);font-kerning:none;font-variant-ligatures:none;text-rendering:geometricPrecision" fill="var(--_fg)" role="graphics-document document" aria-roledescription="flowchart"><g class="ondine-clusters"><g class="ondine-cluster" data-id="이어가기"><rect x="760.5" y="1663" width="733.6" height="249" fill="var(--_a)" fill-opacity="0.5" stroke="var(--_b)" style="rx:var(--_r)"/></g><g class="ondine-cluster" data-id="도전"><rect x="8" y="825" width="1471.7" height="632" fill="var(--_a)" fill-opacity="0.5" stroke="var(--_b)" style="rx:var(--_r)"/></g><g class="ondine-cluster" data-id="모이기"><rect x="1111.4" y="8" width="421.6" height="632" fill="var(--_a)" fill-opacity="0.5" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-cluster-label" fill="var(--_m)" x="1288.6" y="33.6" text-anchor="middle">각자 로그인하고 가족의 방에 모이기</text></g></g><g class="ondine-edges" fill="none" stroke="var(--_l)" stroke-linecap="round"><g class="ondine-edge" data-id="L_M01_M02_0"><path d="M1399,96L1399,137"/><path class="ondine-marker" d="M1399,144L1395.64,136L1402.36,136Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M02_M03_0"><path d="M1399,216L1399,257"/><path class="ondine-marker" d="M1399,264L1395.64,256L1402.36,256Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M03_M04_0"><path d="M1316.4,312L1316.4,353"/><path class="ondine-marker" d="M1316.4,360L1313.04,352L1319.76,352Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M04_M05_0"><path d="M1245.4,408L1245.4,449"/><path class="ondine-marker" d="M1245.4,456L1242.04,448L1248.76,448Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M05_M20_0"><path d="M1245.4,504L1245.4,545"/><path class="ondine-marker" d="M1245.4,552L1242.04,544L1248.76,544Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M20_M06_0"><path d="M1205.4,600L1205.4,640C1205.4,657.36 1034.8,668 756.45,668C478.1,668 307.5,694.7 307.5,738.25L307.5,878"/><path class="ondine-marker" d="M307.5,885L304.14,877L310.86,877Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M20_M07_0"><path d="M1221.4,600L1221.4,640C1221.4,664.8 1088.65,680 872.05,680C655.45,680 522.7,702.14 522.7,738.25L522.7,878"/><path class="ondine-marker" d="M522.7,885L519.34,877L526.06,877Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M20_M08_0"><path d="M1237.4,600L1237.4,640C1237.4,672.24 1142.49,692 987.65,692C832.8,692 737.9,709.58 737.9,738.25L737.9,878"/><path class="ondine-marker" d="M737.9,885L734.54,877L741.26,877Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M20_M09_0"><path d="M1296.4,600L1296.4,640C1296.4,679.68 1230.26,704 1122.35,704C1014.44,704 948.3,714.64 948.3,732L948.3,878"/><path class="ondine-marker" d="M948.3,885L944.94,877L951.66,877Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M20_M10_0"><path d="M1312.4,600L1312.4,757C1312.4,781.8 1281.26,797 1230.45,797C1179.64,797 1148.5,807.64 1148.5,825L1148.5,878"/><path class="ondine-marker" d="M1148.5,885L1145.14,877L1151.86,877Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M20_M11_0"><path d="M1328.4,600L1328.4,640C1328.4,679.68 1349.83,704 1384.8,704C1419.77,704 1441.2,714.64 1441.2,732L1441.2,757C1441.2,781.8 1426.02,797 1401.25,797C1376.48,797 1361.3,807.64 1361.3,825L1361.3,878"/><path class="ondine-marker" d="M1361.3,885L1357.94,877L1364.66,877Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M06_M12_0"><path d="M307.5,933L307.5,978.5C307.5,1010.74 398.09,1030.5 545.9,1030.5C693.71,1030.5 784.3,1036.48 784.3,1046.25L784.3,1051.5"/><path class="ondine-marker" d="M784.3,1058.5L780.94,1050.5L787.66,1050.5Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M07_M12_0"><path d="M522.7,933L522.7,978.5C522.7,1003.3 575.44,1018.5 661.5,1018.5C747.56,1018.5 800.3,1028.76 800.3,1045.5L800.3,1051.5"/><path class="ondine-marker" d="M800.3,1058.5L796.94,1050.5L803.66,1050.5Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M08_M12_0"><path d="M737.9,933L737.9,978.5C737.9,995.86 752.8,1006.5 777.1,1006.5C801.4,1006.5 816.3,1021.32 816.3,1045.5L816.3,1051.5"/><path class="ondine-marker" d="M816.3,1058.5L812.94,1050.5L819.66,1050.5Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M09_M12_0"><path d="M948.3,933L948.3,978.5C948.3,995.86 933.4,1006.5 909.1,1006.5C884.8,1006.5 869.9,1021.32 869.9,1045.5L869.9,1051.5"/><path class="ondine-marker" d="M869.9,1058.5L866.54,1050.5L873.26,1050.5Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M10_M12_0"><path d="M1148.5,933L1148.5,978.5C1148.5,1003.3 1098.61,1018.5 1017.2,1018.5C935.79,1018.5 885.9,1028.76 885.9,1045.5L885.9,1051.5"/><path class="ondine-marker" d="M885.9,1058.5L882.54,1050.5L889.26,1050.5Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M11_M12_0"><path d="M1361.3,933L1361.3,978.5C1361.3,1010.74 1274.01,1030.5 1131.6,1030.5C989.19,1030.5 901.9,1036.49 901.9,1046.25L901.9,1051.5"/><path class="ondine-marker" d="M901.9,1058.5L898.54,1050.5L905.26,1050.5Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M12_M14_0"><path d="M816.3,1106.5L816.3,1119.5C816.3,1136.24 760.65,1146.5 669.85,1146.5C579.05,1146.5 523.4,1157.14 523.4,1174.5L523.4,1241"/><path class="ondine-marker" d="M523.4,1248L520.04,1240L526.76,1240Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M14_M13_0"><path d="M515.4,1296L515.4,1341.5C515.4,1345.34 204,1353.03 204,1356.88L204,1362"/><path class="ondine-marker" d="M204,1369L200.64,1361L207.36,1361Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M13_M12_0"><path d="M112.1,1369L112.1,1186C112.1,1159.68 784.3,1145.82 784.3,1119.5L784.3,1113.5"/><path class="ondine-marker" d="M784.3,1106.5L787.66,1114.5L780.94,1114.5Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M12_M15_0"><path d="M800.3,1106.5L800.3,1118.75C800.3,1128.52 701.16,1134.5 539.4,1134.5C377.64,1134.5 278.5,1149.7 278.5,1174.5L278.5,1241"/><path class="ondine-marker" d="M278.5,1248L275.14,1240L281.86,1240Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M12_M16_0"><path d="M868.4,1106.5L868.4,1119.5C868.4,1183.75 911.9,1183.75 911.9,1248L911.9,1457C911.9,1481.8 846.69,1497 740.3,1497C633.91,1497 568.7,1512.2 568.7,1537L568.7,1583C568.7,1615.24 623.61,1635 713.2,1635C802.79,1635 857.7,1645.64 857.7,1663L857.7,1716" stroke-dasharray="3 4"/><path class="ondine-marker" d="M857.7,1723L854.34,1715L861.06,1715Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M16_M12_0"><path d="M898.9,1723L898.9,1714.25C898.9,1708.63 974.9,1708.63 974.9,1703L974.9,1663C974.9,1638.2 936.56,1623 874,1623C811.44,1623 773.1,1607.8 773.1,1583L773.1,1537C773.1,1519.64 802.51,1509 850.5,1509C898.49,1509 927.9,1489.24 927.9,1457L927.9,1248C927.9,1183.75 884.4,1183.75 884.4,1119.5L884.4,1113.5" stroke-dasharray="3 4"/><path class="ondine-marker" d="M884.4,1106.5L887.76,1114.5L881.04,1114.5Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M12_M17_0"><path d="M900.4,1106.5L900.4,1119.5C900.4,1183.75 943.9,1183.75 943.9,1248L943.9,1583C943.9,1623 990.9,1623 990.9,1663L990.9,1703C990.9,1707.88 1042.9,1707.88 1042.9,1712.75L1042.9,1716" stroke-dasharray="3 4"/><path class="ondine-marker" d="M1042.9,1723L1039.54,1715L1046.26,1715Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M17_M12_0"><path d="M1164.7,1723L1164.7,1537C1164.7,1512.2 1141.33,1497 1103.2,1497C1065.07,1497 1041.7,1481.8 1041.7,1457L1041.7,1248C1041.7,1183.75 916.4,1183.75 916.4,1119.5L916.4,1113.5" stroke-dasharray="3 4"/><path class="ondine-marker" d="M916.4,1106.5L919.76,1114.5L913.04,1114.5Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M17_M18_0"><path d="M1100.1,1771L1100.1,1816.5C1100.1,1824.19 1180.1,1824.19 1180.1,1831.88L1180.1,1837" stroke-dasharray="3 4"/><path class="ondine-marker" d="M1180.1,1844L1176.74,1836L1183.46,1836Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M18_M04_0"><path d="M1237.3,1844L1237.3,1663C1237.3,1634.48 1304.98,1617 1415.4,1617C1525.82,1617 1593.5,1599.71 1593.5,1571.5L1593.5,738.25C1593.5,709.58 1554.34,692 1490.45,692C1426.56,692 1387.4,672.24 1387.4,640L1387.4,415" stroke-dasharray="3 4"/><path class="ondine-marker" d="M1387.4,408L1390.76,416L1384.04,416Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M14_M19_0"><path d="M588,1296L588,1457C588,1474.36 731.62,1485 965.95,1485C1200.28,1485 1343.9,1504.76 1343.9,1537L1343.9,1617C1343.9,1640 1307.5,1640 1307.5,1663L1307.5,1716" stroke-dasharray="3 4"/><path class="ondine-marker" d="M1307.5,1723L1304.14,1715L1310.86,1715Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M19_M18_0"><path d="M1369.7,1771L1369.7,1816.5C1369.7,1824.19 1294.5,1824.19 1294.5,1831.88L1294.5,1837" stroke-dasharray="3 4"/><path class="ondine-marker" d="M1294.5,1844L1291.14,1836L1297.86,1836Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M19_M03_0"><path d="M1377.7,1723L1377.7,1663C1377.7,1641.92 1457.54,1629 1587.8,1629C1718.06,1629 1797.9,1607.15 1797.9,1571.5L1797.9,738.25C1797.9,702.14 1731.42,680 1622.95,680C1514.48,680 1448,664.8 1448,640L1448,319" stroke-dasharray="3 4"/><path class="ondine-marker" d="M1448,312L1451.36,320L1444.64,320Z" fill="var(--_l)" stroke="none"/></g><g class="ondine-edge" data-id="L_M15_M03_0"><path d="M184.7,1248L184.7,825C184.7,800.2 503.44,785 1023.5,785C1543.56,785 1862.3,774.36 1862.3,757L1862.3,732C1862.3,692.32 1786.62,668 1663.15,668C1539.68,668 1464,657.36 1464,640L1464,319" stroke-dasharray="3 4"/><path class="ondine-marker" d="M1464,312L1467.36,320L1460.64,320Z" fill="var(--_l)" stroke="none"/></g></g><g class="ondine-cluster-titles"><g class="ondine-cluster-title" data-id="이어가기"><text fill="none" stroke="color-mix(in srgb,var(--_a) 50%,var(--_bg))" stroke-width="5" stroke-linejoin="round" x="904.1" y="1688.6" text-anchor="middle">쉬어도 마지막 저장 지점부터</text><text class="ondine-cluster-label" fill="var(--_m)" x="904.1" y="1688.6" text-anchor="middle">쉬어도 마지막 저장 지점부터</text></g><g class="ondine-cluster-title" data-id="도전"><text fill="none" stroke="color-mix(in srgb,var(--_a) 50%,var(--_bg))" stroke-width="5" stroke-linejoin="round" x="156.4" y="850.6" text-anchor="middle">본편 저장과 별도의 협동 모험</text><text class="ondine-cluster-label" fill="var(--_m)" x="156.4" y="850.6" text-anchor="middle">본편 저장과 별도의 협동 모험</text></g></g><g class="ondine-edge-labels" font-size="14"><g class="ondine-edge-label" data-id="L_M20_M09_0"><rect x="893.9" y="734" width="108.8" height="21" rx="3" fill="var(--_bg)"/><text x="948.3" y="749.4" text-anchor="middle">45~60분 목표</text></g><g class="ondine-edge-label" data-id="L_M20_M10_0"><rect x="1258" y="734" width="108.8" height="21" rx="3" fill="var(--_bg)"/><text x="1312.4" y="749.4" text-anchor="middle">35~50분 목표</text></g><g class="ondine-edge-label" data-id="L_M20_M11_0"><rect x="1386.8" y="734" width="108.8" height="21" rx="3" fill="var(--_bg)"/><text x="1441.2" y="749.4" text-anchor="middle">40~60분 목표</text></g><g class="ondine-edge-label" data-id="L_M06_M12_0"><rect x="223.7" y="955.5" width="167.6" height="21" rx="3" fill="var(--_bg)"/><text x="307.5" y="970.9" text-anchor="middle">배달·단서 공유·귀환</text></g><g class="ondine-edge-label" data-id="L_M07_M12_0"><rect x="426.3" y="955.5" width="192.8" height="21" rx="3" fill="var(--_bg)"/><text x="522.7" y="970.9" text-anchor="middle">세 항구 입항·단서 공유</text></g><g class="ondine-edge-label" data-id="L_M08_M12_0"><rect x="649.9" y="955.5" width="176" height="21" rx="3" fill="var(--_bg)"/><text x="737.9" y="970.9" text-anchor="middle">자기 배로 세 번 승리</text></g><g class="ondine-edge-label" data-id="L_M09_M12_0"><rect x="864.5" y="955.5" width="167.6" height="21" rx="3" fill="var(--_bg)"/><text x="948.3" y="970.9" text-anchor="middle">해도 해독·다섯 구간</text></g><g class="ondine-edge-label" data-id="L_M10_M12_0"><rect x="1052.1" y="955.5" width="192.8" height="21" rx="3" fill="var(--_bg)"/><text x="1148.5" y="970.9" text-anchor="middle">네 차례 구조·전원 귀환</text></g><g class="ondine-edge-label" data-id="L_M11_M12_0"><rect x="1264.9" y="955.5" width="192.8" height="21" rx="3" fill="var(--_bg)"/><text x="1361.3" y="970.9" text-anchor="middle">세 차례 전달·전원 귀환</text></g><g class="ondine-edge-label" data-id="L_M12_M14_0"><rect x="431.2" y="1187" width="184.4" height="21" rx="3" fill="var(--_bg)"/><text x="523.4" y="1202.4" text-anchor="middle">안전한 진행 지점 도착</text></g><g class="ondine-edge-label" data-id="L_M14_M13_0"><rect x="473.6" y="1318.5" width="83.6" height="21" rx="3" fill="var(--_bg)"/><text x="515.4" y="1333.9" text-anchor="middle">저장 완료</text></g><g class="ondine-edge-label" data-id="L_M12_M15_0"><rect x="194.7" y="1176.5" width="167.6" height="42" rx="3" fill="var(--_bg)"/><text text-anchor="middle" xml:space="preserve"><tspan x="278.5" y="1191.9">모든 목표 완료·기록</tspan><tspan x="278.5" y="1212.9">저장</tspan></text></g><g class="ondine-edge-label" data-id="L_M12_M16_0"><rect x="472.3" y="1539" width="192.8" height="42" rx="3" fill="var(--_bg)"/><text text-anchor="middle" xml:space="preserve"><tspan x="568.7" y="1554.4">보급 소진·전투 패배·턴</tspan><tspan x="568.7" y="1575.4">제한</tspan></text></g><g class="ondine-edge-label" data-id="L_M16_M12_0"><rect x="685.1" y="1549.5" width="176" height="21" rx="3" fill="var(--_bg)"/><text x="773.1" y="1564.9" text-anchor="middle">마지막 저장 지점부터</text></g><g class="ondine-edge-label" data-id="L_M12_M17_0"><rect x="881.1" y="1549.5" width="125.6" height="21" rx="3" fill="var(--_bg)"/><text x="943.9" y="1564.9" text-anchor="middle">가족 연결 끊김</text></g><g class="ondine-edge-label" data-id="L_M17_M12_0"><rect x="1080.9" y="1539" width="167.6" height="42" rx="3" fill="var(--_bg)"/><text text-anchor="middle" xml:space="preserve"><tspan x="1164.7" y="1554.4">재참가 또는 30초 후</tspan><tspan x="1164.7" y="1575.4">계속</tspan></text></g><g class="ondine-edge-label" data-id="L_M17_M18_0"><rect x="1016.3" y="1793.5" width="167.6" height="21" rx="3" fill="var(--_bg)"/><text x="1100.1" y="1808.9" text-anchor="middle">방장이 나가 방 종료</text></g><g class="ondine-edge-label" data-id="L_M18_M04_0"><rect x="1509.7" y="1130.5" width="167.6" height="21" rx="3" fill="var(--_bg)"/><text x="1593.5" y="1145.9" text-anchor="middle">새 방에 다시 모이기</text></g><g class="ondine-edge-label" data-id="L_M14_M19_0"><rect x="1268.5" y="1549.5" width="150.8" height="21" rx="3" fill="var(--_bg)"/><text x="1343.9" y="1564.9" text-anchor="middle">저장 확인 후 쉬기</text></g><g class="ondine-edge-label" data-id="L_M19_M18_0"><rect x="1273.3" y="1793.5" width="192.8" height="21" rx="3" fill="var(--_bg)"/><text x="1369.7" y="1808.9" text-anchor="middle">진행하던 모험 이어하기</text></g><g class="ondine-edge-label" data-id="L_M19_M03_0"><rect x="1697.3" y="1130.5" width="201.2" height="21" rx="3" fill="var(--_bg)"/><text x="1797.9" y="1145.9" text-anchor="middle">진행 중인 모험 그만두기</text></g><g class="ondine-edge-label" data-id="L_M15_M03_0"><rect x="1807.9" y="734" width="108.8" height="21" rx="3" fill="var(--_bg)"/><text x="1862.3" y="749.4" text-anchor="middle">새 도전 선택</text></g></g><g class="ondine-nodes"><g class="ondine-node ondine-shape-rect" data-id="M01" transform="translate(1399,72)"><rect x="-114" y="-24" width="228" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">로그인·함께하기 열기</text></g><g class="ondine-node ondine-shape-rect" data-id="M02" transform="translate(1399,180)"><rect x="-94.8" y="-36" width="189.6" height="72" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-6.4">가족 만들기·가입</tspan><tspan x="0" y="17.6">승인</tspan></text></g><g class="ondine-node ondine-shape-rect" data-id="M03" transform="translate(1399,288)"><rect x="-99.6" y="-24" width="199.2" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">여섯 도전 중 선택</text></g><g class="ondine-node ondine-shape-rect" data-id="M04" transform="translate(1316.4,384)"><rect x="-85.2" y="-24" width="170.4" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">방 만들기·참가</text></g><g class="ondine-node ondine-shape-rect" data-id="M05" transform="translate(1245.4,480)"><rect x="-104.4" y="-24" width="208.8" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">1~3명 준비 후 출발</text></g><g class="ondine-node ondine-shape-rect" data-id="M20" transform="translate(1245.4,576)"><rect x="-114" y="-24" width="228" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">빈자리는 컴퓨터 선장</text></g><g class="ondine-node ondine-shape-rect" data-id="M06" transform="translate(307.5,909)"><rect x="-94.8" y="-24" width="189.6" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">세 항구의 배달부</text></g><g class="ondine-node ondine-shape-rect" data-id="M07" transform="translate(522.7,909)"><rect x="-80.4" y="-24" width="160.8" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">새로운 바닷길</text></g><g class="ondine-node ondine-shape-rect" data-id="M08" transform="translate(737.9,909)"><rect x="-94.8" y="-24" width="189.6" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">우리 바다 지키기</text></g><g class="ondine-node ondine-shape-rect" data-id="M09" transform="translate(948.3,909)"><rect x="-75.6" y="-24" width="151.2" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">세 개의 해도</text></g><g class="ondine-node ondine-shape-rect" data-id="M10" transform="translate(1148.5,909)"><rect x="-70.8" y="-24" width="141.6" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">폭풍 구조대</text></g><g class="ondine-node ondine-shape-rect" data-id="M11" transform="translate(1361.3,909)"><rect x="-85.2" y="-24" width="170.4" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">안개 항구 잠입</text></g><g class="ondine-node ondine-shape-rect" data-id="M12" transform="translate(843.1,1082.5)"><rect x="-94.8" y="-24" width="189.6" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">각자 역할로 협력</text></g><g class="ondine-node ondine-shape-rect" data-id="M13" transform="translate(142,1393)"><rect x="-114" y="-24" width="228" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">다음 목표로 이어가기</text></g><g class="ondine-node ondine-shape-rect" data-id="M14" transform="translate(523.4,1272)"><rect x="-109.2" y="-24" width="218.4" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">안전 지점 공동 저장</text></g><g class="ondine-node ondine-shape-rect" data-id="M15" transform="translate(249.3,1272)"><rect x="-109.2" y="-24" width="218.4" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">완료 배지·가족 기록</text></g><g class="ondine-node ondine-shape-rect" data-id="M16" transform="translate(865.7,1747)"><rect x="-85.2" y="-24" width="170.4" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">실패·다시 도전</text></g><g class="ondine-node ondine-shape-rect" data-id="M17" transform="translate(1100.1,1747)"><rect x="-109.2" y="-24" width="218.4" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">연결 끊김·참가 대기</text></g><g class="ondine-node ondine-shape-rect" data-id="M18" transform="translate(1237.3,1868)"><rect x="-109.2" y="-24" width="218.4" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">저장 지점에서 새 방</text></g><g class="ondine-node ondine-shape-rect" data-id="M19" transform="translate(1369.7,1747)"><rect x="-104.4" y="-24" width="208.8" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="ondine-label" x="0" y="5.6" text-anchor="middle">쉬기·모험 그만두기</text></g></g></svg></div><section class="under-map"><details class="steps"><summary>단계 목록으로 살펴보기 <span id="step-total"></span></summary><ol id="step-list"></ol></details><aside class="guide-notes"><h2>이 흐름에서 기억할 것</h2><ul><li>가족 초대 코드는 가족 등록용, 방 코드는 현재 모험 참가용입니다.</li><li>짧은 모험: 세 항구의 배달부 · 새로운 바닷길 · 우리 바다 지키기.</li><li>긴 원정: 세 개의 해도 · 폭풍 구조대 · 안개 항구 잠입.</li><li>본편의 개인 저장·금화·함대·이야기와 분리되어 진행됩니다.</li></ul><a href="../challenges/mini-challenges/">관련 가이드 읽기 ↗</a></aside></section></main>
+<footer><kbd>Space</kbd> 재생/정지 · <kbd>←</kbd> <kbd>→</kbd> 단계 이동 · <kbd>R</kbd> 처음부터</footer>
+
+<script>
+(() => {
+  // ── timing (ms) and curves, from rossark-motion-skill: travel = ease-in-out, arrive = ease-out
+  const CONFIG = {
+    noteMs: 460,          // a section note settles in
+    drawMinMs: 480,       // shortest arrow draw
+    drawMaxMs: 950,       // longest arrow draw
+    drawMsPerUnit: 0.42,  // longer arrows travel a little longer (constant-ish speed)
+    popMs: 220,           // label / marker / badge arrive
+    rejectHoldMs: 260,    // extra beat to read a rejection
+    gapMs: 140,           // breath between beats
+    glowOutMs: 700,       // active color fades back after the beat
+  };
+  const bezier = (x1, y1, x2, y2) => {
+    const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx;
+    const cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+    const sx = (t) => ((ax * t + bx) * t + cx) * t;
+    const dx = (t) => (3 * ax * t + 2 * bx) * t + cx;
+    const sy = (t) => ((ay * t + by) * t + cy) * t;
+    return (x) => {
+      if (x <= 0) return 0; if (x >= 1) return 1;
+      let t = x;
+      for (let i = 0; i < 6; i++) { const e = sx(t) - x, d = dx(t); if (Math.abs(e) < 1e-5 || !d) break; t -= e / d; }
+      return sy(Math.min(1, Math.max(0, t)));
+    };
+  };
+  const travel = bezier(0.77, 0, 0.175, 1);
+  const arrive = bezier(0.23, 1, 0.32, 1);
+  const seg = (t, a, b) => (b <= a ? (t >= b ? 1 : 0) : Math.min(1, Math.max(0, (t - a) / (b - a))));
+
+  const svg = document.querySelector('#stage svg.ondine');
+  if (!svg) return;
+  const NS = 'http://www.w3.org/2000/svg';
+  const isSequence = svg.classList.contains('ondine-sequence');
+  const byId = (sel, id) => svg.querySelector(`${sel}[data-id="${CSS.escape(id)}"]`);
+  const lines = (g) => (g ? [...g.querySelectorAll('text')].flatMap((t) => {
+    const spans = t.querySelectorAll('tspan');
+    return spans.length ? [...spans].map((s) => s.textContent.trim()) : [t.textContent.trim()];
+  }).filter(Boolean) : []);
+  const labelText = (g) => lines(g).join(' ');
+  const nameOf = (g) => labelText(g);
+  // CSS transform would replace an SVG transform attribute, so pop an inner wrapper instead
+  const popTarget = (el) => {
+    if (!el || !el.hasAttribute('transform')) return el;
+    if (el.__pop) return el.__pop;
+    const inner = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    while (el.firstChild) inner.appendChild(el.firstChild);
+    el.appendChild(inner);
+    el.__pop = inner;
+    return inner;
+  };
+  const mainPath = (g) => [...g.querySelectorAll(':scope > path')].find((p) => !p.classList.contains('ondine-marker'));
+
+  // ── collect beats
+  const beats = [];
+  const nodeOf = new Map();
+  if (isSequence) {
+    const lifelines = [...svg.querySelectorAll('.ondine-lifeline')].map((p) => ({ id: p.dataset.id, x: parseFloat(p.getAttribute('d').slice(1)) }));
+    const actor = (id) => [...svg.querySelectorAll(`.ondine-actor[data-id="${CSS.escape(id)}"]`)].find((g) => !g.classList.contains('ondine-actor-footer'));
+    const nearest = (x) => lifelines.reduce((a, b) => (Math.abs(b.x - x) < Math.abs(a.x - x) ? b : a), lifelines[0]);
+    const items = [...svg.querySelectorAll('.ondine-note[data-id], .ondine-message[data-id]')];
+    items.sort((a, b) => parseInt(a.dataset.id.replace(/\D/g, ''), 10) - parseInt(b.dataset.id.replace(/\D/g, ''), 10));
+    let section = '';
+    for (const g of items) {
+      if (g.classList.contains('ondine-note')) {
+        section = labelText(g);
+        beats.push({ kind: 'note', el: g, section, text: section });
+      } else {
+        const path = mainPath(g);
+        const d = path.getAttribute('d');
+        const nums = d.match(/-?\d+(\.\d+)?/g).map(Number);
+        const from = nearest(nums[0]), to = nearest(path.getPointAtLength(path.getTotalLength()).x);
+        const label = byId('.ondine-edge-label', g.dataset.id);
+        const n = g.querySelector('.ondine-sequence-number text');
+        const nodes = [actor(from.id), actor(to.id)].filter(Boolean);
+        beats.push({
+          kind: 'edge', el: g, path, label, section,
+          marker: g.querySelector('.ondine-marker'),
+          badge: g.querySelector('.ondine-sequence-number'),
+          nodes, text: `${n ? n.textContent + ' · ' : ''}${labelText(label)}`,
+          names: [nameOf(nodes[0]), nameOf(nodes[1])],
+        });
+      }
+    }
+  } else {
+    const nodes = [...svg.querySelectorAll('.ondine-node[data-id]')];
+    nodes.forEach((g) => nodeOf.set(g.dataset.id, g));
+    const ids = [...nodeOf.keys()].sort((a, b) => b.length - a.length);
+    const ends = (edgeId) => {
+      const m = edgeId.match(/^L_(.+)_\d+$/);
+      if (!m) return [];
+      for (const a of ids) if (m[1].startsWith(a + '_') && nodeOf.has(m[1].slice(a.length + 1))) return [a, m[1].slice(a.length + 1)];
+      return [];
+    };
+    const seen = new Set();
+    for (const g of svg.querySelectorAll('.ondine-edges > .ondine-edge[data-id]')) {
+      const path = mainPath(g);
+      if (!path) continue;
+      const [a, b] = ends(g.dataset.id);
+      const label = byId('.ondine-edge-label', g.dataset.id);
+      const appear = [a, b].filter((id) => id && !seen.has(id)).map((id) => nodeOf.get(id));
+      [a, b].forEach((id) => id && seen.add(id));
+      const names = [nameOf(nodeOf.get(a)), nameOf(nodeOf.get(b))];
+      const lt = labelText(label);
+      beats.push({
+        kind: 'edge', el: g, path, label, section: '',
+        marker: g.querySelector('.ondine-marker'), badge: null,
+        nodes: [nodeOf.get(a), nodeOf.get(b)].filter(Boolean), appear,
+        text: `${names[0]} → ${names[1]}${lt ? ' : ' + lt : ''}`, names,
+      });
+    }
+    // nodes no edge touches are part of the opening frame
+    beats.orphans = nodes.filter((g) => !seen.has(g.dataset.id));
+  }
+
+  // ── prepare: masks for draw-on, packets, pop transforms
+  let defs = svg.querySelector('defs');
+  if (!defs) { defs = document.createElementNS(NS, 'defs'); svg.prepend(defs); }
+  let t0 = 0;
+  beats.forEach((b, i) => {
+    b.start = t0;
+    if (b.kind === 'note') {
+      popTarget(b.el).classList.add('fx-pop');
+      b.end = t0 + CONFIG.noteMs;
+    } else {
+      const len = b.path.getTotalLength();
+      b.len = len;
+      b.reject = !!(b.marker && !/z/i.test(b.marker.getAttribute('d') || ''));
+      const draw = Math.min(CONFIG.drawMaxMs, Math.max(CONFIG.drawMinMs, CONFIG.drawMinMs * 0.6 + len * CONFIG.drawMsPerUnit));
+      b.drawEnd = t0 + draw;
+      b.end = b.drawEnd + CONFIG.popMs + (b.reject ? CONFIG.rejectHoldMs : 0);
+      // mask: a solid copy of the path that draws on, so dashed lines keep their dashes
+      const mask = document.createElementNS(NS, 'mask');
+      mask.setAttribute('id', `fx-mask-${i}`);
+      mask.setAttribute('maskUnits', 'userSpaceOnUse');
+      mask.setAttribute('x', '-100000'); mask.setAttribute('y', '-100000');
+      mask.setAttribute('width', '200000'); mask.setAttribute('height', '200000');
+      const mp = document.createElementNS(NS, 'path');
+      mp.setAttribute('d', b.path.getAttribute('d'));
+      mp.setAttribute('fill', 'none'); mp.setAttribute('stroke', '#fff'); // mask luminance: white is visible
+      mp.setAttribute('stroke-width', '14');
+      mp.setAttribute('stroke-linecap', 'butt');
+      mp.setAttribute('pathLength', '1'); mp.setAttribute('stroke-dasharray', '1 2');
+      mask.appendChild(mp);
+      b.el.parentNode.insertBefore(mask, b.el);
+      b.maskPath = mp;
+      b.path.setAttribute('mask', `url(#fx-mask-${i})`);
+      // packet: the thing that travels, so the eye follows the flow
+      const pk = document.createElementNS(NS, 'g');
+      pk.classList.add('fx-packet');
+      pk.setAttribute('stroke', 'none');
+      const halo = document.createElementNS(NS, 'circle'); halo.setAttribute('r', '9'); halo.setAttribute('opacity', '0.22');
+      const dot = document.createElementNS(NS, 'circle'); dot.setAttribute('r', '4.5');
+      pk.append(halo, dot);
+      b.el.parentNode.appendChild(pk);
+      b.packet = pk;
+      [b.marker, b.badge, b.label, ...(b.appear || [])].forEach((el) => el && popTarget(el).classList.add('fx-pop'));
+    }
+    t0 = b.end + CONFIG.gapMs;
+  });
+  const TOTAL = Math.max(1, t0 - CONFIG.gapMs);
+
+  // ── draw the frame for time t (everything is a function of t: scrub, step and play share it)
+  const pop = (el, p) => {
+    el = popTarget(el);
+    if (!el) return;
+    const k = arrive(p);
+    el.style.opacity = k;
+    el.style.transform = k >= 1 ? '' : `scale(${0.92 + 0.08 * k})`;
+  };
+  const tint = (el, varName, color, k) => {
+    if (!el) return;
+    if (k <= 0.001) el.style.removeProperty(varName);
+    else el.style.setProperty(varName, `color-mix(in srgb, ${color} ${Math.round(k * 100)}%, var(--_fg))`);
+  };
+  const setNodeTint = (g, k) => {
+    if (!g) return;
+    const box = g.__pop || g;
+    const rect = box.querySelector(':scope > rect, :scope > path, :scope > polygon, :scope > ellipse, :scope > circle');
+    if (!rect) return;
+    if (k <= 0.001) { rect.style.removeProperty('stroke'); rect.style.removeProperty('stroke-width'); }
+    else {
+      rect.style.stroke = `color-mix(in srgb, var(--accent) ${Math.round(k * 100)}%, var(--_b))`;
+      rect.style.strokeWidth = `calc(var(--_sw) + ${(k * 1).toFixed(2)}px)`;
+    }
+  };
+  const nodeGlow = new Map();
+
+  function render(t) {
+    nodeGlow.clear();
+    if (beats.orphans) beats.orphans.forEach((g) => pop(g, 1));
+    for (const b of beats) {
+      if (b.kind === 'note') { pop(b.el, seg(t, b.start, b.end)); continue; }
+      const p = travel(seg(t, b.start, b.drawEnd));
+      b.maskPath.setAttribute('stroke-dashoffset', String(1 - p));
+      // packet rides the line while it draws, then leaves
+      const live = t > b.start && t < b.drawEnd + 120;
+      if (live) {
+        const pt = b.path.getPointAtLength(b.len * p);
+        b.packet.setAttribute('transform', `translate(${pt.x},${pt.y})`);
+        b.packet.style.opacity = String(Math.min(1, seg(t, b.start, b.start + 120)) * (1 - seg(t, b.drawEnd, b.drawEnd + 120)));
+        b.packet.style.fill = b.reject ? 'var(--reject)' : 'var(--accent)';
+      } else b.packet.style.opacity = '0';
+      (b.appear || []).forEach((n) => pop(n, seg(t, b.start - CONFIG.popMs, b.start)));
+      pop(b.badge, seg(t, b.start, b.start + CONFIG.popMs));
+      pop(b.marker, seg(t, b.drawEnd - 60, b.drawEnd - 60 + CONFIG.popMs));
+      pop(b.label, seg(t, b.start + (b.drawEnd - b.start) * 0.55, b.start + (b.drawEnd - b.start) * 0.55 + CONFIG.popMs));
+      // color: accent while active, fading back after; rejections settle red
+      const on = t >= b.start ? 1 - seg(t, b.end, b.end + CONFIG.glowOutMs) : 0;
+      if (b.reject && t >= b.drawEnd) tint(b.el, '--_l', 'var(--reject)', 1);
+      else tint(b.el, '--_l', b.reject ? 'var(--reject)' : 'var(--accent)', on);
+      if (b.label) b.label.style.fill = b.reject && t >= b.drawEnd ? 'var(--reject)' : '';
+      b.nodes.forEach((g) => nodeGlow.set(g, Math.max(nodeGlow.get(g) || 0, t >= b.start ? on : 0)));
+    }
+    allNodes.forEach((g) => setNodeTint(g, nodeGlow.get(g) || 0));
+  }
+  const allNodes = [...new Set(beats.flatMap((b) => b.nodes || []))];
+
+  // ── clock
+  const ui = {
+    play: document.getElementById('play'), restart: document.getElementById('restart'),
+    prev: document.getElementById('prev'), next: document.getElementById('next'),
+    speed: document.getElementById('speed'), scrub: document.getElementById('scrub'),
+    count: document.getElementById('count'), follow: document.getElementById('follow'),
+    section: document.getElementById('section'), text: document.getElementById('text'),
+  };
+  const EMBED = document.documentElement.classList.contains('is-embed');
+  const VIDEO = !EMBED && new URLSearchParams(location.search).has('video');
+  let video = null;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let t = (reduced || EMBED) && !VIDEO ? TOTAL : 0, playing = !reduced && !VIDEO && !EMBED, last = 0, raf = 0, shown = -2, speed = 1;
+  const ICON_PLAY = '<svg viewBox="0 0 16 16"><path d="M4 2v12l10-6z"/></svg>';
+  const ICON_PAUSE = '<svg viewBox="0 0 16 16"><path d="M3 2h4v12H3zM9 2h4v12H9z"/></svg>';
+
+  const current = () => { let k = -1; for (let i = 0; i < beats.length; i++) if (t >= beats[i].start) k = i; return k; };
+  let lastPlaying = null;
+  function sync() {
+    if (EMBED && playing !== lastPlaying) {
+      lastPlaying = playing;
+      parent.postMessage({type:'guide-flow-state', playing}, location.origin);
+    }
+    render(t);
+    ui.scrub.value = String(Math.round((t / TOTAL) * 1000));
+    ui.play.innerHTML = playing ? ICON_PAUSE : ICON_PLAY;
+    ui.play.setAttribute('aria-label', playing ? '일시정지' : '재생');
+    const k = current();
+    const edges = beats.filter((b) => b.kind === 'edge');
+    const done = beats.slice(0, k + 1).filter((b) => b.kind === 'edge').length;
+    ui.count.textContent = `${done} / ${edges.length}`;
+    if (k !== shown) {
+      shown = k;
+      const b = beats[k];
+      ui.section.textContent = b && b.section && b.kind === 'edge' ? b.section : '';
+      const who = b && b.kind === 'edge' ? b.names.filter(Boolean) : [];
+      ui.text.textContent = b ? (b.kind === 'note' || who.length < 2 || !isSequence ? b.text : `${b.text}  (${who[0]} → ${who[1]})`) : '';
+      ui.text.classList.toggle('is-reject', !!(b && b.reject));
+      if (VIDEO) {
+        ui.section.textContent = b ? (b.kind === 'note' ? b.text : b.section) : '';
+        if (b && b.kind === 'note') ui.text.textContent = '';
+      }
+      if (b && ui.follow.checked && playing) followTo(b);
+    }
+    if (VIDEO) {
+      const b = beats[k];
+      ui.text.style.opacity = b && b.kind === 'edge' ? String(arrive(seg(t, b.start, b.start + CONFIG.popMs + 80))) : '0';
+    }
+  }
+  function followTo(b) {
+    const stage=document.getElementById('stage');
+    const r=b.el.getBoundingClientRect(), s=stage.getBoundingClientRect();
+    if(r.top<s.top+30 || r.bottom>s.bottom-30 || r.left<s.left+30 || r.right>s.right-30){
+      stage.scrollTo({top:Math.max(0,stage.scrollTop+r.top-s.top+r.height/2-stage.clientHeight/2),left:Math.max(0,stage.scrollLeft+r.left-s.left+r.width/2-stage.clientWidth/2),behavior:reduced?'auto':'smooth'});
+    }
+  }
+  function frame(now) {
+    raf = 0;
+    if (!playing) return;
+    const dt = last ? now - last : 0; last = now;
+    t = Math.min(TOTAL, t + dt * speed);
+    if (t >= TOTAL) playing = false;
+    sync();
+    if (playing) raf = requestAnimationFrame(frame);
+  }
+  function setPlaying(v) {
+    playing = v; last = 0;
+    if (!playing) { cancelAnimationFrame(raf); raf = 0; }
+    if (playing && t >= TOTAL) t = 0;
+    if (playing && !raf && !document.hidden) raf = requestAnimationFrame(frame);
+    sync();
+  }
+  const seekBeat = (dir) => {
+    const k = current();
+    const b = beats[k];
+    if (dir > 0) {
+      if (b && t < b.end) t = b.end; else if (beats[k + 1]) t = beats[k + 1].end; else t = TOTAL;
+    } else {
+      t = b && t > b.end + 1 ? b.end : (beats[k - 1] ? beats[k - 1].end : 0);
+    }
+    playing = false; sync();
+    const nb = beats[current()]; if (nb && ui.follow.checked) followTo(nb);
+  };
+  ui.speed.querySelectorAll('button').forEach((btn) => btn.addEventListener('click', () => {
+    speed = Number(btn.dataset.speed);
+    ui.speed.querySelectorAll('button').forEach((o) => o.setAttribute('aria-checked', String(o === btn)));
+  }));
+  ui.play.addEventListener('click', () => setPlaying(!playing));
+  ui.restart.addEventListener('click', () => { t = 0; setPlaying(!reduced); if (reduced) { t = 0; sync(); } window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }); });
+  ui.prev.addEventListener('click', () => seekBeat(-1));
+  ui.next.addEventListener('click', () => seekBeat(1));
+  ui.scrub.addEventListener('input', () => { t = (Number(ui.scrub.value) / 1000) * TOTAL; playing = false; sync(); });
+  addEventListener('keydown', (e) => {
+    if (e.target.closest && e.target.closest('input, select, textarea, button, a, summary, [contenteditable="true"]')) return;
+    if (e.code === 'Space') { e.preventDefault(); setPlaying(!playing); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); seekBeat(1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); seekBeat(-1); }
+    else if (e.key === 'r' || e.key === 'R') ui.restart.click();
+  });
+  // nothing runs unseen
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { cancelAnimationFrame(raf); raf = 0; }
+    else if (playing && !raf) { last = 0; raf = requestAnimationFrame(frame); }
+  });
+  // ── video mode: the renderer seeks time and places the camera, frame by frame (deterministic)
+  if (VIDEO) {
+    document.documentElement.classList.add('is-video');
+    const stage = document.getElementById('stage');
+    const vb = svg.viewBox.baseVal;
+    const cam = document.createElement('div'); cam.className = 'cam';
+    stage.appendChild(cam); cam.appendChild(svg);
+    svg.setAttribute('width', String(vb.width)); svg.setAttribute('height', String(vb.height));
+    svg.style.maxWidth = 'none';
+    const toSvg = (r) => { const o = svg.getBoundingClientRect(); const k = vb.height / o.height; return { top: (r.top - o.top) * k, bottom: (r.bottom - o.top) * k }; };
+    // keep the participants row in view: a cropped copy of the header pinned to the top of the stage
+    let head = null, headH = 0;
+    const headerActors = [...svg.querySelectorAll('.ondine-actor:not(.ondine-actor-footer)')];
+    if (isSequence && headerActors.length) {
+      headH = Math.max(...headerActors.map((g) => toSvg(g.getBoundingClientRect()).bottom)) + 8;
+      head = svg.cloneNode(true);
+      head.querySelectorAll('.ondine-edges, .ondine-edge-labels, .ondine-notes, .ondine-actor-footer, .fx-packet, mask').forEach((n) => n.remove());
+      head.setAttribute('viewBox', `${vb.x} ${vb.y} ${vb.width} ${headH}`);
+      head.setAttribute('height', String(headH));
+      const wrap = document.createElement('div'); wrap.className = 'head'; wrap.appendChild(head);
+      stage.appendChild(wrap); head = wrap;
+    }
+    const headRects = head ? headerActors.map((g) => [g.querySelector('rect'), head.querySelector(`.ondine-actor:not(.ondine-actor-footer)[data-id="${CSS.escape(g.dataset.id)}"] rect`)]) : [];
+    const layout = () => {
+      const sr = stage.getBoundingClientRect();
+      return {
+        stageW: sr.width, stageH: sr.height, svgW: vb.width, svgH: vb.height, headH, total: TOTAL,
+        // top/bottom: the beat itself; boxTop/boxBottom: with the nodes it connects (for framing a flowchart edge)
+        beats: beats.map((b) => {
+          const r = toSvg(b.el.getBoundingClientRect());
+          const rs = [r, ...(b.nodes || []).map((n) => toSvg(n.getBoundingClientRect()))];
+          return { kind: b.kind, start: b.start, end: b.end, section: b.section, top: r.top, bottom: r.bottom,
+            boxTop: Math.min(...rs.map((x) => x.top)), boxBottom: Math.max(...rs.map((x) => x.bottom)) };
+        }),
+      };
+    };
+    let base = layout();
+    video = {
+      // re-measure: the renderer may change the page around the stage (e.g. a subtitle band) after load
+      layout: () => (base = layout()),
+      // y: svg units at the top of the view, zoom: 1 = fit width, headOpacity: pinned header
+      frame(ms, y, zoom = 1, headOpacity = 1) {
+        t = Math.max(0, Math.min(TOTAL, ms)); playing = false; sync();
+        const s = (base.stageW / vb.width) * zoom;
+        const x = (base.stageW - vb.width * s) / 2;
+        cam.style.transform = `translate(${x}px, ${-y * s}px) scale(${s})`;
+        if (head) {
+          head.style.transform = `translate(${x}px, 0) scale(${s})`;
+          head.style.opacity = String(headOpacity);
+          headRects.forEach(([a, b]) => { if (a && b) { b.style.stroke = a.style.stroke; b.style.strokeWidth = a.style.strokeWidth; } });
+        }
+      },
+    };
+  }
+  window.__video = video;
+  window.__flow = { beats, TOTAL, play: () => setPlaying(true), pause: () => setPlaying(false), seek: (ms) => { t = Math.max(0, Math.min(TOTAL, ms)); playing = false; sync(); } };
+  sync();
+  if (playing) raf = requestAnimationFrame(frame);
+})();
+</script>
+<script src="atlas.js"></script></body>
+</html>

@@ -20,3 +20,6 @@ pnpm-debug.log*
 .idea/
 .vscode/*
 !.vscode/extensions.json
+
+# Local flow preview evidence
+/public/flow/.verify/

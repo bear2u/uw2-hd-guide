@@ -1,0 +1,58 @@
+%% title: 바다를 건너 새로운 세계로
+flowchart TD
+    route["목적지와 중간 기항지"]
+    prepare["선원·내구·보급 준비"]
+    check{"출항 준비가 됐나요?"}
+    depart["보급 지속일 확인·출항"]
+    sail["수동 또는 자동 항해"]
+    chart["세계 지도와 항로 확인"]
+    weather["날씨·질병·물자 경고"]
+    response["물품 사용과 위험 대응"]
+    returnport["가까운 항구로 항해"]
+    encounter["주변 함대와 조우"]
+    combat["필요하면 교전 대응"]
+    shore["접근 가능한 해안 상륙"]
+    welcome["원주민 환대"]
+    search["발견물·보물 탐색"]
+    found["발견 기록과 물품 확인"]
+    repair["상륙 수리"]
+    arrival["항구 옆에서 입항 확인"]
+    growth["항해 성장 안내 확인"]
+    save["열 번째 슬롯 자동 저장"]
+    port["일반항·보급항에서 정비"]
+    report["계약처에 발견·해도 보고"]
+    story["보상과 후속 이야기"]
+
+    route --> prepare
+    prepare --> check
+    check -->|준비 완료| depart
+    depart --> sail
+    sail -->|현재 위치와 목적항| chart
+    sail -->|돌발 상황| weather
+    weather --> response
+    response -->|귀항이 필요하면| returnport
+    sail -->|다른 함대 발견| encounter
+    encounter -->|교전이 성립하면| combat
+    sail -->|탐험할 해안| shore
+    shore -->|원주민이 있으면| welcome
+    welcome --> search
+    shore -->|지도·현장 조건에 따라| search
+    search -->|탐색에 성공하면| found
+    shore -->|수리가 필요하면| repair
+    sail -->|목적항에 접근| arrival
+    returnport --> arrival
+    arrival --> growth
+    growth --> save
+    save --> port
+    port -->|미보고 발견·해도가 있으면| report
+    report --> story
+
+    check -.->|인원·물자가 부족하면| prepare
+    chart -.->|침로 조정 후| sail
+    response -.->|계속 항해할 수 있으면| sail
+    encounter -.->|교전 없이 지나가기| sail
+    combat -.->|전투가 끝나면| sail
+    found -.->|귀항 보급을 남기고| sail
+    search -.->|실패·물자 부족이면 철수| sail
+    repair -.->|정비 후 출발| sail
+    port -.->|다음 항차| route

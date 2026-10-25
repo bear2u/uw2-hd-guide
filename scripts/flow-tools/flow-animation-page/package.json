@@ -1,0 +1,9 @@
+{
+  "name": "flow-animation-page",
+  "private": true,
+  "type": "module",
+  "description": "Code/doc flow -> Mermaid -> animated flow result pages + gallery, verified in headless Chrome",
+  "dependencies": {
+    "puppeteer-core": "24.43.1"
+  }
+}

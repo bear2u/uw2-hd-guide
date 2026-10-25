@@ -15,7 +15,9 @@
     "check:links": "node scripts/check-links.mjs",
     "test": "node --test scripts/config.test.mjs",
     "postbuild": "node scripts/check-public-copy.mjs --built",
-    "check:public": "node scripts/check-public-copy.mjs && node scripts/check-public-copy.mjs --built"
+    "check:public": "node scripts/check-public-copy.mjs && node scripts/check-public-copy.mjs --built",
+    "build:flow": "node scripts/build-flow.mjs",
+    "verify:flow": "node scripts/verify-flow.mjs"
   },
   "dependencies": {
     "@cloudflare/nimbus-docs": "0.18.1",

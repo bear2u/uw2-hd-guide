@@ -1,0 +1,74 @@
+%% title: 항구에서 다음 항해까지
+flowchart TD
+    town["항구 거리와 지도"]
+    subgraph trading["교역과 자금"]
+        market["교역소"]
+        rate["상품·시세·물가 확인"]
+        buy["가격·배·수량 골라 구입"]
+        sell["매각 후 항차 손익 확인"]
+        investment["상업·공업 투자"]
+        bank["은행: 예금·대출·상환"]
+        info["항구 발전도 확인"]
+    end
+    subgraph preparation["함대와 물품"]
+        pub["주점: 선원·항해사·소문"]
+        shipyard["조선소: 건조·수리·개조"]
+        fleet["선장·선원·적재 배분"]
+        shop["상점: 물품 사고팔기"]
+        items["소지품 사용·장비 장착"]
+    end
+    subgraph meetings["휴식과 만남"]
+        lodge["여관: 숙박·항해사 만남"]
+        palace["왕궁: 알현·왕명·지원"]
+        guild["조합: 의뢰와 완료 보고"]
+        residence["저택: 계약·보고·배움"]
+        church["교회: 기도·기부"]
+        fortune["점술사: 점과 이야기"]
+        reward["보고·임무 보상 확인"]
+        story["후속 이야기 확인"]
+    end
+    harbor["항구: 보급·출항·선거"]
+    supply["물·식량·자재·포탄"]
+    ready["항해 인원과 보급 점검"]
+    depart["목적지를 정하고 출항"]
+
+    town --> market
+    market --> rate
+    rate --> buy
+    market --> sell
+    market --> investment
+    buy --> fleet
+    town --> pub
+    pub --> fleet
+    town --> shipyard
+    shipyard --> fleet
+    shipyard --> investment
+    town --> lodge
+    town --> palace
+    palace --> story
+    town --> guild
+    guild -->|의뢰 완료 후| reward
+    town --> residence
+    residence -->|계약한 탐험 보고| reward
+    reward --> story
+    town --> bank
+    town --> shop
+    shop --> items
+    town --> church
+    town --> fortune
+    fortune -->|단서가 있으면| story
+    town --> info
+    info -->|발전이 필요하면| investment
+    town --> harbor
+    harbor --> supply
+    supply --> ready
+    fleet --> ready
+    items --> ready
+    ready --> depart
+
+    sell -.->|다음 거래 준비| town
+    investment -.->|발전 반영 기다리기| town
+    lodge -.->|숙박·대화 후| town
+    bank -.->|자금 정리 후| town
+    church -.->|기도·기부 후| town
+    story -.->|다음 장소로| town

@@ -1,0 +1,62 @@
+%% title: 모험의 시작과 이어하기
+flowchart TD
+    title["게임 열기"]
+    account["손님 또는 계정 접속"]
+    choose{"새 항해인가요?"}
+    fresh["주인공과 이름 선택"]
+    subgraph heroes["여섯 주인공"]
+        joao["조안 · 리스본<br/>탐험과 후반 전투"]
+        catalina["카탈리나 · 세비야<br/>복수와 해전"]
+        otto["오토 · 런던<br/>왕명과 함대전"]
+        ernst["에르네스트 · 암스테르담<br/>지도와 세계 탐험"]
+        pietro["피에트로 · 제노바<br/>지도와 보물"]
+        ali["알리 · 이스탄불<br/>교역과 가족"]
+    end
+    intro["도입부와 첫 배 마련"]
+    town["항구에서 출발 준비"]
+    clue["장소·인물·시각 확인"]
+    activity["교역·탐험·전투 선택"]
+    growth["보고와 명성·경험 성장"]
+    story["후속 대화와 다음 사건"]
+    ending["마지막 이야기와 엔딩"]
+    challenge["도전과제 자동 기록<br/>추가 물품 보상 없음"]
+    save["중요한 순간 수동 저장"]
+    load["이어할 저장 선택"]
+    source["로컬·클라우드·백업"]
+    check["주인공과 날짜 확인"]
+    resume["선택한 항해 재개"]
+    sea["저장한 바다에서 재개"]
+
+    title --> account
+    account --> choose
+    choose -->|새 게임| fresh
+    fresh --> joao
+    fresh --> catalina
+    fresh --> otto
+    fresh --> ernst
+    fresh --> pietro
+    fresh --> ali
+    joao --> intro
+    catalina --> intro
+    otto --> intro
+    ernst --> intro
+    pietro --> intro
+    ali --> intro
+    intro --> town
+    town --> clue
+    clue --> activity
+    activity --> growth
+    growth --> story
+    story -->|마지막 조건과 대화| ending
+    growth -->|목표를 달성하면| challenge
+    town -->|안전한 상태에서| save
+    choose -->|이어하기| load
+    load --> source
+    source --> check
+    check -->|이 진행으로 결정| resume
+    resume -->|마을 저장| town
+    resume -->|해상 저장| sea
+
+    story -.->|아직 조건이 남으면| clue
+    save -.->|진행 계속| town
+    ending -.->|타이틀로 돌아가기| title

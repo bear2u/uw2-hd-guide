@@ -1,0 +1,44 @@
+%% title: 모든 항해의 연결
+flowchart TD
+    title["타이틀"]
+    start["새 항해와 여섯 주인공"]
+    port["항구에서 준비"]
+    trade["교역과 투자"]
+    ready["함대·보급·항로 점검"]
+    sea["바다 항해"]
+    explore["상륙과 탐험"]
+    combat["해전과 일기토"]
+    reward["보고·보상·성장"]
+    story["주인공 이야기"]
+    ending["마지막 대화와 엔딩"]
+    save["진행 저장"]
+    load["저장한 항해 불러오기"]
+    agent["선택: AI 자동 교역"]
+    coop["별도: 협동 미니 도전"]
+
+    title --> start
+    start --> port
+    port -->|자금과 발전| trade
+    trade --> ready
+    port -->|출항 준비| ready
+    ready --> sea
+    sea -->|발견물을 찾아| explore
+    explore -->|귀항 후 보고| reward
+    sea -->|교전이 성립하면| combat
+    combat -->|결과에 따라| reward
+    reward --> story
+    port -->|인물과 단서| story
+    story -->|마지막 조건 완료| ending
+    port -->|안전한 상태에서| save
+    title -->|이어하기| load
+    load -->|마을에서 재개| port
+    port -->|준비 후 켜기| agent
+    agent -->|화면을 열어 두고| trade
+    title -->|함께하기| coop
+
+    sea -.->|입항과 재정비| port
+    reward -.->|다음 항차 준비| port
+    story -.->|다음 장소로| ready
+    ending -.->|타이틀 복귀| title
+    save -.->|진행 계속| port
+    load -.->|해상에서 재개| sea

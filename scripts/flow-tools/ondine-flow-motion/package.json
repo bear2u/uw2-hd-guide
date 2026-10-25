@@ -1,0 +1,9 @@
+{
+  "name": "ondine-flow-motion",
+  "private": true,
+  "type": "module",
+  "description": "Mermaid -> Ondine SVG -> animated flow player",
+  "dependencies": {
+    "ondine": "0.0.3"
+  }
+}

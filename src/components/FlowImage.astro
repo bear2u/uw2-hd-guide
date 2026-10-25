@@ -1,0 +1,126 @@
+---
+interface Props { name: string; title: string; description: string; width: number; height: number; eager?: boolean }
+const { name, title, description, width, height, eager = false } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const imageId = `flow-image-${name}`;
+---
+
+<figure class="flow-image" data-flow-image data-nb-zoom="off" style={`--flow-image-width: ${width}px`}>
+  <div class="flow-image-toolbar">
+    <span data-flow-status role="status">전체 이미지</span>
+    <div class="flow-image-actions">
+    <button type="button" data-flow-size aria-controls={imageId} aria-pressed="false" aria-label={`${title} 크게 보기`} hidden>크게 보기</button>
+    <button type="button" data-flow-play data-player-src={`${base}/flow/${name}.animated.html?embed`} data-player-title={`${title} 애니메이션`} aria-controls={`${imageId}-player`} aria-expanded="false" hidden>흐름 재생</button>
+    </div>
+  </div>
+  <div id={imageId} class="flow-image-view" tabindex="0" role="region" aria-label={`${title} 이미지`}>
+    <img src={`${base}/flow/${name}.ondine.svg`} alt={description} width={width} height={height} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+  </div>
+  <div id={`${imageId}-player`} class="flow-player" hidden></div>
+  <figcaption>{description}</figcaption>
+</figure>
+
+<script>
+  import { mount } from '@cloudflare/nimbus-docs/client';
+  mount('[data-flow-image]', (root) => {
+    const button = root.querySelector<HTMLButtonElement>('[data-flow-size]');
+    const view = root.querySelector<HTMLElement>('.flow-image-view');
+    const play = root.querySelector<HTMLButtonElement>('[data-flow-play]');
+    const player = root.querySelector<HTMLElement>('.flow-player');
+    const status = root.querySelector<HTMLElement>('[data-flow-status]');
+    if (!button || !view || !play || !player || !status) return () => {};
+    const title = view.getAttribute('aria-label')?.replace(/ 이미지$/, '') || '흐름도';
+    button.hidden = false;
+    play.hidden = false;
+    let frame: HTMLIFrameElement | null = null;
+    let ready = false;
+    let startWhenVisible = false;
+    let timeout: ReturnType<typeof setTimeout> | undefined;
+    const pause = () => frame?.contentWindow?.postMessage({ type: 'guide-flow-pause' }, location.origin);
+    const close = () => {
+      clearTimeout(timeout);
+      observer.unobserve(player); startWhenVisible = false;
+      frame?.remove(); frame = null; ready = false;
+      player.hidden = true; view.hidden = false; button.hidden = false;
+      play.textContent = '흐름 재생'; play.setAttribute('aria-expanded', 'false');
+      status.textContent = '전체 이미지';
+    };
+    const open = () => {
+      if (frame) { close(); return; }
+      frame = document.createElement('iframe');
+      frame.title = play.dataset.playerTitle || '흐름도 애니메이션';
+      frame.src = play.dataset.playerSrc || '';
+      frame.setAttribute('tabindex', '0');
+      status.textContent = '애니메이션 준비 중';
+      play.textContent = '전체 이미지'; play.setAttribute('aria-expanded', 'true');
+      player.append(frame);
+      timeout = setTimeout(() => {
+        if (!ready) { close(); status.textContent = '애니메이션을 불러오지 못했습니다. 다시 시도해 주세요.'; }
+      }, 15000);
+    };
+    const onMessage = (event: MessageEvent) => {
+      if (!frame || event.source !== frame.contentWindow || event.origin !== location.origin) return;
+      if (event.data?.type === 'guide-flow-ready') {
+        clearTimeout(timeout); ready = true;
+        player.hidden = false; view.hidden = true; button.hidden = true;
+        status.textContent = '재생 버튼으로 흐름을 따라가세요';
+        startWhenVisible = !document.hidden && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+        observer.observe(player);
+      }
+      if (event.data?.type === 'guide-flow-state' && ready) {
+        status.textContent = event.data.playing ? '흐름을 따라가는 중' : '재생·단계 버튼으로 살펴보세요';
+        if (event.data.playing) window.dispatchEvent(new CustomEvent('guide-flow-active', { detail: root }));
+      }
+    };
+    const otherPlayer = (event: Event) => { if ((event as CustomEvent).detail !== root) pause(); };
+    const onVisibility = () => { if (document.hidden) pause(); };
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) { startWhenVisible = false; pause(); }
+      else if (startWhenVisible) {
+        startWhenVisible = false;
+        frame?.contentWindow?.postMessage({ type: 'guide-flow-play' }, location.origin);
+      }
+    });
+    const toggle = () => {
+      const expanded = root.classList.toggle('is-expanded');
+      button.setAttribute('aria-pressed', String(expanded));
+      button.textContent = expanded ? '화면에 맞추기' : '크게 보기';
+      button.setAttribute('aria-label', `${title} ${button.textContent}`);
+      view.scrollLeft = 0;
+    };
+    button.addEventListener('click', toggle);
+    play.addEventListener('click', open);
+    window.addEventListener('message', onMessage);
+    window.addEventListener('guide-flow-active', otherPlayer);
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => {
+      close(); observer.disconnect();
+      button.removeEventListener('click', toggle);
+      play.removeEventListener('click', open);
+      window.removeEventListener('message', onMessage);
+      window.removeEventListener('guide-flow-active', otherPlayer);
+      document.removeEventListener('visibilitychange', onVisibility);
+    };
+  });
+</script>
+
+<style>
+  .flow-image { margin: 1.25rem 0 2rem; border: 1px solid var(--nb-border); border-radius: .5rem; overflow: hidden; }
+  .flow-image-toolbar { display: flex; justify-content: space-between; align-items: center; gap: .75rem; padding: .65rem .85rem; border-bottom: 1px solid var(--nb-border); color: var(--nb-muted-foreground); font-size: .8rem; }
+  .flow-image-actions { display: flex; flex-wrap: wrap; gap: .5rem; flex-shrink: 0; }
+  .flow-player { height: 650px; background: #f6f4ed; }
+  .flow-player :global(iframe) { display: block; width: 100%; height: 100%; border: 0; }
+  [hidden] { display: none!important; }
+  button { border: 1px solid var(--nb-border); border-radius: .3rem; padding: .4rem .7rem; min-height: 36px; background: var(--nb-card); color: var(--nb-foreground); font: inherit; cursor: pointer; }
+  button:hover { background: var(--nb-muted); }
+  button:focus-visible, .flow-image-view:focus-visible { outline: 2px solid var(--nb-primary); outline-offset: -2px; }
+  .flow-image-view { overflow-x: auto; background: white; padding: 1rem; }
+  .flow-image-view img { display: block; width: 100%; max-width: 100%; height: auto; margin: 0; }
+  .is-expanded .flow-image-view img { width: var(--flow-image-width); max-width: none; }
+  figcaption { padding: .75rem .85rem; font-size: .8rem; line-height: 1.7; color: var(--nb-muted-foreground); border-top: 1px solid var(--nb-border); }
+  @media (max-width: 600px) {
+    .flow-image-view { padding: .5rem; }
+    .flow-image-toolbar { flex-wrap: wrap; }
+    .flow-player { height: 600px; }
+  }
+</style>
