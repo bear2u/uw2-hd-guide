@@ -6,7 +6,7 @@ import { tableScroll } from '@cloudflare/nimbus-docs/markdown';
 import { deployment } from './scripts/deployment';
 const { site, base } = deployment(process.env);
 const config = defineNimbusConfig({
-  site,
+  site: site,
   title: '대항해시대 II 항해 수첩',
   description: 'HD 리메이크의 여섯 주인공 완주 공략, 항해와 교역, 도감, 캐릭터 도전과제 가이드.',
   locale: 'ko',
