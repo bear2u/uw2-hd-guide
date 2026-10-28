@@ -22,9 +22,7 @@ const config = defineNimbusConfig({
     { label: 'AI 부관', autogenerate: { directory: 'ai' } },
     { label: '여섯 주인공', autogenerate: { directory: 'heroes' } },
     { label: '외전', autogenerate: { directory: 'side-story' }, collapsed: false },
-    { label: '소설', items: [
-      { label: '조선 외전 : 검은 학을 쫓아', autogenerate: { directory: 'novel' } },
-    ] },
+    { label: '소설', autogenerate: { directory: 'novel' } },
     { label: '핵심 시스템', autogenerate: { directory: 'systems' } },
     { label: '도감', autogenerate: { directory: 'atlas' } },
     { label: '도전과제', autogenerate: { directory: 'challenges' } },
@@ -38,9 +36,13 @@ const config = defineNimbusConfig({
   editPattern: null,
   socialImageAlt: '대항해시대 II HD 리메이크 항해 수첩',
 });
+// 소설을 소설마다 폴더로 나누기 전 조선 외전 소설 주소 (2026-10-28 공개)
+const oldNovelPages = ['prologue', 'part1', 'part2', 'part3', 'part4', 'part5', 'endings'];
+const redirects = Object.fromEntries(oldNovelPages.map(p => [`/novel/${p}/`, `${base.replace(/\/$/, '')}/novel/joseon/${p}/`]));
 export default defineConfig({
   site,
   base,
+  redirects,
   output: 'static',
   trailingSlash: 'always',
   vite: { plugins: [tailwindcss()] },
