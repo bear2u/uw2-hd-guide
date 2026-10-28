@@ -11,19 +11,20 @@ for(const [key,count] of Object.entries(counts)){
 }
 for(let heroId=0;heroId<6;heroId++){
  assert.equal(data.challenges.filter(x=>x.heroId===heroId).length,24);
- assert.equal(data.discoveries.filter(x=>x.activeHeroes.includes(heroId)).length,50);
 }
 for(const row of data.challenges) assert.ok(row.description && row.target>0 && row.category);
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(new URL(e.name+'/',dir)):[new URL(e.name,dir)]);}
 const pages=walk(new URL('src/content/docs/',root)).filter(p=>p.pathname.endsWith('.mdx'));
 const updates = pages.filter(p => /\/updates\//.test(p.pathname));
-assert.equal(pages.length - updates.length,57,'기본 본문 페이지 수');
+assert.equal(pages.length - updates.length,66,'기본 본문 페이지 수');
 const strategies = pages.filter(p => /\/strategy\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
 assert.deepEqual(strategies, ['discoveries.mdx','fleet.mdx','index.mdx','ports.mdx','references.mdx','stories.mdx','survival.mdx','trade.mdx'], '공략 문서 구성');
 const aiPages = pages.filter(p => /\/ai\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
 assert.deepEqual(aiPages, ['agent.mdx','connection.mdx','history.mdx','overview.mdx','personality.mdx'], 'AI 가이드 구성');
 const sidePages = pages.filter(p => /\/side-story\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
-assert.deepEqual(sidePages, ['help.mdx','index.mdx','milanda.mdx','salvador.mdx'], '외전 가이드 구성');
+assert.deepEqual(sidePages, ['help.mdx','index.mdx','joseon.mdx','milanda.mdx','salvador.mdx'], '외전 가이드 구성');
+const novelPages = pages.filter(p => /\/novel\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
+assert.deepEqual(novelPages, ['endings.mdx','index.mdx','part1.mdx','part2.mdx','part3.mdx','part4.mdx','part5.mdx','prologue.mdx'], '소설 구성');
 assert.ok(updates.length > 0, '날짜별 업데이트 문서 필요');
 for (const p of updates) assert.match(p.pathname, /\/updates\/\d{4}-\d{2}-\d{2}\.mdx$/, '업데이트 문서 날짜 형식');
 for(const p of pages){const text=fs.readFileSync(p,'utf8');assert.ok(text.length>350,`${p.pathname} 본문 부족`);assert.ok(!/CHANGE_ME|Your documentation starts here|TODO:|Lorem ipsum/.test(text));}

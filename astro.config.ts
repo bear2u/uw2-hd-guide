@@ -22,6 +22,7 @@ const config = defineNimbusConfig({
     { label: 'AI 부관', autogenerate: { directory: 'ai' } },
     { label: '여섯 주인공', autogenerate: { directory: 'heroes' } },
     { label: '외전', autogenerate: { directory: 'side-story' }, collapsed: false },
+    { label: '소설', autogenerate: { directory: 'novel' } },
     { label: '핵심 시스템', autogenerate: { directory: 'systems' } },
     { label: '도감', autogenerate: { directory: 'atlas' } },
     { label: '도전과제', autogenerate: { directory: 'challenges' } },

@@ -9,14 +9,12 @@ const columns: Record<Props['kind'], [string, string][]> = {
  ships: [['name','모델'],['capacity','적재량'],['minCrew','최소 선원'],['maxCrew','최대 선원'],['durability','내구'],['power','추진'],['tacking','선회'],['maxGuns','포문'],['price','기준 가격']],
  items: [['name','물품'],['type','종류'],['rating','성능값'],['price','기준 가격']],
  sailors: [['name','항해사'],['navigationLevel','항해 레벨'],['battleLevel','전투 레벨'],['nationName','국적'],['skills','기술'],['port','초기 체류지']],
- discoveries: [['name','발견물'],['type','종류'],['x','X'],['y','Y'],['difficulty','난이도'],['activeHeroes','활성 주인공']],
+ discoveries: [['name','발견물'],['type','종류'],['x','X'],['y','Y'],['difficulty','난이도']],
 };
-const heroes = ['조안','카탈리나','오토','에르네스트','피에트로','알리'];
 const rows = reference[kind] as unknown as Record<string, unknown>[];
 const display = (value: unknown, key: string): string => {
  if (value === null || value === undefined || value === '' || value === -1) return '해당 없음';
  if (key === 'skills') return [[1,'교섭'],[2,'회계'],[4,'포술'],[8,'지도 제작'],[16,'측량']].filter(([bit]) => (Number(value) & Number(bit)) !== 0).map(([,name]) => name).join(' · ') || '없음';
- if (key === 'activeHeroes' && Array.isArray(value)) return value.map(id=>heroes[Number(id)]).join(' · ') || '없음';
  if (typeof value === 'number') return value.toLocaleString('ko-KR');
  return String(value);
 };
