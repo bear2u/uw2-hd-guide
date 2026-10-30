@@ -17,13 +17,13 @@ function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.
 const pages=walk(new URL('src/content/docs/',root)).filter(p=>p.pathname.endsWith('.mdx'));
 const updates = pages.filter(p => /\/updates\//.test(p.pathname));
 const novelAll = pages.filter(p => /\/novel\//.test(p.pathname));
-assert.equal(pages.length - updates.length - novelAll.length,58,'기본 본문 페이지 수 (소설 제외)');
+assert.equal(pages.length - updates.length - novelAll.length,59,'기본 본문 페이지 수 (소설 제외)');
 const strategies = pages.filter(p => /\/strategy\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
 assert.deepEqual(strategies, ['discoveries.mdx','fleet.mdx','index.mdx','ports.mdx','references.mdx','stories.mdx','survival.mdx','trade.mdx'], '공략 문서 구성');
 const aiPages = pages.filter(p => /\/ai\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
 assert.deepEqual(aiPages, ['agent.mdx','connection.mdx','history.mdx','overview.mdx','personality.mdx'], 'AI 가이드 구성');
 const sidePages = pages.filter(p => /\/side-story\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
-assert.deepEqual(sidePages, ['help.mdx','index.mdx','joseon.mdx','milanda.mdx','salvador.mdx'], '외전 가이드 구성');
+assert.deepEqual(sidePages, ['bounty.mdx','help.mdx','index.mdx','joseon.mdx','milanda.mdx','salvador.mdx'], '외전 가이드 구성');
 const novels = new Map();
 for (const p of novelAll) { const parts = p.pathname.split('/novel/')[1].split('/'); if (parts.length === 2) novels.set(parts[0], [...(novels.get(parts[0]) ?? []), parts[1]]); }
 assert.ok(novelAll.some(p => p.pathname.endsWith('/novel/index.mdx')), '소설 목록 페이지');
