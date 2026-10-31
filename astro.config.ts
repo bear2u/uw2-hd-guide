@@ -18,6 +18,7 @@ const config = defineNimbusConfig({
     ] },
     { label: '수첩 첫 장', link: '/' },
     { label: '시작하기', autogenerate: { directory: 'start' }, collapsed: false },
+    { label: '카드게임', autogenerate: { directory: 'card-game' }, collapsed: false },
     { label: '공략', autogenerate: { directory: 'strategy' }, collapsed: false },
     { label: 'AI 부관', autogenerate: { directory: 'ai' } },
     { label: '여섯 주인공', autogenerate: { directory: 'heroes' } },

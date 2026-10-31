@@ -1,0 +1,21 @@
+---
+interface Props { name: string; alt: string; caption: string; eager?: boolean }
+const { name, alt, caption, eager = false } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const src = `${base}/card-game/${name}.png`;
+---
+
+<figure class="card-screenshot">
+  <a href={src} target="_blank" rel="noopener" aria-label={`${alt} — 원본 이미지 크게 보기`}>
+    <img src={src} alt={alt} width="1280" height="800" loading={eager ? 'eager' : 'lazy'} decoding="async" />
+  </a>
+  <figcaption>{caption} <a href={src} target="_blank" rel="noopener">크게 보기 ↗</a></figcaption>
+</figure>
+
+<style>
+  .card-screenshot { margin: 1.5rem 0 2rem; }
+  .card-screenshot img { display: block; width: 100%; height: auto; border: 1px solid #82909d66; border-radius: .65rem; }
+  .card-screenshot figcaption { margin-top: .6rem; font-size: .9rem; line-height: 1.7; }
+  .card-screenshot figcaption a { white-space: nowrap; margin-left: .3rem; }
+  .card-screenshot a:focus-visible { outline: 3px solid #0987aa; outline-offset: 4px; border-radius: .65rem; }
+</style>
