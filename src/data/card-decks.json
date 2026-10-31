@@ -2,10 +2,10 @@
   "decks": [
     {
       "slug": "fire",
-      "name": "불 시작 덱",
-      "team": "불",
+      "name": "전투·해적 덱",
+      "team": "전투·해적",
       "kind": "기본 덱",
-      "style": "피해 주문 · 공격",
+      "style": "포격 · 돌격",
       "hero": "hero_fire",
       "cards": [
         {
@@ -87,8 +87,8 @@
     },
     {
       "slug": "forest",
-      "name": "숲 시작 덱",
-      "team": "숲",
+      "name": "탐험·보급 덱",
+      "team": "탐험·보급",
       "kind": "기본 덱",
       "style": "전장 유지 · 회복",
       "hero": "hero_forest",
@@ -172,10 +172,10 @@
     },
     {
       "slug": "water",
-      "name": "물 시작 덱",
-      "team": "물",
+      "name": "항해·교역 덱",
+      "team": "항해·교역",
       "kind": "기본 덱",
-      "style": "손패 · 주문",
+      "style": "손패 · 전술",
       "hero": "hero_water",
       "cards": [
         {
@@ -258,7 +258,7 @@
     {
       "slug": "joao",
       "name": "조안 페레로",
-      "team": "물",
+      "team": "항해·교역",
       "kind": "캐릭터 덱",
       "style": "모험 · 보물",
       "hero": "c_joan_hero",
@@ -348,7 +348,7 @@
     {
       "slug": "catalina",
       "name": "카탈리나 에란초",
-      "team": "불",
+      "team": "전투·해적",
       "kind": "캐릭터 덱",
       "style": "속공 · 돌파",
       "hero": "c_catalina_hero",
@@ -438,7 +438,7 @@
     {
       "slug": "otto",
       "name": "오토 베인스",
-      "team": "숲",
+      "team": "탐험·보급",
       "kind": "캐릭터 덱",
       "style": "전열 · 방어",
       "hero": "c_otto_hero",
@@ -528,7 +528,7 @@
     {
       "slug": "ernest",
       "name": "에르네스트 폰 보어",
-      "team": "숲",
+      "team": "탐험·보급",
       "kind": "캐릭터 덱",
       "style": "탐험 · 회복",
       "hero": "c_ernest_hero",
@@ -618,9 +618,9 @@
     {
       "slug": "pietro",
       "name": "피에트로 콘티",
-      "team": "물",
+      "team": "항해·교역",
       "kind": "캐릭터 덱",
-      "style": "학술 · 주문",
+      "style": "학술 · 전술",
       "hero": "c_pietro_hero",
       "cards": [
         {
@@ -708,9 +708,9 @@
     {
       "slug": "ali",
       "name": "알 베자스",
-      "team": "물",
+      "team": "항해·교역",
       "kind": "캐릭터 덱",
-      "style": "교역 · 마나",
+      "style": "교역 · 지휘력",
       "hero": "c_ali_hero",
       "cards": [
         {
@@ -793,7 +793,7 @@
     {
       "slug": "milanda",
       "name": "밀란다 베르테",
-      "team": "불",
+      "team": "전투·해적",
       "kind": "캐릭터 덱",
       "style": "약탈 · 은신",
       "hero": "c_milanda_hero",
@@ -883,7 +883,7 @@
     {
       "slug": "haegang",
       "name": "윤해강",
-      "team": "숲",
+      "team": "탐험·보급",
       "kind": "캐릭터 덱",
       "style": "일기토 · 관통",
       "hero": "c_haegang_hero",
@@ -973,7 +973,7 @@
     {
       "slug": "mateo",
       "name": "마테오 레예스",
-      "team": "불",
+      "team": "전투·해적",
       "kind": "캐릭터 덱",
       "style": "추적 · 생포",
       "hero": "c_mateo_hero",
@@ -1063,16 +1063,16 @@
   ],
   "cards": {
     "imp": {
-      "name": "임프",
-      "type": "캐릭터",
+      "name": "견습 포수",
+      "type": "유닛",
       "mana": 2,
       "attack": 2,
       "hp": 1,
-      "image": "b2edf6a3e315.png",
+      "image": "4ff99714fc0e.png",
       "text": "등장: 피해를 1 줍니다.",
       "abilities": [
         {
-          "name": "화염 피해",
+          "name": "포격",
           "text": "등장할 때 원하는 대상에게 피해를 1 줍니다.",
           "cost": null
         }
@@ -1081,17 +1081,17 @@
       "unlock": null
     },
     "lava_beast": {
-      "name": "용암 야수",
-      "type": "캐릭터",
+      "name": "갑판 전투원",
+      "type": "유닛",
       "mana": 3,
       "attack": 2,
       "hp": 3,
-      "image": "1ba7aacd70ed.png",
-      "text": "주문을 사용하면 공격력 +2를 얻습니다.",
+      "image": "5fd48434de85.png",
+      "text": "전술을 사용하면 공격력 +2를 얻습니다.",
       "abilities": [
         {
           "name": "열기",
-          "text": "주문을 사용하면 공격력 +2를 얻습니다.",
+          "text": "전술을 사용하면 공격력 +2를 얻습니다.",
           "cost": null
         }
       ],
@@ -1099,17 +1099,17 @@
       "unlock": null
     },
     "fire_chicken": {
-      "name": "불닭",
-      "type": "캐릭터",
+      "name": "예비 돌격정",
+      "type": "유닛",
       "mana": 2,
       "attack": 1,
       "hp": 1,
-      "image": "2b54b1f495f2.png",
-      "text": "죽음: 알을 소환합니다.",
+      "image": "a46a12be9053.png",
+      "text": "퇴장: 재건 조선소를 소환합니다.",
       "abilities": [
         {
-          "name": "알 소환",
-          "text": "이 캐릭터가 죽으면 불사조의 알을 소환합니다.",
+          "name": "조선소 재건",
+          "text": "이 유닛이 퇴장하면 재건 조선소를 소환합니다.",
           "cost": null
         }
       ],
@@ -1117,17 +1117,17 @@
       "unlock": null
     },
     "firefox": {
-      "name": "불여우",
-      "type": "캐릭터",
+      "name": "작전 참모",
+      "type": "유닛",
       "mana": 4,
       "attack": 4,
       "hp": 4,
-      "image": "2666d64f9834.png",
-      "text": "사용(2): 무덤의 주문 하나를 손으로 되돌립니다.",
+      "image": "46659d622026.png",
+      "text": "사용(2): 폐기 더미의 전술 하나를 손으로 되돌립니다.",
       "abilities": [
         {
-          "name": "마법 집중",
-          "text": "내 무덤의 주문 하나를 손으로 되돌립니다. 마나 2를 사용합니다.",
+          "name": "작전 회수",
+          "text": "내 폐기 더미의 전술 하나를 손으로 되돌립니다. 지휘력 2를 사용합니다.",
           "cost": 2
         }
       ],
@@ -1135,12 +1135,12 @@
       "unlock": null
     },
     "hell_hound": {
-      "name": "지옥 사냥개",
-      "type": "캐릭터",
+      "name": "돌격대",
+      "type": "유닛",
       "mana": 4,
       "attack": 4,
       "hp": 2,
-      "image": "f40f3896475c.png",
+      "image": "5fd48434de85.png",
       "text": "격노",
       "abilities": [
         {
@@ -1153,12 +1153,12 @@
       "unlock": null
     },
     "ashes_snake": {
-      "name": "잿빛 뱀",
-      "type": "캐릭터",
+      "name": "잠입 척후",
+      "type": "유닛",
       "mana": 5,
       "attack": 6,
       "hp": 4,
-      "image": "0322869eda0e.png",
+      "image": "139a3fa13099.png",
       "text": "은신",
       "abilities": [
         {
@@ -1171,16 +1171,16 @@
       "unlock": null
     },
     "fire_element": {
-      "name": "불의 정령",
-      "type": "캐릭터",
+      "name": "화공선",
+      "type": "유닛",
       "mana": 5,
       "attack": 7,
       "hp": 3,
-      "image": "a4aa2ef19926.png",
+      "image": "b1af71a2cc58.png",
       "text": "등장: 다른 모든 카드에 피해를 2 줍니다.",
       "abilities": [
         {
-          "name": "화염 피해",
+          "name": "포격",
           "text": "등장할 때 다른 모든 카드에 피해를 2 줍니다.",
           "cost": null
         }
@@ -1189,12 +1189,12 @@
       "unlock": null
     },
     "wolf_furious": {
-      "name": "격노한 늑대",
-      "type": "캐릭터",
+      "name": "결사 돌격대",
+      "type": "유닛",
       "mana": 5,
       "attack": 3,
       "hp": 4,
-      "image": "d0e7eaa83496.png",
+      "image": "98ccf3b2f3da.png",
       "text": "격노\n턴마다 공격력 +1을 얻습니다.",
       "abilities": [
         {
@@ -1212,22 +1212,22 @@
       "unlock": null
     },
     "phoenix": {
-      "name": "불사조",
-      "type": "캐릭터",
+      "name": "재출항 돌격선",
+      "type": "유닛",
       "mana": 6,
       "attack": 6,
       "hp": 6,
-      "image": "2d297ae30813.png",
-      "text": "사용(3): 피해를 2 줍니다.\n죽음: 알을 소환합니다.",
+      "image": "50ba15c3bbcd.png",
+      "text": "사용(3): 피해를 2 줍니다.\n퇴장: 재건 조선소를 소환합니다.",
       "abilities": [
         {
-          "name": "불",
-          "text": "피해를 2 줍니다. 마나 3을 사용합니다.",
+          "name": "함포 사격",
+          "text": "피해를 2 줍니다. 지휘력 3을 사용합니다.",
           "cost": 3
         },
         {
-          "name": "알 소환",
-          "text": "이 캐릭터가 죽으면 불사조의 알을 소환합니다.",
+          "name": "조선소 재건",
+          "text": "이 유닛이 퇴장하면 재건 조선소를 소환합니다.",
           "cost": null
         }
       ],
@@ -1235,17 +1235,17 @@
       "unlock": null
     },
     "dragon_red": {
-      "name": "붉은 용",
-      "type": "캐릭터",
+      "name": "중무장 갤리언",
+      "type": "유닛",
       "mana": 7,
       "attack": 9,
       "hp": 7,
-      "image": "6e267299b4cd.png",
-      "text": "주문 면역",
+      "image": "5075b1c31013.png",
+      "text": "전술 면역",
       "abilities": [
         {
-          "name": "주문 면역",
-          "text": "주문과 함정의 대상이 되지 않으며 피해도 받지 않습니다.",
+          "name": "전술 면역",
+          "text": "전술과 함정의 대상이 되지 않으며 피해도 받지 않습니다.",
           "cost": null
         }
       ],
@@ -1253,17 +1253,17 @@
       "unlock": null
     },
     "spell_burn": {
-      "name": "소각",
-      "type": "주문",
+      "name": "집중 포격",
+      "type": "전술",
       "mana": 4,
       "attack": null,
       "hp": null,
-      "image": "9bfb2bad8ddb.png",
+      "image": "2df073662d12.png",
       "text": "대상을 파괴합니다.",
       "abilities": [
         {
           "name": "파괴",
-          "text": "대상 캐릭터 또는 장소를 파괴합니다.",
+          "text": "대상 유닛 또는 장소를 파괴합니다.",
           "cost": null
         }
       ],
@@ -1271,12 +1271,12 @@
       "unlock": null
     },
     "potion_red": {
-      "name": "빨간 물약",
-      "type": "주문",
+      "name": "돌격 명령",
+      "type": "전술",
       "mana": 2,
       "attack": null,
       "hp": null,
-      "image": "403f3610ba21.png",
+      "image": "98ccf3b2f3da.png",
       "text": "대상이 공격력 +1과 격노를 얻습니다.",
       "abilities": [
         {
@@ -1286,7 +1286,7 @@
         },
         {
           "name": "격노",
-          "text": "대상 캐릭터가 격노를 얻어 한 턴에 두 번 공격할 수 있습니다.",
+          "text": "대상 유닛이 격노를 얻어 한 턴에 두 번 공격할 수 있습니다.",
           "cost": null
         }
       ],
@@ -1294,17 +1294,17 @@
       "unlock": null
     },
     "trap_explosive": {
-      "name": "폭탄 함정",
+      "name": "화약 매복",
       "type": "함정",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "45cdf314d474.png",
-      "text": "함정: 모든 적 캐릭터에게 피해를 2 줍니다.",
+      "image": "811bc4ff35d8.png",
+      "text": "함정: 모든 적 유닛에게 피해를 2 줍니다.",
       "abilities": [
         {
-          "name": "화염 피해",
-          "text": "적 캐릭터가 공격하면 모든 적 캐릭터에게 피해를 2 줍니다.",
+          "name": "포격",
+          "text": "적 유닛이 공격하면 모든 적 유닛에게 피해를 2 줍니다.",
           "cost": null
         }
       ],
@@ -1312,17 +1312,17 @@
       "unlock": null
     },
     "spell_armageddon": {
-      "name": "아마겟돈",
-      "type": "주문",
+      "name": "함대 총공세",
+      "type": "전술",
       "mana": 5,
       "attack": null,
       "hp": null,
-      "image": "b13fc5bf6841.png",
-      "text": "전장의 모든 캐릭터를 파괴합니다.",
+      "image": "452251025dbb.png",
+      "text": "전장의 모든 유닛을 파괴합니다.",
       "abilities": [
         {
-          "name": "아마겟돈",
-          "text": "전장의 모든 캐릭터를 파괴합니다.",
+          "name": "함대 총공세",
+          "text": "전장의 모든 유닛을 파괴합니다.",
           "cost": null
         }
       ],
@@ -1330,17 +1330,17 @@
       "unlock": null
     },
     "town_volcano": {
-      "name": "화산 마을",
+      "name": "해군 기지",
       "type": "장소",
       "mana": 3,
       "attack": null,
       "hp": 7,
-      "image": "ee4b448057a7.png",
-      "text": "모든 빨간 캐릭터가 공격력 +2를 얻습니다.",
+      "image": "d6fe41d11afa.png",
+      "text": "모든 전투·해적 유닛이 공격력 +2를 얻습니다.",
       "abilities": [
         {
-          "name": "붉은 기운",
-          "text": "모든 빨간 캐릭터가 공격력 +2를 얻습니다.",
+          "name": "전열 지원",
+          "text": "모든 전투·해적 유닛이 공격력 +2를 얻습니다.",
           "cost": null
         }
       ],
@@ -1348,16 +1348,16 @@
       "unlock": null
     },
     "hero_fire": {
-      "name": "불의 정령",
-      "type": "영웅",
+      "name": "사략 함장",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
-      "image": "781ed57b785b.png",
+      "image": "6d88e39da710.png",
       "text": "",
       "abilities": [
         {
-          "name": "불",
+          "name": "견제 포격",
           "text": "피해를 1 줍니다.",
           "cost": 2
         }
@@ -1366,22 +1366,22 @@
       "unlock": null
     },
     "wolf_alpha": {
-      "name": "우두머리 늑대",
-      "type": "캐릭터",
+      "name": "척후대장",
+      "type": "유닛",
       "mana": 3,
       "attack": 3,
       "hp": 2,
-      "image": "b4c8f2be2f95.png",
-      "text": "등장: 아기 늑대를 소환합니다.\n모든 늑대가 공격력 +1을 얻습니다.",
+      "image": "044db7e8d6a5.png",
+      "text": "등장: 견습 척후를 소환합니다.\n모든 척후대가 공격력 +1을 얻습니다.",
       "abilities": [
         {
-          "name": "늑대 소환",
-          "text": "등장할 때 인접한 빈칸에 1/1 아기 늑대를 소환합니다.",
+          "name": "척후대 소환",
+          "text": "등장할 때 인접한 빈칸에 1/1 견습 척후를 소환합니다.",
           "cost": null
         },
         {
-          "name": "늑대의 기운",
-          "text": "다른 모든 아군 늑대가 공격력 +1을 얻습니다.",
+          "name": "척후대의 기운",
+          "text": "다른 모든 아군 척후대가 공격력 +1을 얻습니다.",
           "cost": null
         }
       ],
@@ -1389,12 +1389,12 @@
       "unlock": null
     },
     "wolf_stalker": {
-      "name": "늑대 추적자",
-      "type": "캐릭터",
+      "name": "해안 척후",
+      "type": "유닛",
       "mana": 3,
       "attack": 4,
       "hp": 2,
-      "image": "ba6473ef9103.png",
+      "image": "139a3fa13099.png",
       "text": "은신",
       "abilities": [
         {
@@ -1407,17 +1407,17 @@
       "unlock": null
     },
     "tree_angry": {
-      "name": "성난 나무",
-      "type": "캐릭터",
+      "name": "선박 수리공",
+      "type": "유닛",
       "mana": 3,
       "attack": 3,
       "hp": 5,
-      "image": "94422d44ab30.png",
+      "image": "a5495bc2e374.png",
       "text": "재생",
       "abilities": [
         {
           "name": "재생",
-          "text": "내 턴이 시작될 때 이 캐릭터의 체력을 모두 회복합니다.",
+          "text": "내 턴이 시작될 때 이 유닛의 체력을 모두 회복합니다.",
           "cost": null
         }
       ],
@@ -1425,12 +1425,12 @@
       "unlock": null
     },
     "owl": {
-      "name": "부엉이",
-      "type": "캐릭터",
+      "name": "통역관",
+      "type": "유닛",
       "mana": 3,
       "attack": 2,
       "hp": 3,
-      "image": "cb6f3e9941ad.png",
+      "image": "101d0a3cfaef.png",
       "text": "대상 카드의 능력을 침묵시킵니다.",
       "abilities": [
         {
@@ -1443,17 +1443,17 @@
       "unlock": null
     },
     "raccoon": {
-      "name": "너구리",
-      "type": "캐릭터",
+      "name": "구조대원",
+      "type": "유닛",
       "mana": 2,
       "attack": 2,
       "hp": 3,
-      "image": "d4572a71d000.png",
-      "text": "등장: 내 무덤의 캐릭터 하나를 손으로 되돌립니다.",
+      "image": "4910c82f078e.png",
+      "text": "등장: 내 폐기 더미의 유닛 하나를 손으로 되돌립니다.",
       "abilities": [
         {
           "name": "회수",
-          "text": "등장할 때 내 무덤의 캐릭터 하나를 손으로 되돌립니다.",
+          "text": "등장할 때 내 폐기 더미의 유닛 하나를 손으로 되돌립니다.",
           "cost": null
         }
       ],
@@ -1461,17 +1461,17 @@
       "unlock": null
     },
     "armored_beast": {
-      "name": "갑옷 야수",
-      "type": "캐릭터",
+      "name": "호위 수비대",
+      "type": "유닛",
       "mana": 4,
       "attack": 3,
       "hp": 6,
-      "image": "3b11f122ee39.png",
+      "image": "5df6ce5c1a84.png",
       "text": "도발",
       "abilities": [
         {
           "name": "도발",
-          "text": "다른 아군 캐릭터가 공격받지 않도록 보호합니다.",
+          "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
           "cost": null
         }
       ],
@@ -1479,12 +1479,12 @@
       "unlock": null
     },
     "bear": {
-      "name": "곰",
-      "type": "캐릭터",
+      "name": "원정대 부관",
+      "type": "유닛",
       "mana": 5,
       "attack": 4,
       "hp": 5,
-      "image": "e2f5fd54f70e.png",
+      "image": "044db7e8d6a5.png",
       "text": "등장: 도발 또는 격노를 얻습니다.",
       "abilities": [
         {
@@ -1497,17 +1497,17 @@
       "unlock": null
     },
     "sasquatch": {
-      "name": "사스콰치",
-      "type": "캐릭터",
+      "name": "밀림 정찰대",
+      "type": "유닛",
       "mana": 5,
       "attack": 6,
       "hp": 4,
-      "image": "8a2aed93b37a.png",
-      "text": "턴 종료: 다른 아군 캐릭터가 있으면 은신합니다.",
+      "image": "139a3fa13099.png",
+      "text": "턴 종료: 다른 아군 유닛이 있으면 은신합니다.",
       "abilities": [
         {
           "name": "은신",
-          "text": "내 턴이 끝날 때 다른 아군 캐릭터가 하나 이상 있으면 은신합니다.",
+          "text": "내 턴이 끝날 때 다른 아군 유닛이 하나 이상 있으면 은신합니다.",
           "cost": null
         }
       ],
@@ -1515,22 +1515,22 @@
       "unlock": null
     },
     "unicorn": {
-      "name": "유니콘",
-      "type": "캐릭터",
+      "name": "보급선",
+      "type": "유닛",
       "mana": 6,
       "attack": 5,
       "hp": 6,
-      "image": "3ceb10bccb41.png",
-      "text": "등장: 다른 캐릭터에게 공격력과 체력 +2를 부여합니다.\n행동: 돌진합니다.",
+      "image": "a3be9f408c7a.png",
+      "text": "등장: 다른 유닛에게 공격력과 체력 +2를 부여합니다.\n행동: 돌진합니다.",
       "abilities": [
         {
-          "name": "축복",
-          "text": "등장할 때 다른 캐릭터 하나가 다음 내 턴까지 공격력과 체력 +2를 얻습니다.",
+          "name": "전투 지원",
+          "text": "등장할 때 다른 유닛 하나가 다음 내 턴까지 공격력과 체력 +2를 얻습니다.",
           "cost": null
         },
         {
           "name": "돌진",
-          "text": "캐릭터 하나를 소유자의 손으로 돌려보냅니다. 이 캐릭터의 행동을 소모합니다.",
+          "text": "유닛 하나를 소유자의 손으로 돌려보냅니다. 이 유닛의 행동을 소모합니다.",
           "cost": 0
         }
       ],
@@ -1538,17 +1538,17 @@
       "unlock": null
     },
     "dragon_green": {
-      "name": "녹색 용",
-      "type": "캐릭터",
+      "name": "장거리 탐험선",
+      "type": "유닛",
       "mana": 7,
       "attack": 7,
       "hp": 9,
-      "image": "02baadab3792.png",
-      "text": "주문 면역",
+      "image": "f77e70a73414.png",
+      "text": "전술 면역",
       "abilities": [
         {
-          "name": "주문 면역",
-          "text": "주문과 함정의 대상이 되지 않으며 피해도 받지 않습니다.",
+          "name": "전술 면역",
+          "text": "전술과 함정의 대상이 되지 않으며 피해도 받지 않습니다.",
           "cost": null
         }
       ],
@@ -1556,17 +1556,17 @@
       "unlock": null
     },
     "spell_roots": {
-      "name": "휘감는 뿌리",
-      "type": "주문",
+      "name": "포획 그물",
+      "type": "전술",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "0b431a08790f.png",
+      "image": "567c584afbec.png",
       "text": "대상을 3턴 동안 마비시킵니다.",
       "abilities": [
         {
           "name": "마비",
-          "text": "대상 캐릭터를 3턴 동안 마비시킵니다.",
+          "text": "대상 유닛을 3턴 동안 마비시킵니다.",
           "cost": null
         }
       ],
@@ -1574,12 +1574,12 @@
       "unlock": null
     },
     "potion_green": {
-      "name": "초록 물약",
-      "type": "주문",
+      "name": "보급품 배분",
+      "type": "전술",
       "mana": 2,
       "attack": null,
       "hp": null,
-      "image": "d74b3d738213.png",
+      "image": "a3be9f408c7a.png",
       "text": "대상이 체력 +2와 도발을 얻습니다.",
       "abilities": [
         {
@@ -1589,7 +1589,7 @@
         },
         {
           "name": "도발",
-          "text": "대상 캐릭터가 도발을 얻어 다른 아군 캐릭터를 보호합니다.",
+          "text": "대상 유닛이 도발을 얻어 다른 아군 유닛을 보호합니다.",
           "cost": null
         }
       ],
@@ -1597,17 +1597,17 @@
       "unlock": null
     },
     "spell_growth": {
-      "name": "성장",
-      "type": "주문",
+      "name": "원정대 재정비",
+      "type": "전술",
       "mana": 5,
       "attack": null,
       "hp": null,
-      "image": "e2dca4fbf03f.png",
-      "text": "모든 아군 캐릭터가 공격력과 체력 +2를 얻습니다.",
+      "image": "76e85e1fe3d2.png",
+      "text": "모든 아군 유닛이 공격력과 체력 +2를 얻습니다.",
       "abilities": [
         {
-          "name": "성장",
-          "text": "모든 아군 캐릭터가 공격력과 체력 +2를 얻습니다.",
+          "name": "원정대 재정비",
+          "text": "모든 아군 유닛이 공격력과 체력 +2를 얻습니다.",
           "cost": null
         }
       ],
@@ -1615,17 +1615,17 @@
       "unlock": null
     },
     "trap_spike": {
-      "name": "가시 함정",
+      "name": "정박 사슬",
       "type": "함정",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "9bf64c30b507.png",
+      "image": "67ddcf041382.png",
       "text": "함정: 다음 공격자를 마비시킵니다.",
       "abilities": [
         {
           "name": "마비",
-          "text": "적 캐릭터가 공격한 뒤 그 캐릭터를 3턴 동안 마비시킵니다.",
+          "text": "적 유닛이 공격한 뒤 그 유닛을 3턴 동안 마비시킵니다.",
           "cost": null
         }
       ],
@@ -1633,17 +1633,17 @@
       "unlock": null
     },
     "town_forest": {
-      "name": "숲 마을",
+      "name": "보급 기항지",
       "type": "장소",
       "mana": 3,
       "attack": null,
       "hp": 7,
-      "image": "a9a55c3dd324.png",
-      "text": "모든 초록 카드가 체력 +2를 얻습니다.",
+      "image": "49ffec26bc24.png",
+      "text": "모든 탐험·보급 카드가 체력 +2를 얻습니다.",
       "abilities": [
         {
-          "name": "초록 기운",
-          "text": "모든 초록 캐릭터가 체력 +2를 얻습니다.",
+          "name": "보급 지원",
+          "text": "모든 탐험·보급 유닛이 체력 +2를 얻습니다.",
           "cost": null
         }
       ],
@@ -1651,16 +1651,16 @@
       "unlock": null
     },
     "hero_forest": {
-      "name": "숲의 정령",
-      "type": "영웅",
+      "name": "탐험대장",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
-      "image": "0bfadea9344f.png",
+      "image": "044db7e8d6a5.png",
       "text": "",
       "abilities": [
         {
-          "name": "숲",
+          "name": "보급 지원",
           "text": "체력을 2 회복합니다.",
           "cost": 2
         }
@@ -1669,17 +1669,17 @@
       "unlock": null
     },
     "fish": {
-      "name": "물고기",
-      "type": "캐릭터",
+      "name": "표류 선원",
+      "type": "유닛",
       "mana": 1,
       "attack": 1,
       "hp": 1,
-      "image": "27de5a0e002b.png",
-      "text": "죽음: 카드 1장을 뽑습니다.",
+      "image": "4570b193beb6.png",
+      "text": "퇴장: 카드 1장을 뽑습니다.",
       "abilities": [
         {
           "name": "카드 뽑기",
-          "text": "이 캐릭터가 죽으면 카드 1장을 뽑습니다.",
+          "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -1687,17 +1687,17 @@
       "unlock": null
     },
     "crab_mana": {
-      "name": "마나 게",
-      "type": "캐릭터",
+      "name": "교역 중개인",
+      "type": "유닛",
       "mana": 2,
       "attack": 3,
       "hp": 1,
-      "image": "e039428c984f.png",
-      "text": "상대 영웅을 공격하면 마나를 2 얻습니다.",
+      "image": "cbbe2de2e33a.png",
+      "text": "상대 선장을 공격하면 지휘력을 2 얻습니다.",
       "abilities": [
         {
           "name": "약탈",
-          "text": "상대 영웅을 공격하면 마나를 2 얻습니다.",
+          "text": "상대 선장을 공격하면 지휘력을 2 얻습니다.",
           "cost": null
         }
       ],
@@ -1705,17 +1705,17 @@
       "unlock": null
     },
     "turtle": {
-      "name": "거북이",
-      "type": "캐릭터",
+      "name": "호위 상선",
+      "type": "유닛",
       "mana": 3,
       "attack": 2,
       "hp": 3,
-      "image": "4589141af2e2.png",
+      "image": "fe39fe545fc1.png",
       "text": "도발\n보호막",
       "abilities": [
         {
           "name": "도발",
-          "text": "다른 아군 캐릭터가 공격받지 않도록 보호합니다.",
+          "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
           "cost": null
         },
         {
@@ -1728,17 +1728,17 @@
       "unlock": null
     },
     "poison_frog": {
-      "name": "독개구리",
-      "type": "캐릭터",
+      "name": "급소 사수",
+      "type": "유닛",
       "mana": 3,
       "attack": 2,
       "hp": 2,
-      "image": "c1916fde62de.png",
+      "image": "d17bf793ae82.png",
       "text": "치명타",
       "abilities": [
         {
           "name": "치명타",
-          "text": "피해를 준 캐릭터를 처치합니다.",
+          "text": "피해를 준 유닛을 처치합니다.",
           "cost": null
         }
       ],
@@ -1746,16 +1746,16 @@
       "unlock": null
     },
     "eel": {
-      "name": "전기뱀장어",
-      "type": "캐릭터",
+      "name": "협상 항해사",
+      "type": "유닛",
       "mana": 4,
       "attack": 5,
       "hp": 2,
-      "image": "f2929b130246.png",
-      "text": "등장: 대상 캐릭터의 공격력을 1로 만듭니다.",
+      "image": "f9099a908d1c.png",
+      "text": "등장: 대상 유닛의 공격력을 1로 만듭니다.",
       "abilities": [
         {
-          "name": "감전",
+          "name": "교섭",
           "text": "등장할 때 선택한 대상의 공격력을 1로 만듭니다.",
           "cost": null
         }
@@ -1764,12 +1764,12 @@
       "unlock": null
     },
     "pufferfish": {
-      "name": "복어",
-      "type": "캐릭터",
+      "name": "상선 호위대",
+      "type": "유닛",
       "mana": 3,
       "attack": 2,
       "hp": 5,
-      "image": "8a5f47611960.png",
+      "image": "5df6ce5c1a84.png",
       "text": "상대 턴 동안 공격력 +3을 얻습니다.",
       "abilities": [
         {
@@ -1782,17 +1782,17 @@
       "unlock": null
     },
     "killer_whale": {
-      "name": "범고래",
-      "type": "캐릭터",
+      "name": "무장 세관선",
+      "type": "유닛",
       "mana": 5,
       "attack": 5,
       "hp": 4,
-      "image": "a9ce0efe883c.png",
-      "text": "등장: 공격력이 4 이하인 캐릭터를 파괴합니다.",
+      "image": "fe39fe545fc1.png",
+      "text": "등장: 공격력이 4 이하인 유닛을 파괴합니다.",
       "abilities": [
         {
           "name": "처형",
-          "text": "등장할 때 공격력이 4 이하인 캐릭터를 파괴합니다. 파괴했다면 카드 1장을 뽑습니다.",
+          "text": "등장할 때 공격력이 4 이하인 유닛을 파괴합니다. 파괴했다면 카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -1800,12 +1800,12 @@
       "unlock": null
     },
     "kraken": {
-      "name": "크라켄",
-      "type": "캐릭터",
+      "name": "쾌속 무역선",
+      "type": "유닛",
       "mana": 6,
       "attack": 5,
       "hp": 5,
-      "image": "af92e9a99e9e.png",
+      "image": "faef7b73172a.png",
       "text": "신속",
       "abilities": [
         {
@@ -1818,22 +1818,22 @@
       "unlock": null
     },
     "sea_monster": {
-      "name": "바다 괴물",
-      "type": "캐릭터",
+      "name": "호송 함대장",
+      "type": "유닛",
       "mana": 6,
       "attack": 4,
       "hp": 7,
-      "image": "f162ca267e98.png",
-      "text": "적 캐릭터의 공격력이 1 감소합니다.\n행동: 아군의 공격력을 1 높입니다.",
+      "image": "0d586ca78c79.png",
+      "text": "적 유닛의 공격력이 1 감소합니다.\n행동: 아군의 공격력을 1 높입니다.",
       "abilities": [
         {
           "name": "공포",
-          "text": "모든 적 캐릭터의 공격력이 1 감소합니다.",
+          "text": "모든 적 유닛의 공격력이 1 감소합니다.",
           "cost": null
         },
         {
-          "name": "포효",
-          "text": "턴이 끝날 때까지 모든 아군 캐릭터가 공격력 +1을 얻습니다. 이 캐릭터의 행동을 소모합니다.",
+          "name": "사기 진작",
+          "text": "턴이 끝날 때까지 모든 아군 유닛이 공격력 +1을 얻습니다. 이 유닛의 행동을 소모합니다.",
           "cost": 0
         }
       ],
@@ -1841,17 +1841,17 @@
       "unlock": null
     },
     "dragon_blue": {
-      "name": "푸른 용",
-      "type": "캐릭터",
+      "name": "원양 무역선",
+      "type": "유닛",
       "mana": 7,
       "attack": 8,
       "hp": 8,
-      "image": "f9aa5c8e42e6.png",
-      "text": "주문 면역",
+      "image": "bfcf18d455c1.png",
+      "text": "전술 면역",
       "abilities": [
         {
-          "name": "주문 면역",
-          "text": "주문과 함정의 대상이 되지 않으며 피해도 받지 않습니다.",
+          "name": "전술 면역",
+          "text": "전술과 함정의 대상이 되지 않으며 피해도 받지 않습니다.",
           "cost": null
         }
       ],
@@ -1859,12 +1859,12 @@
       "unlock": null
     },
     "spell_wave": {
-      "name": "파도",
-      "type": "주문",
+      "name": "귀항 명령",
+      "type": "전술",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "550daf048436.png",
+      "image": "3c68e117a4f2.png",
       "text": "대상을 소유자의 손으로 돌려보냅니다.",
       "abilities": [
         {
@@ -1877,16 +1877,16 @@
       "unlock": null
     },
     "spell_storm": {
-      "name": "바다 폭풍",
-      "type": "주문",
+      "name": "항로 변경",
+      "type": "전술",
       "mana": 5,
       "attack": null,
       "hp": null,
-      "image": "9faab0665c03.png",
+      "image": "46659d622026.png",
       "text": "전장의 모든 카드를 각 소유자의 손으로 돌려보냅니다.",
       "abilities": [
         {
-          "name": "바다 폭풍",
+          "name": "항로 변경",
           "text": "전장의 모든 카드를 각 소유자의 손으로 돌려보냅니다.",
           "cost": null
         }
@@ -1895,12 +1895,12 @@
       "unlock": null
     },
     "potion_blue": {
-      "name": "파란 물약",
-      "type": "주문",
+      "name": "긴급 수리",
+      "type": "전술",
       "mana": 2,
       "attack": null,
       "hp": null,
-      "image": "7573433d6271.png",
+      "image": "a5495bc2e374.png",
       "text": "대상이 보호막을 얻고 체력을 모두 회복합니다.",
       "abilities": [
         {
@@ -1918,17 +1918,17 @@
       "unlock": null
     },
     "trap_fish": {
-      "name": "물고기 함정",
+      "name": "암초 유인",
       "type": "함정",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "332e7af30bb4.png",
-      "text": "함정: 다음에 등장한 적 캐릭터를 물고기로 변신시킵니다.",
+      "image": "520195b67d07.png",
+      "text": "함정: 다음에 등장한 적 유닛을 표류 선원으로 변신시킵니다.",
       "abilities": [
         {
-          "name": "물고기 변신",
-          "text": "다음에 등장한 적 캐릭터를 1/1 물고기로 변신시킵니다.",
+          "name": "표류 선원 변신",
+          "text": "다음에 등장한 적 유닛을 1/1 표류 선원으로 변신시킵니다.",
           "cost": null
         }
       ],
@@ -1936,17 +1936,17 @@
       "unlock": null
     },
     "town_underwater": {
-      "name": "수중 마을",
+      "name": "자유 무역항",
       "type": "장소",
       "mana": 3,
       "attack": null,
       "hp": 7,
-      "image": "7d5804b0efbd.png",
-      "text": "모든 파란 카드의 비용이 1 감소합니다.",
+      "image": "ac524132a586.png",
+      "text": "모든 항해·교역 카드의 비용이 1 감소합니다.",
       "abilities": [
         {
-          "name": "푸른 기운",
-          "text": "모든 파란 카드의 비용이 1 감소합니다.",
+          "name": "무역 지원",
+          "text": "모든 항해·교역 카드의 비용이 1 감소합니다.",
           "cost": null
         }
       ],
@@ -1954,16 +1954,16 @@
       "unlock": null
     },
     "hero_water": {
-      "name": "물의 정령",
-      "type": "영웅",
+      "name": "상단 선장",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
-      "image": "11c168ced5da.png",
+      "image": "0d586ca78c79.png",
       "text": "",
       "abilities": [
         {
-          "name": "물",
+          "name": "항로 정보",
           "text": "카드 1장을 뽑습니다.",
           "cost": 3
         }
@@ -1973,7 +1973,7 @@
     },
     "c_joan_crew": {
       "name": "행운의 견습 선원",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 2,
       "attack": 2,
       "hp": 2,
@@ -1995,11 +1995,11 @@
     },
     "c_joan_spell1": {
       "name": "순풍",
-      "type": "주문",
+      "type": "전술",
       "mana": 1,
       "attack": null,
       "hp": null,
-      "image": "550daf048436.png",
+      "image": "3c68e117a4f2.png",
       "text": "대상이 보호막을 얻어 다음에 받는 피해를 무시합니다.",
       "abilities": [
         {
@@ -2021,12 +2021,12 @@
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "332e7af30bb4.png",
-      "text": "다음에 등장한 적 캐릭터를 1/1 물고기로 변신시킵니다.",
+      "image": "520195b67d07.png",
+      "text": "다음에 등장한 적 유닛을 1/1 표류 선원으로 변신시킵니다.",
       "abilities": [
         {
-          "name": "물고기 변신",
-          "text": "다음에 등장한 적 캐릭터를 1/1 물고기로 변신시킵니다.",
+          "name": "표류 선원 변신",
+          "text": "다음에 등장한 적 유닛을 1/1 표류 선원으로 변신시킵니다.",
           "cost": null
         }
       ],
@@ -2039,16 +2039,16 @@
     },
     "c_joan_mate": {
       "name": "노련한 항해사",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 4,
       "attack": 3,
       "hp": 4,
       "image": "850efa098adc.jpg",
-      "text": "등장할 때 다른 캐릭터 하나가 다음 내 턴까지 공격력과 체력 +2를 얻습니다.",
+      "text": "등장할 때 다른 유닛 하나가 다음 내 턴까지 공격력과 체력 +2를 얻습니다.",
       "abilities": [
         {
-          "name": "축복",
-          "text": "등장할 때 다른 캐릭터 하나가 다음 내 턴까지 공격력과 체력 +2를 얻습니다.",
+          "name": "전투 지원",
+          "text": "등장할 때 다른 유닛 하나가 다음 내 턴까지 공격력과 체력 +2를 얻습니다.",
           "cost": null
         }
       ],
@@ -2061,11 +2061,11 @@
     },
     "c_joan_spell2": {
       "name": "신항로 발견",
-      "type": "주문",
+      "type": "전술",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "44dbfbec868e.png",
+      "image": "46659d622026.png",
       "text": "내 덱 위 카드 7장을 보고 그중 2장을 손에 넣습니다.",
       "abilities": [
         {
@@ -2083,21 +2083,21 @@
     },
     "c_joan_flagship": {
       "name": "모험가의 캐러벨",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 6,
       "attack": 5,
       "hp": 6,
-      "image": "f9aa5c8e42e6.png",
-      "text": "도발을 무시할 수 있습니다.\n이 캐릭터로 다른 캐릭터를 처치하면 카드 2장을 뽑습니다.",
+      "image": "f77e70a73414.png",
+      "text": "도발을 무시할 수 있습니다.\n이 유닛으로 다른 유닛을 처치하면 카드 2장을 뽑습니다.",
       "abilities": [
         {
-          "name": "비행",
+          "name": "우회",
           "text": "도발을 무시할 수 있습니다.",
           "cost": null
         },
         {
           "name": "카드 뽑기",
-          "text": "이 캐릭터로 다른 캐릭터를 처치하면 카드 2장을 뽑습니다.",
+          "text": "이 유닛으로 다른 유닛을 처치하면 카드 2장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -2109,16 +2109,16 @@
       }
     },
     "octopus": {
-      "name": "문어",
-      "type": "캐릭터",
+      "name": "노련한 흥정꾼",
+      "type": "유닛",
       "mana": 4,
       "attack": 2,
       "hp": 5,
-      "image": "784f2cd68d10.png",
+      "image": "cbbe2de2e33a.png",
       "text": "공격할 때 주사위를 굴려 4 이상이면 그 턴에 공격력 +6을 얻습니다.",
       "abilities": [
         {
-          "name": "촉수",
+          "name": "유리한 거래",
           "text": "공격 전에 주사위를 굴립니다. 4 이상이면 턴이 끝날 때까지 공격력 +6을 얻습니다.",
           "cost": null
         }
@@ -2127,17 +2127,17 @@
       "unlock": null
     },
     "shark": {
-      "name": "상어",
-      "type": "캐릭터",
+      "name": "항만 정보상",
+      "type": "유닛",
       "mana": 4,
       "attack": 4,
       "hp": 4,
-      "image": "c57d6a6d229a.png",
-      "text": "다른 캐릭터가 죽을 때마다 카드 1장을 뽑습니다.",
+      "image": "101d0a3cfaef.png",
+      "text": "다른 유닛이 퇴장할 때마다 카드 1장을 뽑습니다.",
       "abilities": [
         {
-          "name": "포식",
-          "text": "다른 캐릭터가 죽을 때마다 카드 1장을 뽑습니다.",
+          "name": "전황 파악",
+          "text": "다른 유닛이 퇴장할 때마다 카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -2146,7 +2146,7 @@
     },
     "c_joan_hero": {
       "name": "조안 페레로",
-      "type": "영웅",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
@@ -2154,7 +2154,7 @@
       "text": "카드 1장을 뽑습니다.",
       "abilities": [
         {
-          "name": "물",
+          "name": "항로 정보",
           "text": "카드 1장을 뽑습니다.",
           "cost": 3
         }
@@ -2168,7 +2168,7 @@
     },
     "c_catalina_crew": {
       "name": "갑판 검객",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 2,
       "attack": 2,
       "hp": 2,
@@ -2190,15 +2190,15 @@
     },
     "c_catalina_spell1": {
       "name": "현측 포격",
-      "type": "주문",
+      "type": "전술",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "9a643a5d9ccd.png",
+      "image": "2df073662d12.png",
       "text": "피해를 3 줍니다.",
       "abilities": [
         {
-          "name": "불",
+          "name": "집중 사격",
           "text": "피해를 3 줍니다.",
           "cost": null
         }
@@ -2216,12 +2216,12 @@
       "mana": 2,
       "attack": null,
       "hp": 2,
-      "image": "27bf046f2b1a.png",
-      "text": "장착한 캐릭터가 공격력 +2를 얻습니다.\n공격할 때마다 내구도가 1 감소합니다.",
+      "image": "586166894afc.png",
+      "text": "장착한 유닛이 공격력 +2를 얻습니다.\n공격할 때마다 내구도가 1 감소합니다.",
       "abilities": [
         {
           "name": "공격",
-          "text": "장착한 캐릭터가 공격력 +2를 얻습니다.",
+          "text": "장착한 유닛이 공격력 +2를 얻습니다.",
           "cost": null
         },
         {
@@ -2239,7 +2239,7 @@
     },
     "c_catalina_mate": {
       "name": "돌격 부관",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 4,
       "attack": 4,
       "hp": 3,
@@ -2261,16 +2261,16 @@
     },
     "c_catalina_spell2": {
       "name": "돌격 명령",
-      "type": "주문",
+      "type": "전술",
       "mana": 5,
       "attack": null,
       "hp": null,
-      "image": "e2dca4fbf03f.png",
-      "text": "모든 아군 캐릭터가 공격력과 체력 +2를 얻습니다.",
+      "image": "98ccf3b2f3da.png",
+      "text": "모든 아군 유닛이 공격력과 체력 +2를 얻습니다.",
       "abilities": [
         {
-          "name": "성장",
-          "text": "모든 아군 캐릭터가 공격력과 체력 +2를 얻습니다.",
+          "name": "원정대 재정비",
+          "text": "모든 아군 유닛이 공격력과 체력 +2를 얻습니다.",
           "cost": null
         }
       ],
@@ -2283,12 +2283,12 @@
     },
     "c_catalina_flagship": {
       "name": "복수의 갤리언",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 7,
       "attack": 7,
       "hp": 6,
-      "image": "6e267299b4cd.png",
-      "text": "등장한 턴에도 바로 공격할 수 있습니다.\n남는 피해를 상대 영웅에게 줍니다.",
+      "image": "5075b1c31013.png",
+      "text": "등장한 턴에도 바로 공격할 수 있습니다.\n남는 피해를 상대 선장에게 줍니다.",
       "abilities": [
         {
           "name": "신속",
@@ -2297,7 +2297,7 @@
         },
         {
           "name": "관통",
-          "text": "남는 피해를 상대 영웅에게 줍니다.",
+          "text": "남는 피해를 상대 선장에게 줍니다.",
           "cost": null
         }
       ],
@@ -2309,17 +2309,17 @@
       }
     },
     "reaper": {
-      "name": "지옥의 사신",
-      "type": "캐릭터",
+      "name": "추격 함장",
+      "type": "유닛",
       "mana": 6,
       "attack": 6,
       "hp": 6,
-      "image": "a89ad34dba26.png",
-      "text": "턴마다: 공격력이 가장 낮은 캐릭터를 처치합니다.",
+      "image": "6d88e39da710.png",
+      "text": "턴마다: 공격력이 가장 낮은 유닛을 처치합니다.",
       "abilities": [
         {
-          "name": "사신",
-          "text": "내 턴이 시작될 때 전장에서 공격력이 가장 낮은 캐릭터를 모두 처치합니다. 내 캐릭터도 포함됩니다.",
+          "name": "취약 전력 추격",
+          "text": "내 턴이 시작될 때 전장에서 공격력이 가장 낮은 유닛을 모두 처치합니다. 내 유닛도 포함됩니다.",
           "cost": null
         }
       ],
@@ -2328,16 +2328,16 @@
     },
     "c_catalina_hero": {
       "name": "카탈리나 에란초",
-      "type": "영웅",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
       "image": "d2df63b3f888.jpg",
-      "text": "피해를 2 줍니다. 마나 3을 사용합니다.",
+      "text": "피해를 2 줍니다. 지휘력 3을 사용합니다.",
       "abilities": [
         {
-          "name": "불",
-          "text": "피해를 2 줍니다. 마나 3을 사용합니다.",
+          "name": "함포 사격",
+          "text": "피해를 2 줍니다. 지휘력 3을 사용합니다.",
           "cost": 3
         }
       ],
@@ -2350,16 +2350,16 @@
     },
     "c_otto_crew": {
       "name": "갑판 수비병",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 2,
       "attack": 1,
       "hp": 4,
       "image": "7388a6740c24.jpg",
-      "text": "다른 아군 캐릭터가 공격받지 않도록 보호합니다.",
+      "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
       "abilities": [
         {
           "name": "도발",
-          "text": "다른 아군 캐릭터가 공격받지 않도록 보호합니다.",
+          "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
           "cost": null
         }
       ],
@@ -2372,11 +2372,11 @@
     },
     "c_otto_spell1": {
       "name": "방진",
-      "type": "주문",
+      "type": "전술",
       "mana": 2,
       "attack": null,
       "hp": null,
-      "image": "66f4e360361f.png",
+      "image": "d6a4de8919ee.png",
       "text": "대상이 방어도 2를 얻어 받는 모든 피해가 2 감소합니다.",
       "abilities": [
         {
@@ -2398,12 +2398,12 @@
       "mana": 2,
       "attack": null,
       "hp": 2,
-      "image": "d4266f042976.png",
-      "text": "장착한 캐릭터가 방어도 2를 얻습니다.\n공격받을 때마다 내구도가 1 감소합니다.",
+      "image": "d6a4de8919ee.png",
+      "text": "장착한 유닛이 방어도 2를 얻습니다.\n공격받을 때마다 내구도가 1 감소합니다.",
       "abilities": [
         {
           "name": "방어도",
-          "text": "장착한 캐릭터가 방어도 2를 얻습니다.",
+          "text": "장착한 유닛이 방어도 2를 얻습니다.",
           "cost": null
         },
         {
@@ -2421,7 +2421,7 @@
     },
     "c_otto_mate": {
       "name": "포술장",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 4,
       "attack": 3,
       "hp": 5,
@@ -2443,11 +2443,11 @@
     },
     "c_otto_spell2": {
       "name": "전열 정비",
-      "type": "주문",
+      "type": "전술",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "0b431a08790f.png",
+      "image": "a3be9f408c7a.png",
       "text": "대상이 보호막을 얻어 다음에 받는 피해를 무시합니다.",
       "abilities": [
         {
@@ -2465,16 +2465,16 @@
     },
     "c_otto_flagship": {
       "name": "철갑 전열함",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 7,
       "attack": 6,
       "hp": 9,
-      "image": "02baadab3792.png",
-      "text": "다른 아군 캐릭터가 공격받지 않도록 보호합니다.\n처음 받는 피해를 무시합니다.",
+      "image": "fe39fe545fc1.png",
+      "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.\n처음 받는 피해를 무시합니다.",
       "abilities": [
         {
           "name": "도발",
-          "text": "다른 아군 캐릭터가 공격받지 않도록 보호합니다.",
+          "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
           "cost": null
         },
         {
@@ -2491,12 +2491,12 @@
       }
     },
     "gorilla": {
-      "name": "고릴라",
-      "type": "캐릭터",
+      "name": "탐험대 선봉",
+      "type": "유닛",
       "mana": 4,
       "attack": 0,
       "hp": 6,
-      "image": "32d8b9818a0f.png",
+      "image": "139a3fa13099.png",
       "text": "등장: 주사위를 굴려 나온 수만큼 공격력이 증가합니다.",
       "abilities": [
         {
@@ -2509,17 +2509,17 @@
       "unlock": null
     },
     "mammoth": {
-      "name": "매머드",
-      "type": "캐릭터",
+      "name": "중무장 호위선",
+      "type": "유닛",
       "mana": 6,
       "attack": 7,
       "hp": 6,
-      "image": "b448d2a441c7.png",
+      "image": "fe39fe545fc1.png",
       "text": "관통",
       "abilities": [
         {
           "name": "관통",
-          "text": "남는 피해를 상대 영웅에게 줍니다.",
+          "text": "남는 피해를 상대 선장에게 줍니다.",
           "cost": null
         }
       ],
@@ -2528,16 +2528,16 @@
     },
     "c_otto_hero": {
       "name": "오토 베인스",
-      "type": "영웅",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
       "image": "0f58f87e75ee.jpg",
-      "text": "턴이 끝날 때까지 모든 아군 캐릭터가 공격력 +1을 얻습니다. 이 캐릭터의 행동을 소모합니다.",
+      "text": "턴이 끝날 때까지 모든 아군 유닛이 공격력 +1을 얻습니다. 이 유닛의 행동을 소모합니다.",
       "abilities": [
         {
-          "name": "포효",
-          "text": "턴이 끝날 때까지 모든 아군 캐릭터가 공격력 +1을 얻습니다. 이 캐릭터의 행동을 소모합니다.",
+          "name": "사기 진작",
+          "text": "턴이 끝날 때까지 모든 아군 유닛이 공격력 +1을 얻습니다. 이 유닛의 행동을 소모합니다.",
           "cost": 0
         }
       ],
@@ -2550,16 +2550,16 @@
     },
     "c_ernest_crew": {
       "name": "견습 측량사",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 2,
       "attack": 1,
       "hp": 3,
       "image": "4eac72e7519d.jpg",
-      "text": "이 캐릭터가 죽으면 카드 1장을 뽑습니다.",
+      "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
       "abilities": [
         {
           "name": "카드 뽑기",
-          "text": "이 캐릭터가 죽으면 카드 1장을 뽑습니다.",
+          "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -2572,11 +2572,11 @@
     },
     "c_ernest_spell1": {
       "name": "응급 처치",
-      "type": "주문",
+      "type": "전술",
       "mana": 2,
       "attack": null,
       "hp": null,
-      "image": "66f4e360361f.png",
+      "image": "4910c82f078e.png",
       "text": "대상 카드의 체력을 모두 회복합니다.",
       "abilities": [
         {
@@ -2598,12 +2598,12 @@
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "9bf64c30b507.png",
-      "text": "적 캐릭터가 공격하면 모든 적 캐릭터에게 피해를 2 줍니다.",
+      "image": "567c584afbec.png",
+      "text": "적 유닛이 공격하면 모든 적 유닛에게 피해를 2 줍니다.",
       "abilities": [
         {
-          "name": "화염 피해",
-          "text": "적 캐릭터가 공격하면 모든 적 캐릭터에게 피해를 2 줍니다.",
+          "name": "포격",
+          "text": "적 유닛이 공격하면 모든 적 유닛에게 피해를 2 줍니다.",
           "cost": null
         }
       ],
@@ -2616,16 +2616,16 @@
     },
     "c_ernest_mate": {
       "name": "박물학자",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 4,
       "attack": 3,
       "hp": 4,
       "image": "be476d5eab2a.jpg",
-      "text": "등장할 때 내 무덤의 캐릭터 하나를 손으로 되돌립니다.",
+      "text": "등장할 때 내 폐기 더미의 유닛 하나를 손으로 되돌립니다.",
       "abilities": [
         {
           "name": "회수",
-          "text": "등장할 때 내 무덤의 캐릭터 하나를 손으로 되돌립니다.",
+          "text": "등장할 때 내 폐기 더미의 유닛 하나를 손으로 되돌립니다.",
           "cost": null
         }
       ],
@@ -2638,16 +2638,16 @@
     },
     "c_ernest_spell2": {
       "name": "신대륙의 씨앗",
-      "type": "주문",
+      "type": "전술",
       "mana": 4,
       "attack": null,
       "hp": null,
-      "image": "2d393aa18246.png",
-      "text": "대상 캐릭터가 공격력과 체력 +4를 얻고 2턴 동안 잠듭니다.",
+      "image": "76e85e1fe3d2.png",
+      "text": "대상 유닛이 공격력과 체력 +4를 얻고 2턴 동안 휴식합니다.",
       "abilities": [
         {
-          "name": "동면",
-          "text": "대상 캐릭터가 공격력과 체력 +4를 얻고 2턴 동안 잠듭니다.",
+          "name": "장기 정비",
+          "text": "대상 유닛이 공격력과 체력 +4를 얻고 2턴 동안 휴식합니다.",
           "cost": null
         }
       ],
@@ -2660,21 +2660,21 @@
     },
     "c_ernest_flagship": {
       "name": "탐험선 아틀라스",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 6,
       "attack": 5,
       "hp": 7,
-      "image": "02baadab3792.png",
-      "text": "각 턴이 시작될 때 모든 아군 초록 캐릭터와 장소가 체력을 3 회복합니다.\n이 캐릭터가 죽으면 카드 1장을 뽑습니다.",
+      "image": "f77e70a73414.png",
+      "text": "각 턴이 시작될 때 모든 아군 탐험·보급 유닛과 장소가 체력을 3 회복합니다.\n이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
       "abilities": [
         {
-          "name": "초록 치유",
-          "text": "각 턴이 시작될 때 모든 아군 초록 캐릭터와 장소가 체력을 3 회복합니다.",
+          "name": "응급 보급",
+          "text": "각 턴이 시작될 때 모든 아군 탐험·보급 유닛과 장소가 체력을 3 회복합니다.",
           "cost": null
         },
         {
           "name": "카드 뽑기",
-          "text": "이 캐릭터가 죽으면 카드 1장을 뽑습니다.",
+          "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -2686,12 +2686,12 @@
       }
     },
     "snake_venom": {
-      "name": "독사",
-      "type": "캐릭터",
+      "name": "독화살 사수",
+      "type": "유닛",
       "mana": 2,
       "attack": 1,
       "hp": 3,
-      "image": "21ed581f251a.png",
+      "image": "d17bf793ae82.png",
       "text": "공격: 대상에게 독을 부여합니다.",
       "abilities": [
         {
@@ -2704,17 +2704,17 @@
       "unlock": null
     },
     "woodland": {
-      "name": "숲 지대",
+      "name": "야영 보급소",
       "type": "장소",
       "mana": 2,
       "attack": null,
       "hp": 5,
-      "image": "dd356db5284b.png",
-      "text": "턴 시작: 모든 초록 카드가 체력을 3 회복합니다.",
+      "image": "76e85e1fe3d2.png",
+      "text": "턴 시작: 모든 탐험·보급 카드가 체력을 3 회복합니다.",
       "abilities": [
         {
-          "name": "초록 치유",
-          "text": "각 턴이 시작될 때 모든 아군 초록 캐릭터와 장소가 체력을 3 회복합니다.",
+          "name": "응급 보급",
+          "text": "각 턴이 시작될 때 모든 아군 탐험·보급 유닛과 장소가 체력을 3 회복합니다.",
           "cost": null
         }
       ],
@@ -2723,7 +2723,7 @@
     },
     "c_ernest_hero": {
       "name": "에르네스트 폰 보어",
-      "type": "영웅",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
@@ -2731,7 +2731,7 @@
       "text": "체력을 2 회복합니다.",
       "abilities": [
         {
-          "name": "숲",
+          "name": "보급 지원",
           "text": "체력을 2 회복합니다.",
           "cost": 2
         }
@@ -2745,7 +2745,7 @@
     },
     "c_pietro_crew": {
       "name": "통역사",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 2,
       "attack": 1,
       "hp": 3,
@@ -2767,11 +2767,11 @@
     },
     "c_pietro_spell1": {
       "name": "고문서 해독",
-      "type": "주문",
+      "type": "전술",
       "mana": 2,
       "attack": null,
       "hp": null,
-      "image": "550daf048436.png",
+      "image": "46659d622026.png",
       "text": "카드 1장을 뽑습니다.",
       "abilities": [
         {
@@ -2793,12 +2793,12 @@
       "mana": 1,
       "attack": null,
       "hp": 3,
-      "image": "89fe868b6862.png",
-      "text": "앞으로 3턴 동안 턴마다 추가 마나를 2 얻습니다.",
+      "image": "e19bcd49a523.png",
+      "text": "앞으로 3턴 동안 턴마다 추가 지휘력을 2 얻습니다.",
       "abilities": [
         {
-          "name": "마나 반지",
-          "text": "앞으로 3턴 동안 턴마다 추가 마나를 2 얻습니다.",
+          "name": "항해용 나침반",
+          "text": "앞으로 3턴 동안 턴마다 추가 지휘력을 2 얻습니다.",
           "cost": null
         }
       ],
@@ -2811,16 +2811,16 @@
     },
     "c_pietro_mate": {
       "name": "천문학자",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 3,
       "attack": 2,
       "hp": 3,
       "image": "c9d86c1a274d.jpg",
-      "text": "내 파란 캐릭터가 죽으면 카드 1장을 뽑습니다.",
+      "text": "내 항해·교역 유닛이 퇴장하면 카드 1장을 뽑습니다.",
       "abilities": [
         {
           "name": "카드 뽑기",
-          "text": "내 파란 캐릭터가 죽으면 카드 1장을 뽑습니다.",
+          "text": "내 항해·교역 유닛이 퇴장하면 카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -2833,15 +2833,15 @@
     },
     "c_pietro_spell2": {
       "name": "대소용돌이",
-      "type": "주문",
+      "type": "전술",
       "mana": 4,
       "attack": null,
       "hp": null,
-      "image": "9faab0665c03.png",
+      "image": "d8d0d596be17.png",
       "text": "전장의 모든 카드를 각 소유자의 손으로 돌려보냅니다.",
       "abilities": [
         {
-          "name": "바다 폭풍",
+          "name": "항로 변경",
           "text": "전장의 모든 카드를 각 소유자의 손으로 돌려보냅니다.",
           "cost": null
         }
@@ -2855,21 +2855,21 @@
     },
     "c_pietro_flagship": {
       "name": "학술 탐사선",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 6,
       "attack": 4,
       "hp": 7,
-      "image": "f9aa5c8e42e6.png",
-      "text": "내 주문과 능력이 피해를 1 더 줍니다.\n주문을 사용하면 공격력 +2를 얻습니다.",
+      "image": "f77e70a73414.png",
+      "text": "내 전술과 능력이 피해를 1 더 줍니다.\n전술을 사용하면 공격력 +2를 얻습니다.",
       "abilities": [
         {
-          "name": "주문 피해",
-          "text": "내 주문과 능력이 피해를 1 더 줍니다.",
+          "name": "전술 피해",
+          "text": "내 전술과 능력이 피해를 1 더 줍니다.",
           "cost": null
         },
         {
           "name": "열기",
-          "text": "주문을 사용하면 공격력 +2를 얻습니다.",
+          "text": "전술을 사용하면 공격력 +2를 얻습니다.",
           "cost": null
         }
       ],
@@ -2882,16 +2882,16 @@
     },
     "c_pietro_hero": {
       "name": "피에트로 콘티",
-      "type": "영웅",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
       "image": "50189138a797.jpg",
-      "text": "내 무덤의 주문 하나를 손으로 되돌립니다. 마나 2를 사용합니다.",
+      "text": "내 폐기 더미의 전술 하나를 손으로 되돌립니다. 지휘력 2를 사용합니다.",
       "abilities": [
         {
-          "name": "마법 집중",
-          "text": "내 무덤의 주문 하나를 손으로 되돌립니다. 마나 2를 사용합니다.",
+          "name": "작전 회수",
+          "text": "내 폐기 더미의 전술 하나를 손으로 되돌립니다. 지휘력 2를 사용합니다.",
           "cost": 2
         }
       ],
@@ -2904,7 +2904,7 @@
     },
     "c_ali_crew": {
       "name": "흥정꾼",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 2,
       "attack": 2,
       "hp": 2,
@@ -2926,16 +2926,16 @@
     },
     "c_ali_spell1": {
       "name": "금화 주머니",
-      "type": "주문",
+      "type": "전술",
       "mana": 1,
       "attack": null,
       "hp": null,
-      "image": "550daf048436.png",
-      "text": "이번 턴에 마나를 1 얻습니다.\n카드 1장을 뽑습니다.",
+      "image": "2673a305cec3.png",
+      "text": "이번 턴에 지휘력을 1 얻습니다.\n카드 1장을 뽑습니다.",
       "abilities": [
         {
-          "name": "동전",
-          "text": "이번 턴에 마나를 1 얻습니다.",
+          "name": "긴급 자금",
+          "text": "이번 턴에 지휘력을 1 얻습니다.",
           "cost": null
         },
         {
@@ -2957,12 +2957,12 @@
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "332e7af30bb4.png",
-      "text": "적 캐릭터가 공격한 뒤 그 캐릭터를 3턴 동안 마비시킵니다.",
+      "image": "d3326805e958.png",
+      "text": "적 유닛이 공격한 뒤 그 유닛을 3턴 동안 마비시킵니다.",
       "abilities": [
         {
           "name": "마비",
-          "text": "적 캐릭터가 공격한 뒤 그 캐릭터를 3턴 동안 마비시킵니다.",
+          "text": "적 유닛이 공격한 뒤 그 유닛을 3턴 동안 마비시킵니다.",
           "cost": null
         }
       ],
@@ -2975,16 +2975,16 @@
     },
     "c_ali_mate": {
       "name": "회계사",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 3,
       "attack": 2,
       "hp": 4,
       "image": "60970d0453bf.jpg",
-      "text": "다른 캐릭터가 죽을 때마다 카드 1장을 뽑습니다.",
+      "text": "다른 유닛이 퇴장할 때마다 카드 1장을 뽑습니다.",
       "abilities": [
         {
-          "name": "포식",
-          "text": "다른 캐릭터가 죽을 때마다 카드 1장을 뽑습니다.",
+          "name": "전황 파악",
+          "text": "다른 유닛이 퇴장할 때마다 카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -2997,16 +2997,16 @@
     },
     "c_ali_spell2": {
       "name": "통행세",
-      "type": "주문",
+      "type": "전술",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "550daf048436.png",
-      "text": "대상 캐릭터를 3턴 동안 마비시킵니다.",
+      "image": "67ddcf041382.png",
+      "text": "대상 유닛을 3턴 동안 마비시킵니다.",
       "abilities": [
         {
           "name": "마비",
-          "text": "대상 캐릭터를 3턴 동안 마비시킵니다.",
+          "text": "대상 유닛을 3턴 동안 마비시킵니다.",
           "cost": null
         }
       ],
@@ -3019,21 +3019,21 @@
     },
     "c_ali_flagship": {
       "name": "대상선 술탄",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 6,
       "attack": 5,
       "hp": 7,
-      "image": "f9aa5c8e42e6.png",
-      "text": "다른 아군 캐릭터가 공격받지 않도록 보호합니다.\n상대 영웅을 공격하면 마나를 2 얻습니다.",
+      "image": "bfcf18d455c1.png",
+      "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.\n상대 선장을 공격하면 지휘력을 2 얻습니다.",
       "abilities": [
         {
           "name": "도발",
-          "text": "다른 아군 캐릭터가 공격받지 않도록 보호합니다.",
+          "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
           "cost": null
         },
         {
           "name": "약탈",
-          "text": "상대 영웅을 공격하면 마나를 2 얻습니다.",
+          "text": "상대 선장을 공격하면 지휘력을 2 얻습니다.",
           "cost": null
         }
       ],
@@ -3045,17 +3045,17 @@
       }
     },
     "spell_flood": {
-      "name": "홍수",
-      "type": "주문",
+      "name": "거센 풍랑",
+      "type": "전술",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "5c14f59269e9.png",
-      "text": "모든 캐릭터의 체력을 1로 만듭니다.",
+      "image": "d8d0d596be17.png",
+      "text": "모든 유닛의 체력을 1로 만듭니다.",
       "abilities": [
         {
-          "name": "홍수",
-          "text": "전장의 모든 캐릭터의 체력을 1로 만듭니다.",
+          "name": "거센 풍랑",
+          "text": "전장의 모든 유닛의 체력을 1로 만듭니다.",
           "cost": null
         }
       ],
@@ -3064,16 +3064,16 @@
     },
     "c_ali_hero": {
       "name": "알 베자스",
-      "type": "영웅",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
       "image": "b71a46996e68.jpg",
-      "text": "캐릭터를 선택하고 주사위를 굴립니다. 4 이상이면 소유자의 손으로 돌려보냅니다. 마나 2를 사용합니다.",
+      "text": "유닛을 선택하고 주사위를 굴립니다. 4 이상이면 소유자의 손으로 돌려보냅니다. 지휘력 2를 사용합니다.",
       "abilities": [
         {
           "name": "돌진",
-          "text": "캐릭터를 선택하고 주사위를 굴립니다. 4 이상이면 소유자의 손으로 돌려보냅니다. 마나 2를 사용합니다.",
+          "text": "유닛을 선택하고 주사위를 굴립니다. 4 이상이면 소유자의 손으로 돌려보냅니다. 지휘력 2를 사용합니다.",
           "cost": 2
         }
       ],
@@ -3086,7 +3086,7 @@
     },
     "c_milanda_crew": {
       "name": "그림자 척후",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 2,
       "attack": 2,
       "hp": 1,
@@ -3108,11 +3108,11 @@
     },
     "c_milanda_spell1": {
       "name": "기습 승선",
-      "type": "주문",
+      "type": "전술",
       "mana": 2,
       "attack": null,
       "hp": null,
-      "image": "9a643a5d9ccd.png",
+      "image": "5fd48434de85.png",
       "text": "대상을 소유자의 손으로 돌려보냅니다.",
       "abilities": [
         {
@@ -3134,12 +3134,12 @@
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "45cdf314d474.png",
-      "text": "적 캐릭터가 공격한 뒤 그 캐릭터를 3턴 동안 마비시킵니다.",
+      "image": "567c584afbec.png",
+      "text": "적 유닛이 공격한 뒤 그 유닛을 3턴 동안 마비시킵니다.",
       "abilities": [
         {
           "name": "마비",
-          "text": "적 캐릭터가 공격한 뒤 그 캐릭터를 3턴 동안 마비시킵니다.",
+          "text": "적 유닛이 공격한 뒤 그 유닛을 3턴 동안 마비시킵니다.",
           "cost": null
         }
       ],
@@ -3152,7 +3152,7 @@
     },
     "c_milanda_mate": {
       "name": "약탈대장",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 4,
       "attack": 3,
       "hp": 4,
@@ -3174,16 +3174,16 @@
     },
     "c_milanda_spell2": {
       "name": "뱃전 기습",
-      "type": "주문",
+      "type": "전술",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "9a643a5d9ccd.png",
-      "text": "전장에서 체력이 가장 낮은 캐릭터를 처치합니다. 내 캐릭터도 포함됩니다.",
+      "image": "5fd48434de85.png",
+      "text": "전장에서 체력이 가장 낮은 유닛을 처치합니다. 내 유닛도 포함됩니다.",
       "abilities": [
         {
-          "name": "짓밟기",
-          "text": "전장에서 체력이 가장 낮은 캐릭터를 처치합니다. 내 캐릭터도 포함됩니다.",
+          "name": "취약 지점 공략",
+          "text": "전장에서 체력이 가장 낮은 유닛을 처치합니다. 내 유닛도 포함됩니다.",
           "cost": null
         }
       ],
@@ -3196,12 +3196,12 @@
     },
     "c_milanda_flagship": {
       "name": "검은 돛 브리간틴",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 6,
       "attack": 6,
       "hp": 5,
-      "image": "6e267299b4cd.png",
-      "text": "행동하기 전까지 공격이나 능력의 대상이 되지 않습니다.\n상대 영웅을 공격하면 마나를 2 얻습니다.",
+      "image": "50ba15c3bbcd.png",
+      "text": "행동하기 전까지 공격이나 능력의 대상이 되지 않습니다.\n상대 선장을 공격하면 지휘력을 2 얻습니다.",
       "abilities": [
         {
           "name": "은신",
@@ -3210,7 +3210,7 @@
         },
         {
           "name": "약탈",
-          "text": "상대 영웅을 공격하면 마나를 2 얻습니다.",
+          "text": "상대 선장을 공격하면 지휘력을 2 얻습니다.",
           "cost": null
         }
       ],
@@ -3222,17 +3222,17 @@
       }
     },
     "bull_heat": {
-      "name": "열기 황소",
-      "type": "캐릭터",
+      "name": "숙련 포술장",
+      "type": "유닛",
       "mana": 3,
       "attack": 2,
       "hp": 5,
-      "image": "009a2fc19b2f.png",
-      "text": "주문 피해 +1.",
+      "image": "2df073662d12.png",
+      "text": "전술 피해 +1.",
       "abilities": [
         {
-          "name": "주문 피해",
-          "text": "내 주문과 능력이 피해를 1 더 줍니다.",
+          "name": "전술 피해",
+          "text": "내 전술과 능력이 피해를 1 더 줍니다.",
           "cost": null
         }
       ],
@@ -3241,16 +3241,16 @@
     },
     "c_milanda_hero": {
       "name": "밀란다 베르테",
-      "type": "영웅",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
       "image": "678725096794.jpg",
-      "text": "상대가 손에서 무작위 카드 1장을 버립니다. 이 캐릭터의 행동을 소모합니다.",
+      "text": "상대가 손에서 무작위 카드 1장을 버립니다. 이 유닛의 행동을 소모합니다.",
       "abilities": [
         {
           "name": "버리기",
-          "text": "상대가 손에서 무작위 카드 1장을 버립니다. 이 캐릭터의 행동을 소모합니다.",
+          "text": "상대가 손에서 무작위 카드 1장을 버립니다. 이 유닛의 행동을 소모합니다.",
           "cost": 0
         }
       ],
@@ -3263,7 +3263,7 @@
     },
     "c_haegang_crew": {
       "name": "수군 궁수",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 2,
       "attack": 2,
       "hp": 2,
@@ -3271,7 +3271,7 @@
       "text": "도발을 무시할 수 있습니다.",
       "abilities": [
         {
-          "name": "비행",
+          "name": "우회",
           "text": "도발을 무시할 수 있습니다.",
           "cost": null
         }
@@ -3285,16 +3285,16 @@
     },
     "c_haegang_spell1": {
       "name": "결사 돌격",
-      "type": "주문",
+      "type": "전술",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "66f4e360361f.png",
-      "text": "대상 캐릭터가 격노를 얻어 한 턴에 두 번 공격할 수 있습니다.",
+      "image": "98ccf3b2f3da.png",
+      "text": "대상 유닛이 격노를 얻어 한 턴에 두 번 공격할 수 있습니다.",
       "abilities": [
         {
           "name": "격노",
-          "text": "대상 캐릭터가 격노를 얻어 한 턴에 두 번 공격할 수 있습니다.",
+          "text": "대상 유닛이 격노를 얻어 한 턴에 두 번 공격할 수 있습니다.",
           "cost": null
         }
       ],
@@ -3311,17 +3311,17 @@
       "mana": 2,
       "attack": null,
       "hp": 2,
-      "image": "d4266f042976.png",
-      "text": "장착한 캐릭터가 공격력 +1을 얻습니다.\n피해를 줄 때 내 영웅의 체력을 회복합니다.\n공격할 때마다 내구도가 1 감소합니다.",
+      "image": "a24d1c827927.png",
+      "text": "장착한 유닛이 공격력 +1을 얻습니다.\n피해를 줄 때 내 선장의 체력을 회복합니다.\n공격할 때마다 내구도가 1 감소합니다.",
       "abilities": [
         {
           "name": "공격",
-          "text": "장착한 캐릭터가 공격력 +1을 얻습니다.",
+          "text": "장착한 유닛이 공격력 +1을 얻습니다.",
           "cost": null
         },
         {
-          "name": "생명력 흡수",
-          "text": "피해를 줄 때 내 영웅의 체력을 회복합니다.",
+          "name": "전리품 회복",
+          "text": "피해를 줄 때 내 선장의 체력을 회복합니다.",
           "cost": null
         },
         {
@@ -3339,7 +3339,7 @@
     },
     "c_haegang_mate": {
       "name": "검술 사범",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 4,
       "attack": 4,
       "hp": 4,
@@ -3361,15 +3361,15 @@
     },
     "c_haegang_spell2": {
       "name": "총통 사격",
-      "type": "주문",
+      "type": "전술",
       "mana": 4,
       "attack": null,
       "hp": null,
-      "image": "66f4e360361f.png",
+      "image": "2df073662d12.png",
       "text": "피해를 3 줍니다.",
       "abilities": [
         {
-          "name": "불",
+          "name": "집중 사격",
           "text": "피해를 3 줍니다.",
           "cost": null
         }
@@ -3383,16 +3383,16 @@
     },
     "c_haegang_flagship": {
       "name": "판옥선",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 7,
       "attack": 7,
       "hp": 8,
-      "image": "02baadab3792.png",
-      "text": "남는 피해를 상대 영웅에게 줍니다.\n처음 받는 피해를 무시합니다.",
+      "image": "168545185c27.png",
+      "text": "남는 피해를 상대 선장에게 줍니다.\n처음 받는 피해를 무시합니다.",
       "abilities": [
         {
           "name": "관통",
-          "text": "남는 피해를 상대 영웅에게 줍니다.",
+          "text": "남는 피해를 상대 선장에게 줍니다.",
           "cost": null
         },
         {
@@ -3410,16 +3410,16 @@
     },
     "c_haegang_hero": {
       "name": "윤해강",
-      "type": "영웅",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
       "image": "1fce8782f92f.jpg",
-      "text": "캐릭터 하나를 소유자의 손으로 돌려보냅니다. 이 캐릭터의 행동을 소모합니다.",
+      "text": "유닛 하나를 소유자의 손으로 돌려보냅니다. 이 유닛의 행동을 소모합니다.",
       "abilities": [
         {
           "name": "돌진",
-          "text": "캐릭터 하나를 소유자의 손으로 돌려보냅니다. 이 캐릭터의 행동을 소모합니다.",
+          "text": "유닛 하나를 소유자의 손으로 돌려보냅니다. 이 유닛의 행동을 소모합니다.",
           "cost": 0
         }
       ],
@@ -3432,7 +3432,7 @@
     },
     "c_mateo_crew": {
       "name": "견습 사냥꾼",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 2,
       "attack": 2,
       "hp": 2,
@@ -3440,7 +3440,7 @@
       "text": "등장할 때 원하는 대상에게 피해를 1 줍니다.",
       "abilities": [
         {
-          "name": "화염 피해",
+          "name": "포격",
           "text": "등장할 때 원하는 대상에게 피해를 1 줍니다.",
           "cost": null
         }
@@ -3454,16 +3454,16 @@
     },
     "c_mateo_spell1": {
       "name": "생포 그물",
-      "type": "주문",
+      "type": "전술",
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "9a643a5d9ccd.png",
-      "text": "대상 캐릭터를 3턴 동안 마비시킵니다.",
+      "image": "567c584afbec.png",
+      "text": "대상 유닛을 3턴 동안 마비시킵니다.",
       "abilities": [
         {
           "name": "마비",
-          "text": "대상 캐릭터를 3턴 동안 마비시킵니다.",
+          "text": "대상 유닛을 3턴 동안 마비시킵니다.",
           "cost": null
         }
       ],
@@ -3480,7 +3480,7 @@
       "mana": 2,
       "attack": null,
       "hp": 2,
-      "image": "27bf046f2b1a.png",
+      "image": "67ddcf041382.png",
       "text": "공격할 때 대상이 반격하지 못합니다.\n공격할 때마다 내구도가 1 감소합니다.",
       "abilities": [
         {
@@ -3503,16 +3503,16 @@
     },
     "c_mateo_mate": {
       "name": "포획 전문가",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 4,
       "attack": 3,
       "hp": 4,
       "image": "53a1169a297c.jpg",
-      "text": "피해를 준 캐릭터를 처치합니다.",
+      "text": "피해를 준 유닛을 처치합니다.",
       "abilities": [
         {
           "name": "치명타",
-          "text": "피해를 준 캐릭터를 처치합니다.",
+          "text": "피해를 준 유닛을 처치합니다.",
           "cost": null
         }
       ],
@@ -3525,16 +3525,16 @@
     },
     "c_mateo_spell2": {
       "name": "결정타",
-      "type": "주문",
+      "type": "전술",
       "mana": 5,
       "attack": null,
       "hp": null,
-      "image": "9bfb2bad8ddb.png",
-      "text": "대상 캐릭터 또는 장소를 파괴합니다.",
+      "image": "2df073662d12.png",
+      "text": "대상 유닛 또는 장소를 파괴합니다.",
       "abilities": [
         {
           "name": "파괴",
-          "text": "대상 캐릭터 또는 장소를 파괴합니다.",
+          "text": "대상 유닛 또는 장소를 파괴합니다.",
           "cost": null
         }
       ],
@@ -3547,21 +3547,21 @@
     },
     "c_mateo_flagship": {
       "name": "추적자 호",
-      "type": "캐릭터",
+      "type": "유닛",
       "mana": 6,
       "attack": 5,
       "hp": 6,
-      "image": "6e267299b4cd.png",
-      "text": "도발을 무시할 수 있습니다.\n이 캐릭터로 다른 캐릭터를 처치하면 카드 2장을 뽑습니다.",
+      "image": "50ba15c3bbcd.png",
+      "text": "도발을 무시할 수 있습니다.\n이 유닛으로 다른 유닛을 처치하면 카드 2장을 뽑습니다.",
       "abilities": [
         {
-          "name": "비행",
+          "name": "우회",
           "text": "도발을 무시할 수 있습니다.",
           "cost": null
         },
         {
           "name": "카드 뽑기",
-          "text": "이 캐릭터로 다른 캐릭터를 처치하면 카드 2장을 뽑습니다.",
+          "text": "이 유닛으로 다른 유닛을 처치하면 카드 2장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -3573,17 +3573,17 @@
       }
     },
     "dark_stallion": {
-      "name": "검은 군마",
-      "type": "캐릭터",
+      "name": "협상가",
+      "type": "유닛",
       "mana": 4,
       "attack": 4,
       "hp": 5,
-      "image": "ec434c65bc42.png",
+      "image": "cbbe2de2e33a.png",
       "text": "사용(2): 주사위를 굴려 4 이상이면 대상을 손으로 돌려보냅니다.",
       "abilities": [
         {
           "name": "돌진",
-          "text": "캐릭터를 선택하고 주사위를 굴립니다. 4 이상이면 소유자의 손으로 돌려보냅니다. 마나 2를 사용합니다.",
+          "text": "유닛을 선택하고 주사위를 굴립니다. 4 이상이면 소유자의 손으로 돌려보냅니다. 지휘력 2를 사용합니다.",
           "cost": 2
         }
       ],
@@ -3592,7 +3592,7 @@
     },
     "c_mateo_hero": {
       "name": "마테오 레예스",
-      "type": "영웅",
+      "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
@@ -3600,7 +3600,7 @@
       "text": "피해를 1 줍니다.",
       "abilities": [
         {
-          "name": "불",
+          "name": "견제 포격",
           "text": "피해를 1 줍니다.",
           "cost": 2
         }

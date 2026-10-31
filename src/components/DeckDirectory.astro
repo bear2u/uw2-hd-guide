@@ -12,8 +12,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     const card = cards[deck.hero];
     const art = artwork[`../assets/card-illustrations/${card.image}`].default;
     return <a class="deck-link" href={`${base}/card-game/decks/${deck.slug}/`}>
-      <Image src={art} alt={`${deck.name} 대표 영웅`} width={Math.min(240,art.width)} format="webp" quality={80} loading="lazy" />
-      <span><small>{deck.kind} · {deck.team} 진영</small><strong>{deck.name}</strong><span>{deck.style}</span><small>영웅 1장 + 덱 20장 · 전체 구성 보기 →</small></span>
+      <Image src={art} alt={`${deck.name} 대표 선장`} width={Math.min(240,art.width)} format="webp" quality={80} loading="lazy" />
+      <span><small>{deck.kind} · {deck.team} 진영</small><strong>{deck.name}</strong><span>{deck.style}</span><small>선장 1장 + 덱 20장 · 전체 구성 보기 →</small></span>
     </a>;
   })}
 </div>
