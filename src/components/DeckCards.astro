@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import catalogue from '@/data/card-decks.json';
+interface Props { deck: string; group?: 'hero' | 'unique' | 'core' | 'all' }
+const { deck: slug, group = 'all' } = Astro.props;
+const deck = catalogue.decks.find(d => d.slug === slug);
+if (!deck) throw new Error(`Unknown deck: ${slug}`);
+const cards = catalogue.cards as Record<string, (typeof catalogue.cards)[keyof typeof catalogue.cards]>;
+const artwork = import.meta.glob<{default: ImageMetadata}>('../assets/card-illustrations/*', { eager: true });
+const rows = group === 'hero' ? [{id: deck.hero, count: 1, unique: true}]
+  : deck.cards.filter(c => group === 'all' || (group === 'unique' ? c.unique : !c.unique));
+---
+
+<ul class="deck-cards" role="list">
+  {rows.map(row => {
+    const card = cards[row.id];
+    const art = artwork[`../assets/card-illustrations/${card.image}`]?.default;
+    if (!art) throw new Error(`Missing illustration: ${card.name}`);
+    const extra = card.abilities.filter(a => a.text && !card.text.includes(a.text));
+    return <li class="deck-card">
+      <div class="art">
+        <Image src={art} alt={`${card.name} 카드 일러스트`} width={Math.min(480, art.width)} format="webp" quality={80} loading="lazy" />
+        <span class="quantity">{card.type === '영웅' ? '영웅 · 별도 1장' : `${row.count}장`}</span>
+        {card.mana !== null && <span class="mana" aria-label={`마나 비용 ${card.mana}`}>{card.mana}</span>}
+      </div>
+      <div class="card-copy">
+        <h3>{card.name}</h3>
+        <p class="kind">{card.type} · {card.rarity}{row.unique && card.unlock ? ' · 고유 카드' : ''}</p>
+        {(card.attack !== null || card.hp !== null) && <p class="stats">
+          {card.attack !== null && <span>공격력 <strong>{card.attack}</strong></span>}
+          {card.hp !== null && <span>{card.type === '장비' ? '내구도' : '체력'} <strong>{card.hp}</strong></span>}
+        </p>}
+        {card.text && <p class="effect">{card.text}</p>}
+        {extra.map(a => <p class="ability"><strong>{a.name}</strong> — {a.text}</p>)}
+        {card.abilities.filter(a => a.cost !== null).map(a => <p class="activation">사용 능력: {a.name} · 마나 {a.cost}</p>)}
+        {card.unlock && <div class="unlock"><strong>획득 · {card.unlock.group} 「{card.unlock.name}」</strong><p>{card.unlock.description}</p></div>}
+      </div>
+    </li>;
+  })}
+</ul>
+
+<style>
+  .deck-cards { list-style: none; padding: 0; margin: 1.5rem 0 2rem; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.1rem; }
+  .deck-card { border: 1px solid #8a806b66; border-radius: .8rem; overflow: hidden; margin: 0; background: #ab99780b; min-width: 0; }
+  .art { position: relative; background: #17242d; }
+  .art :global(img) { display: block; width: 100%; height: 230px; object-fit: contain; margin: 0; }
+  .quantity { position: absolute; right: .55rem; top: .55rem; border-radius: .3rem; background: #14212fee; color: white; padding: .25rem .5rem; font-size: .8rem; }
+  .mana { position: absolute; left: .55rem; top: .55rem; border-radius: 50%; background: #a84f09; border: 2px solid #fff2d3; color: white; min-width: 2.3rem; height: 2.3rem; display: grid; place-items: center; font-weight: 800; }
+  .card-copy { padding: 1rem; }
+  .card-copy h3 { font-size: 1.15rem; line-height: 1.4; margin: 0 0 .3rem; }
+  .card-copy p { margin: .55rem 0; font-size: .9rem; line-height: 1.65; }
+  .kind { opacity: .8; }
+  .stats { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .effect { white-space: pre-line; }
+  .activation { font-weight: 650; }
+  .unlock { border-top: 1px solid #8a806b55; margin-top: .9rem; padding-top: .8rem; font-size: .8rem; line-height: 1.6; }
+  .unlock p { font-size: .8rem; margin-bottom: 0; }
+  @media(max-width: 520px) { .deck-cards { grid-template-columns: 1fr; } .art :global(img) { height: 250px; } }
+</style>

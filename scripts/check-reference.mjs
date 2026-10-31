@@ -21,7 +21,7 @@ function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.
 const pages=walk(new URL('src/content/docs/',root)).filter(p=>p.pathname.endsWith('.mdx'));
 const updates = pages.filter(p => /\/updates\//.test(p.pathname));
 const novelAll = pages.filter(p => /\/novel\//.test(p.pathname));
-assert.equal(pages.length - updates.length - novelAll.length,67,'기본 본문 페이지 수 (소설 제외)');
+assert.equal(pages.length - updates.length - novelAll.length,80,'기본 본문 페이지 수 (소설 제외)');
 const strategies = pages.filter(p => /\/strategy\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
 assert.deepEqual(strategies, ['discoveries.mdx','fleet.mdx','index.mdx','ports.mdx','references.mdx','stories.mdx','survival.mdx','trade.mdx'], '공략 문서 구성');
 const aiPages = pages.filter(p => /\/ai\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
