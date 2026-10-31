@@ -1,0 +1,24 @@
+%% title: AI 자동 교역 — 맡기기와 직접 개입
+sequenceDiagram
+    autonumber
+    participant P as 플레이어
+    participant A as AI 에이전트
+    participant T as 항구
+    participant F as 내 함대
+    Note over P,F: 첫 배·선원·자금·개인 연결 준비
+    P->>A: 목표·보존 금화 설정 후 켜기
+    A->>F: 현재 상태와 기존 화물 확인
+    Note over A,F: 게임 화면을 앞에 열어 두고 진행
+    A->>A: 가능한 교역 계획 선택
+    A->>T: 필요 시 수리·상품 매입
+    A->>T: 물·식량 보급
+    A->>F: 출항·목적항까지 항해
+    F-->>A: 목적항에 도착
+    A->>T: 입항·AI가 구입한 화물 판매
+    T-->>A: 거래 후 상태 확인
+    A->>A: 목표 금화 확인·다음 계획
+    Note over P,F: 아래는 이야기·해전·경고가 생긴 경우
+    F-->>A: 직접 확인할 상황 발생
+    A-->>P: 일시정지·이유 표시
+    P->>F: 직접 조작으로 상황 처리
+    P->>A: 준비 후 다시 켜기

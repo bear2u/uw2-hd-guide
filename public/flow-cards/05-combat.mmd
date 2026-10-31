@@ -1,0 +1,20 @@
+%% title: 해전 — 차례별 행동과 전리품
+flowchart TD
+    start["교전 시작"]
+    turn["현재 배의 차례"]
+    action["이동·포격·백병전·퇴각"]
+    result{"전투 결과는?"}
+    loot["승리 보상·나포·전리품"]
+    cargo["적재·남은 짐 처리 확인"]
+    fleet["함대 점검·항해 재개"]
+    retry["저장한 항해로 재도전"]
+    start --> turn
+    turn --> action
+    action --> result
+    result -->|승리| loot
+    loot -->|전리품이 있으면| cargo
+    cargo --> fleet
+    loot -->|전리품이 없으면| fleet
+    result -->|퇴각·일몰 등| fleet
+    result -->|패배| retry
+    result -.->|계속 교전 중| turn

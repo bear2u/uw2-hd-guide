@@ -1,0 +1,22 @@
+%% title: 교역 한 항차 — 매입부터 매각까지
+sequenceDiagram
+    autonumber
+    participant P as 플레이어
+    participant A as 출발항
+    participant F as 내 함대
+    participant B as 도착항
+    Note over P,F: 출발항에서 매입과 준비
+    P->>A: 상품과 시세 확인
+    A-->>P: 가격·구입 가능 상품
+    P->>A: 배·수량·가격 선택
+    A->>F: 거래한 상품 적재
+    Note over P,F: 선원·적재 공간·보급을 확인
+    P->>F: 필요 시 수리·선원 배정
+    P->>A: 물·식량 보급
+    P->>F: 목적항을 정해 출항
+    F->>B: 항해 후 입항
+    Note over P,B: 도착항에서 판매와 다음 준비
+    P->>B: 판매 가격과 화물 확인
+    P->>B: 매각 수량 선택
+    B-->>P: 판매 금화 수령
+    P->>F: 손익 확인·다음 항차 준비

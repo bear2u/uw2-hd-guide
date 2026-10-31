@@ -1,0 +1,20 @@
+%% title: 새 항해 · 여섯 주인공과 이어하기
+flowchart TD
+    title["게임 시작"]
+    account["손님 또는 계정 접속"]
+    choose{"새 항해인가요?"}
+    hero["여섯 주인공 중 선택"]
+    intro["이름 입력·도입부 진행"]
+    ready["첫 배·선원·자금 준비"]
+    save["저장 목록에서 진행 선택"]
+    check["주인공·날짜 확인"]
+    play["항해 시작 또는 재개"]
+    title --> account
+    account --> choose
+    choose -->|새 게임| hero
+    hero --> intro
+    intro --> ready
+    ready --> play
+    choose -->|이어하기| save
+    save --> check
+    check -->|이 진행으로 결정| play

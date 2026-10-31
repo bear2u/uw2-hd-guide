@@ -1,0 +1,23 @@
+%% title: 함께하기 — 가족 협동 모험
+flowchart TD
+    family["로그인·가족 만들기 또는 가입"]
+    room["여섯 도전 중 선택·방 참가"]
+    ready["1~3명 준비·빈자리는 컴퓨터"]
+    play["각자 역할을 맡아 협력"]
+    save["안전한 지점에서 공동 저장"]
+    outcome{"모험의 진행은?"}
+    complete["목표 완료·가족 기록"]
+    retry["마지막 저장 지점부터 재도전"]
+    resume["쉬었다가 저장 지점에서 새 방"]
+    family --> room
+    room --> ready
+    ready --> play
+    play -->|안전 지점 도착| save
+    save --> outcome
+    outcome -->|모든 목표 달성| complete
+    outcome -->|쉬어 가기| resume
+    play -->|도전 실패| retry
+    retry -.-> play
+    outcome -.->|목표가 남음| play
+    resume -.-> room
+    complete -.->|다른 모험 선택| room

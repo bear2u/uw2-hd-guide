@@ -1,0 +1,24 @@
+%% title: 항해와 탐험 — 떠나고 돌아오는 길
+flowchart TD
+    ready["항로·선원·보급 준비"]
+    sea["출항·수동 또는 자동 항해"]
+    choice{"항해 중 무엇을 만났나요?"}
+    danger["날씨·보급 위험 대응"]
+    shore["해안 상륙·탐색"]
+    encounter["다른 함대·교전 대응"]
+    arrival["목적항 접근·입항 확인"]
+    port["입항 후 보급·정비"]
+    report["미보고 발견·해도 보고"]
+    ready --> sea
+    sea --> choice
+    choice -->|돌발 상황| danger
+    choice -->|탐험할 해안| shore
+    choice -->|함대 조우| encounter
+    choice -->|항구 도착| arrival
+    arrival --> port
+    port -->|계약처가 있으면| report
+    danger -.->|대응 후 계속·귀항| sea
+    shore -.->|탐색 후 출발| sea
+    encounter -.->|교전 종료·지나가기| sea
+    report -.->|다음 항차| ready
+    port -.->|보고 없이 다음 항차| ready

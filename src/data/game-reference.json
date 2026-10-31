@@ -5578,7 +5578,7 @@
             "heroId": 2,
             "id": "hero2.story_start",
             "name": "이야기의 시작",
-            "description": "오토 스피노라 본편 이야기 1단계에 도달합니다.",
+            "description": "오토 베인스 본편 이야기 1단계에 도달합니다.",
             "category": "이야기",
             "target": 1
         },
@@ -5586,7 +5586,7 @@
             "heroId": 2,
             "id": "hero2.story_turn",
             "name": "이야기의 전환점",
-            "description": "오토 스피노라 본편 이야기 3단계에 도달합니다.",
+            "description": "오토 베인스 본편 이야기 3단계에 도달합니다.",
             "category": "이야기",
             "target": 3
         },
@@ -5594,7 +5594,7 @@
             "heroId": 2,
             "id": "hero2.story_final",
             "name": "마지막 장으로",
-            "description": "오토 스피노라 본편 이야기 5단계에 도달합니다.",
+            "description": "오토 베인스 본편 이야기 5단계에 도달합니다.",
             "category": "이야기",
             "target": 5
         },
@@ -5602,7 +5602,7 @@
             "heroId": 2,
             "id": "hero2.ending",
             "name": "이야기 완주",
-            "description": "오토 스피노라의 실제 엔딩을 봅니다.",
+            "description": "오토 베인스의 실제 엔딩을 봅니다.",
             "category": "이야기",
             "target": 1
         },
@@ -5770,7 +5770,7 @@
             "heroId": 3,
             "id": "hero3.story_start",
             "name": "이야기의 시작",
-            "description": "에르네스트 로페즈 본편 이야기 1단계에 도달합니다.",
+            "description": "에르네스트 폰 보어 본편 이야기 1단계에 도달합니다.",
             "category": "이야기",
             "target": 1
         },
@@ -5778,7 +5778,7 @@
             "heroId": 3,
             "id": "hero3.story_turn",
             "name": "이야기의 전환점",
-            "description": "에르네스트 로페즈 본편 이야기 2단계에 도달합니다.",
+            "description": "에르네스트 폰 보어 본편 이야기 2단계에 도달합니다.",
             "category": "이야기",
             "target": 2
         },
@@ -5786,7 +5786,7 @@
             "heroId": 3,
             "id": "hero3.story_final",
             "name": "마지막 장으로",
-            "description": "에르네스트 로페즈 본편 이야기 4단계에 도달합니다.",
+            "description": "에르네스트 폰 보어 본편 이야기 4단계에 도달합니다.",
             "category": "이야기",
             "target": 4
         },
@@ -5794,7 +5794,7 @@
             "heroId": 3,
             "id": "hero3.ending",
             "name": "이야기 완주",
-            "description": "에르네스트 로페즈의 실제 엔딩을 봅니다.",
+            "description": "에르네스트 폰 보어의 실제 엔딩을 봅니다.",
             "category": "이야기",
             "target": 1
         },
@@ -6154,7 +6154,7 @@
             "heroId": 5,
             "id": "hero5.story_start",
             "name": "이야기의 시작",
-            "description": "알리 베자스 본편 이야기 1단계에 도달합니다.",
+            "description": "알 베자스 본편 이야기 1단계에 도달합니다.",
             "category": "이야기",
             "target": 1
         },
@@ -6162,7 +6162,7 @@
             "heroId": 5,
             "id": "hero5.story_turn",
             "name": "이야기의 전환점",
-            "description": "알리 베자스 본편 이야기 3단계에 도달합니다.",
+            "description": "알 베자스 본편 이야기 3단계에 도달합니다.",
             "category": "이야기",
             "target": 3
         },
@@ -6170,7 +6170,7 @@
             "heroId": 5,
             "id": "hero5.story_final",
             "name": "마지막 장으로",
-            "description": "알리 베자스 본편 이야기 5단계에 도달합니다.",
+            "description": "알 베자스 본편 이야기 5단계에 도달합니다.",
             "category": "이야기",
             "target": 5
         },
@@ -6178,7 +6178,7 @@
             "heroId": 5,
             "id": "hero5.ending",
             "name": "이야기 완주",
-            "description": "알리 베자스의 실제 엔딩을 봅니다.",
+            "description": "알 베자스의 실제 엔딩을 봅니다.",
             "category": "이야기",
             "target": 1
         },
@@ -6225,6 +6225,313 @@
         {
             "heroId": 5,
             "id": "hero5.paid_repairs_5",
+            "name": "배를 아끼는 선장",
+            "description": "조선소에서 비용을 내고 수리를 5회 완료합니다. 상륙 수리는 제외합니다.",
+            "category": "활동",
+            "target": 5
+        }
+    ],
+    "sideHeroes": [
+        {
+            "id": 6,
+            "key": "milanda",
+            "name": "밀란다 베르테"
+        },
+        {
+            "id": 7,
+            "key": "joseon",
+            "name": "윤해강"
+        },
+        {
+            "id": 8,
+            "key": "bounty",
+            "name": "마테오 레예스"
+        }
+    ],
+    "sideChallenges": [
+        {
+            "heroId": 6,
+            "id": "hero6.story_start",
+            "name": "외전의 시작",
+            "description": "밀란다 베르테 외전 이야기의 첫 단계를 마칩니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 6,
+            "id": "hero6.story_turn",
+            "name": "외전의 전환점",
+            "description": "밀란다 베르테 외전 살바도르편(14구역)에 들어섭니다.",
+            "category": "이야기",
+            "target": 14
+        },
+        {
+            "heroId": 6,
+            "id": "hero6.ending",
+            "name": "외전 완주",
+            "description": "밀란다 베르테 외전 이야기를 끝까지 마칩니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 6,
+            "id": "hero6.discovery_1",
+            "name": "첫 발견",
+            "description": "발견물을 1개 찾습니다.",
+            "category": "성장",
+            "target": 1
+        },
+        {
+            "heroId": 6,
+            "id": "hero6.gold_100000",
+            "name": "항해 자금",
+            "description": "금괴를 포함해 금화 10만을 보유합니다.",
+            "category": "성장",
+            "target": 100000
+        },
+        {
+            "heroId": 6,
+            "id": "hero6.fleet_3",
+            "name": "함대 결성",
+            "description": "함선 3척을 보유합니다.",
+            "category": "성장",
+            "target": 3
+        },
+        {
+            "heroId": 6,
+            "id": "hero6.mates_5",
+            "name": "믿음직한 동료",
+            "description": "동료 항해사 5명을 거느립니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 6,
+            "id": "hero6.arrivals_10",
+            "name": "항구를 잇는 항해",
+            "description": "실제 항해 후 일반 항구 또는 보급항에 10회 입항합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 6,
+            "id": "hero6.sold_units_1000",
+            "name": "활발한 교역",
+            "description": "교역소에서 상품을 누적 1,000단위 매각합니다.",
+            "category": "활동",
+            "target": 1000
+        },
+        {
+            "heroId": 6,
+            "id": "hero6.battle_wins_1",
+            "name": "첫 해전 승리",
+            "description": "적 함대 격파 또는 일기토로 해전에서 승리합니다. 적 퇴각은 제외합니다.",
+            "category": "활동",
+            "target": 1
+        },
+        {
+            "heroId": 6,
+            "id": "hero6.battle_wins_10",
+            "name": "승전의 선장",
+            "description": "적 함대 격파 또는 일기토로 해전에서 10회 승리합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 6,
+            "id": "hero6.paid_repairs_5",
+            "name": "배를 아끼는 선장",
+            "description": "조선소에서 비용을 내고 수리를 5회 완료합니다. 상륙 수리는 제외합니다.",
+            "category": "활동",
+            "target": 5
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.story_start",
+            "name": "외전의 시작",
+            "description": "윤해강 외전 이야기의 첫 단계를 마칩니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.story_turn",
+            "name": "외전의 전환점",
+            "description": "윤해강 외전 3부 「해금의 바다」에 들어섭니다.",
+            "category": "이야기",
+            "target": 2
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.ending",
+            "name": "외전 완주",
+            "description": "윤해강 외전 이야기를 끝까지 마칩니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.discovery_1",
+            "name": "첫 발견",
+            "description": "발견물을 1개 찾습니다.",
+            "category": "성장",
+            "target": 1
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.gold_100000",
+            "name": "항해 자금",
+            "description": "금괴를 포함해 금화 10만을 보유합니다.",
+            "category": "성장",
+            "target": 100000
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.fleet_3",
+            "name": "함대 결성",
+            "description": "함선 3척을 보유합니다.",
+            "category": "성장",
+            "target": 3
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.mates_5",
+            "name": "믿음직한 동료",
+            "description": "동료 항해사 5명을 거느립니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.arrivals_10",
+            "name": "항구를 잇는 항해",
+            "description": "실제 항해 후 일반 항구 또는 보급항에 10회 입항합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.sold_units_1000",
+            "name": "활발한 교역",
+            "description": "교역소에서 상품을 누적 1,000단위 매각합니다.",
+            "category": "활동",
+            "target": 1000
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.battle_wins_1",
+            "name": "첫 해전 승리",
+            "description": "적 함대 격파 또는 일기토로 해전에서 승리합니다. 적 퇴각은 제외합니다.",
+            "category": "활동",
+            "target": 1
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.battle_wins_10",
+            "name": "승전의 선장",
+            "description": "적 함대 격파 또는 일기토로 해전에서 10회 승리합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 7,
+            "id": "hero7.paid_repairs_5",
+            "name": "배를 아끼는 선장",
+            "description": "조선소에서 비용을 내고 수리를 5회 완료합니다. 상륙 수리는 제외합니다.",
+            "category": "활동",
+            "target": 5
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.story_start",
+            "name": "외전의 시작",
+            "description": "마테오 레예스 외전 이야기의 첫 단계를 마칩니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.story_turn",
+            "name": "외전의 전환점",
+            "description": "마테오 레예스 외전 4부 「검은 돛을 쫓아」에 들어섭니다.",
+            "category": "이야기",
+            "target": 3
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.ending",
+            "name": "외전 완주",
+            "description": "마테오 레예스 외전 이야기를 끝까지 마칩니다.",
+            "category": "이야기",
+            "target": 1
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.discovery_1",
+            "name": "첫 발견",
+            "description": "발견물을 1개 찾습니다.",
+            "category": "성장",
+            "target": 1
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.gold_100000",
+            "name": "항해 자금",
+            "description": "금괴를 포함해 금화 10만을 보유합니다.",
+            "category": "성장",
+            "target": 100000
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.fleet_3",
+            "name": "함대 결성",
+            "description": "함선 3척을 보유합니다.",
+            "category": "성장",
+            "target": 3
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.mates_5",
+            "name": "믿음직한 동료",
+            "description": "동료 항해사 5명을 거느립니다.",
+            "category": "성장",
+            "target": 5
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.arrivals_10",
+            "name": "항구를 잇는 항해",
+            "description": "실제 항해 후 일반 항구 또는 보급항에 10회 입항합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.sold_units_1000",
+            "name": "활발한 교역",
+            "description": "교역소에서 상품을 누적 1,000단위 매각합니다.",
+            "category": "활동",
+            "target": 1000
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.battle_wins_1",
+            "name": "첫 해전 승리",
+            "description": "적 함대 격파 또는 일기토로 해전에서 승리합니다. 적 퇴각은 제외합니다.",
+            "category": "활동",
+            "target": 1
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.battle_wins_10",
+            "name": "승전의 선장",
+            "description": "적 함대 격파 또는 일기토로 해전에서 10회 승리합니다.",
+            "category": "활동",
+            "target": 10
+        },
+        {
+            "heroId": 8,
+            "id": "hero8.paid_repairs_5",
             "name": "배를 아끼는 선장",
             "description": "조선소에서 비용을 내고 수리를 5회 완료합니다. 상륙 수리는 제외합니다.",
             "category": "활동",

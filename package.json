@@ -17,6 +17,7 @@
     "postbuild": "node scripts/check-public-copy.mjs --built",
     "check:public": "node scripts/check-public-copy.mjs && node scripts/check-public-copy.mjs --built",
     "build:flow": "node scripts/build-flow.mjs",
+    "build:flow-cards": "node scripts/build-flow-cards.mjs",
     "verify:flow": "node scripts/verify-flow.mjs"
   },
   "dependencies": {

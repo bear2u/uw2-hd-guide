@@ -1,0 +1,20 @@
+%% title: 저장과 이어하기 — 내 항해 지키기
+flowchart TD
+    play["항해 진행"]
+    safe["대화·전투를 마친 안전한 상태"]
+    manual["슬롯 선택·수동 저장"]
+    arrival["입항 자동 저장·열 번째 슬롯"]
+    local["기기에 저장된 항해"]
+    cloud["계정의 클라우드 저장"]
+    choose["이어할 주인공·날짜 확인"]
+    resume["선택한 항해 불러오기"]
+    play --> safe
+    safe --> manual
+    manual --> local
+    play -->|항구에 입항| arrival
+    arrival --> local
+    local -->|계정 접속·업로드 완료 확인| cloud
+    local -->|같은 기기에서 이어하기| choose
+    cloud -->|내려받기 전 로컬과 비교| choose
+    choose --> resume
+    resume -.-> play

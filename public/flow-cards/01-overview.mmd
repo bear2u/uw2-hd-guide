@@ -1,0 +1,23 @@
+%% title: 대항해시대 II HD — 모험의 큰 흐름
+flowchart TD
+    start["새 항해 또는 이어하기"]
+    port["항구에서 준비"]
+    trade["교역과 함대 정비"]
+    sea["보급 후 출항"]
+    explore["상륙과 발견"]
+    battle["함대 조우와 해전"]
+    story["보고·성장·이야기"]
+    ending["마지막 이야기와 엔딩"]
+    title["타이틀로 돌아가기"]
+    start --> port
+    port --> trade
+    trade --> sea
+    sea -->|탐험을 선택하면| explore
+    sea -->|교전이 성립하면| battle
+    explore -->|귀항 후 보고| story
+    battle -->|결과와 후속 대화| story
+    port -->|인물과 단서| story
+    story -->|마지막 조건 완료| ending
+    ending --> title
+    sea -.->|입항·재정비| port
+    story -.->|다음 목표 준비| port
