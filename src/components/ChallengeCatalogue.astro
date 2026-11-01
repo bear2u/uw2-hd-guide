@@ -2,7 +2,7 @@
 import reference from '../data/game-reference.json';
 interface Props { heroId?: number; side?: boolean; }
 const { heroId, side = false } = Astro.props;
-const slugs: Record<number, string> = { 0: 'joao', 1: 'catalina', 2: 'otto', 3: 'ernst', 4: 'pietro', 5: 'ali', 6: 'milanda', 7: 'haegang', 8: 'mateo' };
+const slugs: Record<number, string> = { 0: 'joao', 1: 'catalina', 2: 'otto', 3: 'ernst', 4: 'pietro', 5: 'ali', 6: 'milanda', 7: 'haegang', 8: 'mateo', 9: 'manggil' };
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const sideHero = reference.sideHeroes.find(row => row.id === heroId);
 const hero = reference.heroes.find(row => row.id === heroId) ?? sideHero;

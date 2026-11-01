@@ -1059,6 +1059,96 @@
           "unique": false
         }
       ]
+    },
+    {
+      "slug": "manggil",
+      "name": "서만길",
+      "team": "항해·교역",
+      "kind": "캐릭터 덱",
+      "style": "신용 · 속량",
+      "hero": "c_manggil_hero",
+      "cards": [
+        {
+          "id": "c_manggil_crew",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_manggil_spell1",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_manggil_gear",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_manggil_mate",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_manggil_spell2",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_manggil_flagship",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "crab_mana",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "turtle",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "octopus",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "eel",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "shark",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "killer_whale",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "kraken",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "potion_blue",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "spell_flood",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "town_underwater",
+          "count": 1,
+          "unique": false
+        }
+      ]
     }
   ],
   "cards": {
@@ -2692,7 +2782,7 @@
       "attack": 1,
       "hp": 3,
       "image": "d17bf793ae82.png",
-      "text": "공격: 대상에게 독을 부여합니다. 공격받으면 공격한 유닛에게도 독을 부여합니다.",
+      "text": "공격: 대상에게 독을 부여합니다.\n공격받으면 공격한 유닛에게도 독을 부여합니다.",
       "abilities": [
         {
           "name": "독",
@@ -3614,6 +3704,165 @@
       "unlock": {
         "name": "외전의 시작",
         "description": "마테오 레예스 외전 이야기의 첫 단계를 마칩니다.",
+        "group": "외전"
+      }
+    },
+    "c_manggil_crew": {
+      "name": "동포 격군",
+      "type": "유닛",
+      "mana": 2,
+      "attack": 1,
+      "hp": 3,
+      "image": "cbe0d2c3e60f.jpg",
+      "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
+      "abilities": [
+        {
+          "name": "카드 뽑기",
+          "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "고급",
+      "unlock": {
+        "name": "항구를 잇는 항해",
+        "description": "실제 항해 후 일반 항구 또는 보급항에 10회 입항합니다.",
+        "group": "외전"
+      }
+    },
+    "c_manggil_spell1": {
+      "name": "주문서",
+      "type": "전술",
+      "mana": 3,
+      "attack": null,
+      "hp": null,
+      "image": "46659d622026.png",
+      "text": "내 덱 위 카드 7장을 보고 그중 2장을 손에 넣습니다.",
+      "abilities": [
+        {
+          "name": "보물",
+          "text": "내 덱 위 카드 7장을 보고 그중 2장을 손에 넣습니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "고급",
+      "unlock": {
+        "name": "활발한 교역",
+        "description": "교역소에서 상품을 누적 1,000단위 매각합니다.",
+        "group": "외전"
+      }
+    },
+    "c_manggil_gear": {
+      "name": "주판",
+      "type": "장비",
+      "mana": 2,
+      "attack": null,
+      "hp": 3,
+      "image": "2673a305cec3.png",
+      "text": "장착한 유닛이 카드를 처치하면 지휘력을 3 얻습니다.",
+      "abilities": [
+        {
+          "name": "항해용 나침반",
+          "text": "장착한 유닛이 카드를 처치하면 지휘력을 3 얻습니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "고급",
+      "unlock": {
+        "name": "상납 완수",
+        "description": "주인에게 바칠 상납 세 번을 모두 채웁니다.",
+        "group": "외전"
+      }
+    },
+    "c_manggil_mate": {
+      "name": "연이",
+      "type": "유닛",
+      "mana": 4,
+      "attack": 3,
+      "hp": 4,
+      "image": "611d032677e8.jpg",
+      "text": "등장할 때 내 폐기 더미의 유닛 하나를 손으로 되돌립니다.",
+      "abilities": [
+        {
+          "name": "회수",
+          "text": "등장할 때 내 폐기 더미의 유닛 하나를 손으로 되돌립니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "희귀",
+      "unlock": {
+        "name": "외전의 전환점",
+        "description": "서만길 외전 3부 「해방 문서」에 들어섭니다.",
+        "group": "외전"
+      }
+    },
+    "c_manggil_spell2": {
+      "name": "해방 문서",
+      "type": "전술",
+      "mana": 3,
+      "attack": null,
+      "hp": null,
+      "image": "3c68e117a4f2.png",
+      "text": "대상이 방어도 2를 얻어 받는 모든 피해가 2 감소합니다.",
+      "abilities": [
+        {
+          "name": "방어도 +2",
+          "text": "대상이 방어도 2를 얻어 받는 모든 피해가 2 감소합니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "희귀",
+      "unlock": {
+        "name": "동포 5명 속량",
+        "description": "흩어진 동포 다섯 명의 몸값을 치르고 풀어 줍니다.",
+        "group": "외전"
+      }
+    },
+    "c_manggil_flagship": {
+      "name": "만리호",
+      "type": "유닛",
+      "mana": 6,
+      "attack": 5,
+      "hp": 7,
+      "image": "bfcf18d455c1.png",
+      "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.\n내 턴이 시작될 때 이 유닛의 체력을 모두 회복합니다.",
+      "abilities": [
+        {
+          "name": "도발",
+          "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
+          "cost": null
+        },
+        {
+          "name": "재생",
+          "text": "내 턴이 시작될 때 이 유닛의 체력을 모두 회복합니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "신화",
+      "unlock": {
+        "name": "외전 완주",
+        "description": "서만길 외전 이야기를 끝까지 마칩니다.",
+        "group": "외전"
+      }
+    },
+    "c_manggil_hero": {
+      "name": "서만길",
+      "type": "선장",
+      "mana": null,
+      "attack": null,
+      "hp": null,
+      "image": "a1e61b97e3de.jpg",
+      "text": "카드 1장을 뽑습니다.",
+      "abilities": [
+        {
+          "name": "항로 정보",
+          "text": "카드 1장을 뽑습니다.",
+          "cost": 3
+        }
+      ],
+      "rarity": "신화",
+      "unlock": {
+        "name": "외전의 시작",
+        "description": "서만길 외전 이야기의 첫 단계를 마칩니다.",
         "group": "외전"
       }
     }
