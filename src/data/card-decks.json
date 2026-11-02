@@ -320,7 +320,7 @@
         },
         {
           "id": "killer_whale",
-          "count": 2,
+          "count": 1,
           "unique": false
         },
         {
@@ -340,6 +340,11 @@
         },
         {
           "id": "town_underwater",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "sea_monster",
           "count": 1,
           "unique": false
         }
@@ -765,7 +770,7 @@
         },
         {
           "id": "killer_whale",
-          "count": 2,
+          "count": 1,
           "unique": false
         },
         {
@@ -787,15 +792,20 @@
           "id": "town_underwater",
           "count": 1,
           "unique": false
+        },
+        {
+          "id": "sea_monster",
+          "count": 1,
+          "unique": false
         }
       ]
     },
     {
       "slug": "milanda",
       "name": "밀란다 베르테",
-      "team": "전투·해적",
+      "team": "탐험·보급",
       "kind": "캐릭터 덱",
-      "style": "약탈 · 은신",
+      "style": "탐험 · 단서",
       "hero": "c_milanda_hero",
       "cards": [
         {
@@ -829,52 +839,52 @@
           "unique": true
         },
         {
-          "id": "fire_chicken",
+          "id": "raccoon",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "owl",
           "count": 2,
           "unique": false
         },
         {
-          "id": "lava_beast",
+          "id": "tree_angry",
           "count": 2,
           "unique": false
         },
         {
-          "id": "firefox",
+          "id": "wolf_alpha",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "armored_beast",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "bear",
           "count": 2,
           "unique": false
         },
         {
-          "id": "bull_heat",
+          "id": "mammoth",
           "count": 1,
           "unique": false
         },
         {
-          "id": "ashes_snake",
-          "count": 1,
-          "unique": false
-        },
-        {
-          "id": "fire_element",
-          "count": 1,
-          "unique": false
-        },
-        {
-          "id": "reaper",
-          "count": 1,
-          "unique": false
-        },
-        {
-          "id": "potion_red",
+          "id": "potion_green",
           "count": 2,
           "unique": false
         },
         {
-          "id": "spell_burn",
+          "id": "spell_growth",
           "count": 1,
           "unique": false
         },
         {
-          "id": "town_volcano",
+          "id": "town_forest",
           "count": 1,
           "unique": false
         }
@@ -1099,18 +1109,18 @@
           "unique": true
         },
         {
-          "id": "crab_mana",
-          "count": 2,
-          "unique": false
+          "id": "c_manggil_pedro",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_manggil_beatriz",
+          "count": 1,
+          "unique": true
         },
         {
           "id": "turtle",
           "count": 2,
-          "unique": false
-        },
-        {
-          "id": "octopus",
-          "count": 1,
           "unique": false
         },
         {
@@ -1119,13 +1129,8 @@
           "unique": false
         },
         {
-          "id": "shark",
-          "count": 1,
-          "unique": false
-        },
-        {
           "id": "killer_whale",
-          "count": 2,
+          "count": 1,
           "unique": false
         },
         {
@@ -1145,6 +1150,16 @@
         },
         {
           "id": "town_underwater",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "fish",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "pufferfish",
           "count": 1,
           "unique": false
         }
@@ -2177,7 +2192,7 @@
       "mana": 6,
       "attack": 5,
       "hp": 6,
-      "image": "f77e70a73414.png",
+      "image": "b556e50101e1.png",
       "text": "도발을 무시할 수 있습니다.\n이 유닛으로 다른 유닛을 처치하면 카드 2장을 뽑습니다.",
       "abilities": [
         {
@@ -2488,7 +2503,7 @@
       "mana": 2,
       "attack": null,
       "hp": 2,
-      "image": "d6a4de8919ee.png",
+      "image": "a23efd5a26d5.png",
       "text": "장착한 유닛이 방어도 2를 얻습니다.\n공격받을 때마다 내구도가 1 감소합니다.",
       "abilities": [
         {
@@ -2623,12 +2638,12 @@
       "attack": null,
       "hp": null,
       "image": "0f58f87e75ee.jpg",
-      "text": "턴이 끝날 때까지 모든 아군 유닛이 공격력 +1을 얻습니다. 이 유닛의 행동을 소모합니다.",
+      "text": "지휘력 1과 선장 행동을 사용합니다. 이번 턴 모든 아군 유닛이 공격력 +1을 얻습니다.",
       "abilities": [
         {
-          "name": "사기 진작",
-          "text": "턴이 끝날 때까지 모든 아군 유닛이 공격력 +1을 얻습니다. 이 유닛의 행동을 소모합니다.",
-          "cost": 0
+          "name": "함대 지휘",
+          "text": "지휘력 1과 선장 행동을 사용합니다. 이번 턴 모든 아군 유닛이 공격력 +1을 얻습니다.",
+          "cost": 1
         }
       ],
       "rarity": "신화",
@@ -2642,7 +2657,7 @@
       "name": "견습 측량사",
       "type": "유닛",
       "mana": 2,
-      "attack": 1,
+      "attack": 2,
       "hp": 3,
       "image": "4eac72e7519d.jpg",
       "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
@@ -2663,7 +2678,7 @@
     "c_ernest_spell1": {
       "name": "응급 처치",
       "type": "전술",
-      "mana": 2,
+      "mana": 1,
       "attack": null,
       "hp": null,
       "image": "4910c82f078e.png",
@@ -2688,7 +2703,7 @@
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "567c584afbec.png",
+      "image": "1eee7caa5efa.png",
       "text": "적 유닛이 공격하면 모든 적 유닛에게 피해를 2 줍니다.",
       "abilities": [
         {
@@ -2729,15 +2744,15 @@
     "c_ernest_spell2": {
       "name": "신대륙의 씨앗",
       "type": "전술",
-      "mana": 4,
+      "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "76e85e1fe3d2.png",
-      "text": "대상 유닛이 공격력과 체력 +4를 얻고 2턴 동안 휴식합니다.",
+      "image": "ae216739a5d0.png",
+      "text": "아군 유닛 하나에게 공격력과 체력을 각각 +2 부여합니다.",
       "abilities": [
         {
-          "name": "장기 정비",
-          "text": "대상 유닛이 공격력과 체력 +4를 얻고 2턴 동안 휴식합니다.",
+          "name": "신대륙의 씨앗",
+          "text": "아군 유닛 하나에게 공격력과 체력을 각각 +2 부여합니다.",
           "cost": null
         }
       ],
@@ -2754,7 +2769,7 @@
       "mana": 6,
       "attack": 5,
       "hp": 7,
-      "image": "f77e70a73414.png",
+      "image": "f4b737a7e6ac.png",
       "text": "각 턴이 시작될 때 모든 아군 탐험·보급 유닛과 장소가 체력을 3 회복합니다.\n이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
       "abilities": [
         {
@@ -2954,12 +2969,12 @@
       "mana": 6,
       "attack": 4,
       "hp": 7,
-      "image": "f77e70a73414.png",
-      "text": "내 전술과 능력이 피해를 1 더 줍니다.\n전술을 사용하면 공격력 +2를 얻습니다.",
+      "image": "87d0193dda69.png",
+      "text": "등장할 때 카드 1장을 뽑습니다.\n전술을 사용하면 공격력 +2를 얻습니다.",
       "abilities": [
         {
-          "name": "전술 피해",
-          "text": "내 전술과 능력이 피해를 1 더 줍니다.",
+          "name": "발견 보고",
+          "text": "등장할 때 카드 1장을 뽑습니다.",
           "cost": null
         },
         {
@@ -3001,14 +3016,14 @@
       "name": "흥정꾼",
       "type": "유닛",
       "mana": 2,
-      "attack": 2,
+      "attack": 1,
       "hp": 2,
       "image": "751af11419f2.jpg",
-      "text": "상대가 손에서 무작위 카드 1장을 버립니다.",
+      "text": "등장할 때 지휘력을 1 얻습니다.",
       "abilities": [
         {
-          "name": "버리기",
-          "text": "상대가 손에서 무작위 카드 1장을 버립니다.",
+          "name": "거래 성사",
+          "text": "등장할 때 지휘력을 1 얻습니다.",
           "cost": null
         }
       ],
@@ -3118,8 +3133,8 @@
       "mana": 6,
       "attack": 5,
       "hp": 7,
-      "image": "bfcf18d455c1.png",
-      "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.\n상대 선장을 공격하면 지휘력을 2 얻습니다.",
+      "image": "8bcd8c9dafb6.png",
+      "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.\n내 턴이 시작될 때 지휘력을 1 얻습니다.",
       "abilities": [
         {
           "name": "도발",
@@ -3127,8 +3142,8 @@
           "cost": null
         },
         {
-          "name": "약탈",
-          "text": "상대 선장을 공격하면 지휘력을 2 얻습니다.",
+          "name": "정기 교역",
+          "text": "내 턴이 시작될 때 지휘력을 1 얻습니다.",
           "cost": null
         }
       ],
@@ -3167,7 +3182,7 @@
       "text": "유닛을 선택하고 주사위를 굴립니다. 4 이상이면 소유자의 손으로 돌려보냅니다. 지휘력 2를 사용합니다.",
       "abilities": [
         {
-          "name": "돌진",
+          "name": "거래 제안",
           "text": "유닛을 선택하고 주사위를 굴립니다. 4 이상이면 소유자의 손으로 돌려보냅니다. 지휘력 2를 사용합니다.",
           "cost": 2
         }
@@ -3180,17 +3195,17 @@
       }
     },
     "c_milanda_crew": {
-      "name": "그림자 척후",
+      "name": "탐험대 길잡이",
       "type": "유닛",
       "mana": 2,
       "attack": 2,
-      "hp": 1,
+      "hp": 3,
       "image": "d384c289f814.jpg",
-      "text": "행동하기 전까지 공격이나 능력의 대상이 되지 않습니다.",
+      "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
       "abilities": [
         {
-          "name": "은신",
-          "text": "행동하기 전까지 공격이나 능력의 대상이 되지 않습니다.",
+          "name": "카드 뽑기",
+          "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -3202,17 +3217,17 @@
       }
     },
     "c_milanda_spell1": {
-      "name": "기습 승선",
+      "name": "유적의 단서",
       "type": "전술",
       "mana": 2,
       "attack": null,
       "hp": null,
-      "image": "5fd48434de85.png",
-      "text": "대상을 소유자의 손으로 돌려보냅니다.",
+      "image": "46659d622026.png",
+      "text": "카드 1장을 뽑습니다.",
       "abilities": [
         {
-          "name": "손으로 돌려보내기",
-          "text": "대상을 소유자의 손으로 돌려보냅니다.",
+          "name": "카드 뽑기",
+          "text": "카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -3224,7 +3239,7 @@
       }
     },
     "c_milanda_trap": {
-      "name": "해적의 매복",
+      "name": "탐사로의 올가미",
       "type": "함정",
       "mana": 3,
       "attack": null,
@@ -3246,17 +3261,17 @@
       }
     },
     "c_milanda_mate": {
-      "name": "약탈대장",
+      "name": "탐험 동료",
       "type": "유닛",
       "mana": 4,
       "attack": 3,
       "hp": 4,
       "image": "7b391d97def1.jpg",
-      "text": "상대가 손에서 무작위 카드 1장을 버립니다.",
+      "text": "등장할 때 다른 유닛 하나가 다음 내 턴까지 공격력과 체력 +2를 얻습니다.",
       "abilities": [
         {
-          "name": "버리기",
-          "text": "상대가 손에서 무작위 카드 1장을 버립니다.",
+          "name": "전투 지원",
+          "text": "등장할 때 다른 유닛 하나가 다음 내 턴까지 공격력과 체력 +2를 얻습니다.",
           "cost": null
         }
       ],
@@ -3268,17 +3283,17 @@
       }
     },
     "c_milanda_spell2": {
-      "name": "뱃전 기습",
+      "name": "동료 구출",
       "type": "전술",
-      "mana": 3,
+      "mana": 2,
       "attack": null,
       "hp": null,
-      "image": "5fd48434de85.png",
-      "text": "전장에서 체력이 가장 낮은 유닛을 처치합니다. 내 유닛도 포함됩니다.",
+      "image": "4910c82f078e.png",
+      "text": "아군 유닛 하나의 마비와 수면을 해제하고 보호막을 줍니다.",
       "abilities": [
         {
-          "name": "취약 지점 공략",
-          "text": "전장에서 체력이 가장 낮은 유닛을 처치합니다. 내 유닛도 포함됩니다.",
+          "name": "해방",
+          "text": "아군 유닛 하나의 마비와 수면을 해제하고 보호막을 줍니다.",
           "cost": null
         }
       ],
@@ -3290,22 +3305,22 @@
       }
     },
     "c_milanda_flagship": {
-      "name": "검은 돛 브리간틴",
+      "name": "리베치오",
       "type": "유닛",
       "mana": 6,
-      "attack": 6,
-      "hp": 5,
-      "image": "50ba15c3bbcd.png",
-      "text": "행동하기 전까지 공격이나 능력의 대상이 되지 않습니다.\n상대 선장을 공격하면 지휘력을 2 얻습니다.",
+      "attack": 5,
+      "hp": 6,
+      "image": "ebbe9164076e.png",
+      "text": "도발을 무시할 수 있습니다.\n등장할 때 카드 1장을 뽑습니다.",
       "abilities": [
         {
-          "name": "은신",
-          "text": "행동하기 전까지 공격이나 능력의 대상이 되지 않습니다.",
+          "name": "우회",
+          "text": "도발을 무시할 수 있습니다.",
           "cost": null
         },
         {
-          "name": "약탈",
-          "text": "상대 선장을 공격하면 지휘력을 2 얻습니다.",
+          "name": "탐사 준비",
+          "text": "등장할 때 카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -3316,24 +3331,6 @@
         "group": "외전"
       }
     },
-    "bull_heat": {
-      "name": "숙련 포술장",
-      "type": "유닛",
-      "mana": 3,
-      "attack": 2,
-      "hp": 5,
-      "image": "2df073662d12.png",
-      "text": "전술 피해 +1.",
-      "abilities": [
-        {
-          "name": "전술 피해",
-          "text": "내 전술과 능력이 피해를 1 더 줍니다.",
-          "cost": null
-        }
-      ],
-      "rarity": "일반",
-      "unlock": null
-    },
     "c_milanda_hero": {
       "name": "밀란다 베르테",
       "type": "선장",
@@ -3341,12 +3338,12 @@
       "attack": null,
       "hp": null,
       "image": "678725096794.jpg",
-      "text": "상대가 손에서 무작위 카드 1장을 버립니다. 이 유닛의 행동을 소모합니다.",
+      "text": "지휘력 2와 선장 행동을 사용합니다. 내 덱 위 카드 3장을 보고 하나를 손에 넣습니다.",
       "abilities": [
         {
-          "name": "버리기",
-          "text": "상대가 손에서 무작위 카드 1장을 버립니다. 이 유닛의 행동을 소모합니다.",
-          "cost": 0
+          "name": "탐험의 단서",
+          "text": "지휘력 2와 선장 행동을 사용합니다. 내 덱 위 카드 3장을 보고 하나를 손에 넣습니다.",
+          "cost": 2
         }
       ],
       "rarity": "신화",
@@ -3384,7 +3381,7 @@
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "98ccf3b2f3da.png",
+      "image": "d4344ca38177.png",
       "text": "대상 유닛이 격노를 얻어 한 턴에 두 번 공격할 수 있습니다.",
       "abilities": [
         {
@@ -3457,10 +3454,10 @@
     "c_haegang_spell2": {
       "name": "총통 사격",
       "type": "전술",
-      "mana": 4,
+      "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "2df073662d12.png",
+      "image": "95c6bcf35b8d.png",
       "text": "피해를 3 줍니다.",
       "abilities": [
         {
@@ -3510,12 +3507,12 @@
       "attack": null,
       "hp": null,
       "image": "1fce8782f92f.jpg",
-      "text": "유닛 하나를 소유자의 손으로 돌려보냅니다. 이 유닛의 행동을 소모합니다.",
+      "text": "지휘력 4와 선장 행동을 사용합니다. 적 유닛 하나를 소유자의 손으로 돌려보냅니다.",
       "abilities": [
         {
-          "name": "돌진",
-          "text": "유닛 하나를 소유자의 손으로 돌려보냅니다. 이 유닛의 행동을 소모합니다.",
-          "cost": 0
+          "name": "전열 압박",
+          "text": "지휘력 4와 선장 행동을 사용합니다. 적 유닛 하나를 소유자의 손으로 돌려보냅니다.",
+          "cost": 4
         }
       ],
       "rarity": "신화",
@@ -3575,7 +3572,7 @@
       "mana": 2,
       "attack": null,
       "hp": 2,
-      "image": "67ddcf041382.png",
+      "image": "1dbff6c00d6b.png",
       "text": "공격할 때 대상이 반격하지 못합니다.\n공격할 때마다 내구도가 1 감소합니다.",
       "abilities": [
         {
@@ -3603,11 +3600,11 @@
       "attack": 3,
       "hp": 4,
       "image": "53a1169a297c.jpg",
-      "text": "피해를 준 유닛을 처치합니다.",
+      "text": "등장할 때 적 유닛 하나를 1턴 동안 마비시킵니다.",
       "abilities": [
         {
-          "name": "치명타",
-          "text": "피해를 준 유닛을 처치합니다.",
+          "name": "생포",
+          "text": "등장할 때 적 유닛 하나를 1턴 동안 마비시킵니다.",
           "cost": null
         }
       ],
@@ -3619,17 +3616,17 @@
       }
     },
     "c_mateo_spell2": {
-      "name": "결정타",
+      "name": "생포 완료",
       "type": "전술",
-      "mana": 5,
+      "mana": 4,
       "attack": null,
       "hp": null,
-      "image": "2df073662d12.png",
-      "text": "대상 유닛 또는 장소를 파괴합니다.",
+      "image": "6220970e3a88.png",
+      "text": "적 유닛 하나를 소유자의 손으로 돌려보내고 카드 1장을 뽑습니다.",
       "abilities": [
         {
-          "name": "파괴",
-          "text": "대상 유닛 또는 장소를 파괴합니다.",
+          "name": "생포 완료",
+          "text": "적 유닛 하나를 소유자의 손으로 돌려보내고 카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -3646,8 +3643,8 @@
       "mana": 6,
       "attack": 5,
       "hp": 6,
-      "image": "50ba15c3bbcd.png",
-      "text": "도발을 무시할 수 있습니다.\n이 유닛으로 다른 유닛을 처치하면 카드 2장을 뽑습니다.",
+      "image": "3378cfd51cfc.png",
+      "text": "도발을 무시할 수 있습니다.\n등장할 때 카드 1장을 뽑습니다.",
       "abilities": [
         {
           "name": "우회",
@@ -3655,8 +3652,8 @@
           "cost": null
         },
         {
-          "name": "카드 뽑기",
-          "text": "이 유닛으로 다른 유닛을 처치하면 카드 2장을 뽑습니다.",
+          "name": "발견 보고",
+          "text": "등장할 때 카드 1장을 뽑습니다.",
           "cost": null
         }
       ],
@@ -3692,11 +3689,11 @@
       "attack": null,
       "hp": null,
       "image": "e84c56fbba35.jpg",
-      "text": "피해를 1 줍니다.",
+      "text": "지휘력 2와 선장 행동을 사용합니다. 적 유닛 하나를 1턴 동안 마비시킵니다.",
       "abilities": [
         {
-          "name": "견제 포격",
-          "text": "피해를 1 줍니다.",
+          "name": "추적 표식",
+          "text": "지휘력 2와 선장 행동을 사용합니다. 적 유닛 하나를 1턴 동안 마비시킵니다.",
           "cost": 2
         }
       ],
@@ -3708,17 +3705,17 @@
       }
     },
     "c_manggil_crew": {
-      "name": "동포 격군",
+      "name": "막손",
       "type": "유닛",
       "mana": 2,
       "attack": 1,
       "hp": 3,
-      "image": "cbe0d2c3e60f.jpg",
-      "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
+      "image": "55eed5fb964b.jpg",
+      "text": "등장할 때 지휘력을 1 얻습니다.",
       "abilities": [
         {
-          "name": "카드 뽑기",
-          "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
+          "name": "거래 성사",
+          "text": "등장할 때 지휘력을 1 얻습니다.",
           "cost": null
         }
       ],
@@ -3735,7 +3732,7 @@
       "mana": 3,
       "attack": null,
       "hp": null,
-      "image": "46659d622026.png",
+      "image": "d13e78360113.png",
       "text": "내 덱 위 카드 7장을 보고 그중 2장을 손에 넣습니다.",
       "abilities": [
         {
@@ -3757,12 +3754,12 @@
       "mana": 2,
       "attack": null,
       "hp": 3,
-      "image": "2673a305cec3.png",
-      "text": "장착한 유닛이 카드를 처치하면 지휘력을 3 얻습니다.",
+      "image": "a795cdc0ebad.png",
+      "text": "앞으로 3번의 내 턴이 시작될 때 추가 지휘력을 1 얻고 내구도를 1 사용합니다.",
       "abilities": [
         {
-          "name": "항해용 나침반",
-          "text": "장착한 유닛이 카드를 처치하면 지휘력을 3 얻습니다.",
+          "name": "주판",
+          "text": "앞으로 3번의 내 턴이 시작될 때 추가 지휘력을 1 얻고 내구도를 1 사용합니다.",
           "cost": null
         }
       ],
@@ -3779,7 +3776,7 @@
       "mana": 4,
       "attack": 3,
       "hp": 4,
-      "image": "611d032677e8.jpg",
+      "image": "0fe824b1ce63.jpg",
       "text": "등장할 때 내 폐기 더미의 유닛 하나를 손으로 되돌립니다.",
       "abilities": [
         {
@@ -3798,15 +3795,15 @@
     "c_manggil_spell2": {
       "name": "해방 문서",
       "type": "전술",
-      "mana": 3,
+      "mana": 2,
       "attack": null,
       "hp": null,
-      "image": "3c68e117a4f2.png",
-      "text": "대상이 방어도 2를 얻어 받는 모든 피해가 2 감소합니다.",
+      "image": "4e80b1acb89d.png",
+      "text": "아군 유닛 하나의 마비와 수면을 해제하고 보호막을 줍니다.",
       "abilities": [
         {
-          "name": "방어도 +2",
-          "text": "대상이 방어도 2를 얻어 받는 모든 피해가 2 감소합니다.",
+          "name": "해방",
+          "text": "아군 유닛 하나의 마비와 수면을 해제하고 보호막을 줍니다.",
           "cost": null
         }
       ],
@@ -3823,7 +3820,7 @@
       "mana": 6,
       "attack": 5,
       "hp": 7,
-      "image": "bfcf18d455c1.png",
+      "image": "c2f9edc9c28d.png",
       "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.\n내 턴이 시작될 때 이 유닛의 체력을 모두 회복합니다.",
       "abilities": [
         {
@@ -3844,19 +3841,63 @@
         "group": "외전"
       }
     },
+    "c_manggil_pedro": {
+      "name": "페드루 은감바",
+      "type": "유닛",
+      "mana": 3,
+      "attack": 2,
+      "hp": 4,
+      "image": "5d8e0a4dab6b.png",
+      "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
+      "abilities": [
+        {
+          "name": "도발",
+          "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "고급",
+      "unlock": {
+        "name": "함대 결성",
+        "description": "함선 3척을 보유합니다.",
+        "group": "외전"
+      }
+    },
+    "c_manggil_beatriz": {
+      "name": "베아트리스 누녜스",
+      "type": "유닛",
+      "mana": 4,
+      "attack": 2,
+      "hp": 4,
+      "image": "3f4dc772b6c2.png",
+      "text": "등장할 때 카드 1장을 뽑습니다.",
+      "abilities": [
+        {
+          "name": "발견 보고",
+          "text": "등장할 때 카드 1장을 뽑습니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "희귀",
+      "unlock": {
+        "name": "항해 자금",
+        "description": "금괴를 포함해 금화 10만을 보유합니다.",
+        "group": "외전"
+      }
+    },
     "c_manggil_hero": {
       "name": "서만길",
       "type": "선장",
       "mana": null,
       "attack": null,
       "hp": null,
-      "image": "a1e61b97e3de.jpg",
-      "text": "카드 1장을 뽑습니다.",
+      "image": "7baf0ca96b6f.jpg",
+      "text": "지휘력 2와 선장 행동을 사용합니다. 내 폐기 더미의 유닛 하나를 손으로 되돌립니다.",
       "abilities": [
         {
-          "name": "항로 정보",
-          "text": "카드 1장을 뽑습니다.",
-          "cost": 3
+          "name": "속량",
+          "text": "지휘력 2와 선장 행동을 사용합니다. 내 폐기 더미의 유닛 하나를 손으로 되돌립니다.",
+          "cost": 2
         }
       ],
       "rarity": "신화",
