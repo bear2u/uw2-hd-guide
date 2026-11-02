@@ -5,6 +5,13 @@ sidebar:
   order: 7
 ---
 
+import CharacterStages from "../../../components/CharacterStages.astro";
+import manggilPart1 from "../../../assets/side-story/captive/manggil-part1.png";
+import manggilPart2 from "../../../assets/side-story/captive/manggil-part2.png";
+import manggilPart3 from "../../../assets/side-story/captive/manggil-part3.png";
+import manggilPart4 from "../../../assets/side-story/captive/manggil-part4.png";
+import manggilPart5 from "../../../assets/side-story/captive/manggil-part5.png";
+
 import CompanionPortrait from "../../../components/CompanionPortrait.astro";
 import yeoni from "../../../assets/side-story/captive/yeoni.png";
 import pedro from "../../../assets/side-story/captive/pedro.png";
@@ -26,7 +33,7 @@ import makson from "../../../assets/side-story/captive/makson.png";
 
 ## 이야기의 큰 흐름
 
-부가 바뀔 때마다 만길의 **칭호·얼굴·걷는 모습**이 함께 바뀝니다. 현재 칭호는 화면 왼쪽 위 목표 안내와 주인공 정보 화면에서 볼 수 있습니다.
+이야기의 부가 진행되면 만길의 **칭호와 모습**이 달라집니다. 현재 칭호는 화면 왼쪽 위 목표 안내와 주인공 정보 화면에서 볼 수 있습니다.
 
 | 부 | 칭호 | 무대 | 진행의 중심 |
 | --- | --- | --- | --- |
@@ -35,6 +42,20 @@ import makson from "../../../assets/side-story/captive/makson.png";
 | 3부 | 허가받은 상인 | 제노바·이스탄불·베네치아·피사 | 자신과 연이의 몸값, 동포 찾기 시작 |
 | 4부 | 거상 | 리스본·루안다·고아·캘리컷 | 왕실 향신료 독점권 입찰, 서씨 상관 설립 |
 | 5부 | 귀향 선단주 | 아프리카·인도·마카오·천주·부산포 | 세계를 돌아 고향 바다로 |
+
+### 부별 얼굴과 칭호
+
+HD 화면에서 보이는 서만길의 얼굴입니다. 각 부의 칭호와 함께 포로에서 귀향 선단주가 되기까지의 모습을 확인하세요.
+
+<CharacterStages stages={[
+  { image: manggilPart1, part: "1부", title: "포로" },
+  { image: manggilPart2, part: "2부", title: "주인의 대리인" },
+  { image: manggilPart3, part: "3부", title: "허가받은 상인" },
+  { image: manggilPart4, part: "4부", title: "거상" },
+  { image: manggilPart5, part: "5부", title: "귀향 선단주" },
+]} />
+
+현재 **2부와 3부는 같은 얼굴**을 사용하며 칭호가 달라집니다. 원작 화면에서는 위 HD 초상화가 표시되지 않습니다.
 
 ## 교역 목표
 
