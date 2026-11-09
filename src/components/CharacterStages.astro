@@ -1,12 +1,12 @@
 ---
 import type { ImageMetadata } from "astro";
-interface Props { stages: { image: ImageMetadata; part: string; title: string }[]; }
-const { stages } = Astro.props;
+interface Props { stages: { image: ImageMetadata; part: string; title: string }[]; name?: string; }
+const { stages, name = "서만길" } = Astro.props;
 ---
 <div class="character-stages">
   {stages.map(stage => (
     <figure class="character-stage">
-      <img class="stage-portrait" src={stage.image.src} alt={`서만길 ${stage.part} ${stage.title}의 게임 초상화`} width={stage.image.width} height={stage.image.height} loading="lazy" decoding="async" />
+      <img class="stage-portrait" src={stage.image.src} alt={`${name} ${stage.part} ${stage.title}의 게임 초상화`} width={stage.image.width} height={stage.image.height} loading="lazy" decoding="async" />
       <figcaption class="stage-caption"><span>{stage.part}</span><strong>{stage.title}</strong></figcaption>
     </figure>
   ))}
