@@ -1259,6 +1259,96 @@
           "unique": false
         }
       ]
+    },
+    {
+      "slug": "hayato",
+      "name": "마쓰라 하야토",
+      "team": "탐험·보급",
+      "kind": "캐릭터 덱",
+      "style": "영지 · 축성",
+      "hero": "c_hayato_hero",
+      "cards": [
+        {
+          "id": "c_hayato_crew",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_hayato_mate",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_hayato_navigator",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_hayato_guard",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_hayato_port",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_hayato_flagship",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "raccoon",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "potion_green",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "tree_angry",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "armored_beast",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "gorilla",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "spell_roots",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "bear",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "sasquatch",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "spell_growth",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "mammoth",
+          "count": 1,
+          "unique": false
+        }
+      ]
     }
   ],
   "cards": {
@@ -4217,6 +4307,175 @@
       "unlock": {
         "name": "외전의 시작",
         "description": "다루 외전 이야기의 첫 단계를 마칩니다.",
+        "group": "외전"
+      }
+    },
+    "c_hayato_crew": {
+      "name": "곤베",
+      "type": "유닛",
+      "mana": 2,
+      "attack": 1,
+      "hp": 3,
+      "image": "5de880872bf3.png",
+      "text": "등장할 때 아군 유닛 하나에게 체력 +2를 부여합니다.",
+      "abilities": [
+        {
+          "name": "목재 스물",
+          "text": "등장할 때 아군 유닛 하나에게 체력 +2를 부여합니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "고급",
+      "unlock": {
+        "name": "항구를 잇는 항해",
+        "description": "실제 항해 후 일반 항구 또는 보급항에 10회 입항합니다.",
+        "group": "외전"
+      }
+    },
+    "c_hayato_mate": {
+      "name": "오린",
+      "type": "유닛",
+      "mana": 3,
+      "attack": 2,
+      "hp": 3,
+      "image": "b215792ab61c.png",
+      "text": "등장할 때 지휘력을 1 얻습니다.\n이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
+      "abilities": [
+        {
+          "name": "거래 성사",
+          "text": "등장할 때 지휘력을 1 얻습니다.",
+          "cost": null
+        },
+        {
+          "name": "카드 뽑기",
+          "text": "이 유닛이 퇴장하면 카드 1장을 뽑습니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "고급",
+      "unlock": {
+        "name": "활발한 교역",
+        "description": "교역소에서 상품을 누적 1,000단위 매각합니다.",
+        "group": "외전"
+      }
+    },
+    "c_hayato_navigator": {
+      "name": "주앙",
+      "type": "유닛",
+      "mana": 3,
+      "attack": 2,
+      "hp": 3,
+      "image": "18c32ac7261b.png",
+      "text": "등장할 때 원하는 대상에게 피해를 1 줍니다.",
+      "abilities": [
+        {
+          "name": "포격",
+          "text": "등장할 때 원하는 대상에게 피해를 1 줍니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "희귀",
+      "unlock": {
+        "name": "외전의 전환점",
+        "description": "마쓰라 하야토 외전 3부 「남만의 항구」에 들어섭니다.",
+        "group": "외전"
+      }
+    },
+    "c_hayato_guard": {
+      "name": "고타로",
+      "type": "유닛",
+      "mana": 4,
+      "attack": 2,
+      "hp": 5,
+      "image": "2e850cb2a2b8.png",
+      "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.\n상대 턴 동안 공격력 +3을 얻습니다.",
+      "abilities": [
+        {
+          "name": "도발",
+          "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
+          "cost": null
+        },
+        {
+          "name": "수비",
+          "text": "상대 턴 동안 공격력 +3을 얻습니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "희귀",
+      "unlock": {
+        "name": "첫 해전 승리",
+        "description": "적 함대 격파 또는 일기토로 해전에서 승리합니다. 적 퇴각은 제외합니다.",
+        "group": "외전"
+      }
+    },
+    "c_hayato_port": {
+      "name": "국제항 히라도",
+      "type": "장소",
+      "mana": 3,
+      "attack": null,
+      "hp": 7,
+      "image": "537b7e25a35d.png",
+      "text": "내 턴이 시작될 때 지휘력을 1 얻습니다.",
+      "abilities": [
+        {
+          "name": "정기 교역",
+          "text": "내 턴이 시작될 때 지휘력을 1 얻습니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "희귀",
+      "unlock": {
+        "name": "국제항",
+        "description": "히라도를 항구 등급 4 「국제항」으로 키웁니다. 인구 3,000에 건물 여덟 채가 있어야 합니다.",
+        "group": "외전"
+      }
+    },
+    "c_hayato_flagship": {
+      "name": "히라도마루",
+      "type": "유닛",
+      "mana": 6,
+      "attack": 4,
+      "hp": 7,
+      "image": "64bfcc448f12.png",
+      "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.\n각 턴이 시작될 때 공격력 +1을 얻습니다.",
+      "abilities": [
+        {
+          "name": "도발",
+          "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
+          "cost": null
+        },
+        {
+          "name": "격노",
+          "text": "각 턴이 시작될 때 공격력 +1을 얻습니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "신화",
+      "unlock": {
+        "name": "외전 완주",
+        "description": "마쓰라 하야토 외전 이야기를 끝까지 마칩니다.",
+        "group": "외전"
+      }
+    },
+    "c_hayato_hero": {
+      "name": "마쓰라 하야토",
+      "type": "선장",
+      "mana": null,
+      "attack": null,
+      "hp": null,
+      "image": "eaef843d8f2d.png",
+      "text": "지휘력 3과 선장 행동을 사용합니다. 아군 유닛 하나에게 공격력과 체력을 각각 +1 부여합니다.",
+      "abilities": [
+        {
+          "name": "영지 개발",
+          "text": "지휘력 3과 선장 행동을 사용합니다. 아군 유닛 하나에게 공격력과 체력을 각각 +1 부여합니다.",
+          "cost": 3
+        }
+      ],
+      "rarity": "신화",
+      "unlock": {
+        "name": "외전의 시작",
+        "description": "마쓰라 하야토 외전 이야기의 첫 단계를 마칩니다.",
         "group": "외전"
       }
     }
