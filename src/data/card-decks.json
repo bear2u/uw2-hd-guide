@@ -1349,6 +1349,101 @@
           "unique": false
         }
       ]
+    },
+    {
+      "slug": "ingrid",
+      "name": "잉리드 하우게",
+      "team": "항해·교역",
+      "kind": "캐릭터 덱",
+      "style": "연합 · 구속",
+      "hero": "c_ingrid_hero",
+      "cards": [
+        {
+          "id": "c_ingrid_surveyor",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_ingrid_smuggler",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_ingrid_harpooner",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_ingrid_salvager",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_ingrid_carpenter",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "c_ingrid_flagship",
+          "count": 1,
+          "unique": true
+        },
+        {
+          "id": "seagull",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "potion_blue",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "fish",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "turtle",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "pufferfish",
+          "count": 2,
+          "unique": false
+        },
+        {
+          "id": "octopus",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "town_underwater",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "trap_fish",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "killer_whale",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "spell_storm",
+          "count": 1,
+          "unique": false
+        },
+        {
+          "id": "kraken",
+          "count": 1,
+          "unique": false
+        }
+      ]
     }
   ],
   "cards": {
@@ -4476,6 +4571,170 @@
       "unlock": {
         "name": "외전의 시작",
         "description": "마쓰라 하야토 외전 이야기의 첫 단계를 마칩니다.",
+        "group": "외전"
+      }
+    },
+    "c_ingrid_surveyor": {
+      "name": "마르그레테",
+      "type": "유닛",
+      "mana": 2,
+      "attack": 1,
+      "hp": 2,
+      "image": "627f095d3389.png",
+      "text": "등장할 때 카드 1장을 뽑습니다.",
+      "abilities": [
+        {
+          "name": "습성 기록",
+          "text": "등장할 때 카드 1장을 뽑습니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "고급",
+      "unlock": {
+        "name": "해도의 기록자",
+        "description": "괴물을 깊은 물로 몰아내고 기록을 쌓아 결말 「해도의 기록자」를 봅니다.",
+        "group": "외전"
+      }
+    },
+    "c_ingrid_smuggler": {
+      "name": "파올라",
+      "type": "유닛",
+      "mana": 2,
+      "attack": 1,
+      "hp": 2,
+      "image": "9b0fdaebc8f5.png",
+      "text": "도발을 무시할 수 있습니다.",
+      "abilities": [
+        {
+          "name": "우회",
+          "text": "도발을 무시할 수 있습니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "고급",
+      "unlock": {
+        "name": "외전의 전환점",
+        "description": "잉리드 하우게 외전 4부 「폭풍의 길」에 들어섭니다.",
+        "group": "외전"
+      }
+    },
+    "c_ingrid_harpooner": {
+      "name": "토르켈",
+      "type": "유닛",
+      "mana": 3,
+      "attack": 2,
+      "hp": 2,
+      "image": "05ba7b385c86.png",
+      "text": "등장할 때 적 유닛 하나를 1턴 동안 마비시킵니다.",
+      "abilities": [
+        {
+          "name": "생포",
+          "text": "등장할 때 적 유닛 하나를 1턴 동안 마비시킵니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "희귀",
+      "unlock": {
+        "name": "첫 해전 승리",
+        "description": "적 함대 격파 또는 일기토로 해전에서 승리합니다. 적 퇴각은 제외합니다.",
+        "group": "외전"
+      }
+    },
+    "c_ingrid_salvager": {
+      "name": "디르크",
+      "type": "유닛",
+      "mana": 3,
+      "attack": 2,
+      "hp": 3,
+      "image": "410184d9c745.png",
+      "text": "등장할 때 내 폐기 더미의 유닛 하나를 손으로 되돌립니다.",
+      "abilities": [
+        {
+          "name": "회수",
+          "text": "등장할 때 내 폐기 더미의 유닛 하나를 손으로 되돌립니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "희귀",
+      "unlock": {
+        "name": "아무도 잃지 않았다",
+        "description": "1~6부의 토벌 여섯에서 동료 배가 한 척도 물러나지 않게 합니다.",
+        "group": "외전"
+      }
+    },
+    "c_ingrid_carpenter": {
+      "name": "이븐 살림",
+      "type": "유닛",
+      "mana": 4,
+      "attack": 2,
+      "hp": 4,
+      "image": "4d379492df26.png",
+      "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.\n처음 받는 피해를 무시합니다.",
+      "abilities": [
+        {
+          "name": "도발",
+          "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
+          "cost": null
+        },
+        {
+          "name": "보호막",
+          "text": "처음 받는 피해를 무시합니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "희귀",
+      "unlock": {
+        "name": "스무 척의 바다",
+        "description": "연합 장부 열두 줄을 모두 채워 이름 있는 배 열두 척과 함께 7부 결전을 치릅니다.",
+        "group": "외전"
+      }
+    },
+    "c_ingrid_flagship": {
+      "name": "「북극성」",
+      "type": "유닛",
+      "mana": 6,
+      "attack": 4,
+      "hp": 6,
+      "image": "f77e70a73414.png",
+      "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.\n등장할 때 모든 아군 유닛이 체력 +1을 얻습니다.",
+      "abilities": [
+        {
+          "name": "도발",
+          "text": "다른 아군 유닛이 공격받지 않도록 보호합니다.",
+          "cost": null
+        },
+        {
+          "name": "연합",
+          "text": "등장할 때 모든 아군 유닛이 체력 +1을 얻습니다.",
+          "cost": null
+        }
+      ],
+      "rarity": "신화",
+      "unlock": {
+        "name": "외전 완주",
+        "description": "잉리드 하우게 외전 이야기를 끝까지 마칩니다.",
+        "group": "외전"
+      }
+    },
+    "c_ingrid_hero": {
+      "name": "잉리드 하우게",
+      "type": "선장",
+      "mana": null,
+      "attack": null,
+      "hp": null,
+      "image": "3a68176c0849.png",
+      "text": "지휘력 4와 선장 행동을 사용합니다. 적 유닛 하나에게 피해를 1 주고 1턴 동안 마비시킵니다.",
+      "abilities": [
+        {
+          "name": "작살",
+          "text": "지휘력 4와 선장 행동을 사용합니다. 적 유닛 하나에게 피해를 1 주고 1턴 동안 마비시킵니다.",
+          "cost": 4
+        }
+      ],
+      "rarity": "신화",
+      "unlock": {
+        "name": "외전의 시작",
+        "description": "잉리드 하우게 외전 이야기의 첫 단계를 마칩니다.",
         "group": "외전"
       }
     }

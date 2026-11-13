@@ -13,23 +13,24 @@ for(let heroId=0;heroId<6;heroId++){
  assert.equal(data.challenges.filter(x=>x.heroId===heroId).length,24);
 }
 for(const row of data.challenges) assert.ok(row.description && row.target>0 && row.category);
-assert.deepEqual(data.sideHeroes.map(h=>h.id),[6,7,8,9,10,11],'외전 주인공');
-assert.equal(data.sideChallenges.length,74,'외전 도전과제 수');
+assert.deepEqual(data.sideHeroes.map(h=>h.id),[6,7,8,9,10,11,12],'외전 주인공');
+assert.equal(data.sideChallenges.length,89,'외전 도전과제 수');
 for(const heroId of [6,7,8,9]) assert.equal(data.sideChallenges.filter(x=>x.heroId===heroId).length,12);
 assert.equal(data.sideChallenges.filter(x=>x.heroId===10).length,13,'류큐 외전 도전과제 (만국 장부 하나 더)');
 assert.equal(data.sideChallenges.filter(x=>x.heroId===11).length,13,'히라도 외전 도전과제 (국제항 하나 더)');
+assert.equal(data.sideChallenges.filter(x=>x.heroId===12).length,15,'심해 외전 도전과제 (주인공 과제 셋 더)');
 for(const row of data.sideChallenges) assert.ok(row.description && row.target>0 && row.category);
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(new URL(e.name+'/',dir)):[new URL(e.name,dir)]);}
 const pages=walk(new URL('src/content/docs/',root)).filter(p=>p.pathname.endsWith('.mdx'));
 const updates = pages.filter(p => /\/updates\//.test(p.pathname));
 const novelAll = pages.filter(p => /\/novel\//.test(p.pathname));
-assert.equal(pages.length - updates.length - novelAll.length,94,'기본 본문 페이지 수 (소설 제외)');
+assert.equal(pages.length - updates.length - novelAll.length,98,'기본 본문 페이지 수 (소설 제외)');
 const strategies = pages.filter(p => /\/strategy\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
 assert.deepEqual(strategies, ['discoveries.mdx','fleet.mdx','index.mdx','ports.mdx','references.mdx','stories.mdx','survival.mdx','trade.mdx'], '공략 문서 구성');
 const aiPages = pages.filter(p => /\/ai\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
 assert.deepEqual(aiPages, ['agent.mdx','connection.mdx','history.mdx','overview.mdx','personality.mdx'], 'AI 가이드 구성');
 const sidePages = pages.filter(p => /\/side-story\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();
-assert.deepEqual(sidePages, ['bounty.mdx','captive.mdx','help.mdx','hirado.mdx','index.mdx','joseon.mdx','milanda.mdx','ryukyu.mdx','salvador.mdx'], '외전 가이드 구성');
+assert.deepEqual(sidePages, ['bounty.mdx','captive.mdx','deepsea-monsters.mdx','deepsea.mdx','help.mdx','hirado.mdx','index.mdx','joseon.mdx','milanda.mdx','ryukyu.mdx','salvador.mdx'], '외전 가이드 구성');
 const novels = new Map();
 for (const p of novelAll) { const parts = p.pathname.split('/novel/')[1].split('/'); if (parts.length === 2) novels.set(parts[0], [...(novels.get(parts[0]) ?? []), parts[1]]); }
 assert.ok(novelAll.some(p => p.pathname.endsWith('/novel/index.mdx')), '소설 목록 페이지');
@@ -42,4 +43,4 @@ for (const [id, files] of novels) {
 assert.ok(updates.length > 0, '날짜별 업데이트 문서 필요');
 for (const p of updates) assert.match(p.pathname, /\/updates\/\d{4}-\d{2}-\d{2}\.mdx$/, '업데이트 문서 날짜 형식');
 for(const p of pages){const text=fs.readFileSync(p,'utf8');assert.ok(text.length>350,`${p.pathname} 본문 부족`);assert.ok(!/CHANGE_ME|Your documentation starts here|TODO:|Lorem ipsum/.test(text));}
-console.log(`공개 데이터 검증 통과: 6인·144과제·외전 6인 74과제·도감519항목·본문${pages.length}페이지`);
+console.log(`공개 데이터 검증 통과: 6인·144과제·외전 7인 89과제·도감519항목·본문${pages.length}페이지`);
