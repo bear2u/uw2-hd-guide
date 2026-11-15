@@ -1,5 +1,5 @@
 ---
-import { orderedShips, regionalShips, shipHref, newShipHref, num } from '@/lib/ships';
+import { orderedShips, regionalShips, shipHref, newShipHref, num, upcomingLabel } from '@/lib/ships';
 /** set="new": 엔딩 뒤 지역 새 배 (숨은 조선소 배는 빼고) */
 interface Props { set?: 'original' | 'new' }
 const { set = 'original' } = Astro.props;
@@ -59,7 +59,7 @@ const { set = 'original' } = Astro.props;
               <th scope="row">
                 <a class="ship-table-name" href={newShipHref(ship)}>
                   <img src={ship.image.src} alt="" width={64} height={48} loading="lazy" decoding="async" />
-                  <span>{ship.name}</span>
+                  <span>{ship.name}{ship.upcoming && <small class="ship-table-next">{upcomingLabel}</small>}</span>
                 </a>
               </th>
               <td>{ship.regionLabel}</td>
@@ -90,4 +90,5 @@ const { set = 'original' } = Astro.props;
   .ship-table-name { display: flex; align-items: center; gap: 0.6rem; color: inherit; }
   .ship-table-name img { display: block; flex: none; width: 64px; height: 48px; margin: 0; border-radius: 0.25rem; border: 1px solid var(--nb-border); }
   .ship-table-new .ship-table-name span { white-space: nowrap; }
+  .ship-table-next { display: block; font-size: 0.7rem; font-weight: 600; color: var(--nb-primary); }
 </style>

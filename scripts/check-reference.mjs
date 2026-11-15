@@ -35,11 +35,11 @@ for(const s of shipGuide.ships){
  assert.ok(fs.existsSync(new URL(`src/assets/ships/${s.image}`,root)), `함선 그림 ${s.image}`);
  assert.ok(shipGuide.shipyards.some(y=>y.models.includes(s.id)), `짓는 조선소 없음 ${s.id}`);
 }
-// 엔딩 뒤 새 배 (ship-catalog): 50척 = 여덟 지역 44척 (지역마다 2등급 한 척 넘게, 3등급 한 척) + 숨은 조선소 6척
+// 엔딩 뒤 새 배 (ship-catalog): 56척 = 여덟 지역 49척 (지역마다 2등급 한 척 넘게, 3등급 한 척 — 동아시아만 두 척) + 숨은 조선소 7척. 2026.11.15.2 부터 모두 배포 — 아직 배포하지 않은 배 (status next) 는 지금 없다
 const catalog = JSON.parse(fs.readFileSync(new URL('src/data/ship-catalog.json',root),'utf8'));
 assert.equal(catalog.schemaVersion,1);
-assert.equal(catalog.ships.length,50,'새 배 수');
-assert.equal(new Set(catalog.ships.map(s=>s.slug)).size,50,'새 배 slug 중복');
+assert.equal(catalog.ships.length,56,'새 배 수');
+assert.equal(new Set(catalog.ships.map(s=>s.slug)).size,56,'새 배 slug 중복');
 assert.equal(catalog.regions.length,8,'새 배 지역 수');
 const regionKeys = catalog.regions.map(r=>r.key);
 const portIds = new Set(data.ports.map(p=>p.id));
@@ -52,16 +52,19 @@ for(const s of catalog.ships){
  assert.ok(s.ports.length>0 && s.ports.every(p=>portIds.has(p)), `새 배 ${s.slug} 짓는 항구`);
  if(s.region!=='hidden') assert.ok(s.industry>0 && (s.tier===1 ? s.economy===0 : s.economy>0) && (s.tier===3) === Boolean(s.challenge), `새 배 ${s.slug} 여는 조건`);
  assert.ok(fs.existsSync(new URL(`src/assets/ships/${s.image}`,root)), `새 배 그림 ${s.image}`);
+ assert.ok(s.status===undefined || s.status==='next', `새 배 ${s.slug} 제공 상태`);
+ assert.ok(s.portNote===undefined || typeof s.portNote==='string', `새 배 ${s.slug} 짓는 곳 안내`);
 }
+assert.deepEqual(catalog.ships.filter(s=>s.status==='next').map(s=>s.name),[],'아직 배포하지 않은 배 (status next)');
 for(const key of regionKeys){
  const rows = catalog.ships.filter(s=>s.region===key);
  assert.ok(rows.length>0, `지역 ${key} 새 배 없음`);
- assert.equal(rows.filter(s=>s.tier===3).length,1,`지역 ${key} 3등급 한 척`);
+ assert.equal(rows.filter(s=>s.tier===3).length,key==='east-asia'?2:1,`지역 ${key} 3등급 (동아시아는 대복선·거북선 두 척)`);
  assert.ok(rows.filter(s=>s.tier===2).length>=1,`지역 ${key} 2등급 한 척 넘게`);
 }
-assert.equal(catalog.ships.filter(s=>s.region!=='hidden').length,44,'지역 새 배 수');
-assert.deepEqual([1,2,3].map(t=>catalog.ships.filter(s=>s.region!=='hidden'&&s.tier===t).length),[25,11,8],'지역 새 배 등급별 수');
-assert.equal(catalog.ships.filter(s=>s.region==='hidden').length,6,'숨은 조선소 배 수');
+assert.equal(catalog.ships.filter(s=>s.region!=='hidden').length,49,'지역 새 배 수');
+assert.deepEqual([1,2,3].map(t=>catalog.ships.filter(s=>s.region!=='hidden'&&s.tier===t).length),[27,13,9],'지역 새 배 등급별 수');
+assert.equal(catalog.ships.filter(s=>s.region==='hidden').length,7,'숨은 조선소 배 수');
 const yardPorts = shipGuide.shipyards.flatMap(y=>y.ports).sort((a,b)=>a-b);
 assert.deepEqual(yardPorts, Array.from({length:100},(_,i)=>i), '일반 항구 100곳이 조선소 계열 하나씩');
 const strategies = pages.filter(p => /\/strategy\//.test(p.pathname)).map(p => p.pathname.split('/').pop()).sort();

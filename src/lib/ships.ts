@@ -94,7 +94,7 @@ export const yardHref = (yard: Shipyard) => `${base}/ships/shipyards/#yard-${yar
 
 export const num = (value: number) => value.toLocaleString('ko-KR');
 
-// ───────────── 엔딩 뒤 새 배 (ship-catalog): 엔딩 뒤 지역 조선소 44종 + 숨은 조선소 6종 ─────────────
+// ───────────── 엔딩 뒤 새 배 (ship-catalog): 엔딩 뒤 지역 조선소 49종 + 숨은 조선소 7종 ─────────────
 
 export interface CatalogPort { id: number; name: string; industry: number; economy: number; capital: boolean }
 
@@ -124,9 +124,15 @@ export interface NewShip {
   challenge: string | null;
   regionShips: number;
   ports: CatalogPort[];
+  /** 본편 기준 짓는 곳 밖의 안내 (외전이 항구를 옮기는 곳) */
+  portNote: string | null;
+  /** 아직 배포하지 않은 배 (카탈로그 status next) — 가이드에 upcomingLabel 표시. 2026.11.15.2 부터는 없다 */
+  upcoming: boolean;
   description: string;
   image: ImageMetadata;
 }
+
+export const upcomingLabel = '다음 버전 제공 예정';
 
 export const regions: { key: string; label: string }[] = catalog.regions;
 const regionLabel = (key: string) => (key === 'hidden' ? '숨은 조선소' : regions.find((r) => r.key === key)?.label ?? key);
@@ -143,6 +149,8 @@ export const newShips: NewShip[] = catalog.ships.map((row) => {
     tierLabel: tierLabels[row.tier],
     hull,
     hullLabel: hullLabels[hull],
+    portNote: 'portNote' in row && typeof row.portNote === 'string' ? row.portNote : null,
+    upcoming: 'status' in row && row.status === 'next',
     image,
     ports: row.ports.map((id) => {
       const port = reference.ports.find((p) => p.id === id);
@@ -160,6 +168,8 @@ export const orderedNewShips: NewShip[] = [...newShips].sort((a, b) =>
 export const regionalShips = orderedNewShips.filter((s) => !s.hidden);
 export const hiddenShips = orderedNewShips.filter((s) => s.hidden);
 export const shipsOfRegion = (key: string) => orderedNewShips.filter((s) => s.region === key);
+/** 동아시아의 조선 배 다섯 (나가사키, 외전에서는 부산포) — 새 함선 페이지에서 따로 묶어 보인다 */
+export const joseonSlugs = ['maengseon', 'joun-seon', 'tongsinsa-seon', 'panokseon', 'geobukseon'];
 
 /** 본편 주인공 한 사람의 도전과제 수 (여섯 모두 같다) */
 const mainChallenges = reference.challenges.filter((c) => c.heroId === 0).length;

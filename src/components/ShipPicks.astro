@@ -1,10 +1,10 @@
 ---
-import { ships, regionalShips, shipHref, newShipHref, num } from '@/lib/ships';
+import { ships, regionalShips, shipHref, newShipHref, num, upcomingLabel } from '@/lib/ships';
 type Kind = 'trade' | 'explore' | 'battle';
-/** set="new": 엔딩 뒤 지역 새 배 44종에서 고르고 지역·등급 열을 더한다 */
+/** set="new": 엔딩 뒤 지역 새 배 49종에서 고르고 지역·등급 열을 더한다 (아직 배포하지 않은 배가 있으면 이름 아래 upcomingLabel) */
 interface Props { kind: Kind; count?: number; set?: 'original' | 'new' }
 const { kind, count = 8, set = 'original' } = Astro.props;
-interface Row { name: string; href: string; hullLabel: string; capacity: number; minCrew: number; maxCrew: number; durability: number; power: number; tacking: number; maxGuns: number; price: number; industry: number; regionLabel?: string; tierLabel?: string }
+interface Row { name: string; href: string; hullLabel: string; capacity: number; minCrew: number; maxCrew: number; durability: number; power: number; tacking: number; maxGuns: number; price: number; industry: number; regionLabel?: string; tierLabel?: string; upcoming?: boolean }
 const perCrew = (s: Row) => s.capacity / s.minCrew;
 const plans: Record<Kind, { label: string; sort: (a: Row, b: Row) => number; columns: [string, (s: Row) => string][] }> = {
   trade: {
@@ -56,7 +56,7 @@ const label = isNew ? `새 배의 ${plan.label}` : plan.label;
     <tbody>
       {rows.map((ship) => (
         <tr>
-          <th scope="row"><a href={ship.href}>{ship.name}</a></th>
+          <th scope="row"><a href={ship.href}>{ship.name}</a>{ship.upcoming && <small class="ship-picks-next">{upcomingLabel}</small>}</th>
           {isNew && <><td class="text">{ship.regionLabel}</td><td class="text">{ship.tierLabel}</td></>}
           <td class="text">{ship.hullLabel}</td>
           {plan.columns.map(([, value]) => <td>{value(ship)}</td>)}
@@ -69,4 +69,5 @@ const label = isNew ? `새 배의 ${plan.label}` : plan.label;
 <style>
   .ship-picks td { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .ship-picks td.text { text-align: left; }
+  .ship-picks-next { display: block; font-size: 0.7rem; font-weight: 600; color: var(--nb-primary); }
 </style>

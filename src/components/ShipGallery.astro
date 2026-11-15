@@ -1,10 +1,12 @@
 ---
-import { orderedShips, shipsOfRegion, shipHref, needsOf, portLabel, portReady, num, type Hull } from '@/lib/ships';
-/** hull: 원작 25종 가운데 범선·노 젓는 배. region: 엔딩 뒤 새 배 (지역 키 또는 hidden) — 고르는 곳·조건·설명까지 담은 카드 */
-interface Props { hull?: Hull; region?: string }
-const { hull, region } = Astro.props;
+import { orderedShips, shipsOfRegion, shipHref, needsOf, portLabel, portReady, num, upcomingLabel, type Hull } from '@/lib/ships';
+/** hull: 원작 25종 가운데 범선·노 젓는 배. region: 엔딩 뒤 새 배 (지역 키 또는 hidden) — 고르는 곳·조건·설명까지 담은 카드.
+ *  only·except: 그 지역 가운데 이 slug 의 배만 / 이 slug 의 배를 빼고 (예: 동아시아의 조선 배를 따로 묶을 때) */
+interface Props { hull?: Hull; region?: string; only?: string[]; except?: string[] }
+const { hull, region, only, except } = Astro.props;
 const rows = region ? [] : orderedShips.filter((s) => !hull || s.hull === hull);
-const newRows = region ? shipsOfRegion(region) : [];
+const newRows = region ? shipsOfRegion(region).filter((s) => (!only || only.includes(s.slug)) && !except?.includes(s.slug)) : [];
+if (region && newRows.length === 0) throw new Error(`새 배 카드가 비었습니다: ${region}`);
 ---
 {rows.length > 0 && (
   <ul class="ship-gallery" role="list">
@@ -37,6 +39,7 @@ const newRows = region ? shipsOfRegion(region) : [];
             <span class="ship-card-title"><strong>{ship.name}</strong><span class="ship-card-hull">{ship.hullLabel}</span></span>
             {!ship.hidden && <p class="ship-card-native">{ship.native}</p>}
             <p class="ship-card-badges">
+              {ship.upcoming && <span class="ship-badge ship-badge-next">{upcomingLabel}</span>}
               <span class="ship-badge ship-badge-tier" data-tier={ship.tier}>{ship.tierLabel}</span>
               {!ship.hidden && <span class="ship-badge">{ship.regionLabel}</span>}
               <span class="ship-badge">{ship.role}</span>
@@ -55,10 +58,11 @@ const newRows = region ? shipsOfRegion(region) : [];
             <div><dt>필요 공업</dt><dd>{ship.industry > 0 ? num(ship.industry) : '없음'}</dd></div>
           </dl>
           <dl class="ship-card-build">
-            <div><dt>짓는 곳</dt><dd>{ship.ports.map((p, i) => <>{i > 0 && ' · '}{!ship.hidden && portReady(ship, p) ? <strong>{portLabel(ship, p)}</strong> : portLabel(ship, p)}</>)}</dd></div>
+            <div><dt>짓는 곳</dt><dd>{ship.ports.map((p, i) => <>{i > 0 && ' · '}{!ship.hidden && portReady(ship, p) ? <strong>{portLabel(ship, p)}</strong> : portLabel(ship, p)}</>)}{ship.portNote && <span class="ship-card-portnote"> {ship.portNote}</span>}</dd></div>
             <div><dt>여는 조건</dt><dd>{needs.length > 0 ? needs.join(' · ') : '없음 (엔딩 뒤 자유 항해이면 바로)'}</dd></div>
           </dl>
           <blockquote class="ship-card-quote"><p>{ship.description}</p></blockquote>
+          {ship.upcoming && <p class="ship-card-next">이 배는 {upcomingLabel}입니다. 지금 버전의 게임에는 아직 나오지 않습니다.</p>}
         </li>
       );
     })}
@@ -89,6 +93,9 @@ const newRows = region ? shipsOfRegion(region) : [];
   .ship-badge-tier { color: var(--nb-foreground); font-weight: 600; }
   .ship-badge-tier[data-tier="3"] { border-color: var(--nb-primary); color: var(--nb-primary); }
   .ship-badge-warn { border-style: dashed; }
+  .ship-badge-next { color: var(--nb-primary); border-color: var(--nb-primary); font-weight: 600; }
+  .ship-card-portnote { color: var(--nb-muted-foreground); }
+  .ship-card-next { margin: -0.35rem 0.75rem 0.85rem; font-size: 0.8rem; color: var(--nb-primary); }
   .ship-card-new .ship-card-stats { border-top: 1px solid var(--nb-border); margin-top: 0.7rem; padding-top: 0.6rem; padding-bottom: 0.6rem; }
   .ship-card-build { margin: 0; padding: 0 0.75rem; font-size: 0.85rem; }
   .ship-card-build div { padding: 0.35rem 0; border-top: 1px solid var(--nb-border); }
