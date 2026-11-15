@@ -1,0 +1,72 @@
+---
+import { ships, regionalShips, shipHref, newShipHref, num } from '@/lib/ships';
+type Kind = 'trade' | 'explore' | 'battle';
+/** set="new": 엔딩 뒤 지역 새 배 44종에서 고르고 지역·등급 열을 더한다 */
+interface Props { kind: Kind; count?: number; set?: 'original' | 'new' }
+const { kind, count = 8, set = 'original' } = Astro.props;
+interface Row { name: string; href: string; hullLabel: string; capacity: number; minCrew: number; maxCrew: number; durability: number; power: number; tacking: number; maxGuns: number; price: number; industry: number; regionLabel?: string; tierLabel?: string }
+const perCrew = (s: Row) => s.capacity / s.minCrew;
+const plans: Record<Kind, { label: string; sort: (a: Row, b: Row) => number; columns: [string, (s: Row) => string][] }> = {
+  trade: {
+    label: '교역용 함선 비교',
+    sort: (a, b) => b.capacity - a.capacity || a.minCrew - b.minCrew,
+    columns: [
+      ['적재량', (s) => num(s.capacity)],
+      ['최소 선원', (s) => num(s.minCrew)],
+      ['선원 1명당 적재', (s) => perCrew(s).toLocaleString('ko-KR', { maximumFractionDigits: 1 })],
+      ['기준 가격', (s) => num(s.price)],
+      ['필요 공업', (s) => num(s.industry)],
+    ],
+  },
+  explore: {
+    label: '탐험용 함선 비교',
+    sort: (a, b) => (b.power + b.tacking) - (a.power + a.tacking) || a.minCrew - b.minCrew,
+    columns: [
+      ['추진', (s) => String(s.power)],
+      ['선회', (s) => String(s.tacking)],
+      ['최소 선원', (s) => num(s.minCrew)],
+      ['적재량', (s) => num(s.capacity)],
+      ['내구', (s) => String(s.durability)],
+    ],
+  },
+  battle: {
+    label: '전투용 함선 비교',
+    sort: (a, b) => b.durability - a.durability || b.maxGuns - a.maxGuns || b.maxCrew - a.maxCrew,
+    columns: [
+      ['내구', (s) => String(s.durability)],
+      ['포문', (s) => String(s.maxGuns)],
+      ['최대 선원', (s) => num(s.maxCrew)],
+      ['추진·선회', (s) => `${s.power}·${s.tacking}`],
+      ['기준 가격', (s) => num(s.price)],
+    ],
+  },
+};
+const plan = plans[kind];
+const isNew = set === 'new';
+const source: Row[] = isNew
+  ? regionalShips.map((s) => ({ ...s, href: newShipHref(s) }))
+  : ships.map((s) => ({ ...s, href: shipHref(s) }));
+const rows = [...source].sort(plan.sort).slice(0, count);
+const label = isNew ? `새 배의 ${plan.label}` : plan.label;
+---
+<div class="reference-scroll" tabindex="0" role="region" aria-label={label}>
+  <table class="ship-picks">
+    <caption class="sr-only">{label} (상위 {rows.length}종)</caption>
+    <thead><tr><th scope="col">모델</th>{isNew && <><th scope="col">지역</th><th scope="col">등급</th></>}<th scope="col">구분</th>{plan.columns.map(([label]) => <th scope="col">{label}</th>)}</tr></thead>
+    <tbody>
+      {rows.map((ship) => (
+        <tr>
+          <th scope="row"><a href={ship.href}>{ship.name}</a></th>
+          {isNew && <><td class="text">{ship.regionLabel}</td><td class="text">{ship.tierLabel}</td></>}
+          <td class="text">{ship.hullLabel}</td>
+          {plan.columns.map(([, value]) => <td>{value(ship)}</td>)}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .ship-picks td { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ship-picks td.text { text-align: left; }
+</style>

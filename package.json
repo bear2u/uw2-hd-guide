@@ -10,7 +10,7 @@
     "typecheck": "astro check",
     "lint:docs": "nimbus-docs lint",
     "lint:docs:fix": "nimbus-docs lint --fix",
-    "prebuild": "node scripts/theme.mjs && node scripts/check-reference.mjs && node scripts/check-public-copy.mjs",
+    "prebuild": "node scripts/theme.mjs && node scripts/check-reference.mjs && node scripts/check-public-copy.mjs && node scripts/check-android-version.mjs",
     "build:deploy": "GUIDE_DEPLOY=1 npm run build",
     "check:links": "node scripts/check-links.mjs",
     "test": "node --test scripts/config.test.mjs",

@@ -1,0 +1,93 @@
+---
+import { orderedShips, regionalShips, shipHref, newShipHref, num } from '@/lib/ships';
+/** set="new": 엔딩 뒤 지역 새 배 (숨은 조선소 배는 빼고) */
+interface Props { set?: 'original' | 'new' }
+const { set = 'original' } = Astro.props;
+---
+{set === 'original' ? (
+  <>
+    <p class="reference-summary">{orderedShips.length}종 · 범선 다음 노 젓는 배, 각각 적재량이 작은 배부터. 가로로 긴 표는 안쪽으로 스크롤할 수 있습니다.</p>
+    <div class="reference-scroll" tabindex="0" role="region" aria-label="함선 전체 비교 표">
+      <table class="ship-table">
+        <caption class="sr-only">함선 25종 전체 비교</caption>
+        <thead>
+          <tr>
+            <th scope="col">모델</th><th scope="col">구분</th><th scope="col">적재량</th><th scope="col">최소 선원</th><th scope="col">최대 선원</th>
+            <th scope="col">내구</th><th scope="col">추진</th><th scope="col">선회</th><th scope="col">포문</th><th scope="col">기준 가격</th><th scope="col">필요 공업</th>
+          </tr>
+        </thead>
+        <tbody>
+          {orderedShips.map((ship) => (
+            <tr>
+              <th scope="row">
+                <a class="ship-table-name" href={shipHref(ship)}>
+                  <img src={ship.image.src} alt="" width={64} height={48} loading="lazy" decoding="async" />
+                  <span>{ship.name}</span>
+                </a>
+              </th>
+              <td>{ship.hullLabel}</td>
+              <td>{num(ship.capacity)}</td>
+              <td>{num(ship.minCrew)}</td>
+              <td>{num(ship.maxCrew)}</td>
+              <td>{ship.durability}</td>
+              <td>{ship.power}</td>
+              <td>{ship.tacking}</td>
+              <td>{ship.maxGuns}</td>
+              <td>{num(ship.price)}</td>
+              <td>{num(ship.industry)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </>
+) : (
+  <>
+    <p class="reference-summary">{regionalShips.length}종 · 지역 순서, 같은 지역 안에서는 등급 다음 적재량이 작은 배부터. 필요 경제는 2·3등급만 있습니다. 가로로 긴 표는 안쪽으로 스크롤할 수 있습니다.</p>
+    <div class="reference-scroll" tabindex="0" role="region" aria-label="지역 새 배 비교 표">
+      <table class="ship-table ship-table-new">
+        <caption class="sr-only">지역 새 배 {regionalShips.length}종 비교</caption>
+        <thead>
+          <tr>
+            <th scope="col">모델</th><th scope="col">지역</th><th scope="col">등급</th><th scope="col">구분</th><th scope="col">적재량</th><th scope="col">최소 선원</th><th scope="col">최대 선원</th>
+            <th scope="col">내구</th><th scope="col">추진</th><th scope="col">선회</th><th scope="col">포문</th><th scope="col">기준 가격</th><th scope="col">필요 공업</th><th scope="col">필요 경제</th>
+          </tr>
+        </thead>
+        <tbody>
+          {regionalShips.map((ship) => (
+            <tr>
+              <th scope="row">
+                <a class="ship-table-name" href={newShipHref(ship)}>
+                  <img src={ship.image.src} alt="" width={64} height={48} loading="lazy" decoding="async" />
+                  <span>{ship.name}</span>
+                </a>
+              </th>
+              <td>{ship.regionLabel}</td>
+              <td>{ship.tierLabel}</td>
+              <td>{ship.hullLabel}</td>
+              <td>{num(ship.capacity)}</td>
+              <td>{num(ship.minCrew)}</td>
+              <td>{num(ship.maxCrew)}</td>
+              <td>{ship.durability}</td>
+              <td>{ship.power}</td>
+              <td>{ship.tacking}</td>
+              <td>{ship.maxGuns}</td>
+              <td>{num(ship.price)}</td>
+              <td>{num(ship.industry)}</td>
+              <td>{ship.economy > 0 ? num(ship.economy) : '—'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </>
+)}
+
+<style>
+  .ship-table td { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; vertical-align: middle; }
+  .ship-table td:nth-child(2) { text-align: left; }
+  .ship-table-new td:nth-child(3), .ship-table-new td:nth-child(4) { text-align: left; }
+  .ship-table-name { display: flex; align-items: center; gap: 0.6rem; color: inherit; }
+  .ship-table-name img { display: block; flex: none; width: 64px; height: 48px; margin: 0; border-radius: 0.25rem; border: 1px solid var(--nb-border); }
+  .ship-table-new .ship-table-name span { white-space: nowrap; }
+</style>

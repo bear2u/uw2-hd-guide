@@ -1,0 +1,54 @@
+---
+import { shipById, yardsBuilding, startPorts, yardHref, num } from '@/lib/ships';
+interface Props { id: number }
+const ship = shipById(Astro.props.id);
+const yards = yardsBuilding(ship);
+const ready = startPorts(ship, yards);
+const portCount = yards.reduce((n, y) => n + y.ports.length, 0);
+---
+<div class="ship-profile" id={`ship-${ship.slug}`}>
+  <img class="ship-profile-art" src={ship.image.src} alt={`${ship.name}의 게임 속 배 그림`} width={ship.image.width * 2} height={ship.image.height * 2} loading="lazy" decoding="async" />
+  <div class="ship-profile-body">
+    <p class="ship-profile-hull">{ship.hullLabel}</p>
+    <dl class="ship-profile-stats">
+      <div><dt>적재량</dt><dd>{num(ship.capacity)}</dd></div>
+      <div><dt>최소 선원</dt><dd>{num(ship.minCrew)}</dd></div>
+      <div><dt>최대 선원</dt><dd>{num(ship.maxCrew)}</dd></div>
+      <div><dt>내구</dt><dd>{ship.durability}</dd></div>
+      <div><dt>추진</dt><dd>{ship.power}</dd></div>
+      <div><dt>선회</dt><dd>{ship.tacking}</dd></div>
+      <div><dt>포문</dt><dd>{ship.maxGuns}</dd></div>
+      <div><dt>기준 가격</dt><dd>{num(ship.price)}</dd></div>
+      <div><dt>필요 공업</dt><dd>{num(ship.industry)}</dd></div>
+    </dl>
+  </div>
+</div>
+<ul class="ship-profile-build">
+  <li><strong>짓는 조선소</strong>: {yards.map((y, i) => <>{i > 0 && ' · '}<a href={yardHref(y)}>{y.label}</a></>)} ({portCount}개 항구)</li>
+  <li><strong>게임 시작 때 지을 수 있는 항구</strong>: {ready.length > 0
+    ? ready.map((p) => `${p.name}(${num(p.industry)})`).join(' · ')
+    : `없음. 짓는 조선소 가운데 공업 ${num(ship.industry)}에 이른 항구가 없어, 투자로 공업을 올려야 합니다.`}</li>
+</ul>
+<blockquote class="ship-profile-quote">
+  <p>{ship.description}</p>
+  <p class="ship-profile-quote-source">조선소에서 이 배를 고를 때 듣는 설명</p>
+</blockquote>
+
+<style>
+  .ship-profile { display: grid; grid-template-columns: 256px minmax(0, 1fr); gap: 1.25rem; align-items: start; margin: 1rem 0 0.75rem; scroll-margin-top: 9rem; }
+  .ship-profile-art { display: block; width: 256px; height: auto; aspect-ratio: 4 / 3; margin: 0; border-radius: 0.5rem; border: 1px solid var(--nb-border); image-rendering: auto; }
+  .ship-profile-body { min-width: 0; }
+  .ship-profile-hull { display: inline-block; margin: 0 0 0.6rem; font-size: 0.8rem; color: var(--nb-muted-foreground); border: 1px solid var(--nb-border); border-radius: 999px; padding: 0.05rem 0.6rem; }
+  .ship-profile-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem 0.75rem; margin: 0; }
+  .ship-profile-stats div { min-width: 0; border-bottom: 1px solid var(--nb-border); padding-bottom: 0.3rem; }
+  .ship-profile-stats dt { margin: 0; font-size: 0.75rem; font-weight: 500; color: var(--nb-muted-foreground); }
+  .ship-profile-stats dd { margin: 0; font-size: 1rem; font-weight: 600; color: var(--nb-foreground); font-variant-numeric: tabular-nums; }
+  .ship-profile-build { margin: 0.75rem 0; padding-left: 1.1rem; font-size: 0.925rem; }
+  .ship-profile-quote { margin: 0.75rem 0 1rem; padding: 0.15rem 0 0.15rem 1rem; border-left: 3px solid var(--nb-border-strong); color: var(--nb-foreground); }
+  .ship-profile-quote p { margin: 0; }
+  .ship-profile-quote .ship-profile-quote-source { margin-top: 0.35rem; font-size: 0.8rem; font-style: normal; color: var(--nb-muted-foreground); }
+  @media (max-width: 640px) {
+    .ship-profile { grid-template-columns: 1fr; }
+    .ship-profile-art { width: 100%; max-width: 256px; }
+  }
+</style>

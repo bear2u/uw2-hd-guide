@@ -1,0 +1,100 @@
+---
+import { orderedShips, shipsOfRegion, shipHref, needsOf, portLabel, portReady, num, type Hull } from '@/lib/ships';
+/** hull: 원작 25종 가운데 범선·노 젓는 배. region: 엔딩 뒤 새 배 (지역 키 또는 hidden) — 고르는 곳·조건·설명까지 담은 카드 */
+interface Props { hull?: Hull; region?: string }
+const { hull, region } = Astro.props;
+const rows = region ? [] : orderedShips.filter((s) => !hull || s.hull === hull);
+const newRows = region ? shipsOfRegion(region) : [];
+---
+{rows.length > 0 && (
+  <ul class="ship-gallery" role="list">
+    {rows.map((ship) => (
+      <li class="ship-card">
+        <a class="ship-card-link" href={shipHref(ship)}>
+          <img class="ship-card-art" src={ship.image.src} alt={`${ship.name}의 게임 속 배 그림`} width={ship.image.width * 2} height={ship.image.height * 2} loading="lazy" decoding="async" />
+          <span class="ship-card-title"><strong>{ship.name}</strong><span class="ship-card-hull">{ship.hullLabel}</span></span>
+        </a>
+        <dl class="ship-card-stats">
+          <div><dt>적재량</dt><dd>{num(ship.capacity)}</dd></div>
+          <div><dt>선원</dt><dd>{num(ship.minCrew)}~{num(ship.maxCrew)}</dd></div>
+          <div><dt>내구</dt><dd>{ship.durability}</dd></div>
+          <div><dt>추진·선회</dt><dd>{ship.power}·{ship.tacking}</dd></div>
+          <div><dt>포문</dt><dd>{ship.maxGuns}</dd></div>
+          <div><dt>필요 공업</dt><dd>{num(ship.industry)}</dd></div>
+        </dl>
+      </li>
+    ))}
+  </ul>
+)}
+{newRows.length > 0 && (
+  <ul class="ship-gallery ship-gallery-new" role="list">
+    {newRows.map((ship) => {
+      const needs = needsOf(ship);
+      return (
+        <li class="ship-card ship-card-new" id={`ship-${ship.slug}`}>
+          <div class="ship-card-head">
+            <img class="ship-card-art" src={ship.image.src} alt={`${ship.name}의 게임 속 배 그림`} width={ship.image.width * 2} height={ship.image.height * 2} loading="lazy" decoding="async" />
+            <span class="ship-card-title"><strong>{ship.name}</strong><span class="ship-card-hull">{ship.hullLabel}</span></span>
+            {!ship.hidden && <p class="ship-card-native">{ship.native}</p>}
+            <p class="ship-card-badges">
+              <span class="ship-badge ship-badge-tier" data-tier={ship.tier}>{ship.tierLabel}</span>
+              {!ship.hidden && <span class="ship-badge">{ship.regionLabel}</span>}
+              <span class="ship-badge">{ship.role}</span>
+              {!ship.stormProof && <span class="ship-badge ship-badge-warn">폭풍에 약함</span>}
+            </p>
+          </div>
+          <dl class="ship-card-stats">
+            <div><dt>적재량</dt><dd>{num(ship.capacity)}</dd></div>
+            <div><dt>최소 선원</dt><dd>{num(ship.minCrew)}</dd></div>
+            <div><dt>최대 선원</dt><dd>{num(ship.maxCrew)}</dd></div>
+            <div><dt>내구</dt><dd>{ship.durability}</dd></div>
+            <div><dt>추진</dt><dd>{ship.power}</dd></div>
+            <div><dt>선회</dt><dd>{ship.tacking}</dd></div>
+            <div><dt>포문</dt><dd>{ship.maxGuns}</dd></div>
+            <div><dt>기준 가격</dt><dd>{num(ship.price)}</dd></div>
+            <div><dt>필요 공업</dt><dd>{ship.industry > 0 ? num(ship.industry) : '없음'}</dd></div>
+          </dl>
+          <dl class="ship-card-build">
+            <div><dt>짓는 곳</dt><dd>{ship.ports.map((p, i) => <>{i > 0 && ' · '}{!ship.hidden && portReady(ship, p) ? <strong>{portLabel(ship, p)}</strong> : portLabel(ship, p)}</>)}</dd></div>
+            <div><dt>여는 조건</dt><dd>{needs.length > 0 ? needs.join(' · ') : '없음 (엔딩 뒤 자유 항해이면 바로)'}</dd></div>
+          </dl>
+          <blockquote class="ship-card-quote"><p>{ship.description}</p></blockquote>
+        </li>
+      );
+    })}
+  </ul>
+)}
+
+<style>
+  .ship-gallery { list-style: none; padding: 0; margin: 1.25rem 0 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(13.5rem, 1fr)); gap: 1rem; }
+  .ship-card { margin: 0; min-width: 0; border: 1px solid var(--nb-border); border-radius: 0.75rem; background: var(--nb-card); overflow: hidden; }
+  .ship-card-link { display: block; color: inherit; text-decoration: none; padding: 0.75rem 0.75rem 0; }
+  .ship-card-link:hover .ship-card-title strong, .ship-card-link:focus-visible .ship-card-title strong { text-decoration: underline; }
+  .ship-card-art { display: block; width: 100%; max-width: 256px; height: auto; aspect-ratio: 4 / 3; margin: 0 auto; border-radius: 0.4rem; border: 1px solid var(--nb-border); image-rendering: auto; }
+  .ship-card-title { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; margin-top: 0.6rem; }
+  .ship-card-title strong { font-size: 1.05rem; word-break: keep-all; }
+  .ship-card-hull { flex: none; font-size: 0.75rem; color: var(--nb-muted-foreground); border: 1px solid var(--nb-border); border-radius: 999px; padding: 0.05rem 0.5rem; }
+  .ship-card-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem 0.5rem; margin: 0; padding: 0.6rem 0.75rem 0.85rem; }
+  .ship-card-stats div { min-width: 0; }
+  .ship-card-stats dt { font-size: 0.7rem; font-weight: 500; color: var(--nb-muted-foreground); margin: 0; }
+  .ship-card-stats dd { margin: 0; font-size: 0.9rem; font-weight: 600; color: var(--nb-foreground); font-variant-numeric: tabular-nums; }
+
+  /* 엔딩 뒤 새 배: 같은 카드에 원어 이름·등급·지역 표시, 짓는 곳·조건·설명을 더한다 */
+  .ship-gallery-new { grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); }
+  .ship-card-new { display: flex; flex-direction: column; scroll-margin-top: 9rem; }
+  .ship-card-head { padding: 0.75rem 0.75rem 0; }
+  .ship-card-native { margin: 0.15rem 0 0; font-size: 0.8rem; color: var(--nb-muted-foreground); overflow-wrap: anywhere; }
+  .ship-card-badges { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.5rem 0 0; }
+  .ship-badge { font-size: 0.72rem; line-height: 1.4; color: var(--nb-muted-foreground); border: 1px solid var(--nb-border); border-radius: 999px; padding: 0.05rem 0.5rem; white-space: nowrap; }
+  .ship-badge-tier { color: var(--nb-foreground); font-weight: 600; }
+  .ship-badge-tier[data-tier="3"] { border-color: var(--nb-primary); color: var(--nb-primary); }
+  .ship-badge-warn { border-style: dashed; }
+  .ship-card-new .ship-card-stats { border-top: 1px solid var(--nb-border); margin-top: 0.7rem; padding-top: 0.6rem; padding-bottom: 0.6rem; }
+  .ship-card-build { margin: 0; padding: 0 0.75rem; font-size: 0.85rem; }
+  .ship-card-build div { padding: 0.35rem 0; border-top: 1px solid var(--nb-border); }
+  .ship-card-build dt { font-size: 0.7rem; font-weight: 500; color: var(--nb-muted-foreground); margin: 0; }
+  .ship-card-build dd { margin: 0; color: var(--nb-foreground); word-break: keep-all; overflow-wrap: anywhere; }
+  .ship-card-quote { margin: 0.25rem 0.75rem 0.85rem; padding: 0.1rem 0 0.1rem 0.75rem; border-left: 3px solid var(--nb-border-strong); font-size: 0.875rem; color: var(--nb-foreground); }
+  .ship-card-quote p { margin: 0; }
+  @media (max-width: 480px) { .ship-gallery, .ship-gallery-new { grid-template-columns: 1fr; } }
+</style>

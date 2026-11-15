@@ -27,6 +27,7 @@ const config = defineNimbusConfig({
     { label: '소설', autogenerate: { directory: 'novel' } },
     { label: '핵심 시스템', autogenerate: { directory: 'systems' } },
     { label: '도감', autogenerate: { directory: 'atlas' } },
+    { label: '함선', autogenerate: { directory: 'ships' } },
     { label: '도전과제', autogenerate: { directory: 'challenges' } },
     { label: '도움말과 근거', items: [
       { label: '자주 막히는 상황', link: '/help/faq/' },

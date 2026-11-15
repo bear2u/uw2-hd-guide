@@ -1,0 +1,68 @@
+---
+import { yardByKey, shipById, startPorts, shipHref, newShipsAtPorts, newShipHref, needsOf, portLabel, num } from '@/lib/ships';
+/** next: 엔딩 뒤 이 계열 항구에 더해지는 새 배도 함께 보인다 */
+interface Props { yard: string; next?: boolean }
+const yard = yardByKey(Astro.props.yard);
+const models = yard.models.map(shipById);
+const nextRows = Astro.props.next ? newShipsAtPorts(yard.ports.map((p) => p.id)) : [];
+---
+<div class="shipyard-group" id={`yard-${yard.key}`}>
+  <p class="shipyard-ports"><strong>항구 {yard.ports.length}곳</strong> (괄호는 게임 시작 때 공업): {yard.ports.map((p) => `${p.name}(${num(p.industry)})`).join(' · ')}</p>
+  <div class="reference-scroll" tabindex="0" role="region" aria-label={`${yard.label} 조선소에서 짓는 배`}>
+    <table class="shipyard-models">
+      <caption class="sr-only">{yard.label} 조선소에서 짓는 배 {models.length}종</caption>
+      <thead><tr><th scope="col">모델</th><th scope="col">구분</th><th scope="col">필요 공업</th><th scope="col">게임 시작 때 지을 수 있는 항구</th></tr></thead>
+      <tbody>
+        {models.map((ship) => {
+          const ready = startPorts(ship, [yard]);
+          return (
+            <tr>
+              <th scope="row"><a href={shipHref(ship)}>{ship.name}</a></th>
+              <td>{ship.hullLabel}</td>
+              <td class="num">{num(ship.industry)}</td>
+              <td>{ready.length === yard.ports.length ? '모든 항구' : ready.length > 0 ? ready.map((p) => p.name).join(' · ') : '없음 (공업을 올려야 함)'}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+  {Astro.props.next && (
+    <div class="shipyard-next">
+      <p class="shipyard-next-label"><span class="shipyard-next-badge">새 배</span> 이야기를 끝낸 뒤 이 계열 항구에 더해지는 새 배 {nextRows.length}종</p>
+      {nextRows.length > 0 ? (
+        <div class="reference-scroll" tabindex="0" role="region" aria-label={`${yard.label} 조선소에 더해지는 새 배`}>
+          <table class="shipyard-models">
+            <caption class="sr-only">이야기를 끝낸 뒤 {yard.label} 조선소에 더해지는 새 배 {nextRows.length}종</caption>
+            <thead><tr><th scope="col">새 배</th><th scope="col">지역</th><th scope="col">등급</th><th scope="col">여는 조건</th><th scope="col">짓는 항구 (게임 시작 때 공업·경제)</th></tr></thead>
+            <tbody>
+              {nextRows.map(({ ship, ports }) => (
+                <tr>
+                  <th scope="row"><a href={newShipHref(ship)}>{ship.name}</a></th>
+                  <td>{ship.regionLabel}</td>
+                  <td>{ship.tierLabel}</td>
+                  <td>{needsOf(ship).map((n) => n.replace(/ \(본편 \d+개\)$/, '')).join(' · ')}</td>
+                  <td>{ports.map((p) => portLabel(ship, p)).join(' · ')}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <p class="shipyard-next-empty">이 계열 항구에는 새 배가 더해지지 않습니다.</p>
+      )}
+    </div>
+  )}
+</div>
+
+<style>
+  .shipyard-group { scroll-margin-top: 9rem; }
+  .shipyard-ports { font-size: 0.925rem; }
+  .shipyard-models td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .shipyard-models td:last-child { min-width: 12rem; }
+  .shipyard-next { margin: 1rem 0 1.5rem; padding: 0.25rem 0.9rem 0.5rem; border: 1px dashed var(--nb-border-strong); border-radius: 0.6rem; }
+  .shipyard-next-label { font-size: 0.9rem; margin: 0.5rem 0; }
+  .shipyard-next-badge { display: inline-block; margin-right: 0.35rem; font-size: 0.75rem; font-weight: 600; color: var(--nb-primary); border: 1px solid var(--nb-primary); border-radius: 999px; padding: 0.05rem 0.55rem; }
+  .shipyard-next-empty { font-size: 0.9rem; color: var(--nb-muted-foreground); }
+  .shipyard-next td:nth-child(2), .shipyard-next td:nth-child(3) { white-space: nowrap; }
+</style>
